@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D0F13A2-E79E-4BD2-9DC3-3984E755D772}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PRDB_Sqlite.Sevice</RootNamespace>
+    <AssemblyName>PRDB_Sqlite.Sevice</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PRDB_Sqlite\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonService\QueryExecutor.cs" />
+    <Compile Include="CommonService\SelectCondition.cs" />
+    <Compile Include="Factory\DbFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysService\RawDatabaseService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PRDB_Sqlite.Data\PRDB_Sqlite.Data.csproj">
+      <Project>{170935DA-D3EE-4A03-AC85-AFE4CB2EC4CB}</Project>
+      <Name>PRDB_Sqlite.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PRDB_Sqlite.Domain\PRDB_Sqlite.Domain.csproj">
+      <Project>{E7A82340-0E09-4443-A3A9-5B7E3E69CE21}</Project>
+      <Name>PRDB_Sqlite.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PRDB_Sqlite.Infractructure\PRDB_Sqlite.Infractructure.csproj">
+      <Project>{667940AB-D14D-4CF2-8C06-95E43A0967DF}</Project>
+      <Name>PRDB_Sqlite.Infractructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PRDB_Sqlite.SystemParam\PRDB_Sqlite.SystemParam.csproj">
+      <Project>{A85E5C24-9ECD-486B-B2A6-31A657E427CB}</Project>
+      <Name>PRDB_Sqlite.SystemParam</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

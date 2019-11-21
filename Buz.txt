@@ -1,0 +1,27 @@
+1.no DB: done
+2. There is a DB:
+ -menu DB (Database): 
+	+ btnNewDB(done)
+	+ btnOpnDB(done)
+	+ Save DB
+	+ Close DB
+- menu Schema:
+	+ btnNewSchema(done)
+	+ btnEditSchema
+	+ btnOpenSchema(start)
+	+ btnDeleteSchema
+	+ btnCloseCurSchema
+- menu Relation
+	+ btnNewRelation(done)
+	+ btnOpnRelation()
+- menu Query
+	+ btnNewQry
+	+ btnSaveQry
+	+ btnOpnQry
+	+ btnDelQry
+	+ btnExec
+	+ btnCloseCurQry
+- About
+
+- edit schema, query, relation in Ram
+- using btn saveDb to Extract new db or replace pre Db

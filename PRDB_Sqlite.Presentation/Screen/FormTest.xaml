@@ -1,0 +1,45 @@
+﻿<Window x:Class="PRDB_Sqlite.Presentation.Screen.FormTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.Screen"
+        mc:Ignorable="d"
+        Title="FormTest" Height="450" Width="800">
+    <StackPanel>
+        <!--<RelativePanel >
+            <TextBox x:Name="textBox1" RelativePanel.AlignLeftWithPanel="True"/>
+            <Button Content="Submit" RelativePanel.Below="textBox1"/>
+        </RelativePanel>-->
+
+
+        <!--<Ribbon x:Name="RibbonWin"  SelectedIndex="0">
+            --><!--<Ribbon.HelpPaneContent>
+                <RibbonButton SmallImageSource="Imageshelp.png" />
+            </Ribbon.HelpPaneContent>--><!--
+            <RibbonTab Header="Home" KeyTip="H" Margin="0,0,0,-47" >
+
+                 Home  group
+                <RibbonGroup x:Name="ClipboardGroup" Header="Home" Visibility="Visible">
+                    <RibbonMenuButton LargeImageSource="Imagespaste.png" Label="Paste" KeyTip="V">
+                        <RibbonMenuItem ImageSource="Imagespaste.png" Header="Keep Text Only" KeyTip="T"/>
+                        <RibbonMenuItem ImageSource="Imagespaste.png" Header="Paste Special..." KeyTip="S"/>
+                    </RibbonMenuButton>
+                    <RibbonButton SmallImageSource="Imagescut.png" Label="Cut" KeyTip="X" />
+                    <RibbonButton SmallImageSource="Imagescopy.png" Label="Copy" KeyTip="C" />
+                    <RibbonButton SmallImageSource="Imagesformat_painter.png" Label="Format Painter" KeyTip="FP" />
+                </RibbonGroup>
+                 Employee And Payroll group
+                <RibbonGroup x:Name="Employee" Header="Employee And Payroll">
+                    <RibbonMenuButton LargeImageSource="Imagespersonal.png" Label="Employee" KeyTip="V">
+                        <RibbonMenuItem ImageSource="Imagespaste.png" Header="Keep Text Only" KeyTip="T"/>
+                        <RibbonMenuItem ImageSource="Imagespaste.png" Header="Paste Special..." KeyTip="S"/>
+                    </RibbonMenuButton>
+                    <RibbonButton SmallImageSource="Imagessave.png" Label="Save" KeyTip="X" />
+                    <RibbonButton SmallImageSource="Imagesadd.png" Label="Add" KeyTip="C" />
+                </RibbonGroup>
+            </RibbonTab>
+
+        </Ribbon>-->
+    </StackPanel>
+</Window>

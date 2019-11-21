@@ -1,0 +1,282 @@
+﻿<Window x:Class="PRDB_Sqlite.Presentation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRDB_Sqlite.Presentation"
+        MinHeight="500"
+        MinWidth="750"
+        WindowState="Maximized"
+        WindowStyle="SingleBorderWindow"
+        Padding="15"
+        FontSize="12"
+        Closed="Window_Closed"
+        Title="Probability Relation Database with uncertain information" Height="450" Width="800">
+
+    
+    <DockPanel>
+        <StackPanel
+                x:Name="rlpHeader"    
+                HorizontalAlignment="Stretch"
+	            VerticalAlignment="Stretch"
+            DockPanel.Dock="Top"
+                Background="Turquoise">
+
+            <Ribbon x:Name="tbtHeader" Height="Auto">
+                <Ribbon.HelpPaneContent>
+                    <RibbonButton Label="help" />
+                </Ribbon.HelpPaneContent>
+
+                <Ribbon.ApplicationMenu>
+                    <RibbonApplicationMenu KeyTip="F">
+                        <RibbonApplicationMenuItem Header="Reload Db" Name="btnReload" Click="btnReload_Click" />
+                        <RibbonApplicationMenuItem Header="Exit" Name="btnExit" Click="btnExit_Click"/>
+                    </RibbonApplicationMenu>
+                </Ribbon.ApplicationMenu>
+
+                <RibbonTab Header="Database" KeyTip="D">
+                    <RibbonGroup >
+                        <Button Name="btnNewDb" Click="btnNewDb_Click" Background="Transparent" BorderBrush="Transparent">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\newdb.ico" Width="40" Height="40"></Image>
+                                    <TextBlock Text="New DataBase"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>  
+                    </RibbonGroup>
+                    <RibbonGroup>
+                        <Button  Name="btnOpnDb" Click="btnOpenDb_Click"  Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\opendb.ico" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Open DataBase"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RibbonGroup>
+                    <RibbonGroup Name="rgSaveDb" Visibility="Collapsed">
+                        <Button  Name="btnSveDb" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\savedb (2).ico" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Save DataBase"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RibbonGroup>
+                    <RibbonGroup Name="rgClsDb" Visibility="Collapsed">
+                        <Button Name="btnClsDb"  Background="Transparent" BorderBrush="Transparent">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\remove db d.ico" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Close DataBase"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RibbonGroup>
+                </RibbonTab>
+
+                <RibbonTab Header="Schema" KeyTip="S" >
+                    <RibbonGroup Name="rgNewSch" Visibility="Collapsed">
+                        <Button Name="btnNewSch"  Click="btnNewSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\scheme add.png" Width="40" Height="40"></Image>
+                                    <TextBlock Text="New Schema"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RibbonGroup>
+                    <RibbonGroup Name="rgEdtSch" Visibility="Collapsed">
+                         <Button Name="btnEdtSch" Click="btnEdtSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\scheme edit.png" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Edit Schema"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RibbonGroup>
+                    <RibbonGroup Name="rgOpnSch" Visibility="Collapsed">
+                       <Button Name="btnOpnSch" Click="btnOpnSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\scheme open.png" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Open Schema"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RibbonGroup>
+                    <RibbonGroup Name="rgDelSch" Visibility="Collapsed">
+                        <Button Name="btnDelSch" Click="btnDelSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\scheme delete.png" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Delete Schema"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>                    </RibbonGroup>
+                    <RibbonGroup Name="rgClsSch" Visibility="Collapsed">
+                        <Button x:Name="btnClsSch" Content="Close Schema" Background="Transparent" BorderBrush="Transparent" />
+                    </RibbonGroup>
+                </RibbonTab>
+
+                <RibbonTab Header="Relation" KeyTip="R" >
+                    <RibbonGroup Name="rgNewRel" Visibility="Collapsed">
+                        <Button Name="btnNewRel" Click="btnOpnRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\new relation.png" Width="40" Height="40"></Image>
+                                    <TextBlock Text="New Relation"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>                    </RibbonGroup>
+                    <RibbonGroup Name="rgOpnRel" Visibility="Collapsed">
+                        <Button Name="btnOpnRel" Click="btnOpnRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\open relation.png" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Open Relation"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>                    </RibbonGroup>
+                    <RibbonGroup Name="rgDelRel" Visibility="Collapsed">
+                        <Button Name="btnDelRel" Click="btnDelRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\remove relation.png" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Delete Relation"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>                    </RibbonGroup>
+                </RibbonTab>
+
+                <RibbonTab Header="Query" KeyTip="Q" >
+                    <RibbonGroup>
+
+                    </RibbonGroup>
+                </RibbonTab>
+            </Ribbon>
+
+
+        </StackPanel>
+
+        <Grid x:Name="mainGrid"
+              DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.4*" />
+              <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <RelativePanel
+                Name="rpnLContent"
+                Grid.Row="0" 
+                Background="WhiteSmoke">
+      <DockPanel RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignTopWithPanel="True">
+        <TreeView x:Name="tvLeftNode"
+                          VerticalAlignment="Stretch" 
+                          HorizontalAlignment="Stretch"
+                  DockPanel.Dock="Top">
+          <TreeView.Background>
+            <LinearGradientBrush Opacity="0.5" StartPoint="0.5,0.6" EndPoint="0.1,0.5">
+              <GradientStop Color="White" Offset="0.9" />
+              <GradientStop Color="LightGray" Offset="0.4" />
+              <GradientStop Color="Thistle" Offset="0.3" />
+            </LinearGradientBrush>
+          </TreeView.Background>
+        </TreeView>
+      </DockPanel>
+    </RelativePanel>
+                
+    <Border Grid.Row="0"
+                Grid.Column="1"
+                Opacity="0.7"
+                BorderBrush="DarkCyan" 
+                BorderThickness="1,1,1,3">
+      <RelativePanel
+                Name="rpnRContent"              
+                Grid.Row="1" 
+                Grid.Column="1"
+                Background="WhiteSmoke">
+
+        <DockPanel 
+                       RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignTopWithPanel="True" >
+
+
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="268*"/>
+              <RowDefinition Height="85*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="3*"/>
+              <!--<ColumnDefinition Width="1*"/>-->
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+              <LinearGradientBrush StartPoint="0.7,0.9" EndPoint="0.5,0.7">
+                <GradientStop Color="White" Offset="1" />
+                <GradientStop Color="LightGray" Offset="0.7" />
+                <GradientStop Color="Aqua" Offset="0.5" />
+              </LinearGradientBrush>
+            </Grid.Background>
+
+            <RelativePanel Name="stpTabinfo"
+                                    Grid.Column="0"
+                                    Grid.Row="0" Grid.RowSpan="2">
+              <RelativePanel.Background>
+                <LinearGradientBrush StartPoint="0.7,0.9" EndPoint="0.5,0.7">
+                  <GradientStop Color="White" Offset="1" />
+                  <GradientStop Color="LightGray" Offset="0.7" />
+                  <GradientStop Color="Aqua" Offset="0.5" />
+                </LinearGradientBrush>
+              </RelativePanel.Background>
+              <TabControl
+                  x:Name="tbMainTab"
+                  RelativePanel.AlignTopWithPanel="True"
+                  RelativePanel.AlignBottomWithPanel="True"
+                  RelativePanel.AlignLeftWithPanel="True"
+                  RelativePanel.AlignRightWithPanel="True">
+                <TabItem Name="tbiSch" Header="Schemas" Uid="sch"/>
+                <TabItem Name="tbiRel" Header="Relations" Uid="rel" />
+                                <TabItem Name="tbiQry" Header="Execute Query" Uid="qry">
+                                    
+                                </TabItem>
+              </TabControl>
+            </RelativePanel>
+            <!--<StackPanel Background="LightCyan"
+                                    Opacity="0.5"
+                                    Name="stpCellinfo"
+                                    Grid.Column="1"
+                                    Grid.Row="0" Grid.RowSpan="2">
+
+            </StackPanel>-->
+          </Grid>
+        </DockPanel>
+      </RelativePanel>
+    </Border>
+
+    <StackPanel
+                HorizontalAlignment="Center"
+                Name="stpFooter"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Background="Turquoise">
+      <DockPanel>
+        <Label DockPanel.Dock="Bottom" Background="White">Thank for using our applications!</Label>
+      </DockPanel>
+    </StackPanel>
+  </Grid>
+    </DockPanel>
+</Window>

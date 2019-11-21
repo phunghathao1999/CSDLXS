@@ -1,0 +1,26 @@
+﻿<Window x:Class="PRDB_Sqlite.Presentation.Screen.opn_del_Schema"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.Screen"
+        mc:Ignorable="d"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded"
+        Title="opn_del_Schema" Height="200" Width="400" >
+    <StackPanel>
+        <Label Name="lblHeader" Content="Replace Content" HorizontalAlignment="Center" FontSize="30" FontWeight="DemiBold"/>
+        <GroupBox x:Name="grpMain" Header="Replace Content">
+            <ComboBox Name="cbx" />
+        </GroupBox>
+        <Label/>
+        <StackPanel  HorizontalAlignment="Center" Orientation="Horizontal">
+            
+            <Button x:Name="btnMain" Click="btnMain_Click" Padding="5" Content="" Background="Aquamarine"/>
+            <Label/>
+            <Button x:Name="btnCancel" Click="btnCancel_Click" Content="Cancel" Background="OrangeRed" Padding="5" />
+        </StackPanel>
+    </StackPanel>
+</Window>

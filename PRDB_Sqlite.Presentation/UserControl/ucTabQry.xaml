@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="PRDB_Sqlite.Presentation.UserControl.ucTabQry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.UserControl"
+             mc:Ignorable="d" 
+             KeyDown="UserControl_KeyDown"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
+    <StackPanel Name="stpQry">
+
+        <StackPanel x:Name="stpTbl"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            Orientation="Horizontal">
+            <ToolBarTray x:Name="tlbQry" Grid.Row="0">
+                <ToolBar>
+                    <Button Name="btnNewtab" Content="New Tab" ToolTip="New a tab"/>
+                    <Button Name="btnOpnQry" Content="Open Query" ToolTip="Open a query file"/>
+                    <Button Name="btnSave" Content="Save" ToolTip="Save file"/>
+                    <Separator/>
+                    <Button Name="btnFind" Content="Find" ToolTip="Find in text"/>
+                    <Button Name="btnExec" Content="Execute" ToolTip="Execute query"/>
+                    <Button Name="btnExecCur" Content="Execute Line" ToolTip="Execute Current line"/>
+                    <Separator/>
+                </ToolBar>
+            </ToolBarTray>
+        </StackPanel>
+
+        <StackPanel x:Name="stpTab">
+            <TabControl Name="TbQry">
+                <TabItem Header="new Tab 1">
+                    <RichTextBox Name="rbxQry"
+                                 FontFamily="Consolas"
+                                 FontSize="14">
+                    </RichTextBox>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+
+        <StackPanel Name="stpData">
+            <Border Grid.Row="1"
+                Grid.Column="1"
+                Opacity="0.7"
+                BorderBrush="DarkCyan" 
+                BorderThickness="20,1,20,2">
+                <TextBlock x:Name="txtMessage"
+                       HorizontalAlignment="Center"
+                       FontFamily="Consolas"
+                           Foreground="Black"
+                           IsEnabled="False">
+                </TextBlock>
+            </Border>
+                <ToolBarTray x:Name="tbDtgAction" Orientation="Horizontal">
+                    <ToolBar>
+                        <Button Name="btnView" Content="View" ToolTip="Change View"/>
+                    </ToolBar>
+                </ToolBarTray>
+
+                <StackPanel Orientation="Vertical">
+                  
+                    <DataGrid Name="dtgDataResult"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      ColumnWidth="*"
+                      FontSize="14"
+                      HorizontalContentAlignment="Center"
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      GridLinesVisibility="Vertical">
+            </DataGrid>
+                    
+                </StackPanel>
+            </StackPanel>
+    </StackPanel>
+    </ScrollViewer>
+</UserControl>
+
+<!--<StackPanel>
+
+    <StackPanel x:Name="stpTbl"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            Orientation="Horizontal">
+        <ToolBarTray x:Name="tlbQry" Grid.Row="0">
+            <ToolBar>
+                <Button Name="btnNewtab" Content="New Tab" ToolTip="New a tab"/>
+                <Button Name="btnOpnQry" Content="Open Query" ToolTip="Open a query file"/>
+                <Button Name="btnSave" Content="Save" ToolTip="Save file"/>
+                <Separator/>
+                <Button Name="btnFind" Content="Find" ToolTip="Find in text"/>
+                <Button Name="btnExec" Content="Execute" ToolTip="Execute query"/>
+                <Button Name="btnExecCur" Content="Execute Line" ToolTip="Execute Current line"/>
+                <Separator/>
+            </ToolBar>
+        </ToolBarTray>
+    </StackPanel>
+
+    <StackPanel x:Name="stpTab">
+        <TabControl Name="TbQry">
+            <TabItem Header="new Tab 1">
+                <RichTextBox Name="rbxQry"
+                                 FontFamily="Consolas"
+                                 MaxHeight="150"
+                                 MinHeight="150"
+                                 FontSize="14">
+                </RichTextBox>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+
+    <StackPanel >
+        <Border Grid.Row="1"
+                Grid.Column="1"
+                Opacity="0.7"
+                BorderBrush="DarkCyan" 
+                BorderThickness="4,4,4,5">
+            <TextBlock x:Name="txtMessage"
+                       HorizontalAlignment="Center"
+                       FontFamily="Consolas"
+                           Height="30"
+                           Foreground="Black"
+                           IsEnabled="False">
+            </TextBlock>
+        </Border>
+        <ToolBarTray x:Name="tbDtgAction">
+            <ToolBar>
+                <Button Name="btnView" Content="View" ToolTip="Change View"/>
+            </ToolBar>
+        </ToolBarTray>
+        <DataGrid Name="dtgDataResult" MinHeight="300"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      Background="WhiteSmoke"
+                      ColumnWidth="*"
+                      FontSize="13"
+                      HorizontalContentAlignment="Center"
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      GridLinesVisibility="Vertical">
+        </DataGrid>
+    </StackPanel>
+</StackPanel>-->

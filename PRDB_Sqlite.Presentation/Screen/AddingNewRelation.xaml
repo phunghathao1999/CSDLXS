@@ -1,0 +1,58 @@
+﻿<Window x:Class="PRDB_Sqlite.Presentation.Screen.AddingNewRelation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.Screen"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded"
+        WindowStyle="ToolWindow"
+        Title="AddingNewRelation" Height="200" Width="500">
+    <StackPanel>
+        <Label/>
+        <Grid HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+        
+        <Label Content="Create New Relation" 
+               Grid.Row="0"
+               Grid.ColumnSpan="2"
+               HorizontalAlignment="Center" 
+               FontSize="30" 
+               FontWeight="DemiBold"/>
+           
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Content="Relation Name" />
+            <TextBox MinWidth="200"
+                     Name="txtRelName"
+                     Grid.Column="1"
+                     Grid.Row="1"/>
+            
+            <Label Content="Select Schema"
+                   Grid.Column="0"
+                   Grid.Row="2"/>
+            <ComboBox MinWidth="200"
+                      Name="cbxSch"
+                      Grid.Column="1"
+                      Grid.Row="2"/>
+            
+    </Grid>
+        <Label/>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Name="btnSave" Click="btnSave_Click" Content="Save"  Background="DodgerBlue" Padding="5" />
+            <Label/>
+            <Button Name="btnCancel" Click="btnCancel_Click" Content="Cancel" Background="IndianRed" Padding="5" />
+        </StackPanel>
+    </StackPanel>
+</Window>

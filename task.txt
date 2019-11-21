@@ -1,0 +1,21 @@
+﻿3.iss: Ps is loaded but it's wrong (done)
+2.iss
+unable load Schemas in dataGrid (done)
+
+1.load a dbp (done)
+
+2.exe query select :
+select *
+from consulation
+where ( Diagnose ={ bronchitis,jhgf } ) [0.2 , 0.7]
+3. query in 2 relations(done)
+4. loi khi dynamicGenDataTable , table ko show dc du lieu trừ Ps(done)
+
+
+5. binding treview --> MainContent 
+
+6.btnView cause force close App when datagrid is empty
+
+7. add a schema UI (done)
+8. handle back end for AddSchemaUI(done)
+9. add 

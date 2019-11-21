@@ -1,0 +1,67 @@
+#NOTE: priority 
+Date: 1/10/2019 
+Author: Tra
+file Project 
+line 36
+content: dynamicGenDataTable
+sts:done
+end NOTE;
+
+
+#NOTE: priority -1
+Date: 27/10/2019 
+Author: Tra
+line 296
+content: func Satisfied(PTuple tuple) in SelectCondition (ExpressionValue)
+consider point: - ExpressionValue => get Val
+				- CalculateExpression => xe sac xuat
+				- GetProbInterval
+
+sts:done
+end NOTE;
+
+#NOTE: 
+Date: 1/10/2019 
+Author: Tra
+file Project 
+line 36
+content: CalculateCondition SelectCondition
+sts:Undone
+end NOTE;
+
+#NOTE: 
+Date: 1/10/2019 
+Author: Tra
+file Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\Module\MdlTreeView.cs
+line 36
+content:Contruct mdl to build a Treeview
+sts:done
+end NOTE;
+
+#NOTE: priority 2
+Date: 1/10/2019 
+Author: Tra
+file Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\MainWindow.xaml
+line 69 
+design: MainWindow.xaml
+sts:Undone
+end NOTE;
+
+#NOTE:
+Date: 1/10/2019 
+Author: Tra
+file Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\SysService\RawDatabaseService.cs 
+line 520
+func: public Object getData(string rawValue,PDataType type)
+sts:Done
+end NOTE;
+
+#NOTE:
+Date: 2/9/2019 
+Author: Tra
+file Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\Module\MdlFileDialog.cs
+line 69 
+func: public PDatabase OpenExistingDatabase(PDatabase pDatabase)
+sts:Done
+end NOTE;
+
