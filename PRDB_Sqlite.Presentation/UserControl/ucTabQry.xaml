@@ -37,13 +37,13 @@
                             </StackPanel>
                         </Button>
                         <Separator/>
-                        <Button Name="btnFind"  ToolTip="Find in text">
+                        <!--<Button Name="btnFind"  ToolTip="Find in text">
                             <StackPanel Orientation="Horizontal">
                                 <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconFind.png"/>
                                 <TextBlock Text=" Find" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
-                        <Separator/>
+                        <Separator/>-->
                         <Button Name="btnExec"  ToolTip="Execute query">
                             <StackPanel Orientation="Horizontal">
                                 <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcute.png"/>
