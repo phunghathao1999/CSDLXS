@@ -8,7 +8,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
 {
     public class SelectCondition
     {
-
+        // xu ly cau dieu kien where
         public PRelation relations { get; set; }
         public PTuple tuple { get; set; }
         public string conditionString { get; set; }

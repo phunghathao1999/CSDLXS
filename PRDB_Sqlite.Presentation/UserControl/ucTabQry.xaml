@@ -15,27 +15,58 @@
             RelativePanel.AlignLeftWithPanel="True"
             Orientation="Horizontal">
             <ToolBarTray x:Name="tlbQry" Grid.Row="0">
-                <ToolBar>
-                    <Button Name="btnNewtab" Content="New Tab" ToolTip="New a tab"/>
-                    <Button Name="btnOpnQry" Content="Open Query" ToolTip="Open a query file"/>
-                    <Button Name="btnSave" Content="Save" ToolTip="Save file"/>
-                    <Separator/>
-                    <Button Name="btnFind" Content="Find" ToolTip="Find in text"/>
-                    <Button Name="btnExec" Content="Execute" ToolTip="Execute query"/>
-                    <Button Name="btnExecCur" Content="Execute Line" ToolTip="Execute Current line"/>
-                    <Separator/>
+                <ToolBar FontWeight="Bold">
+                        <Button Name="btnNewtab"  ToolTip="New a tab">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconNewtab.png"/>
+                                <TextBlock Text=" New Tab" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Separator/>
+                        <Button Name="btnOpnQry" Click="btnOpnQry_Click" ToolTip="Open a query file">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconOpenTab.Png"/>
+                                <TextBlock Text=" Open Query" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Separator/>
+                        <Button Name="btnSave" Click="btnSave_Click"  ToolTip="Save file">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconSave.png"/>
+                                <TextBlock Text=" Save" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Separator/>
+                       
+                        <Button Name="btnExec"  ToolTip="Execute query">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcute.png"/>
+                                <TextBlock Text=" Execute" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Separator/>
+                        <Button Name="btnExecCur"  ToolTip="Execute Current line">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcuteLine.png"/>
+                                <TextBlock Text=" Execute Line" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Separator/>
                 </ToolBar>
             </ToolBarTray>
         </StackPanel>
 
         <StackPanel x:Name="stpTab">
+            
             <TabControl Name="TbQry">
-                <TabItem Header="new Tab 1">
+
+                    <TabItem Header="new Tab 1"  Margin="0,0,0,0" Height="30"  Name="label_TabTitle" VerticalAlignment="Bottom" FontFamily="Courier" FontSize="14" >
                     <RichTextBox Name="rbxQry"
-                                 FontFamily="Consolas"
+                                 FontFamily="Courier"
                                  FontSize="14">
                     </RichTextBox>
-                </TabItem>
+                      
+                    </TabItem>
             </TabControl>
         </StackPanel>
 
@@ -68,7 +99,7 @@
                       HorizontalContentAlignment="Center"
                       RelativePanel.AlignLeftWithPanel="True"
                       RelativePanel.AlignRightWithPanel="True"
-                      GridLinesVisibility="Vertical">
+                      GridLinesVisibility="All">
             </DataGrid>
                     
                 </StackPanel>

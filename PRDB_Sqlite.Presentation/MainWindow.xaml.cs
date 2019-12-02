@@ -205,8 +205,13 @@ namespace PRDB_Sqlite.Presentation
         private void btnReload_Click(object sender, RoutedEventArgs e)
         {
             this.reloadDb();
-            
         }
 
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            var showAbout = new About();
+            showAbout.ShowDialog();
+            this.Refresh();
+        }
     }
 }

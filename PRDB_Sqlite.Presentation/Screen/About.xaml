@@ -1,0 +1,74 @@
+﻿<Window x:Class="PRDB_Sqlite.Presentation.Screen.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.Screen"
+        mc:Ignorable="d"
+        Title="About" Height="450" Width="800">
+    <Grid Margin="0,0,1,0" >
+        <Grid.Background>
+            <ImageBrush ImageSource="/PRDB_Sqlite.Presentation;component/assets/AboutBG.PNG"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="791*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="385" Margin="15,16,0,0" VerticalAlignment="Top" Width="334" Source="/PRDB_Sqlite.Presentation;component/assets/Images/SGU.PNG" Grid.Column="1"/>
+        <GroupBox x:Name="groupBox" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left" Height="168" Margin="425,15,0,0" VerticalAlignment="Top" Width="332" Grid.Column="1">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold">Student</TextBlock>
+                </StackPanel>
+            </GroupBox.Header>
+            <GroupItem Margin="0,0,0,24">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="286" Height="142" Margin="30,0,0,0" >
+                    <StackPanel Orientation="Horizontal" Margin="10,5,0,0">
+                        <Label  Content="FullName: " Width="100"/>
+                        <Label  Content="Trần Nguyễn Sưu Tra"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" Margin="10,5,0,0">
+                        <Label  Content="StudentID:" Width="100"/>
+                        <Label  Content="3115410162" />
+                    </StackPanel>
+                    <StackPanel Width="316"  Orientation="Horizontal" Margin="10,5,0,2">
+                        <Label  Content="Email:" Width="100"/>
+                        <Label  Content="3115410162"/>
+                    </StackPanel>
+                    <StackPanel Width="316"  Orientation="Horizontal" Margin="10,5,0,5">
+                        <Label  Content="Instructor:" Width="100"/>
+                        <Label  Content="Nguyễn Hòa"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupItem>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left" Height="176" Margin="427,231,0,0" VerticalAlignment="Top" Width="332" Grid.Column="1">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold">Student</TextBlock>
+                </StackPanel>
+            </GroupBox.Header>
+            <GroupItem Margin="0,10,0,-9">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="286" Height="140" Margin="30,0,0,0" >
+                    <StackPanel Orientation="Horizontal" Margin="10,5,0,2" >
+                        <Label  Content="FullName: " Width="100"/>
+                        <Label  Content="Ngô Thị Hồng" />
+                    </StackPanel>
+                    <StackPanel Width="316"  Orientation="Horizontal" Margin="10,5,0,2">
+                        <Label  Content="StudentID:" Width="100"/>
+                        <Label  Content="3115410043"/>
+                    </StackPanel>
+                    <StackPanel Width="316"  Orientation="Horizontal" Margin="10,5,0,2">
+                        <Label  Content="Email:" Width="100"/>
+                        <Label  Content="nthong7755@gmail.com"/>
+                    </StackPanel>
+                    <StackPanel Width="316"  Orientation="Horizontal" Margin="10,5,0,2">
+                        <Label  Content="Instructor:" Width="100"/>
+                        <Label  Content="Nguyễn Hòa"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupItem>
+        </GroupBox>
+
+    </Grid>
+</Window>

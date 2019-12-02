@@ -8,6 +8,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
 {
     public class QueryExecutor
     {
+
+        // thuc thi cau query
         public string queryString { get; set; }
         public IList<PRelation> selectedRelations { get; set; }
         public PRelation relationResult { get; set; }
@@ -32,6 +34,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             this.flagNaturalJoin = false;
         }
 
+        //chuân hóa query
         private string StandardizeQuery(string queryString)
         {
             try

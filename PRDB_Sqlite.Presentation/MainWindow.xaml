@@ -22,64 +22,65 @@
             DockPanel.Dock="Top"
                 Background="Turquoise">
 
-            <Ribbon x:Name="tbtHeader" Height="Auto">
+            <Ribbon x:Name="tbtHeader" FontSize="13" FontWeight="Bold"  Height="Auto">
                 <Ribbon.HelpPaneContent>
-                    <RibbonButton Label="help" />
+                    <RibbonButton Margin="1,3,2,0"  Label="Help" ></RibbonButton>
                 </Ribbon.HelpPaneContent>
 
                 <Ribbon.ApplicationMenu>
                     <RibbonApplicationMenu KeyTip="F">
-                        <RibbonApplicationMenuItem Header="Reload Db" Name="btnReload" Click="btnReload_Click" />
-                        <RibbonApplicationMenuItem Header="Exit" Name="btnExit" Click="btnExit_Click"/>
+                        <RibbonApplicationMenuItem Header="Reload Db" FontWeight="Bold" Name="btnReload" Click="btnReload_Click" />
+                        <RibbonApplicationMenuItem Header="Exit" FontWeight="Bold" Name="btnExit" Click="btnExit_Click"/>
+                        <RibbonApplicationMenuItem Header="About" FontWeight="Bold" Name="btnAbout" Click="btnAbout_Click"/>
                     </RibbonApplicationMenu>
                 </Ribbon.ApplicationMenu>
 
-                <RibbonTab Header="Database" KeyTip="D">
-                    <RibbonGroup >
-                        <Button Name="btnNewDb" Click="btnNewDb_Click" Background="Transparent" BorderBrush="Transparent">
-                            <Button.Content>
-                                <StackPanel Orientation="Vertical">
+                <RibbonTab Header="Database" FontWeight="Bold"  KeyTip="D" HorizontalContentAlignment="Center"  >
+                    <RibbonGroup Margin="1,10,1,1"  >
+                        <Button Name="btnNewDb" Margin="0,0,0,-3" Click="btnNewDb_Click" Background="Transparent" BorderBrush="Transparent"   >
+                            <Button.Content >
+                                <StackPanel Orientation="Vertical" Height="60"  >
                                     <Image Source="assets\Images\newdb.ico" Width="40" Height="40"></Image>
-                                    <TextBlock Text="New DataBase"></TextBlock>
+                                    <TextBlock Text="New Database"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
                         </Button>  
                     </RibbonGroup>
-                    <RibbonGroup>
-                        <Button  Name="btnOpnDb" Click="btnOpenDb_Click"  Background="Transparent" BorderBrush="Transparent" >
+                    <RibbonGroup Margin="1,10,1,1">
+                        <Button Margin="0,0,0,-3" Name="btnOpnDb" Click="btnOpenDb_Click"  Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\opendb.ico" Width="40" Height="40"></Image>
-                                    <TextBlock Text="Open DataBase"></TextBlock>
+                                    <TextBlock Text="Open Database"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
                         </Button>
                     </RibbonGroup>
-                    <RibbonGroup Name="rgSaveDb" Visibility="Collapsed">
-                        <Button  Name="btnSveDb" Background="Transparent" BorderBrush="Transparent" >
+                    <RibbonGroup Margin="1,10,1,1" Name="rgSaveDb" Visibility="Collapsed">
+                        <Button Margin="0,0,0,-3" Name="btnSveDb" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\savedb (2).ico" Width="40" Height="40"></Image>
-                                    <TextBlock Text="Save DataBase"></TextBlock>
+                                    <TextBlock Text="Save Database"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
                         </Button>
                     </RibbonGroup>
-                    <RibbonGroup Name="rgClsDb" Visibility="Collapsed">
-                        <Button Name="btnClsDb"  Background="Transparent" BorderBrush="Transparent">
+                    <RibbonGroup Margin="1,10,1,1" Name="rgClsDb" Visibility="Collapsed">
+                        <Button Name="btnClsDb" Margin="0,0,0,-3"  Background="Transparent" BorderBrush="Transparent">
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\remove db d.ico" Width="40" Height="40"></Image>
-                                    <TextBlock Text="Close DataBase"></TextBlock>
+                                    <TextBlock Text="Close Database"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
                         </Button>
                     </RibbonGroup>
                 </RibbonTab>
 
-                <RibbonTab Header="Schema" KeyTip="S" >
-                    <RibbonGroup Name="rgNewSch" Visibility="Collapsed">
-                        <Button Name="btnNewSch"  Click="btnNewSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                <RibbonTab Header="Schema" FontWeight="Bold" KeyTip="S" >
+                    <RibbonGroup Margin="1,10,1,1" Name="rgNewSch" Visibility="Collapsed">
+                        <Button Name="btnNewSch" Margin="0,0,0,-3" Click="btnNewSch_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme add.png" Width="40" Height="40"></Image>
@@ -88,8 +89,8 @@
                             </Button.Content>
                         </Button>
                     </RibbonGroup>
-                    <RibbonGroup Name="rgEdtSch" Visibility="Collapsed">
-                         <Button Name="btnEdtSch" Click="btnEdtSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                    <RibbonGroup Margin="1,10,1,1" Name="rgEdtSch" Visibility="Collapsed">
+                        <Button Name="btnEdtSch" Margin="0,0,0,-3" Click="btnEdtSch_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme edit.png" Width="40" Height="40"></Image>
@@ -98,8 +99,8 @@
                             </Button.Content>
                         </Button>
                     </RibbonGroup>
-                    <RibbonGroup Name="rgOpnSch" Visibility="Collapsed">
-                       <Button Name="btnOpnSch" Click="btnOpnSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                    <RibbonGroup Margin="1,10,1,1" Name="rgOpnSch" Visibility="Collapsed">
+                        <Button Name="btnOpnSch" Margin="0,0,0,-3" Click="btnOpnSch_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme open.png" Width="40" Height="40"></Image>
@@ -108,8 +109,8 @@
                             </Button.Content>
                         </Button>
                     </RibbonGroup>
-                    <RibbonGroup Name="rgDelSch" Visibility="Collapsed">
-                        <Button Name="btnDelSch" Click="btnDelSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                    <RibbonGroup Margin="1,10,1,1" Name="rgDelSch" Visibility="Collapsed">
+                        <Button Name="btnDelSch" Margin="0,0,0,-3" Click="btnDelSch_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme delete.png" Width="40" Height="40"></Image>
@@ -117,48 +118,50 @@
                                 </StackPanel>
                             </Button.Content>
                         </Button>                    </RibbonGroup>
-                    <RibbonGroup Name="rgClsSch" Visibility="Collapsed">
-                        <Button x:Name="btnClsSch" Content="Close Schema" Background="Transparent" BorderBrush="Transparent" />
+                    <RibbonGroup Margin="1,10,1,1" Name="rgClsSch" Visibility="Collapsed">
+                        <Button x:Name="btnClsSch" Margin="0,0,0,-3" Content="Close Schema" Background="Transparent" BorderBrush="Transparent" />
                     </RibbonGroup>
                 </RibbonTab>
 
-                <RibbonTab Header="Relation" KeyTip="R" >
-                    <RibbonGroup Name="rgNewRel" Visibility="Collapsed">
-                        <Button Name="btnNewRel" Click="btnOpnRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                <RibbonTab  Header="Relation" FontWeight="Bold" KeyTip="R" >
+                    <RibbonGroup Margin="1,10,1,1" Name="rgNewRel" Visibility="Collapsed">
+                        <Button Name="btnNewRel" Margin="0,0,0,-3" Click="btnNewRel_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\new relation.png" Width="40" Height="40"></Image>
                                     <TextBlock Text="New Relation"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
-                        </Button>                    </RibbonGroup>
-                    <RibbonGroup Name="rgOpnRel" Visibility="Collapsed">
-                        <Button Name="btnOpnRel" Click="btnOpnRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                        </Button>                   
+                    </RibbonGroup>
+                    <RibbonGroup Margin="1,10,1,1" Name="rgOpnRel" Visibility="Collapsed">
+                        <Button Name="btnOpnRel" Margin="0,0,0,-3" Click="btnOpnRel_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\open relation.png" Width="40" Height="40"></Image>
                                     <TextBlock Text="Open Relation"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
-                        </Button>                    </RibbonGroup>
-                    <RibbonGroup Name="rgDelRel" Visibility="Collapsed">
-                        <Button Name="btnDelRel" Click="btnDelRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                        </Button>                    
+                    </RibbonGroup>
+                    <RibbonGroup Margin="1,10,1,1" Name="rgDelRel" Visibility="Collapsed">
+                        <Button Name="btnDelRel" Margin="0,0,0,-3" Click="btnDelRel_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\remove relation.png" Width="40" Height="40"></Image>
                                     <TextBlock Text="Delete Relation"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
-                        </Button>                    </RibbonGroup>
+                        </Button>                    
+                    </RibbonGroup>
                 </RibbonTab>
 
-                <RibbonTab Header="Query" KeyTip="Q" >
-                    <RibbonGroup>
-
+                <RibbonTab  Header="Query" FontWeight="Bold" KeyTip="Q" >
+                    <RibbonGroup Margin="1,10,1,0">
+                        
                     </RibbonGroup>
                 </RibbonTab>
             </Ribbon>
-
 
         </StackPanel>
 
@@ -232,37 +235,49 @@
               </LinearGradientBrush>
             </Grid.Background>
 
-            <RelativePanel Name="stpTabinfo"
+                            <RelativePanel Name="stpTabinfo"
                                     Grid.Column="0"
                                     Grid.Row="0" Grid.RowSpan="2">
-              <RelativePanel.Background>
-                <LinearGradientBrush StartPoint="0.7,0.9" EndPoint="0.5,0.7">
-                  <GradientStop Color="White" Offset="1" />
-                  <GradientStop Color="LightGray" Offset="0.7" />
-                  <GradientStop Color="Aqua" Offset="0.5" />
-                </LinearGradientBrush>
-              </RelativePanel.Background>
-              <TabControl
+                                <RelativePanel.Background>
+                                    <LinearGradientBrush StartPoint="0.7,0.9" EndPoint="0.5,0.7">
+                                        <GradientStop Color="White" Offset="1" />
+                                        <GradientStop Color="LightGray" Offset="0.7" />
+                                        <GradientStop Color="Aqua" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </RelativePanel.Background>
+                                <TabControl
                   x:Name="tbMainTab"
                   RelativePanel.AlignTopWithPanel="True"
                   RelativePanel.AlignBottomWithPanel="True"
                   RelativePanel.AlignLeftWithPanel="True"
                   RelativePanel.AlignRightWithPanel="True">
-                <TabItem Name="tbiSch" Header="Schemas" Uid="sch"/>
-                <TabItem Name="tbiRel" Header="Relations" Uid="rel" />
-                                <TabItem Name="tbiQry" Header="Execute Query" Uid="qry">
-                                    
-                                </TabItem>
-              </TabControl>
-            </RelativePanel>
-            <!--<StackPanel Background="LightCyan"
-                                    Opacity="0.5"
-                                    Name="stpCellinfo"
-                                    Grid.Column="1"
-                                    Grid.Row="0" Grid.RowSpan="2">
-
-            </StackPanel>-->
-          </Grid>
+                                    <TabItem Name="tbiSch" Height="35" Uid="sch">
+                                        <TabItem.Header>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="assets\Images\scheme.png" Width="20" Margin="0,3,0,0"   Height="20"/>
+                                                <TextBlock Text="  Schemas" Margin="3,0,0,0" Foreground="Black" FontSize="15"  FontWeight="Bold"/>
+                                            </StackPanel>
+                                        </TabItem.Header>
+                                    </TabItem>
+                                    <TabItem Name="tbiRel"  Uid="rel" >
+                                        <TabItem.Header>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="assets\Images\relation.png" Width="20"   Margin="0,3,0,0"   Height="20"/>
+                                                <TextBlock Text=" Relations" Margin="3,0,0,0" Foreground="Black" FontSize="15"   FontWeight="Bold"/>
+                                            </StackPanel>
+                                        </TabItem.Header>
+                                    </TabItem>
+                                    <TabItem Name="tbiQry"  Uid="qry">
+                                        <TabItem.Header>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="assets\Images\query.png" Width="20" Margin="0,3,0,0"   Height="20"/>
+                                                <TextBlock Text=" Execute Query" Margin="3,0,0,0" Foreground="Black"  FontSize="15"  FontWeight="Bold"/>
+                                            </StackPanel>
+                                        </TabItem.Header>
+                                    </TabItem>
+                                </TabControl>
+                            </RelativePanel>
+                        </Grid>
         </DockPanel>
       </RelativePanel>
     </Border>

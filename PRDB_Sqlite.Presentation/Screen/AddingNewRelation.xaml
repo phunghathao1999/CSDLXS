@@ -9,7 +9,7 @@
         ResizeMode="NoResize"
         Loaded="Window_Loaded"
         WindowStyle="ToolWindow"
-        Title="AddingNewRelation" Height="200" Width="500">
+        Title="Adding New Relation" Height="300" Width="600" FontFamily="Times New Roman">
     <StackPanel>
         <Label/>
         <Grid HorizontalAlignment="Center">
@@ -27,32 +27,47 @@
                Grid.Row="0"
                Grid.ColumnSpan="2"
                HorizontalAlignment="Center" 
-               FontSize="30" 
-               FontWeight="DemiBold"/>
+               FontSize="40" 
+               FontWeight="DemiBold"
+               FontFamily="Bookman Old Style" Margin="0,0,0,20"/>
            
             <Label Grid.Row="1"
                    Grid.Column="0"
-                   Content="Relation Name" />
+                   Content="Relation Name" FontFamily="Times New Roman" FontWeight="Bold" Margin="0,0,0,20" FontSize="20" />
             <TextBox MinWidth="200"
                      Name="txtRelName"
                      Grid.Column="1"
-                     Grid.Row="1"/>
+                     Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,20" FontSize="20"/>
             
             <Label Content="Select Schema"
                    Grid.Column="0"
-                   Grid.Row="2"/>
+                   Grid.Row="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
             <ComboBox MinWidth="200"
                       Name="cbxSch"
                       Grid.Column="1"
-                      Grid.Row="2"/>
+                      Grid.Row="2" VerticalAlignment="Center" FontSize="20" FontFamily="Times New Roman"/>
             
     </Grid>
         <Label/>
+        <Label/>
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center">
-            <Button Name="btnSave" Click="btnSave_Click" Content="Save"  Background="DodgerBlue" Padding="5" />
+            <Button x:Name="btnSave" Click="btnSave_Click" BorderThickness="0" >
+                <Button.Content>
+                    <Border Width="60" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <TextBlock Text="Save" FontSize="18" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    </Border>
+                </Button.Content>
+            </Button>
             <Label/>
-            <Button Name="btnCancel" Click="btnCancel_Click" Content="Cancel" Background="IndianRed" Padding="5" />
+            <Label/>
+            <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0" >
+                <Button.Content>
+                    <Border CornerRadius="5" Width="60"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <TextBlock Text="Cancel" FontSize="18" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    </Border>
+                </Button.Content>
+            </Button>
         </StackPanel>
     </StackPanel>
 </Window>

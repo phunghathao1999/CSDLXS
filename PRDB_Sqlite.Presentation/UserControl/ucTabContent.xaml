@@ -9,15 +9,49 @@
              Background="Transparent"
              BorderBrush="Blue"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <UserControl.Resources>
+        <Style x:Key="cellStyle" TargetType="DataGridCell">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <Border  BorderThickness="0">
+                            <Border x:Name="border"
+                              BorderBrush="White"
+                              BorderThickness="2"
+                              Background="Black"
+                              CornerRadius="5">
+                                <ContentPresenter />
+                            </Border>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsSelected}" Value="true">
+                                <Setter TargetName="border" Property="Background" Value="Orange"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="rowStyle" TargetType="DataGridRow">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="White" />
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="0,10,10,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"
-                    Grid.Row="0">
-            <Label Name="lblCbx" VerticalContentAlignment="Center" Background="Transparent"></Label>
-            <ComboBox Name="cbx" Background="Transparent" SelectedValuePath="Key" DisplayMemberPath="Value"/>
+                    Grid.Row="0" >
+            <Label Name="lblCbx" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="14" FontWeight="Black" Background="Transparent"></Label>
+            <ComboBox Name="cbx"  Background="Transparent" VerticalContentAlignment="Center" SelectedValuePath="Key" DisplayMemberPath="Value" FontFamily="Times New Roman"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Background="Transparent">
             <Label />
@@ -26,8 +60,9 @@
                       CanUserAddRows="False"
                       Background="Transparent"
                       ColumnWidth="*"
+                      FontSize="14"
                       HorizontalContentAlignment="Center"
-                      GridLinesVisibility="Vertical">
+                      GridLinesVisibility="All" >
 
             </DataGrid>
         </StackPanel>
