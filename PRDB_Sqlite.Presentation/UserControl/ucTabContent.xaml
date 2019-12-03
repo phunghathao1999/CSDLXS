@@ -11,26 +11,86 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="0">
-            <Label Name="lblCbx" VerticalContentAlignment="Center" Background="Transparent"></Label>
-            <ComboBox Name="cbx" Background="Transparent" SelectedValuePath="Key" DisplayMemberPath="Value"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Background="Transparent">
-            <Label />
-            <DataGrid Name="dtg"
-                      IsReadOnly="True"
-                      CanUserAddRows="False"
-                      Background="Transparent"
-                      ColumnWidth="*"
-                      HorizontalContentAlignment="Center"
-                      GridLinesVisibility="Vertical">
 
-            </DataGrid>
+        <StackPanel Orientation="Horizontal"
+                    Background="Aqua"
+                    Grid.Row="0">
+            <Label Name="lblCbx" VerticalContentAlignment="Center" Background="Transparent" FontSize="13"></Label>
+            <ComboBox Name="cbx" Background="DeepSkyBlue" SelectedValuePath="Key" DisplayMemberPath="Value"/>
         </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Name="stpAction"
+                    FlowDirection="RightToLeft"
+                    Orientation="Horizontal">
+            <GroupBox Header="Action CRUD">
+                <StackPanel Orientation="Horizontal">
+
+                    <Button Name="btnEdit"
+                        Click="btnEdit_Click"
+                        ToolTip="Enable Editing"
+                        Content="Enable Editing"/>
+                    <Button x:Name="btnDel"
+                        Click="btnDel_Click"
+                        ToolTip="Delelte New Record"
+                        Content="Delete Record"/>
+                   
+                    <Button x:Name="btnIns"
+                        Click="btnIns_Click"
+                        ToolTip="Insert New Record"
+                        Content="Insert Record"/>
+
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Action Database">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnCmmt"
+                        Click="btnCmmt_Click"
+                        ToolTip="Commit Changes"
+                        Content="Commit"/>
+                    <Button Name="btnRbk"
+                        Click="btnRbk_Click"
+                        ToolTip="Rollback Changes"
+                        Content="Rollback"/>
+
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <Grid x:Name="grdDtg"
+            Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="2*"/>
+                <!--<ColumnDefinition Width="3*"/>-->
+            </Grid.ColumnDefinitions>
+            <DataGrid Name="dtg"
+                          Grid.Column="0"
+                          SelectionChanged="dtg_SelectionChanged"
+                          CurrentCellChanged="dtg_CurrentCellChanged"
+                          IsReadOnly="True"
+                            SelectionMode="Single"
+                          CanUserAddRows="False"
+                          Background="White"
+                          ColumnWidth="*"
+                          MinHeight="300"
+                          GridLinesVisibility="All"
+                          HorizontalContentAlignment="Center">
+                
+            </DataGrid>
+            <local:ucCETuple x:Name="ucEdit"
+                                 Grid.Column="1"
+                                 Grid.ColumnSpan="2"
+                                 MinWidth="100"
+                                 Background="White"
+                                 IsEnabled="True" />
+
+
+        </Grid>
+
+
 
 
     </Grid>

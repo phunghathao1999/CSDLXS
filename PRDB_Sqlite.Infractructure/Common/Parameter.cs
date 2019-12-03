@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PRDB_Sqlite.Infractructure.Common
 {
     public class Parameter
     {
         #region Tra_Prop
-        private static  string _connectionString;
+        private static string _connectionString;
         private static float _eulerThreshold;
+        private static string _curStrategy;
 
         #endregion
         #region Tra_get_seter
@@ -22,8 +19,21 @@ namespace PRDB_Sqlite.Infractructure.Common
         }
         public static float eulerThreshold
         {
-            get => (_eulerThreshold == 0f) ? 0.00001f : _eulerThreshold;
+            get => (_eulerThreshold == 0f) ? 0.01f : _eulerThreshold;
             set => _eulerThreshold = value;
+        }
+        public static string curStrategy
+        {
+            set
+            {
+                _curStrategy = value;
+            }
+            get
+            {
+                if (string.IsNullOrEmpty(_curStrategy))
+                    return "⊗_in";
+                return _curStrategy;
+            }
         }
 
         #endregion
@@ -33,7 +43,7 @@ namespace PRDB_Sqlite.Infractructure.Common
         public static int SchemaIndex { get; set; }
         public static int RelationIndex { get; set; }
         public static int activeTabIdx { get; set; }
-      
+
         public static IList<string> datatype
         {
             get
@@ -53,6 +63,15 @@ namespace PRDB_Sqlite.Infractructure.Common
                     "Binary",
                     "Currency",
                     "UserDefined"
+                };
+            }
+        }
+        public static IList<string> strategies
+        {
+            get
+            {
+                return new List<string> {
+                    "⊕_in", "⊕_ig", "⊕_me","⊗_in", "⊗_ig", "⊗_me"
                 };
             }
         }

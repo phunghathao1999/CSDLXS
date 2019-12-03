@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="PRDB_Sqlite.Presentation.UserControl.ucCETuple"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.UserControl"
+             mc:Ignorable="d" 
+             BorderBrush="Black"
+             BorderThickness="2"
+             Margin="5"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
+    <StackPanel>
+        <ToolBarTray>
+            <ToolBar>
+                <Button x:Name="btnClr" Content="Clear" Click="btnClr_Click"/>
+                <Label/>
+                <Button x:Name="btnView" Content="Change View Edit" Click="btnView_Click"/>
+                <Label/>
+                <Button Content="Reload Value" Visibility="Collapsed"/>
+            </ToolBar>
+        </ToolBarTray>
+        <GroupBox Header="Infomation">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Attribute Name:" FontSize="15"/>
+                    <Label x:Name="txtInfo" FontSize="15" Foreground="Blue"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Is Primary Key:" FontSize="15"/>
+                    <CheckBox x:Name="chkPri" Margin="10" Foreground="Blue" IsChecked="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Data Type:" FontSize="15"/>
+                    <Label x:Name="txtDataType" FontSize="15" Foreground="Blue" />
+                </StackPanel>
+                
+            </StackPanel>
+           
+        </GroupBox>
+        <StackPanel>
+            <RichTextBox x:Name="rtbxCellContent" 
+                         FontSize="14"
+                         MinHeight="100"                         
+                         FontFamily="Consolas"
+                         Margin="10,0,10,10"
+                         MaxHeight="100"
+                         Background="LavenderBlush"
+                         IsReadOnly="True"
+                         Visibility="Visible">
+                <RichTextBox.Resources>
+                    <Style TargetType="{x:Type Paragraph}">
+                        <Setter Property="Margin" Value="0"/>
+                    </Style>
+                </RichTextBox.Resources>
+            </RichTextBox>
+            <DataGrid x:Name="dtgCellContent"
+                          FontFamily="Consolas"
+                          MinHeight="100"
+                          MaxHeight="100"
+                          IsEnabled="False"
+                          AutoGenerateColumns="False"
+                          ColumnWidth="*"
+                      CanUserDeleteRows="True"
+                      CanUserAddRows="True"
+                      IsSynchronizedWithCurrentItem="True"
+                      Margin="10"
+                          Visibility="Collapsed">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                        Header="Value"
+                        FontSize="13"
+                        Binding="{Binding value}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal"
+                        Margin="10"
+                        FlowDirection="LeftToRight">
+                <Button x:Name="btnCommitEdit"
+                        Click="btnCommitEdit_Click"
+                        Content="Accept Changes"/>
+            </StackPanel>
+        </StackPanel>
+        <ToolBarTray Orientation="Horizontal" FlowDirection="RightToLeft">
+            <ToolBar>
+                <Button x:Name="btnApply" Content="Apply to DB" Click="btnApply_Click"/>
+            </ToolBar>
+        </ToolBarTray>
+        <TextBlock x:Name="txtMessage" MinHeight="100"/>
+    </StackPanel>
+    </ScrollViewer>
+</UserControl>

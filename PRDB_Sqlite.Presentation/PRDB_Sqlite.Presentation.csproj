@@ -108,6 +108,9 @@
     <Compile Include="Screen\opn_del_Schema.xaml.cs">
       <DependentUpon>opn_del_Schema.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ucCETuple.xaml.cs">
+      <DependentUpon>ucCETuple.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\ucTabContent.xaml.cs">
       <DependentUpon>ucTabContent.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screen\opn_del_Schema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ucCETuple.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

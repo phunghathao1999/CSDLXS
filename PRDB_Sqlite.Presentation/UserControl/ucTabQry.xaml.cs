@@ -1,4 +1,5 @@
 ﻿using PRDB_Sqlite.Domain.Model;
+using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Infractructure.Constant;
 using PRDB_Sqlite.Sevice.CommonService;
 using System;
@@ -29,7 +30,8 @@ namespace PRDB_Sqlite.Presentation.UserControl
             {
                 // var sampleSql = "select * from patient where (patient.bloodtype = 'A' ⊗_in patient.height > 130)[0.3,0.8]";
                 //var sampleSql = "select * from patient natural join in physician";
-                var sampleSql = "select patient.firstname from patient";
+                //var sampleSql = "select patient.firstname from patient";
+                var sampleSql = "select * from patient natural join in physician\n\nselect * from patient where (patient.bloodtype = 'A' ⊗_in patient.height > 130)[0.3,0.8]\n\nselect consultation.dateofconsultation,consultation.diagnose,consultation.physicianid from consultation";
                 this.rbxQry.Document.Blocks.Add(new Paragraph(new Run(sampleSql.Trim())));
             }
             setDefaultDismension();
@@ -41,9 +43,9 @@ namespace PRDB_Sqlite.Presentation.UserControl
         private void setDefaultDismension()
         {
             var rate = System.Windows.SystemParameters.PrimaryScreenHeight / 23;
-            this.rbxQry.MinHeight =  4*rate;
+            this.rbxQry.MinHeight = 4 * rate;
             this.txtMessage.MinHeight = rate;
-            this.dtgDataResult.MinHeight = 10*rate;
+            this.dtgDataResult.MinHeight = 10 * rate;
             this.rbxQry.SetValue(Paragraph.LineHeightProperty, 0.5);
         }
 
@@ -60,11 +62,11 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void btnChangeView_Click(object sender, RoutedEventArgs e)
         {
-            if(this.dtgDataResult.Items.Count != 0)
-            if (this.dtgDataResult.Columns[0].Width.IsStar)
-                foreach (var col in this.dtgDataResult.Columns) col.Width = new DataGridLength(1.0, DataGridLengthUnitType.Auto);
-            else
-                foreach (var col in this.dtgDataResult.Columns) col.Width = new DataGridLength(1.0, DataGridLengthUnitType.Star);
+            if (this.dtgDataResult.Items.Count != 0)
+                if (this.dtgDataResult.Columns[0].Width.IsStar)
+                    foreach (var col in this.dtgDataResult.Columns) col.Width = new DataGridLength(1.0, DataGridLengthUnitType.Auto);
+                else
+                    foreach (var col in this.dtgDataResult.Columns) col.Width = new DataGridLength(1.0, DataGridLengthUnitType.Star);
 
         }
 
@@ -108,8 +110,18 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
                     if (query.relationResult.tupes.Count <= 0)
                     {
-                        txtMessage.Text = "No tuple satisfies the condition";
-                        //xtraTabControlQueryResult.SelectedTabPageIndex = 1;
+                        txtMessage.Foreground = Brushes.IndianRed;
+
+                        txtMessage.Text += "No tuple satisfies the condition";
+                    }
+                    else
+                    {
+                        txtMessage.Foreground = Brushes.Black;
+                        txtMessage.Text += String.Format("E threshold: {0}", Parameter.eulerThreshold.ToString());
+                        txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
+                        txtMessage.Text += String.Format("\nResult Tuple Count: {0}", query.relationResult.tupes.Count);
+
+
                     }
                     //else
                     //{
@@ -143,6 +155,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 }
                 else
                 {
+                    txtMessage.Foreground = Brushes.Red;
                     txtMessage.Text = query.MessageError;
                 }
             }
@@ -178,6 +191,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
         }
         private DataTable dynamicGenDataTable(IList<IDictionary<string, string>> data)
         {
+            if (data is null || data.Count == 0) return new DataTable();
             var dt = new DataTable();
             dt.Columns.Clear();
             foreach (var key in data[0].Keys)

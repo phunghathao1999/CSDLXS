@@ -11,11 +11,13 @@ namespace PRDB_Sqlite.Domain.Interface.Service.dbComponent
     public interface ITupleService : IService
     {
         IList<PTuple> getAllTupleByRelationName(string relationName, IList<PAttribute> pAttributes);
-        bool DeleteTypeById(PTuple probTuple);
+        bool DeleteTupleById(PRelation pRelation, PTuple pTuple);
         Object getValuebyType(string rawValue, PDataType type);
         IList<String> getData(string rawValue, PDataType type,bool priKey);
-
+        
         bool checkDataFormat(string rawValue);
+        PTuple Insert(PTuple pTuple, PRelation pRelation); //by id
+        PTuple Update(PTuple pTuple, PRelation pRelation,String Key); //by id
 
 
     }

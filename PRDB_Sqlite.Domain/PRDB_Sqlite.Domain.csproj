@@ -57,6 +57,7 @@
     <Compile Include="Interface\Service\IRawDatabaseService.cs" />
     <Compile Include="ModelView\DataTypeMdView.cs" />
     <Compile Include="ModelView\SchemaModelView.cs" />
+    <Compile Include="ModelView\ValueCellView.cs" />
     <Compile Include="Model\ElemProb.cs" />
     <Compile Include="Model\PAttribute.cs" />
     <Compile Include="Model\PDatabase.cs" />

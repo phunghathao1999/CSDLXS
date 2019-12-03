@@ -13,7 +13,8 @@ namespace PRDB_Sqlite.Domain.Model
             get => _upperBound;
             set
             {
-                if (_upperBound > 1 || _upperBound < 0) throw new Exception("Invalid Prod");
+                if (value > 1 || value < 0) throw new Exception("Invalid Prod");
+                //if(value < _lowerBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
                 var val = value.ToString("F5");
                 _upperBound = float.Parse(val);
             }
@@ -23,7 +24,8 @@ namespace PRDB_Sqlite.Domain.Model
             get => _lowerBound;
             set
             {
-                if (_lowerBound > 1 || _lowerBound < 0) throw new Exception("Invalid Prod");
+                if (value > 1 || value < 0) throw new Exception("Invalid Prod");
+                //if (value > _upperBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
                 var val = value.ToString("F5");
                 _lowerBound = float.Parse(val);
             }
@@ -52,20 +54,48 @@ namespace PRDB_Sqlite.Domain.Model
                 this.upperBound = -1;
                 this.lowerBound = -1;
             }
+            finally
+            {
+                if(this.lowerBound > this.upperBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
+                //if(this.upperBound < this.lowerBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
+            }
         }
 
         public ElemProb(float lowerBound, float upperBound, string schemaName = "")
         {
-            this.schemaName = schemaName;
-            if (Math.Abs(upperBound - lowerBound) < Parameter.eulerThreshold) throw new Exception("Lower Bound must be smaller than Upper Bound");
-            this._lowerBound = lowerBound;
-            this._upperBound = upperBound;
+            try
+            {
+                this.schemaName = schemaName;
+                this.lowerBound = lowerBound;
+                this.upperBound = upperBound;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (this.lowerBound > this.upperBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
+                //if(this.upperBound < this.lowerBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
+            }
+
         }
         public ElemProb(ElemProb ps)
         {
-            if (Math.Abs(upperBound - lowerBound) < Parameter.eulerThreshold) throw new Exception("Lower Bound must be smaller than Upper Bound");
-            this._lowerBound = ps.lowerBound;
-            this._upperBound = ps.upperBound;
+            try
+            {
+                this.lowerBound = ps.lowerBound;
+                this.upperBound = ps.upperBound;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (this.lowerBound > this.upperBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
+                //if(this.upperBound < this.lowerBound) throw new Exception("Lower Bound must be smaller than Upper Bound");
+            }
         }
 
         public override string ToString()

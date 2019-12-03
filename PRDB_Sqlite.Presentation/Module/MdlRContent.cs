@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -93,6 +94,7 @@ namespace PRDB_Sqlite.Presentation.Module
                     reControl.cbx.Items.Add(new { Key = item.id, Value = item.SchemaName.ToUpper() });
                 if (this.pDatabase.Relations.Count >= Parameter.SchemaIndex)
                     reControl.cbx.SelectedIndex = Parameter.SchemaIndex;
+                reControl.stpAction.Visibility = Visibility.Hidden;
             }
 
             //make up
@@ -104,13 +106,14 @@ namespace PRDB_Sqlite.Presentation.Module
 
             if ("sch".Equals(uid.ToLower()))
             {
+
                 reControl.dtg.ItemsSource = getDataSourceSch((int)reControl.cbx.SelectedValue);
             }
             if ("rel".Equals(uid.ToLower()))
             {
                 var data = getDataSourceRel((int)reControl.cbx.SelectedValue);
                 var dtS = dynamicGenDataTable(data);
-                
+
                 {
                     reControl.dtg.Columns.Clear();
                     //make up dtg
@@ -143,7 +146,19 @@ namespace PRDB_Sqlite.Presentation.Module
                 }
             };
 
+            if ("sch".Equals(uid.ToLower()))
+            {
+                reControl.ucEdit.Visibility = Visibility.Collapsed;
+                var last = reControl.grdDtg.ColumnDefinitions.Last();
+                reControl.grdDtg.ColumnDefinitions.Remove(last);
+            }
+            if ("rel".Equals(uid.ToLower()))
+            {
+                //reControl.dtg.SelectionUnit = DataGridSelectionUnit.Cell;
+            }
 
+
+                reControl.dtg.FontSize = 15;
             #endregion
             stp.Children.Add(reControl);
             return stp;
@@ -190,7 +205,6 @@ namespace PRDB_Sqlite.Presentation.Module
                 dt.Rows.Add(dr);
             }
             return dt;
-
         }
 
         private IList<PAttribute> getDataSourceSch(int cbxIdx)
@@ -203,20 +217,28 @@ namespace PRDB_Sqlite.Presentation.Module
         private IList<IDictionary<string, string>> getDataSourceRel(int cbxIdx)
         {
             var reVal = new List<IDictionary<string, string>>();
+
             foreach (var item in this.pDatabase.Relations)
             {
-
                 if (item.id == cbxIdx)
+                {
+                    var pri = (item.schema.Attributes.Where(a=>a.primaryKey).First()).AttributeName.Trim();
+                    if (pri.IndexOf(".") == -1) pri = String.Format("{0}.{1}", item.relationName, pri);
                     foreach (var tuple in item.tupes)
                     {
                         IDictionary<string, string> dataSource = new Dictionary<string, string>();
+                        //add pri first
+                        dataSource.Add(pri, getValCell(tuple.valueSet[pri]));
+
                         foreach (var key in tuple.valueSet.Keys)
                         {
+                            if(!key.Equals( pri,StringComparison.CurrentCultureIgnoreCase))
                             dataSource.Add(key, getValCell(tuple.valueSet[key]));
                         }
                         dataSource.Add(ContantCls.emlementProb, tuple.Ps.ToString());
                         reVal.Add((dataSource));
                     }
+                }
             }
             return new List<IDictionary<string, string>>(reVal);
         }

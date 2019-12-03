@@ -1,15 +1,14 @@
-﻿using PRDB_Sqlite.Domain.Model;
-using PRDB_Sqlite.Infractructure.Common;
+﻿using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Presentation.Module;
 using PRDB_Sqlite.Presentation.Screen;
 using PRDB_Sqlite.SystemParam;
 using System;
 using System.Configuration;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-
+using System.Windows.Input;
 
 namespace PRDB_Sqlite.Presentation
 {
@@ -36,32 +35,28 @@ namespace PRDB_Sqlite.Presentation
                 StaticParams.currentDb = MdlFileDialog.Instance().OpenDialogGetPDb();
             else
                 StaticParams.currentDb = null;
-                
+
             Refresh();
             //setAutoBinding();
         }
         private void setAutoBinding()
         {
-
-            {
                 if (Parameter.indexRelChange)
-                {   
+                {
                     Refresh();
                 }
                 if (Parameter.indexSchChange)
                 {
                     Refresh();
                 }
-            }
-
         }
         private void reloadDb()
         {
-           StaticParams.currentDb = MdlFileDialog.Instance().OpenDialogGetPDb(true);
-           Refresh();
+            StaticParams.currentDb = MdlFileDialog.Instance().OpenDialogGetPDb(true);
+            Refresh();
         }
 
-        private void Refresh()
+        private void Refresh(bool loadLeft = true)
         {
             //load Main interface 
             if (StaticParams.currentDb is null)
@@ -70,8 +65,11 @@ namespace PRDB_Sqlite.Presentation
                 loadHeader(false);
 
                 //load leftContent
-                tvLeftNode.Items.Clear();
-                tvLeftNode.Items.Add(new TreeViewItem() { Header = "There is no DataBase", FontSize = 14f });
+                if (loadLeft)
+                {
+                    tvLeftNode.Items.Clear();
+                    tvLeftNode.Items.Add(new TreeViewItem() { Header = "There is no DataBase", FontSize = 14f });
+                }
                 //load rightContent
             }
             else
@@ -80,25 +78,27 @@ namespace PRDB_Sqlite.Presentation
                 loadHeader(true);
 
                 //load leftContent
-                tvLeftNode.Items.Clear();
-                tvLeftNode.Items.Add(MdlTreeView.Instance(StaticParams.currentDb).getTreeViewItemFromDb());
-
+                if (loadLeft)
+                {
+                    tvLeftNode.Items.Clear();
+                    tvLeftNode.Items.Add(MdlTreeView.Instance(StaticParams.currentDb).getTreeViewItemFromDb());
+                }
                 //load rightContent
                 this.tbMainTab.SelectedIndex = Parameter.activeTabIdx;
                 MdlRContent.Instance(StaticParams.currentDb).getTabByUid(ref this.tbiSch);
                 MdlRContent.Instance(StaticParams.currentDb).getTabByUid(ref this.tbiRel);
                 MdlRContent.Instance(StaticParams.currentDb).getTabByUid(ref this.tbiQry);
             }
+
+            this.cbxStrategy.ItemsSource = Parameter.strategies;
+            this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
         }
         //false == none Db
         private void loadHeader(bool v)
         {
-           
-
             if (v)
             {
                 //config options
-
                 //database
                 this.rgClsDb.Visibility = Visibility.Visible;
                 this.rgSaveDb.Visibility = Visibility.Visible;
@@ -112,10 +112,7 @@ namespace PRDB_Sqlite.Presentation
                 this.rgOpnRel.Visibility = Visibility.Visible;
                 this.rgDelRel.Visibility = Visibility.Visible;
                 //query
-
             }
-            //this.tbtHeader.ToolBars.Add(tbDb);
-
         }
 
         private void btnNewDb_Click(object sender, EventArgs e)
@@ -130,7 +127,6 @@ namespace PRDB_Sqlite.Presentation
             //currentDb = SystemParam.StaticParams.currentDb;
             Refresh();
         }
-
         private void Window_Closed(object sender, EventArgs e)
         {
             //this.bindingTimer.Dispose();
@@ -139,9 +135,9 @@ namespace PRDB_Sqlite.Presentation
         {
             switch (stp.ToLower())
             {
-                //case "sch": MdlRContent.Instance(currentDb).getTabByUid(ref this.tbiSch);break;
-                //case "rel": MdlRContent.Instance(currentDb).getTabByUid(ref this.tbiRel);break;
-                default:break;
+                //case "sch": MdlRContent.Instance(currentDb).getTabByUid(ref this.tbiSch); break;
+                //case "rel": MdlRContent.Instance(currentDb).getTabByUid(ref this.tbiRel); break;
+                default: break;
             }
         }
 
@@ -150,7 +146,6 @@ namespace PRDB_Sqlite.Presentation
             var newSchForm = new AddingSchema();
             newSchForm.ShowDialog();
             this.Refresh();
-
         }
 
         private void btnNewRel_Click(object sender, RoutedEventArgs e)
@@ -180,7 +175,6 @@ namespace PRDB_Sqlite.Presentation
             newOpnSch.ShowDialog();
             this.Refresh();
         }
-
         private void btnOpnRel_Click(object sender, RoutedEventArgs e)
         {
             var newOpnSch = new opn_del_Schema("opnrel");
@@ -195,7 +189,13 @@ namespace PRDB_Sqlite.Presentation
             this.Refresh();
         }
 
-   
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            var oldVal = (sender as TextBox).Text;
+            //Regex regex = new Regex("[+]?([0-1]*[.])?[0-9]+");
+            e.Handled = (regex.IsMatch(e.Text));
+        }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
@@ -205,8 +205,42 @@ namespace PRDB_Sqlite.Presentation
         private void btnReload_Click(object sender, RoutedEventArgs e)
         {
             this.reloadDb();
-            
         }
 
+        private float? checkEuler(string str)
+        {
+            float num;
+            if (float.TryParse(str, out num))
+                if (num >= 0 && num <= 1)
+                    return num;
+            return null;
+        }
+
+        private void loadCurE_Click(object sender, RoutedEventArgs e)
+        {
+            this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
+        }
+
+        private void Set_Click(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(this.NumberTextBox.Text))
+                loadCurE_Click(sender,e);
+            var num = checkEuler(this.NumberTextBox.Text);
+            if (num != null)
+                Parameter.eulerThreshold = (float)num;
+            else
+                MessageBox.Show("Invalid Euler Threshold","NOtification",MessageBoxButton.OK,MessageBoxImage.Information);
+           Parameter.curStrategy =  this.cbxStrategy.SelectedItem.ToString();
+        }
+
+        private void tvLeftNode_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            this.Refresh(false);
+        }
+
+        private void tbMainTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,7 +6,7 @@ using PRDB_Sqlite.Domain.Model;
 using PRDB_Sqlite.Domain.Unit;
 using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Infractructure.Constant;
-using PRDB_Sqlite.SystemParam;
+using PRDB_Sqlite.Sevice.CommonService;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -186,7 +186,7 @@ namespace PRDB_Sqlite.Sevice.SysService
                     SQL += "'" + pRelation.relationName + "'" + ",";
                     SQL += pRelation.schema.id;
                     SQL += " );";
-                    if (ConcreteDb.Instance.Update(SQL,false) < 0)
+                    if (ConcreteDb.Instance.Update(SQL, false) < 0)
                         throw new Exception(ConcreteDb.Instance.errorMessage);
                     //insert Relation Data Table
 
@@ -201,7 +201,7 @@ namespace PRDB_Sqlite.Sevice.SysService
                 }
                 ConcreteDb.Instance.closeConnection();
             }
-           
+
             return pRelation;
         }
 
@@ -224,6 +224,44 @@ namespace PRDB_Sqlite.Sevice.SysService
         {
             throw new NotImplementedException();
         }
+
+        public PTuple GetTuplebyId(ref PRelation rel, string tupId)
+        {
+            var relid = rel.id;
+            PTuple reVal = null;
+            {
+                var relation = RelationService.Instance().getAllRelation().Where(r => r.id.Equals(relid)).First();
+
+                tupId = tupId.Replace("{", "");
+                tupId = tupId.Replace("}", "");
+
+                if (!(relation is null))
+                {
+                    var pri = relation.schema.Attributes.Where(a => a.primaryKey).First();
+                    var atr = String.Format("{0}.{1}", relation.relationName, pri.AttributeName);
+                    if (!(pri is null))
+                        reVal = relation.tupes.Where(t => SelectCondition.EQUAL(t.valueSet[atr].First(), tupId.Trim(), pri.Type.TypeName)).First();
+                    rel = relation;
+                }
+            }
+            return reVal;
+        }
+
+        public bool DeleteTupleById(PRelation pRelation, PTuple pTuple)
+        {
+            return PTupleService.Instance().DeleteTupleById(pRelation, pTuple);
+        }
+
+        public PTuple Insert(PTuple pTuple, PRelation pRelation)
+        {
+            return PTupleService.Instance().Insert(pTuple, pRelation);
+        }
+        public PTuple Update(PTuple pTuple, PRelation pRelation, String key)
+        {
+            return PTupleService.Instance().Update(pTuple, pRelation, key);
+        }
+
+
         #endregion
 
         protected class SchemaService : ISchemaService
@@ -253,9 +291,9 @@ namespace PRDB_Sqlite.Sevice.SysService
                     try
                     {
                         //del attr 
-                        AttributeService.Instance().DeleteAllAttributeByScheme(pSchema,false);
+                        AttributeService.Instance().DeleteAllAttributeByScheme(pSchema, false);
 
-                        if (ConcreteDb.Instance.Update("DELETE FROM SystemScheme Where ID = " + pSchema.id,false) < 0)
+                        if (ConcreteDb.Instance.Update("DELETE FROM SystemScheme Where ID = " + pSchema.id, false) < 0)
                             throw new Exception(ConcreteDb.Instance.errorMessage);
 
                         conn.Commit();
@@ -267,7 +305,7 @@ namespace PRDB_Sqlite.Sevice.SysService
                     }
                     ConcreteDb.Instance.closeConnection();
                 }
-               
+
                 return pSchema;
             }
 
@@ -386,10 +424,10 @@ namespace PRDB_Sqlite.Sevice.SysService
                 throw new NotImplementedException();
             }
 
-            public bool DeleteAllAttributeByScheme(PSchema pSchema,bool con)
+            public bool DeleteAllAttributeByScheme(PSchema pSchema, bool con)
             {
-                if (ConcreteDb.Instance.Update(String.Format("DELETE FROM SystemAttribute Where SchemeID = {0}", pSchema.id),con) < 0)
-                throw new Exception(ConcreteDb.Instance.errorMessage); 
+                if (ConcreteDb.Instance.Update(String.Format("DELETE FROM SystemAttribute Where SchemeID = {0}", pSchema.id), con) < 0)
+                    throw new Exception(ConcreteDb.Instance.errorMessage);
                 return true;
             }
 
@@ -460,7 +498,7 @@ namespace PRDB_Sqlite.Sevice.SysService
             public PAttribute Update(PAttribute pAttribute)
             {
                 string sql = String.Format("UPDATE SystemAttribute SET Primary = '{0}',AttributeName='{1}', DataType='{2}', Domain='{3}', Description='{4}', SchemeID='{5}' WHERE ID= '{6}' ",
-                    pAttribute.primaryKey?"True":"False",
+                    pAttribute.primaryKey ? "True" : "False",
                     pAttribute.AttributeName,
                     pAttribute.Type.DataType,
                     pAttribute.Type.DomainString,
@@ -501,13 +539,14 @@ namespace PRDB_Sqlite.Sevice.SysService
                     try
                     {
                         //delete SystemRelation
-                        if (ConcreteDb.Instance.Update("DELETE FROM SystemRelation where ID = " + pRelation.id,false) < 0)
+                        if (ConcreteDb.Instance.Update("DELETE FROM SystemRelation where ID = " + pRelation.id, false) < 0)
                             throw new Exception(ConcreteDb.Instance.errorMessage);
                         //delete data tuple
-                        if (!ConcreteDb.Instance.DropTable(pRelation.relationName,false))
+                        if (!ConcreteDb.Instance.DropTable(pRelation.relationName, false))
                             throw new Exception(ConcreteDb.Instance.errorMessage);
                         conn.Commit();
-                    }catch(Exception ex)
+                    }
+                    catch (Exception ex)
                     {
                         conn.Rollback();
                         throw new Exception(ex.Message);
@@ -577,12 +616,12 @@ namespace PRDB_Sqlite.Sevice.SysService
                     SQL = SQL.Remove(SQL.LastIndexOf(','), 1);
                     SQL += " ); ";
 
-                    if (!ConcreteDb.Instance.CreateTable(SQL,false))
+                    if (!ConcreteDb.Instance.CreateTable(SQL, false))
                         throw new Exception(ConcreteDb.Instance.errorMessage);
                     return true;
                 }
                 else
-                return false;
+                    return false;
             }
 
             public bool InsertTupleIntoTableRelation(PRelation pRelation)
@@ -742,9 +781,29 @@ namespace PRDB_Sqlite.Sevice.SysService
                 if (instance == null) instance = new PTupleService();
                 return instance;
             }
-            public bool DeleteTypeById(PTuple probTuple)
+            public bool DeleteTupleById(PRelation pRelation, PTuple pTuple)
             {
-                throw new NotImplementedException();
+ 
+                    try
+                    {
+                        var strPriAtt = pRelation.schema.Attributes.Where(att => att.primaryKey).First().ToString().Trim();
+                        var pri = String.Format("{0}.{1}", pRelation.relationName, strPriAtt);
+                        var tupID = pTuple.valueSet[pri].FirstOrDefault().Trim();
+                        //del in db
+                        var sql = "";
+                        sql += String.Format("DELETE FROM {0} ", pRelation.relationName.ToUpper());
+                        sql += String.Format("WHERE {0} = '{1}'", strPriAtt, "{ " + tupID + " }");
+                        //del in ram
+                        SystemParam.StaticParams.currentDb.Relations.Where(p => p.id == pRelation.id).First().tupes.Remove(pTuple);
+                        if (ConcreteDb.Instance.Update(sql) < 0)
+                            throw new Exception(ConcreteDb.Instance.errorMessage);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        return false;
+                    }
+                    return true;
             }
 
             public void Dispose()
@@ -788,8 +847,8 @@ namespace PRDB_Sqlite.Sevice.SysService
                     rawValue = rawValue.Replace("{", "");
                     rawValue = rawValue.Replace("}", "");
                     rawValue = rawValue.Trim();
-                    if (priKey && rawValue.Contains(",")) return new List<string>() { rawValue.Split(',').ToList().FirstOrDefault() };
-                    return rawValue.Contains(",") ? rawValue.Split(',').ToList() : new List<string>() { rawValue };
+                    if (priKey && rawValue.Contains(",")) return new List<string>() { rawValue.Split(',').ToList().FirstOrDefault().Trim() };
+                    return rawValue.Contains(",") ? rawValue.Split(',').ToList().Select(p => p.Trim()).ToList() : new List<string>() { rawValue.Trim() };
                 }
                 catch (Exception ex)
                 {
@@ -838,6 +897,50 @@ namespace PRDB_Sqlite.Sevice.SysService
 
                 }
                 return result;
+            }
+
+            public PTuple Insert(PTuple pTuple, PRelation pRelation)
+            {
+                var sql = "";
+                sql += "INSERT INTO ";
+                sql += pRelation.relationName.ToLower().Trim();
+                var atrrs = String.Join(",", pRelation.schema.Attributes.Select(a => a.AttributeName.Trim().ToLower()).ToArray());
+                sql += String.Format("({0}) VALUES", atrrs);
+                var vals = String.Join(",", pTuple.valueSet.ToArray());
+                sql += String.Format("{{0}}", vals);
+
+                return pTuple;
+            }
+
+            public PTuple Update(PTuple pTuple, PRelation pRelation, String key)
+            {
+                var priName = pRelation.schema.Attributes.Where(a => a.primaryKey).Select(p => p.AttributeName).Single().Trim().ToLower();
+                var standard = key.IndexOf(".") == -1 ? key : key.Substring(key.IndexOf(".") + 1).Trim();
+                var sql = "";
+                sql += String.Format("UPDATE {0} SET ", pRelation.relationName.ToLower().Trim());
+                var vals = String.Join(" , ", pTuple.valueSet[key].ToArray());
+                sql += String.Format("{0} = ", standard);
+                //note
+                sql += "'{ " + vals + " }'";
+                priName = String.Format("{0}.{1}", pRelation.relationName, priName);
+                var priVal = pTuple.valueSet[priName].First().Trim();
+                sql += String.Format(" WHERE {0} = ", priName);
+                //note
+                sql += "'{ " + priVal + " }'";
+                try
+                {
+                    //in db
+                    ConcreteDb.Instance.Update(sql);
+                    //in ram
+                    var relation = SystemParam.StaticParams.currentDb.Relations.Where(p => p.id == pRelation.id).First();
+                    var tuple = relation.tupes.Where(t => t.valueSet[priName].First().Equals(pTuple.valueSet[priName].First(), StringComparison.CurrentCultureIgnoreCase)).First();
+                    tuple = pTuple;
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+                return pTuple;
             }
         }
     }

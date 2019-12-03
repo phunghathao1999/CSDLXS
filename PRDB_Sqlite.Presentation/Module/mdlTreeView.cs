@@ -65,15 +65,14 @@ namespace PRDB_Sqlite.Presentation.Module
                 curSch.MouseDoubleClick += (s, e) =>
                 {
                     var sender = s as TreeViewItem;
-                    Parameter.SchemaIndex = Convert.ToInt32(sender.Uid);
-                    Parameter.indexSchChange = true;
+                    Parameter.SchemaIndex = Convert.ToInt32(sender.Uid)-1;
+                    Parameter.activeTabIdx = 0;
+                    //Parameter.indexSchChange = true;
                     MainWindow.resetTab("sch");
 
                 };
 
                 //fetch the attributes
-
-              
                 foreach (PAttribute attr in item.Attributes)
                 {
                    
@@ -114,8 +113,9 @@ namespace PRDB_Sqlite.Presentation.Module
                 rel.MouseDoubleClick += (s, e) =>
                 {
                     var sender = s as TreeViewItem;
-                    Parameter.RelationIndex = Convert.ToInt32(sender.Uid);
-                    Parameter.indexRelChange = true;
+                    Parameter.RelationIndex = Convert.ToInt32(sender.Uid)-1;
+                    Parameter.activeTabIdx = 1;
+                    //Parameter.indexRelChange = true;
                     MainWindow.resetTab("rel");
                 };
                 rlLst.Items.Add(rel);

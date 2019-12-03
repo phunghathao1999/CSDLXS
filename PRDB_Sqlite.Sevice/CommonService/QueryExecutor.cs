@@ -1,4 +1,5 @@
 ﻿using PRDB_Sqlite.Domain.Model;
+using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Infractructure.Constant;
 using System;
 using System.Collections.Generic;
@@ -193,17 +194,6 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 {
                     return false;
                 }
-                //format AttributeName
-                //foreach (PRelation rel in this.selectedRelations)
-                //{
-                //    foreach (var item in rel.schema.Attributes)
-                //    {
-                //        if (!item.AttributeName.Contains("."))
-                //            item.AttributeName = String.Format("{0}.{1}", this.selectedRelations[0].relationName, item.AttributeName);
-
-                //    }
-
-                //}
 
                 //Get All Attribute
                 this.selectedAttributes = GetAttribute(S);
@@ -326,18 +316,20 @@ namespace PRDB_Sqlite.Sevice.CommonService
                             int countSameAttribute = 0;
                             foreach (var relation in this.selectedRelations)
                             {
-                                List<string> listOfAttributeName = relation.schema.Attributes.Select(p => {
-                                    if(p.AttributeName.IndexOf('.') == -1)
+                                List<string> listOfAttributeName = relation.schema.Attributes.Select(p =>
+                                {
+                                    if (p.AttributeName.IndexOf('.') == -1)
                                     {
                                         return String.Format("{0}.{1}", relation.relationName, p.AttributeName).ToLower();
                                     }
-                                    return p.AttributeName.ToLower(); }).ToList();
-                                if (listOfAttributeName.Contains(String.Format("{0}.{1}",relation.relationName,attributeName.ToLower())))
+                                    return p.AttributeName.ToLower();
+                                }).ToList();
+                                if (listOfAttributeName.Contains(String.Format("{0}.{1}", relation.relationName, attributeName.ToLower())))
                                 {
-                                    var attr = 
+                                    var attr =
                                         new PAttribute(relation.schema.Attributes[listOfAttributeName.IndexOf(String.Format("{0}.{1}", relation.relationName, attributeName.ToLower()))]);
-                                    
-                                    if(attr.AttributeName.IndexOf('.') == -1) attr.AttributeName = String.Format("{0}.{1}", relation.relationName, attr.AttributeName);
+
+                                    if (attr.AttributeName.IndexOf('.') == -1) attr.AttributeName = String.Format("{0}.{1}", relation.relationName, attr.AttributeName);
                                     listPAttribute.Add(attr);
                                     countSameAttribute++;
                                 }
@@ -379,9 +371,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
                                 return null;
                             }
 
-                            var attr = new PAttribute(relation.schema.Attributes.SingleOrDefault(c => getStandardAttrName( c.AttributeName.Trim().ToLower())== array.Last().Trim()));
-                            
-                            if(attr.AttributeName.IndexOf('.') == -1) attr.AttributeName = String.Format("{0}.{1}", relation.relationName, attr.AttributeName);
+                            var attr = new PAttribute(relation.schema.Attributes.SingleOrDefault(c => getStandardAttrName(c.AttributeName.Trim().ToLower()) == array.Last().Trim()));
+
+                            if (attr.AttributeName.IndexOf('.') == -1) attr.AttributeName = String.Format("{0}.{1}", relation.relationName, attr.AttributeName);
 
                             if (attr == null)
                             {
@@ -621,9 +613,147 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 tuple.Ps = etuple.Ps;
                 relation.tupes.Add(tuple);
             }
+
+            #region projection
+             e_Val_Equivalent(ref relation, selectedAttributes);
+            #endregion projection
+
             relation.schema.Attributes = selectedAttributes;
             return relation;
         }
+
+        private PRelation e_Val_Equivalent_err(ref PRelation pRelation, IList<PAttribute> pAttributes)
+        {
+            var Tuples = new List<PTuple>();
+            var rootTuples = pRelation.tupes.ToList();
+            foreach (var tup1 in rootTuples)
+            {
+                foreach (var tup2 in rootTuples)
+                {
+                    if (tup1 == tup2) continue;
+                    var tuple = new PTuple();
+                    if (check_e_Val_eql(tup1, tup2, pAttributes))
+                    {
+                        var collapsedTuple = getTupleCollapse(tup1, tup2, pAttributes);
+                        /*
+                         * remove tup1 and tup2
+                         * replace collapse tuple in tuple 1
+                         */
+                        var tupidx_1 = pRelation.tupes.IndexOf(tup1);
+                        var tupidx_2 = pRelation.tupes.IndexOf(tup2);
+                        PTuple t1;
+                        if (tupidx_1 != -1)
+                            t1 = pRelation.tupes.ElementAt(tupidx_1);
+
+                        if (tupidx_2 != -1)
+                            pRelation.tupes.Remove(pRelation.tupes.ElementAt(tupidx_2));
+
+                        t1 = collapsedTuple;
+
+                    }
+                }
+            }
+
+            return pRelation;
+        }
+        private void e_Val_Equivalent(ref PRelation pRelation, IList<PAttribute> pAttributes)
+        {
+            var length = pRelation.tupes.Count;
+            for (int i = 0; i < pRelation.tupes.Count; i++)
+            {
+                for (int j = 0; j < pRelation.tupes.Count; j++)
+                {
+                    if (i != j && check_e_Val_eql(pRelation.tupes[i], pRelation.tupes[j], pAttributes))
+                    {
+                        pRelation.tupes[i] = getTupleCollapse(pRelation.tupes[i], pRelation.tupes[j], pAttributes);
+                        pRelation.tupes.RemoveAt(j);
+                        i = -1;
+                        break;
+                    }
+                }
+            }
+        }
+        private PTuple getTupleCollapse(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var reTuple = new PTuple();
+            //get val
+            foreach (var att in pAttributes)
+            {
+                #region 
+                float p = 1f;
+                reTuple.valueSet.Add(att.AttributeName, getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName));
+                #endregion
+            }
+            //get Prob
+
+            var prop1 = new ElemProb(pTuple_1.Ps);
+            var prop2 = new ElemProb(pTuple_2.Ps);
+            var strategy = Parameter.curStrategy;
+            switch (strategy.Substring(strategy.IndexOf("_")+1))
+            {
+                
+                case "ig": reTuple.Ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                case "in": reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
+                case "me": reTuple.Ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                default:
+                    MessageError = "Invalid Current Strategy: " + Parameter.curStrategy;
+                    break;
+            }
+
+            return reTuple;
+        }
+        private bool check_e_Val_eql(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var probs = new List<float>();
+            var eulerElem = new ElemProb(0,0);
+            foreach (var att in pAttributes)
+            {
+                #region 
+                //check equal
+                float p = 1f;
+                var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
+
+                if (!(innerSet is null) && innerSet.Count != 0)
+                    if (probs.Count > 0)
+                    {
+                        probs.Add(p);
+                        eulerElem = calProp_e(ref probs);
+                    }
+                    else probs.Add(p);
+                else
+                    return false;
+
+                #endregion
+            }
+
+            return Parameter.eulerThreshold <= eulerElem.lowerBound && eulerElem.upperBound >= Parameter.eulerThreshold;
+        }
+
+        private ElemProb calProp_e(ref List<float> probs)
+        {
+            var first = probs.First();
+            probs.Remove(first);
+            var second = probs.First();
+            probs.Remove(second);
+
+            var prop1 = new ElemProb(first,first);
+            var prop2 = new ElemProb(second,second);
+            ElemProb ps = new ElemProb(0,0); 
+            switch (Parameter.curStrategy)
+            {
+                case "⊗_ig": ps = new ElemProb(Math.Max(0, prop1.lowerBound + prop2.lowerBound - 1), Math.Min(prop1.upperBound, prop2.upperBound)); break;
+                case "⊗_in": ps = new ElemProb(prop1.lowerBound * prop2.lowerBound, prop1.upperBound * prop2.upperBound); break;
+                case "⊗_me": ps = new ElemProb(0, 0); break;
+                case "⊕_ig": ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                case "⊕_in": ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
+                case "⊕_me": ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                default:
+                    MessageError = "Invalid Current Strategy: " + Parameter.curStrategy;
+                    break;
+            }
+            return ps;
+        }
+
         private PRelation Descartes()
         {
             var relation = new PRelation();
@@ -780,7 +910,6 @@ namespace PRDB_Sqlite.Sevice.CommonService
                         //discard a duplicate attr
                         tuple.valueSet.Remove(attr2.AttributeName);
                     }
-
                 }
             }
 
@@ -799,7 +928,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 foreach (var item_set2 in set2)
                 {
-                    if (SelectCondition.EQUAL(item_set1, item_set2, typeName))
+                    //string is err 
+                    if (SelectCondition.EQUAL(item_set1.Trim(), item_set2.Trim(), typeName))
                     {
                         interSet.Add(item_set1);
                     }

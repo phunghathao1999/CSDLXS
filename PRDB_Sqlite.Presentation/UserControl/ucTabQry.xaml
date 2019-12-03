@@ -8,9 +8,10 @@
              KeyDown="UserControl_KeyDown"
              d:DesignHeight="450" d:DesignWidth="800">
     <ScrollViewer>
-    <StackPanel Name="stpQry">
 
-        <StackPanel x:Name="stpTbl"
+        <StackPanel Name="stpQry">
+
+            <StackPanel x:Name="stpTbl"
             RelativePanel.AlignRightWithPanel="True"
             RelativePanel.AlignLeftWithPanel="True"
             Orientation="Horizontal">
@@ -42,14 +43,16 @@
         <StackPanel Name="stpData">
             <Border Grid.Row="1"
                 Grid.Column="1"
-                Opacity="0.7"
-                BorderBrush="DarkCyan" 
-                BorderThickness="20,1,20,2">
+                Opacity="1"
+                BorderBrush="DarkViolet" 
+                    CornerRadius="1"
+                BorderThickness="20,2,20,5">
                 <TextBlock x:Name="txtMessage"
-                       HorizontalAlignment="Center"
-                       FontFamily="Consolas"
-                           Foreground="Black"
-                           IsEnabled="False">
+                            HorizontalAlignment="Center"
+                            FontFamily="Consolas"
+                            FontSize="13"
+                            Foreground="OrangeRed"
+                            IsEnabled="False">
                 </TextBlock>
             </Border>
                 <ToolBarTray x:Name="tbDtgAction" Orientation="Horizontal">
@@ -68,13 +71,15 @@
                       HorizontalContentAlignment="Center"
                       RelativePanel.AlignLeftWithPanel="True"
                       RelativePanel.AlignRightWithPanel="True"
-                      GridLinesVisibility="Vertical">
+                      GridLinesVisibility="All">
             </DataGrid>
                     
                 </StackPanel>
             </StackPanel>
+
     </StackPanel>
     </ScrollViewer>
+
 </UserControl>
 
 <!--<StackPanel>

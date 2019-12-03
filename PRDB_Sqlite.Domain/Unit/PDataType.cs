@@ -115,7 +115,20 @@ namespace PRDB_Sqlite.Domain.Unit
             }
             return false;
         }
-
+        public bool CheckDataTypeOfVarLs(string rawVal)
+        {
+            rawVal = rawVal.Replace("{", "");
+            rawVal = rawVal.Replace("}", "");
+            if (rawVal.IndexOf(',') > -1)
+            {
+                var list = rawVal.Split(',').Select(e => e.Trim());
+                foreach (var item in list)
+                    if (!CheckDataTypeOfVariables(item)) return false;
+            }
+            else
+                return CheckDataTypeOfVariables(rawVal);
+            return true;
+        }
         public bool CheckDataTypeOfVariables(string value)
         {
             try

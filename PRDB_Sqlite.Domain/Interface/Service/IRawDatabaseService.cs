@@ -28,6 +28,14 @@ namespace PRDB_Sqlite.Domain.Interface.Service
         bool InsertTupleData(PRelation pRelation);
         PRelation Update(PRelation pRelation);
         PRelation Delete(PRelation pRelation);
+        PTuple GetTuplebyId(ref PRelation rel, string tupId);
+        bool DeleteTupleById(PRelation pRelation, PTuple pTuple);
+
+        //Tuple sv
+        PTuple Insert(PTuple pTuple, PRelation pRelation);
+        PTuple Update(PTuple pTuple, PRelation pRelation,String key);
+
+
 
         //QuerySv
 

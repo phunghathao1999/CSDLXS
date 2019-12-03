@@ -507,7 +507,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
         {
             ElemProb prop = null;
 
-            int indexOne, indexTwo, countValue, countSecValue;
+            int indexOne, indexTwo, countValue;
             PTuple tuple = this.tuple;
             //string typenameOne;
             //string typenameTwo;
@@ -626,6 +626,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                             }
                             break;
                         }
+                        else prop = new ElemProb(0, 0);
                     }
 
                 }
@@ -669,11 +670,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 string[] arr = value.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
                 int count = 0;
-                //foreach (string item in this.relations.ListRenameRelation)
-                //{
-                //    if (item != arr[0])
-                //        count++;
-                //}
+               
                 if (count == 2)
                 {
                     MessageError = String.Format("The multi-part identifier {0} could not be bound.", value);
@@ -719,7 +716,6 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
                 return indexAttributeS;
             }
-
         }
         #endregion
 
