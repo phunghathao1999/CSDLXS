@@ -133,9 +133,6 @@ namespace PRDB_Sqlite.Domain.Unit
         {
             try
             {
-
-
-
                 this.GetDataType();
 
 
@@ -180,7 +177,6 @@ namespace PRDB_Sqlite.Domain.Unit
                     V = V.Replace(" ", "");
                 }
 
-
                 string[] seperator = { "||" };
                 string[] temp = V.Split(seperator, StringSplitOptions.RemoveEmptyEntries);
 
@@ -193,10 +189,6 @@ namespace PRDB_Sqlite.Domain.Unit
                     values.Add(temp[i].Substring(j1 + 1, j2 - j1 - 1).Trim());
 
                 }
-
-
-
-
                 foreach (object value in values)
                 {
                     switch (this.DataType)

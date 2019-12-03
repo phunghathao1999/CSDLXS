@@ -28,13 +28,13 @@ namespace PRDB_Sqlite.Presentation.Module
             if (db == null) db = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
             return instance == null ? instance = new MdlTreeView(db) : instance;
         }
-        public StackPanel GetStackPanelRoot1(String RootName , String urlImage)
+        public StackPanel GetStackPanelRoot1(String RootName , String urlImage , int sizeX = 20, int sizeY = 15)
         {
             //Image schema
             StackPanel stpSchema = new StackPanel() { Orientation = Orientation.Horizontal };
             Image imageShema = new Image() { Source = new BitmapImage(new Uri(urlImage, UriKind.RelativeOrAbsolute)) };
-            imageShema.Height = 20;
-            imageShema.Width = 20;
+            imageShema.Height = sizeY;
+            imageShema.Width = sizeX;
             TextBlock txtSchema = new TextBlock() { Text = RootName };
             stpSchema.Children.Add(imageShema);
             stpSchema.Children.Add(txtSchema);
@@ -45,7 +45,7 @@ namespace PRDB_Sqlite.Presentation.Module
         {
 
             //make a Treeview
-            StackPanel stpDatabse = GetStackPanelRoot1("   " + this.pDatabase.DbName.ToString(), @"assets\Images\databseTree.jpg");
+            StackPanel stpDatabse = GetStackPanelRoot1("   " + this.pDatabase.DbName.ToString(), @"assets\Images\Icondatabase.png", 20 , 20);
             //make a root
             var root = new TreeViewItem();
             root.Header = stpDatabse;
@@ -55,12 +55,12 @@ namespace PRDB_Sqlite.Presentation.Module
            // root.FontWeight = FontWeights.Bold;
             root.FontSize = 14;
 
-            StackPanel stpSchema = GetStackPanelRoot1("   Schema", @"assets\Images\tableTree.png");
+            StackPanel stpSchema = GetStackPanelRoot1("   Schema", @"assets\Images\iconFoldel.jpg");
             //fetch the Schemas
             var schLst = new TreeViewItem() { Header = stpSchema, ToolTip = String.Format("rows", this.pDatabase.Schemas.Count) };
             foreach (PSchema item in this.pDatabase.Schemas)
             {
-                StackPanel stpSchemaItem = GetStackPanelRoot1("   " + item.SchemaName.ToUpper().ToString(), @"assets\Images\tableTree.png");
+                StackPanel stpSchemaItem = GetStackPanelRoot1("   " + item.SchemaName.ToUpper().ToString(), @"assets\Images\iconFoldel.jpg");
                 var curSch = new TreeViewItem() { Header = stpSchemaItem, ToolTip = String.Format("{0} rows", item.Attributes.Count), Uid = item.id.ToString()/*, Foreground = Brushes.YellowGreen*/ };
                 curSch.MouseDoubleClick += (s, e) =>
                 {
@@ -98,12 +98,12 @@ namespace PRDB_Sqlite.Presentation.Module
             };
             root.Items.Add(schLst);
 
-            StackPanel stpRelation = GetStackPanelRoot1("   Relations", @"assets\Images\attribute.png");
+            StackPanel stpRelation = GetStackPanelRoot1("   Relations", @"assets\Images\iconFoldel.jpg");
             //fetch the Relations
             var rlLst = new TreeViewItem() { Header = stpRelation, ToolTip = String.Format("{0} rows", this.pDatabase.Relations.Count) };
             foreach (PRelation item in this.pDatabase.Relations)
             {
-                StackPanel stpRelationFile = GetStackPanelRoot1("   " + item.relationName.ToUpper().ToString(), @"assets\Images\attribute.png");
+                StackPanel stpRelationFile = GetStackPanelRoot1("   " + item.relationName.ToUpper().ToString(), @"assets\Images\attributeTree.png");
                 var rel = new TreeViewItem()
                 {
                     Header = stpRelationFile,
@@ -122,7 +122,7 @@ namespace PRDB_Sqlite.Presentation.Module
             };
             root.Items.Add(rlLst);
             //fetch the Query
-            StackPanel stpQuery = GetStackPanelRoot1("   Queries", @"assets\Images\queryTree.png");
+            StackPanel stpQuery = GetStackPanelRoot1("   Queries", @"assets\Images\iconFoldel.jpg");
             var qrLst = new TreeViewItem() { Header = stpQuery, ToolTip = String.Format("{0} rows", this.pDatabase.Queries.Count) };
             foreach (PQuery item in this.pDatabase.Queries)
             {

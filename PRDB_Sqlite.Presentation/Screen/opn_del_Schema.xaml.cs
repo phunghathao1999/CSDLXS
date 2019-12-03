@@ -30,13 +30,26 @@ namespace PRDB_Sqlite.Presentation.Screen
             this.mode = which;
         }
 
+        public Border getBorderButton()
+        {
+             Border borderbtn = new Border();
+            borderbtn.Width = 60;
+            borderbtn.CornerRadius = new CornerRadius(5);
+            borderbtn.Background = Brushes.LightBlue;
+            borderbtn.BorderBrush = Brushes.Black;
+            borderbtn.BorderThickness = new Thickness(1,1,1,1);
+            return borderbtn;
+        }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            Style roundButton_Style = FindResource("RoundButton_Style") as Style;
+            this.btnMain.Width = 60;
+            this.btnMain.Style = roundButton_Style;
             if ("opnsch".Equals(this.mode, StringComparison.CurrentCultureIgnoreCase))
             {
                 this.Title = "Open Schema";
                 this.grpMain.Header = "Select Schema";
-                this.btnMain.Content = "Open Schema";
+                this.btnMain.Content = "Open";
 
 
                 this.cbx.ItemsSource = StaticParams.currentDb.Schemas.ToList();
@@ -48,7 +61,7 @@ namespace PRDB_Sqlite.Presentation.Screen
             {
                 this.Title = "Open Relation";
                 this.grpMain.Header = "Select Relation";
-                this.btnMain.Content = "Open Relation";
+                this.btnMain.Content = "Open";
 
                 this.cbx.ItemsSource = StaticParams.currentDb.Relations.ToList();
                 this.cbx.DisplayMemberPath = "relationName";
@@ -58,7 +71,7 @@ namespace PRDB_Sqlite.Presentation.Screen
             {
                 this.Title = "Delte Schema";
                 this.grpMain.Header = "Select Schema";
-                this.btnMain.Content = "Delete Schema";
+                this.btnMain.Content = "Delete";
 
                 this.cbx.ItemsSource = StaticParams.currentDb.Schemas.ToList();
                 this.cbx.DisplayMemberPath = "SchemaName";
@@ -68,11 +81,12 @@ namespace PRDB_Sqlite.Presentation.Screen
             {
                 this.Title = "Delete Relation";
                 this.grpMain.Header = "Select Relation";
-                this.btnMain.Content = "Delete Relation";
+                this.btnMain.Content = "Delete";
 
                 this.cbx.ItemsSource = StaticParams.currentDb.Relations.ToList();
                 this.cbx.DisplayMemberPath = "relationName";
             }
+
             
             this.lblHeader.Content = this.Title;
         }

@@ -8,19 +8,21 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="ToolWindow"
-        Title="EditingSchema" Height="470" Width="800">
+        Title="EditingSchema" MinWidth="800" MinHeight="596">
     <DockPanel >
-        <StackPanel Background="LightSteelBlue">
+        <StackPanel Background="#FFDAE3EC">
 
-            <Label Content="Create New Schema" HorizontalAlignment="Center" FontSize="50" FontWeight="DemiBold" />
+            <Label Content="Edit Schema" HorizontalAlignment="Center" FontFamily="Bookman Old Style" FontSize="50" FontWeight="DemiBold" />
             <Label/>
-            <GroupBox Header="Schema Info" Foreground="Blue" FontWeight="ExtraBold">
+            <GroupBox Header="SCHEMA INFORMATION" FontWeight="ExtraBold" FontFamily="Times New Roman" FontSize="20" Padding="0,10" Margin="0,20,0,19">
                 <GroupItem>
                     
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Label  Content="Schema Name" Foreground="Black" FontWeight="SemiBold" />
+                        <Label  Content="Schema name:" Foreground="Black" FontWeight="SemiBold" />
                         <ComboBox x:Name="cbxSchName" MinWidth="200" HorizontalAlignment="Center" Foreground="Black" FontWeight="SemiBold"/>
-                        <Label Content="Current Name"  Foreground="Black" FontWeight="SemiBold"/>
+                        <Label/>
+                        <Label/>
+                        <Label Content="Current name:"  Foreground="Black" FontWeight="SemiBold"/>
                         <TextBox x:Name="txtName" Foreground="Black" MinWidth="200" FontWeight="SemiBold" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"/>
                     </StackPanel>
                     
@@ -28,8 +30,8 @@
             </GroupBox>
             <ToolBarTray>
                 <ToolBar>
-                    <Button x:Name="btnAddRow" Click="btnAddRow_Click" Content="Add New Row"/>
-                    <Button x:Name="btnDelRow" Click="btnDelRow_Click" Content="Delele Current Row"/>
+                    <Button x:Name="btnAddRow" Click="btnAddRow_Click" Content="Add New Row" FontFamily="Arial" FontWeight="Bold"/>
+                    <Button x:Name="btnDelRow" Click="btnDelRow_Click" Content="Delele Current Row" FontFamily="Arial" FontWeight="Bold"/>
                 </ToolBar>
             </ToolBarTray>
             <DataGrid x:Name="dtg"
@@ -66,10 +68,23 @@
             <StackPanel Orientation="Horizontal"
                        HorizontalAlignment="Center">
                 <Label/>
-                <Button x:Name="btnSave" Click="btnSave_Click" Padding="5" Content="Save" FontSize="20" Background="LightBlue"></Button>
+                <Button x:Name="btnSave" Click="btnSave_Click" BorderThickness="0" >
+                    <Button.Content>
+                        <Border Width="80" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                            <TextBlock Text="Save" FontSize="20" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                        </Border>
+                    </Button.Content>
+                </Button>
+                
                 <Label/>
-
-                <Button Name="btnCancel" Click="btnCancel_Click"  Padding="5" Content="Cancel" FontSize="20" Background="LightCoral"></Button>
+                <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0" >
+                    <Button.Content>
+                        <Border CornerRadius="5" Width="80"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                            <TextBlock Text="Cancel" FontSize="20" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                        </Border>
+                    </Button.Content>
+                </Button>
+                
             </StackPanel>
             <Label/>
             <Label/>

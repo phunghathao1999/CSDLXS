@@ -9,18 +9,46 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Loaded="Window_Loaded"
-        Title="opn_del_Schema" Height="200" Width="400" >
+        Title="opn_del_Schema" Height="250" Width="500" >
+    <Window.Resources>
+        <Style x:Key="RoundButton_Style" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Button.Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border CornerRadius="5" BorderThickness="1,1,1,1" Background="LightBlue" BorderBrush="Black">
+                                <TextBlock FontSize="18" Padding="5" Text="Accept" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
     <StackPanel>
-        <Label Name="lblHeader" Content="Replace Content" HorizontalAlignment="Center" FontSize="30" FontWeight="DemiBold"/>
-        <GroupBox x:Name="grpMain" Header="Replace Content">
-            <ComboBox Name="cbx" />
+        <Label Name="lblHeader" Content="Replace Content" HorizontalAlignment="Center" FontSize="32"  FontWeight="DemiBold"  FontFamily="Bookman Old Style" Margin="0,0,0,20"/>
+        <GroupBox x:Name="grpMain" Header="Replace Content" FontFamily="Times New Roman" FontWeight="Bold" Margin="0,0,0,20" FontSize="20" >
+            <ComboBox Name="cbx" FontWeight="Normal" Width="250"/>
         </GroupBox>
         <Label/>
         <StackPanel  HorizontalAlignment="Center" Orientation="Horizontal">
-            
-            <Button x:Name="btnMain" Click="btnMain_Click" Padding="5" Content="" Background="Aquamarine"/>
+            <Button x:Name="btnMain" Click="btnMain_Click" BorderThickness="0" >
+                <Button.Content>
+                    <Border Width="60" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <TextBlock FontSize="18" Padding="5" Text="Open"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    </Border>
+                </Button.Content>
+            </Button>
+            <!--<Button  Name="btnMain" Click="btnMain_Click" FontFamily="Times New Roman" FontSize="18" ></Button>-->
             <Label/>
-            <Button x:Name="btnCancel" Click="btnCancel_Click" Content="Cancel" Background="OrangeRed" Padding="5" />
+            <Label/>
+            <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0" >
+                <Button.Content>
+                    <Border CornerRadius="5" Width="60"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <TextBlock Text="Cancel" FontSize="18" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    </Border>
+                </Button.Content>
+            </Button>
         </StackPanel>
     </StackPanel>
 </Window>

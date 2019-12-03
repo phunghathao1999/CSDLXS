@@ -90,6 +90,14 @@
     </ApplicationDefinition>
     <Compile Include="Module\MdlRContent.cs" />
     <Compile Include="Module\MdlTreeView.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screen\AddingNewRelation.xaml.cs">
       <DependentUpon>AddingNewRelation.xaml</DependentUpon>
     </Compile>
@@ -108,6 +116,10 @@
     <Compile Include="Screen\opn_del_Schema.xaml.cs">
       <DependentUpon>opn_del_Schema.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\CloseableHeader.xaml.cs">
+      <DependentUpon>CloseableHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TabQuery.cs" />
     <Compile Include="UserControl\ucCETuple.xaml.cs">
       <DependentUpon>ucCETuple.xaml</DependentUpon>
     </Compile>
@@ -129,6 +141,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Screen\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Screen\AddingNewRelation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +169,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControl\CloseableHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl\ucCETuple.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,11 +191,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -183,6 +198,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -225,9 +241,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\Images\databseTree.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\Images\attribute.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -237,6 +250,7 @@
     <Resource Include="assets\Images\exit.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="assets\Images\iconFoldel.jpg" />
     <Resource Include="assets\Images\key-icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -302,13 +316,39 @@
     <Resource Include="assets\Images\attributeTree.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\Images\schemaTree.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\Images\tableTree.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\Images\queryTree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\databseTree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\scheme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\relation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\SGU.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\Icondatabase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\IconExcute.png" />
+    <Resource Include="assets\Images\IconExcuteLine.png" />
+    <Resource Include="assets\Images\iconFind.png" />
+    <Resource Include="assets\Images\iconNewtab.png" />
+    <Resource Include="assets\Images\iconOpenTab.Png" />
+    <Resource Include="assets\Images\iconSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\AboutBG.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

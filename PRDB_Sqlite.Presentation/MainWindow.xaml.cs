@@ -224,13 +224,13 @@ namespace PRDB_Sqlite.Presentation
         private void Set_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(this.NumberTextBox.Text))
-                loadCurE_Click(sender,e);
+                loadCurE_Click(sender, e);
             var num = checkEuler(this.NumberTextBox.Text);
             if (num != null)
                 Parameter.eulerThreshold = (float)num;
             else
-                MessageBox.Show("Invalid Euler Threshold","NOtification",MessageBoxButton.OK,MessageBoxImage.Information);
-           Parameter.curStrategy =  this.cbxStrategy.SelectedItem.ToString();
+                MessageBox.Show("Invalid Euler Threshold", "NOtification", MessageBoxButton.OK, MessageBoxImage.Information);
+            Parameter.curStrategy = this.cbxStrategy.SelectedItem.ToString();
         }
 
         private void tvLeftNode_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -238,9 +238,17 @@ namespace PRDB_Sqlite.Presentation
             this.Refresh(false);
         }
 
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            var showAbout = new About();
+            showAbout.ShowDialog();
+            this.Refresh();
+        }
         private void tbMainTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
+      
     }
 }

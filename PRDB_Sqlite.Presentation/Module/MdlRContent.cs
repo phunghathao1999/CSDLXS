@@ -39,7 +39,7 @@ namespace PRDB_Sqlite.Presentation.Module
         {
             var reControl = new StackPanel() { Orientation = Orientation.Vertical };
             var dataGrid = new DataGrid();
-
+            
             switch (tab.Uid.ToString().ToLower())
             {
                 case "sch":

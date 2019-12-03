@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Windows;
 using System.Windows.Automation.Peers;
 using System.Windows.Automation.Provider;
@@ -75,9 +76,13 @@ namespace PRDB_Sqlite.Presentation.UserControl
             if (this.TbQry.Items.Count < 15)
             {
                 var name = String.Format("{0} {1}", "new Tab", this.TbQry.Items.Count + 1);
-                var newTAb = new TabItem() { Header = name };
-                newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
+                //var newTAb = new TabItem() { Header = name };
+                TabQuery newTAb = new TabQuery();
+                newTAb.Title = name;
+
+                newTAb.Content = new RichTextBox() {  MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
                 this.TbQry.Items.Add(newTAb);
+                newTAb.Focus();
             }
             else
                 MessageBox.Show("Too more Tab cause your bad experience");
@@ -244,6 +249,71 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     invokeProv.Invoke();
                     break;
                 default: break;
+            }
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new Microsoft.Win32.SaveFileDialog();
+            dialog.Filter = "Rich Text File (*.psql)|*.psql|All Files (*.*)|*.*";
+            dialog.FileName = "PRDB_Query.psql"; //set initial filename
+            if (dialog.ShowDialog() == true)
+            {
+                foreach (TabItem tabItem in TbQry.Items)
+                {
+                    if( tabItem.IsSelected)
+                    {
+                        using (var stream = dialog.OpenFile())
+                        {
+                            RichTextBox richTextBox = (RichTextBox)tabItem.Content;
+                            var range = new TextRange(richTextBox.Document.ContentStart,
+                                                      richTextBox.Document.ContentEnd);
+                            range.Save(stream, DataFormats.Text);
+                            var name = dialog.FileName;
+                            int index = name.LastIndexOf(@"\");
+                            tabItem.Header = name.Substring(index + 1, name.Length - index - 1);
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        private void btnOpnQry_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Filter = "Rich Text File (*.psql)|*.psql|All Files (*.*)|*.*";
+            if (dialog.ShowDialog() == true)
+            {
+                if (this.TbQry.Items.Count < 15)
+                {
+                    var name = dialog.FileName;
+                    int index = name.LastIndexOf(@"\");
+                    TabQuery newTAb = new TabQuery();
+                    newTAb.Title = name.Substring(index + 1, name.Length - index -1 );
+
+                    newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
+                    this.TbQry.Items.Add(newTAb);
+                    // read file
+                    FileStream fStream;
+                    RichTextBox richTextBox = (RichTextBox)newTAb.Content;
+                    var range = new TextRange(richTextBox.Document.ContentStart,
+                                              richTextBox.Document.ContentEnd);
+
+                    if (File.Exists(dialog.FileName))
+
+                    {
+                        fStream = new FileStream(dialog.FileName, FileMode.OpenOrCreate);
+
+                        range.Load(fStream, DataFormats.Text);
+
+                        fStream.Close();
+
+                    }
+                    newTAb.Focus();
+                }
+                else
+                    MessageBox.Show("Too more Tab cause your bad experience");
+                
             }
         }
     }
