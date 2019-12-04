@@ -75,9 +75,10 @@ namespace PRDB_Sqlite.Presentation.UserControl
         {
             if (this.TbQry.Items.Count < 15)
             {
-                var name = String.Format("{0} {1}", "new Tab", this.TbQry.Items.Count + 1);
+                var name = String.Format("{0} {1}", "New Tab", this.TbQry.Items.Count + 1);
                 //var newTAb = new TabItem() { Header = name };
                 TabQuery newTAb = new TabQuery();
+                newTAb.Height = 25;
                 newTAb.Title = name;
 
                 newTAb.Content = new RichTextBox() {  MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };

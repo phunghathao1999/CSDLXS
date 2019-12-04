@@ -9,6 +9,22 @@
              BorderThickness="2"
              Margin="5"
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="TabButton">
+            <Setter Property="Background" Value="#FF5AF711" />
+            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="2,2,2,2" Background="#FFB5DEFB" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
     <ScrollViewer>
     <StackPanel>
         <ToolBarTray>
@@ -20,19 +36,19 @@
                 <Button Content="Reload Value" Visibility="Collapsed"/>
             </ToolBar>
         </ToolBarTray>
-        <GroupBox Header="Infomation">
+        <GroupBox Header="Infomation" FontSize="15">
             <StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Attribute Name:" FontSize="15"/>
-                    <Label x:Name="txtInfo" FontSize="15" Foreground="Blue"/>
+                <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                    <Label Content="Attribute Name:" FontSize="13"/>
+                    <Label x:Name="txtInfo" FontSize="13" Foreground="Blue"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Is Primary Key:" FontSize="15"/>
-                    <CheckBox x:Name="chkPri" Margin="10" Foreground="Blue" IsChecked="False"/>
+                    <StackPanel Orientation="Horizontal" Margin="30,0,0,0" Height="33">
+                    <Label Content="Is Primary Key:" FontSize="13"/>
+                        <CheckBox x:Name="chkPri" Margin="10" Height="15" Foreground="Blue" IsEnabled="False" IsChecked="False"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Data Type:" FontSize="15"/>
-                    <Label x:Name="txtDataType" FontSize="15" Foreground="Blue" />
+                    <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                    <Label Content="Data Type:" FontSize="13"/>
+                    <Label x:Name="txtDataType" FontSize="13" Foreground="Blue" />
                 </StackPanel>
                 
             </StackPanel>
@@ -43,7 +59,7 @@
                          FontSize="14"
                          MinHeight="100"                         
                          FontFamily="Consolas"
-                         Margin="10,0,10,10"
+                         Margin="5,10,10,10"
                          MaxHeight="100"
                          Background="LavenderBlush"
                          IsReadOnly="True"
@@ -75,10 +91,10 @@
             </DataGrid>
             <StackPanel Orientation="Horizontal"
                         Margin="10"
-                        FlowDirection="LeftToRight">
+                        FlowDirection="LeftToRight" HorizontalAlignment="Center">
                 <Button x:Name="btnCommitEdit"
                         Click="btnCommitEdit_Click"
-                        Content="Accept Changes"/>
+                        Content="Accept Changes"  Height="25" Style="{StaticResource TabButton }"/>
             </StackPanel>
         </StackPanel>
         <ToolBarTray Orientation="Horizontal" FlowDirection="RightToLeft">

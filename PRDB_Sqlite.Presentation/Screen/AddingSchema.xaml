@@ -14,13 +14,13 @@
     <DockPanel >
         <StackPanel Background="#FFDAE3EC">
 
-            <Label Content="Create New Schema" HorizontalAlignment="Center" FontSize="50" FontFamily="Bookman Old Style" FontWeight="Bold" />
+            <Label Content="Create New Schema" HorizontalAlignment="Center" FontSize="50" FontFamily="Bookman Old Style" FontWeight="Normal"/>
             <Label/>
-            <GroupBox Header="SCHEMA INFORMATION"  FontWeight="ExtraBold" FontFamily="Times New Roman" FontSize="20" Padding="0,10" Margin="0,20,0,19">
+            <GroupBox Header="SCHEMA INFORMATION"  FontWeight="Normal" FontFamily="Arial" FontSize="20" Padding="0,10" Margin="0,20,0,19">
                 <GroupItem Width="600" Padding="0">
                     <StackPanel Orientation="Horizontal">
-                        <Label  Content="Schema Name:"  FontWeight="Bold" />
-                        <TextBox x:Name="txtSchName"   MinWidth="500" MaxWidth="500" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" FontWeight="Normal" VerticalAlignment="Center" />
+                        <Label  Content="Schema Name:"  FontWeight="Normal"  FontFamily="Arial"/>
+                        <TextBox x:Name="txtSchName" FontSize="18"  FontFamily="Arial"  MinWidth="500" MaxWidth="500" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" FontWeight="Normal" VerticalAlignment="Center" />
                     </StackPanel>
                 </GroupItem>
             </GroupBox>

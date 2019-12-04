@@ -7,15 +7,20 @@
              mc:Ignorable="d" 
              d:DesignHeight="23" d:DesignWidth="81" Margin="0">
     <Grid>
-        <Button Content="X"  Height="19" HorizontalAlignment="Right" Margin="0,3,4,0" 
+        <Button  Height="15" HorizontalAlignment="Right" Margin="0,3,1,6" 
 
-          Name="button_close" VerticalAlignment="Top" Width="20" FontFamily="Courier" 
+          Name="button_close" VerticalAlignment="Center" Width="15"  FontFamily="Times New Roman" 
 
-          FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+          FontWeight="Normal" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
 
           FontStretch="Normal" Visibility="Visible" 
 
-          FontSize="14" Padding="0" ToolTip="Close"/>
+          FontSize="12" Padding="0" ToolTip="Close">
+            <StackPanel>
+                <Image Source="..\assets\Images\exit.ico" />
+                <TextBlock></TextBlock>
+            </StackPanel>
+        </Button>
         <Label Content="TabItem"  Height="23" HorizontalAlignment="Left" 
 
           Margin="0,0,0,0" Name="label_TabTitle" VerticalAlignment="Top" 

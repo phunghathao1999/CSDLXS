@@ -12,18 +12,18 @@
     <DockPanel >
         <StackPanel Background="#FFDAE3EC">
 
-            <Label Content="Edit Schema" HorizontalAlignment="Center" FontFamily="Bookman Old Style" FontSize="50" FontWeight="DemiBold" />
+            <Label Content="Edit Schema" HorizontalAlignment="Center" FontFamily="Bookman Old Style" FontSize="50" FontWeight="Normal" />
             <Label/>
-            <GroupBox Header="SCHEMA INFORMATION" FontWeight="ExtraBold" FontFamily="Times New Roman" FontSize="20" Padding="0,10" Margin="0,20,0,19">
+            <GroupBox Header="SCHEMA INFORMATION" FontWeight="Normal"  FontFamily="Arial" FontSize="20" Padding="0,10" Margin="0,20,0,19">
                 <GroupItem>
                     
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Label  Content="Schema name:" Foreground="Black" FontWeight="SemiBold" />
-                        <ComboBox x:Name="cbxSchName" MinWidth="200" HorizontalAlignment="Center" Foreground="Black" FontWeight="SemiBold"/>
+                        <Label  Content="Schema name:"  FontFamily="Arial" Foreground="Black" FontWeight="Normal" />
+                        <ComboBox x:Name="cbxSchName"  FontFamily="Arial" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" Foreground="Black"  VerticalAlignment="Center"/>
                         <Label/>
                         <Label/>
-                        <Label Content="Current name:"  Foreground="Black" FontWeight="SemiBold"/>
-                        <TextBox x:Name="txtName" Foreground="Black" MinWidth="200" FontWeight="SemiBold" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"/>
+                        <Label Content="Current name:"  FontFamily="Arial" Foreground="Black" FontWeight="Normal"/>
+                        <TextBox x:Name="txtName"   FontFamily="Arial" Foreground="Black" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Center"/>
                     </StackPanel>
                     
                 </GroupItem>
