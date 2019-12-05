@@ -154,7 +154,6 @@
                             </Button.Content>
                         </Button>                    
                     </RibbonGroup>
-                    </RibbonGroup>
                 </RibbonTab>
 <RibbonTab Header="Query" KeyTip="Q" >
                     <RibbonGroup ToolTipTitle="SET UP PROJECTION">

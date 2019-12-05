@@ -45,8 +45,12 @@ namespace PRDB_Sqlite.Presentation.UserControl
         {
             var rate = System.Windows.SystemParameters.PrimaryScreenHeight / 23;
             this.rbxQry.MinHeight = 4 * rate;
+            this.rbxQry.MaxHeight = 4 * rate;
             this.txtMessage.MinHeight = rate;
+            this.txtMessage.MaxHeight = rate;
+
             this.dtgDataResult.MinHeight = 10 * rate;
+            this.dtgDataResult.MaxHeight = 10 * rate;
             this.rbxQry.SetValue(Paragraph.LineHeightProperty, 0.5);
         }
 
