@@ -13,19 +13,19 @@
     <StackPanel Margin="0,0,4,-16" >
         <Label Content="INPUT DATATYPE" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="ExtraBold" FontSize="30"/>
         <Label />
-        <StackPanel Orientation="Horizontal" Margin="30,5,5,5">
-            <Label Content="Data Type" FontSize="20" RelativePanel.AlignLeftWithPanel="True"/>
+        <StackPanel Orientation="Horizontal" Margin="15,5,5,5">
+            <Label Content="Data Type" FontSize="20" RelativePanel.AlignLeftWithPanel="True" FontWeight="Bold"/>
             <ComboBox Name="cbxDtt" Height="30" Width="200" SelectionChanged="cbxDtt_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
         <Label/>
-        <GroupBox Header="Details" Margin="10,20,10,10" FontSize="20" Foreground="#FF090A0A">
+        <GroupBox Header="Details" Margin="10,20,10,10"  FontSize="20" Foreground="#FF090A0A" FontWeight="Bold">
             <StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20,10,10,10"> 
-                <Label Content="Data Name"  FontSize="15"/>
-                <TextBox Name="txtTypeName" IsEnabled="False" FontSize="14" Width="310" />
+                <Label Content="Data Name:"   FontSize="15" FontWeight="Normal"/>
+                    <TextBox Name="txtTypeName" IsEnabled="False" FontWeight="Normal" FontSize="12" Width="310" Height="25" />
                 <Label />
             </StackPanel>
-            <RichTextBox Name="rbValls" Height="90" Margin="5,10,5,5" IsEnabled="False" ></RichTextBox>
+                <RichTextBox Name="rbValls" Height="90" FontSize="12" FontWeight="Normal" Margin="5,10,5,5" IsEnabled="False" ></RichTextBox>
             </StackPanel>
 
         </GroupBox>

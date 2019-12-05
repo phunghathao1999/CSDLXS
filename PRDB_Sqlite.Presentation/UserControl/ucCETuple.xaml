@@ -29,10 +29,20 @@
     <StackPanel>
         <ToolBarTray>
             <ToolBar>
-                <Button x:Name="btnClr" Content="Clear" Click="btnClr_Click"/>
-                <Label/>
-                <Button x:Name="btnView" Content="Change View Edit" Click="btnView_Click"/>
-                <Label/>
+                    <Button x:Name="btnClr"  Click="btnClr_Click" Width="58">
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/clear-icon.png"/>
+                            <TextBlock Text=" Clear" FontSize="12" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Separator/>
+                    <Button x:Name="btnView"  Click="btnView_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/changeView.png"/>
+                            <TextBlock Text=" Change View Edit" FontSize="12" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Label/>
                 <Button Content="Reload Value" Visibility="Collapsed"/>
             </ToolBar>
         </ToolBarTray>
@@ -61,7 +71,7 @@
                          FontFamily="Consolas"
                          Margin="5,10,10,10"
                          MaxHeight="100"
-                         Background="LavenderBlush"
+                         Background="#FFF7F2D2"
                          IsReadOnly="True"
                          Visibility="Visible">
                 <RichTextBox.Resources>
@@ -99,8 +109,13 @@
         </StackPanel>
         <ToolBarTray Orientation="Horizontal" FlowDirection="RightToLeft">
             <ToolBar>
-                <Button x:Name="btnApply" Content="Apply to DB" Click="btnApply_Click"/>
-            </ToolBar>
+                    <Button x:Name="btnApply"  Click="btnApply_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/savedb (2).ico"/>
+                            <TextBlock Text=" Apply to DB" FontSize="12" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                </ToolBar>
         </ToolBarTray>
         <TextBlock x:Name="txtMessage" MinHeight="100"/>
     </StackPanel>

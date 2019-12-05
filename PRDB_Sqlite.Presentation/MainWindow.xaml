@@ -156,7 +156,7 @@
                         </Button>
                     </RibbonGroup>
                 </RibbonTab>
-                <RibbonTab Header="Query" KeyTip="Q" >
+                <RibbonTab Header="Query" KeyTip="Q" Opacity="1" Margin="0,5,0,0" >
                     <RibbonGroup ToolTipTitle="SET UP PROJECTION">
                         <Grid >
                             <Label Content="Prob Strategies"  Grid.Column="0" Grid.Row="0"/>
@@ -187,13 +187,12 @@
                                     Click="loadCurE_Click" Width="100" Height="25" />
                             <Button Content="Set" Name="Set"
                                     Grid.Column="0"
-                                    Background="#FF84C8F7"
+                                    Background="#FF3CFD5F"
                                     Grid.Row="0"
                                     Click="Set_Click" Width="100" Height="25"/>
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="150"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30"/>
@@ -203,8 +202,75 @@
                         </Grid>
                         
                     </RibbonGroup>
-
+                    <RibbonGroup ToolTipTitle="Independence"  Header="Independence">
+                        <Grid >
+                            <Button Content="⊗_in(Conjunction) " Name="Con_in"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Background="#FF84C8F7"
+                                    Click="Con_in_Click" Width="120" Height="25"/>
+                            <Button Content="⊕_in(Disjunction)" Name="Dis_in"
+                                    Grid.Column="0"
+                                    Background="#FF84C8F7"
+                                    Grid.Row="1"
+                                    Click="Dis_in_Click" Width="120" Height="25"/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </RibbonGroup>
+                    <RibbonGroup ToolTipTitle="Ignorance" Header="Ignorance">
+                        <Grid >
+                            <Button Content="⊗_ig(Conjunction)" Name="Con_ig"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Background="#FF84C8F7"
+                                    Click="Con_ig_Click" Width="120" Height="25" />
+                            <Button Content="⊕_ig(Disjunction)" Name="Dis_ig"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    Background="#FF84C8F7"
+                                    Click="Dis_ig_Click" Width="120" Height="25" />
+                          
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </RibbonGroup>
+                    <RibbonGroup ToolTipTitle="Mutual Exclusion" Header="Mutual Exclusion">
+                        <Grid >
+                            <Button Content="⊗_me(Conjunction)" Name="Con_me"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Background="#FF84C8F7"
+                                    Click="Con_me_Click" Width="120" Height="25" />
+                            <Button Content="⊕_me(Disjunction)" Name="Dis_me"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    Background="#FF84C8F7"
+                                    Click="Dis_me_Click" Width="120" Height="25" />
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </RibbonGroup>
                 </RibbonTab>
+                
             </Ribbon>
 
         </StackPanel>

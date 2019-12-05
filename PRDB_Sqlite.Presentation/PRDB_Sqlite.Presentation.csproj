@@ -350,5 +350,9 @@
   <ItemGroup>
     <Resource Include="assets\AboutBG.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\changeView.png" />
+    <Resource Include="assets\Images\clear-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

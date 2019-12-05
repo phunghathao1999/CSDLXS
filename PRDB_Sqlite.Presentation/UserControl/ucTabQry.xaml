@@ -67,7 +67,7 @@
             
             <TabControl Name="TbQry">
 
-                    <TabItem Header="New Tab 1"  Margin="0,0,0,0" Height="40"  Name="label_TabTitle" VerticalAlignment="Bottom" FontFamily="Courier" FontSize="14" >
+                    <TabItem Header="New Tab 1"  Margin="0,0,0,0" Height="25"  Name="label_TabTitle" VerticalAlignment="Bottom" FontFamily="Courier" FontSize="14" >
                         <RichTextBox Name="rbxQry"
                                  FontFamily="Courier"
                                  FontSize="13">

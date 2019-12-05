@@ -70,7 +70,22 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     foreach (var col in this.dtgDataResult.Columns) col.Width = new DataGridLength(1.0, DataGridLengthUnitType.Star);
 
         }
+        private void AddStrategies( String text)
+        {
+            foreach (TabItem tabItem in this.TbQry.Items)
+            {
+                if (tabItem.IsSelected)
+                {
+                        RichTextBox richTextBox = (RichTextBox)tabItem.Content;
+                    TextPointer tp = richTextBox.CaretPosition;
 
+                    tp = tp.GetNextInsertionPosition(LogicalDirection.Forward);
+
+                    richTextBox.Selection.Select(richTextBox.CaretPosition, tp);
+
+                }
+            }
+        }
         private void btnNewtab_Click(object sender, RoutedEventArgs e)
         {
             if (this.TbQry.Items.Count < 15)
