@@ -22,20 +22,20 @@
                 DockPanel.Dock="Top"
                 Background="Turquoise">
 
-            <Ribbon x:Name="tbtHeader" FontSize="13" FontWeight="Bold"  Height="Auto">
+            <Ribbon x:Name="tbtHeader" FontSize="13" FontWeight="Normal"  Height="Auto">
                 <Ribbon.HelpPaneContent>
                     <RibbonButton Margin="1,3,2,0"  Label="Help" ></RibbonButton>
                 </Ribbon.HelpPaneContent>
 
                 <Ribbon.ApplicationMenu>
-                    <RibbonApplicationMenu KeyTip="F">
-                        <RibbonApplicationMenuItem Header="Reload Db" FontWeight="Bold" Name="btnReload" Click="btnReload_Click" />
-                        <RibbonApplicationMenuItem Header="Exit" FontWeight="Bold" Name="btnExit" Click="btnExit_Click"/>
-                        <RibbonApplicationMenuItem Header="About" FontWeight="Bold" Name="btnAbout" Click="btnAbout_Click"/>
+                    <RibbonApplicationMenu KeyTip="F" FontWeight="Normal">
+                        <RibbonApplicationMenuItem Header="Reload Db"  Name="btnReload" Click="btnReload_Click" />
+                        <RibbonApplicationMenuItem Header="Exit"  Name="btnExit" Click="btnExit_Click"/>
+                        <RibbonApplicationMenuItem Header="About"  Name="btnAbout" Click="btnAbout_Click"/>
                     </RibbonApplicationMenu>
                 </Ribbon.ApplicationMenu>
 
-                <RibbonTab Header="Database" FontWeight="Bold"  KeyTip="D" HorizontalContentAlignment="Center"  >
+                <RibbonTab Header="Database" FontWeight="Normal"  KeyTip="D" HorizontalContentAlignment="Center"  >
                     <RibbonGroup Margin="1,10,1,1"  >
                         <Button Name="btnNewDb" Margin="0,0,0,-3" Click="btnNewDb_Click" Background="Transparent" BorderBrush="Transparent"   >
                             <Button.Content >
@@ -78,7 +78,7 @@
                     </RibbonGroup>
                 </RibbonTab>
 
-                <RibbonTab Header="Schema" FontWeight="Bold" KeyTip="S" >
+                <RibbonTab Header="Schema" FontWeight="Normal" KeyTip="S" >
                     <RibbonGroup Margin="1,10,1,1" Name="rgNewSch" Visibility="Collapsed">
                         <Button Name="btnNewSch" Margin="0,0,0,-3" Click="btnNewSch_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
@@ -117,13 +117,14 @@
                                     <TextBlock Text="Delete Schema"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
-                        </Button>                    </RibbonGroup>
+                        </Button>                   
+                    </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgClsSch" Visibility="Collapsed">
                         <Button x:Name="btnClsSch" Margin="0,0,0,-3" Content="Close Schema" Background="Transparent" BorderBrush="Transparent" />
                     </RibbonGroup>
                 </RibbonTab>
 
-                <RibbonTab  Header="Relation" FontWeight="Bold" KeyTip="R" >
+                <RibbonTab  Header="Relation" FontWeight="Normal" KeyTip="R" >
                     <RibbonGroup Margin="1,10,1,1" Name="rgNewRel" Visibility="Collapsed">
                         <Button Name="btnNewRel" Margin="0,0,0,-3" Click="btnNewRel_Click" Background="Transparent" BorderBrush="Transparent" >
                             <Button.Content>
@@ -152,42 +153,124 @@
                                     <TextBlock Text="Delete Relation"></TextBlock>
                                 </StackPanel>
                             </Button.Content>
-                        </Button>                    
+                        </Button>
                     </RibbonGroup>
                 </RibbonTab>
-<RibbonTab Header="Query" KeyTip="Q" >
+                <RibbonTab Header="Query" KeyTip="Q" Opacity="1" Margin="0,5,0,0" >
                     <RibbonGroup ToolTipTitle="SET UP PROJECTION">
-                        <Grid Margin="2">
-                            <Label Content="Prob Strategies" Grid.Column="0" Grid.Row="0"/>
-                            <ComboBox Name="cbxStrategy" Width="100" SelectedIndex="0" Grid.Column="1" Grid.Row="0"/>
+                        <Grid >
+                            <Label Content="Prob Strategies"  Grid.Column="0" Grid.Row="0"/>
+                            <ComboBox Name="cbxStrategy" Height="25" Width="100" SelectedIndex="0" Grid.Column="1" Grid.Row="0"/>
                             <Label Content="Euler Threshold" Grid.Column="0" Grid.Row="1"/>
                             <TextBox Name="NumberTextBox"
                                      HorizontalContentAlignment="Right"
-                                     Width="100" PreviewTextInput="NumberValidationTextBox" Grid.Column="1" Grid.Row="1"/>
-                            <Button Content="Reload" Name="loadCurE"
-                                    Grid.Column="1"
-                                    Grid.Row="2"
-                                    Click="loadCurE_Click"/>
-                            <Button Content="Set" Name="Set"
-                                    Grid.Column="0"
-                                    Background="AliceBlue"
-                                    Grid.Row="2"
-                                    Click="Set_Click"/>
-
+                                     Width="100" Height="25"  PreviewTextInput="NumberValidationTextBox" Grid.Column="1" Grid.Row="1"/>
+                         
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                         </Grid>
 
                     </RibbonGroup>
+                    <RibbonGroup ToolTipTitle="SET UP PROJECTION">
+                        <Grid >
+                            <Button Content="Reload" Name="loadCurE"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                     Background="#FFF7D884"
+                                    Click="loadCurE_Click" Width="100" Height="25" />
+                            <Button Content="Set" Name="Set"
+                                    Grid.Column="0"
+                                    Background="#FF3CFD5F"
+                                    Grid.Row="0"
+                                    Click="Set_Click" Width="100" Height="25"/>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                        
+                    </RibbonGroup>
+                    <RibbonGroup ToolTipTitle="Independence"  Header="Independence">
+                        <Grid >
+                            <Button Content="⊗_in(Conjunction) " Name="Con_in"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Background="#FF84C8F7"
+                                    Click="Con_in_Click" Width="120" Height="25"/>
+                            <Button Content="⊕_in(Disjunction)" Name="Dis_in"
+                                    Grid.Column="0"
+                                    Background="#FF84C8F7"
+                                    Grid.Row="1"
+                                    Click="Dis_in_Click" Width="120" Height="25"/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </RibbonGroup>
+                    <RibbonGroup ToolTipTitle="Ignorance" Header="Ignorance">
+                        <Grid >
+                            <Button Content="⊗_ig(Conjunction)" Name="Con_ig"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Background="#FF84C8F7"
+                                    Click="Con_ig_Click" Width="120" Height="25" />
+                            <Button Content="⊕_ig(Disjunction)" Name="Dis_ig"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    Background="#FF84C8F7"
+                                    Click="Dis_ig_Click" Width="120" Height="25" />
+                          
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </RibbonGroup>
+                    <RibbonGroup ToolTipTitle="Mutual Exclusion" Header="Mutual Exclusion">
+                        <Grid >
+                            <Button Content="⊗_me(Conjunction)" Name="Con_me"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Background="#FF84C8F7"
+                                    Click="Con_me_Click" Width="120" Height="25" />
+                            <Button Content="⊕_me(Disjunction)" Name="Dis_me"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    Background="#FF84C8F7"
+                                    Click="Dis_me_Click" Width="120" Height="25" />
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </RibbonGroup>
                 </RibbonTab>
+                
             </Ribbon>
 
         </StackPanel>
@@ -208,7 +291,7 @@
                 Name="rpnLContent"
                 Grid.Row="0" 
                 Grid.Column="0"
-                Background="Azure">
+                Background="White">
             <DockPanel RelativePanel.AlignRightWithPanel="True"
                        RelativePanel.AlignLeftWithPanel="True"
                        RelativePanel.AlignBottomWithPanel="True"
@@ -218,20 +301,19 @@
                       VerticalAlignment="Stretch" 
                       HorizontalAlignment="Stretch"
                       DockPanel.Dock="Top">
-                        <TreeView.Background>
+                        <!--<TreeView.Background>
                             <LinearGradientBrush Opacity="0.8" StartPoint="0.2,0.9" EndPoint="0.9,0.5">
                                 <GradientStop Color="LightBlue" Offset="0.6"/>
                                 <GradientStop Color="CornflowerBlue" Offset="0.5" />
                                 <GradientStop Color="DeepSkyBlue" Offset="0.3" />
                             </LinearGradientBrush>
-                        </TreeView.Background>
+                        </TreeView.Background>-->
                     </TreeView>
             </DockPanel>
         </RelativePanel>
                 
     <Border Grid.Row="0"
                 Grid.Column="1"
-                Opacity="0.7"
                 BorderBrush="DarkCyan" 
                 BorderThickness="1,1,1,3">
       <RelativePanel
@@ -259,48 +341,41 @@
             <Grid.Background>
               <LinearGradientBrush StartPoint="0.7,0.9" EndPoint="0.5,0.7">
                 <GradientStop Color="White" Offset="1" />
-                <GradientStop Color="LightGray" Offset="0.7" />
-                <GradientStop Color="Aqua" Offset="0.5" />
+                <GradientStop Color="White" Offset="0.7" />
+                 <GradientStop Color="White" Offset="0.5" />
               </LinearGradientBrush>
             </Grid.Background>
 
                             <RelativePanel Name="stpTabinfo"
                                     Grid.Column="0"
                                     Grid.Row="0" Grid.RowSpan="2">
-                                <RelativePanel.Background>
-                                    <LinearGradientBrush StartPoint="0.7,0.9" EndPoint="0.5,0.7">
-                                        <GradientStop Color="White" Offset="1" />
-                                        <GradientStop Color="LightGray" Offset="0.7" />
-                                        <GradientStop Color="Aqua" Offset="0.5" />
-                                    </LinearGradientBrush>
-                                </RelativePanel.Background>
                                 <TabControl
                   x:Name="tbMainTab"
                   RelativePanel.AlignTopWithPanel="True"
                   RelativePanel.AlignBottomWithPanel="True"
                   RelativePanel.AlignLeftWithPanel="True"
                   RelativePanel.AlignRightWithPanel="True">
-                                    <TabItem Name="tbiSch" Height="35" Uid="sch">
+                                    <TabItem Name="tbiSch" Height="25" Uid="sch">
                                         <TabItem.Header>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="assets\Images\scheme.png" Width="20" Margin="0,3,0,0"   Height="20"/>
-                                                <TextBlock Text="  Schemas" Margin="3,0,0,0" Foreground="Black" FontSize="15"  FontWeight="Bold"/>
+                                                <Image Source="assets\Images\scheme.png" Width="12" Margin="0,3,0,0"   Height="12"/>
+                                                <TextBlock Text="  Schemas" Margin="3,0,0,0" Foreground="Black" FontSize="13"/>
                                             </StackPanel>
                                         </TabItem.Header>
                                     </TabItem>
                                     <TabItem Name="tbiRel"  Uid="rel" >
                                         <TabItem.Header>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="assets\Images\relation.png" Width="20"   Margin="0,3,0,0"   Height="20"/>
-                                                <TextBlock Text=" Relations" Margin="3,0,0,0" Foreground="Black" FontSize="15"   FontWeight="Bold"/>
+                                                <Image Source="assets\Images\relation.png" Width="12"   Margin="0,3,0,0"   Height="12"/>
+                                                <TextBlock Text=" Relations" Margin="3,0,0,0" Foreground="Black" FontSize="13"   FontWeight="Normal"/>
                                             </StackPanel>
                                         </TabItem.Header>
                                     </TabItem>
                                     <TabItem Name="tbiQry"  Uid="qry">
                                         <TabItem.Header>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="assets\Images\query.png" Width="20" Margin="0,3,0,0"   Height="20"/>
-                                                <TextBlock Text=" Execute Query" Margin="3,0,0,0" Foreground="Black"  FontSize="15"  FontWeight="Bold"/>
+                                                <Image Source="assets\Images\query.png" Width="12" Margin="0,3,0,0"   Height="12"/>
+                                                <TextBlock Text=" Execute Query" Margin="3,0,0,0" Foreground="Black"  FontSize="13"  FontWeight="Normal"/>
                                             </StackPanel>
                                         </TabItem.Header>
                                     </TabItem>

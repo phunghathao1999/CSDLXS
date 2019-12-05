@@ -39,6 +39,7 @@ namespace PRDB_Sqlite.Presentation
             Refresh();
             //setAutoBinding();
         }
+       
         private void setAutoBinding()
         {
                 if (Parameter.indexRelChange)
@@ -248,7 +249,36 @@ namespace PRDB_Sqlite.Presentation
         {
 
         }
+       
+        private void Con_in_Click(object sender, RoutedEventArgs e)
+        {
+            string text = "⊗_in";
+            
+        }
 
-      
+        private void Dis_in_Click(object sender, RoutedEventArgs e)
+        {
+            string text = "⊕_in";
+        }
+
+        private void Con_ig_Click(object sender, RoutedEventArgs e)
+        {
+            string text = "⊗_ig";
+        }
+
+        private void Dis_ig_Click(object sender, RoutedEventArgs e)
+        {
+            string text = "⊕_ig";
+        }
+
+        private void Con_me_Click(object sender, RoutedEventArgs e)
+        {
+            string text = "⊗_me";
+        }
+
+        private void Dis_me_Click(object sender, RoutedEventArgs e)
+        {
+            string text = "⊕_me";
+        }
     }
 }

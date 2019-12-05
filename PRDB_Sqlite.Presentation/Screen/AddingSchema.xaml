@@ -9,18 +9,17 @@
         WindowStyle="ToolWindow"
         Title="AddingSchema" 
         ResizeMode="NoResize"
-        MaxHeight="500"
-        MinWidth="800" MinHeight="596" >
+        Width="700" Height="550" >
     <DockPanel >
         <StackPanel Background="#FFDAE3EC">
 
-            <Label Content="Create New Schema" HorizontalAlignment="Center" FontSize="50" FontFamily="Bookman Old Style" FontWeight="Bold" />
+            <Label Content="Create New Schema" HorizontalAlignment="Center" FontSize="50" FontFamily="Bookman Old Style" FontWeight="Normal"/>
             <Label/>
-            <GroupBox Header="SCHEMA INFORMATION"  FontWeight="ExtraBold" FontFamily="Times New Roman" FontSize="20" Padding="0,10" Margin="0,20,0,19">
-                <GroupItem Width="600" Padding="0">
-                    <StackPanel Orientation="Horizontal">
-                        <Label  Content="Schema Name:"  FontWeight="Bold" />
-                        <TextBox x:Name="txtSchName"   MinWidth="500" MaxWidth="500" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" FontWeight="Normal" VerticalAlignment="Center" />
+            <GroupBox Header="Schema Information"  FontWeight="Normal" FontFamily="Arial" FontSize="20" Padding="0,10" Margin="0,20,0,19">
+                <GroupItem Padding="0" Margin="0,0,238,0">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <Label  Content="Schema Name:"  FontWeight="Normal" FontSize="15"  FontFamily="Arial"/>
+                        <TextBox x:Name="txtSchName" FontSize="15"  FontFamily="Arial"  MinWidth="300" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" FontWeight="Normal" VerticalAlignment="Center" Width="291" />
                     </StackPanel>
                 </GroupItem>
             </GroupBox>
@@ -33,6 +32,7 @@
             <DataGrid x:Name="dtg"
                       FontSize="14" 
                       MinHeight="200"
+                      MinWidth="200"
                       IsSynchronizedWithCurrentItem="true"
                       MaxHeight="200"
                       ColumnWidth="*">

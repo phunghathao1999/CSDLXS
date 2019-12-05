@@ -9,7 +9,7 @@
         ResizeMode="NoResize"
         Loaded="Window_Loaded"
         WindowStyle="ToolWindow"
-        Title="Adding New Relation" Height="300" Width="600" FontFamily="Times New Roman">
+        Title="Adding New Relation" Height="300" Width="600" FontWeight="Normal" FontFamily="Times New Roman">
     <StackPanel>
         <Label/>
         <Grid HorizontalAlignment="Center">
@@ -28,12 +28,12 @@
                Grid.ColumnSpan="2"
                HorizontalAlignment="Center" 
                FontSize="40" 
-               FontWeight="DemiBold"
+               FontWeight="Normal"
                FontFamily="Bookman Old Style" Margin="0,0,0,20"/>
            
             <Label Grid.Row="1"
                    Grid.Column="0"
-                   Content="Relation Name" FontFamily="Times New Roman" FontWeight="Bold" Margin="0,0,0,20" FontSize="20" />
+                   Content="Relation Name" FontFamily="Times New Roman" FontWeight="Normal" Margin="0,0,0,20" FontSize="20" />
             <TextBox MinWidth="200"
                      Name="txtRelName"
                      Grid.Column="1"
@@ -41,11 +41,11 @@
             
             <Label Content="Select Schema"
                    Grid.Column="0"
-                   Grid.Row="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+                   Grid.Row="2" FontFamily="Times New Roman" FontWeight="Normal" FontSize="20"/>
             <ComboBox MinWidth="200"
                       Name="cbxSch"
                       Grid.Column="1"
-                      Grid.Row="2" VerticalAlignment="Center" FontSize="20" FontFamily="Times New Roman"/>
+                      Grid.Row="2" VerticalAlignment="Center" FontSize="20" FontFamily="Aria"/>
             
     </Grid>
         <Label/>

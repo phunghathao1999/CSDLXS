@@ -7,33 +7,45 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow"
-        Background="Turquoise"
         ResizeMode="NoResize"
-        Title="INPUT DATATYPE" Width="500" Height="351" >
-    <StackPanel Margin="0,0,4,-4" >
+        Title="INPUT DATATYPE" Width="500" Height="450" Background="#FFCBDAE2" >
+    
+    <StackPanel Margin="0,0,4,-16" >
         <Label Content="INPUT DATATYPE" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="ExtraBold" FontSize="30"/>
         <Label />
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Data Type" RelativePanel.AlignLeftWithPanel="True"/>
-            <ComboBox Name="cbxDtt" Width="117" SelectionChanged="cbxDtt_SelectionChanged"/>
+        <StackPanel Orientation="Horizontal" Margin="15,5,5,5">
+            <Label Content="Data Type" FontSize="20" RelativePanel.AlignLeftWithPanel="True" FontWeight="Bold"/>
+            <ComboBox Name="cbxDtt" Height="30" Width="200" SelectionChanged="cbxDtt_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
         <Label/>
-        <GroupBox Header="Details" FontSize="20" Foreground="SteelBlue">
+        <GroupBox Header="Details" Margin="10,20,10,10"  FontSize="20" Foreground="#FF090A0A" FontWeight="Bold">
             <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Data Name" />
-                <TextBox Name="txtTypeName" IsEnabled="False" Width="310" />
+            <StackPanel Orientation="Horizontal" Margin="20,10,10,10"> 
+                <Label Content="Data Name:"   FontSize="15" FontWeight="Normal"/>
+                    <TextBox Name="txtTypeName" IsEnabled="False" FontWeight="Normal" FontSize="12" Width="310" Height="25" />
                 <Label />
             </StackPanel>
-            <RichTextBox Name="rbValls" Height="90" IsEnabled="False" ></RichTextBox>
+                <RichTextBox Name="rbValls" Height="90" FontSize="12" FontWeight="Normal" Margin="5,10,5,5" IsEnabled="False" ></RichTextBox>
             </StackPanel>
 
         </GroupBox>
         <Label/>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-            <Button Name="btnOk" Click="btnOk_Click" Content="OK" Padding="5"/>
+            <Button Name="btnOk" Click="btnOk_Click" BorderThickness="0" >
+                <Button.Content>
+                    <Border Width="60" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <TextBlock FontSize="18" Padding="5" Text="OK"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    </Border>
+                </Button.Content>
+            </Button>
             <Label/>
-            <Button Name="btnCancel" Click="btnCancel_Click" Content="Cencel" Padding="5"/>
+            <Button Name="btnCancel" Click="btnCancel_Click"   BorderThickness="0" >
+                <Button.Content>
+                    <Border Width="60" CornerRadius="5"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <TextBlock FontSize="18" Padding="5" Text="Cancel"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    </Border>
+                </Button.Content>
+            </Button>
         </StackPanel>
     </StackPanel>
 </Window>

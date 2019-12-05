@@ -16,64 +16,62 @@
             RelativePanel.AlignLeftWithPanel="True"
             Orientation="Horizontal">
             <ToolBarTray x:Name="tlbQry" Grid.Row="0">
-                <ToolBar FontWeight="Bold">
+                <ToolBar FontWeight="Normal">
                         <Button Name="btnNewtab"  ToolTip="New a tab">
                             <StackPanel Orientation="Horizontal">
-                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconNewtab.png"/>
-                                <TextBlock Text=" New Tab" VerticalAlignment="Center" />
+                                <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconNewtab.png"/>
+                                <TextBlock Text=" New Tab" FontSize="12" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
                         <Separator/>
                         <Button Name="btnOpnQry" Click="btnOpnQry_Click" ToolTip="Open a query file">
                             <StackPanel Orientation="Horizontal">
-                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconOpenTab.Png"/>
-                                <TextBlock Text=" Open Query" VerticalAlignment="Center" />
+                                <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconOpenTab.Png"/>
+                                <TextBlock Text=" Open Query" FontSize="12" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
                         <Separator/>
                         <Button Name="btnSave" Click="btnSave_Click"  ToolTip="Save file">
                             <StackPanel Orientation="Horizontal">
-                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconSave.png"/>
-                                <TextBlock Text=" Save" VerticalAlignment="Center" />
+                                <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconSave.png"/>
+                                <TextBlock Text=" Save" FontSize="12" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
                         <Separator/>
                         <Button Name="btnFind"  ToolTip="Find in text">
                             <StackPanel Orientation="Horizontal">
-                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconFind.png"/>
-                                <TextBlock Text=" Find" VerticalAlignment="Center" />
+                                <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/iconFind.png"/>
+                                <TextBlock Text=" Find" FontSize="12" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
                         <Separator/>
                         <Button Name="btnExec"  ToolTip="Execute query">
                             <StackPanel Orientation="Horizontal">
-                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcute.png"/>
-                                <TextBlock Text=" Execute" VerticalAlignment="Center" />
+                                <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcute.png"/>
+                                <TextBlock Text=" Execute" FontSize="12" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
                         <Separator/>
                         <Button Name="btnExecCur"  ToolTip="Execute Current line">
                             <StackPanel Orientation="Horizontal">
-                                <Image  Width="20" Height="20" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcuteLine.png"/>
-                                <TextBlock Text=" Execute Line" VerticalAlignment="Center" />
+                                <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcuteLine.png"/>
+                                <TextBlock Text=" Execute Line" FontSize="12" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
                         <Separator/>
                 </ToolBar>
             </ToolBarTray>
         </StackPanel>
-
+            <Label></Label>
         <StackPanel x:Name="stpTab">
             
             <TabControl Name="TbQry">
 
-                    <TabItem Header="new Tab 1"  Margin="0,0,0,0" Height="30"  Name="label_TabTitle" VerticalAlignment="Bottom" FontFamily="Courier" FontSize="14" >
-                    <RichTextBox Name="rbxQry"
-                                 MinHeight="100"
-                                 MaxHeight="100"
+                    <TabItem Header="New Tab 1"  Margin="0,0,0,0" Height="25"  Name="label_TabTitle" VerticalAlignment="Bottom" FontFamily="Courier" FontSize="14" >
+                        <RichTextBox Name="rbxQry"
                                  FontFamily="Courier"
-                                 FontSize="14">
-                    </RichTextBox>
+                                 FontSize="13">
+                        </RichTextBox>
                       
                     </TabItem>
             </TabControl>
@@ -83,15 +81,16 @@
             <Border Grid.Row="1"
                 Grid.Column="1"
                 Opacity="1"
-                BorderBrush="DarkViolet" 
-                    CornerRadius="1"
+                BorderBrush="#FF9DBCCB" 
+                    CornerRadius="0"
                 BorderThickness="20,2,20,5">
                 <TextBlock x:Name="txtMessage"
                             HorizontalAlignment="Center"
                             FontFamily="Consolas"
                             FontSize="13"
                             Foreground="OrangeRed"
-                            IsEnabled="False">
+                            IsEnabled="False"
+                           MinHeight="70">
                 </TextBlock>
             </Border>
                 <ToolBarTray x:Name="tbDtgAction" Orientation="Horizontal">

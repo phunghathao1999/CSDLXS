@@ -48,7 +48,11 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void btnIns_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            PRelation relation = new PRelation() { id = int.Parse(this.cbx.SelectedValue.ToString()) };
+            if (RawDatabaseService.Instance().InsertTupleIntoTableRelation(relation))
+            {
 
+            }
         }
 
         private void btnDel_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -88,7 +92,6 @@ namespace PRDB_Sqlite.Presentation.UserControl
             this.ucEdit.rtbxCellContent.IsReadOnly = true;
 
             var relation = new PRelation() { id = int.Parse(this.cbx.SelectedValue.ToString()) };
-
             try
             {
                 var tupID = (this.dtg.CurrentItem as DataRowView).Row.ItemArray[0].ToString().Trim();

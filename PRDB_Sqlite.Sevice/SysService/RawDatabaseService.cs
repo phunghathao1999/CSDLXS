@@ -224,7 +224,10 @@ namespace PRDB_Sqlite.Sevice.SysService
         {
             throw new NotImplementedException();
         }
-
+        public bool InsertTupleIntoTableRelation(PRelation pRelation)
+        {
+            return RelationService.Instance().InsertTupleIntoTableRelation(pRelation);
+        }
         public PTuple GetTuplebyId(ref PRelation rel, string tupId)
         {
             var relid = rel.id;
@@ -246,7 +249,7 @@ namespace PRDB_Sqlite.Sevice.SysService
             }
             return reVal;
         }
-
+      
         public bool DeleteTupleById(PRelation pRelation, PTuple pTuple)
         {
             return PTupleService.Instance().DeleteTupleById(pRelation, pTuple);
@@ -626,7 +629,23 @@ namespace PRDB_Sqlite.Sevice.SysService
 
             public bool InsertTupleIntoTableRelation(PRelation pRelation)
             {
-                throw new NotImplementedException();
+                if (pRelation.schema.Attributes.Count > 0)
+                {
+                    string SQL = "";
+                    SQL += "INSERT INTO TABLE " + pRelation.relationName + " VALUES ( ";
+                    foreach (var attribute in pRelation.schema.Attributes)
+                    {
+                        SQL +=  " " +  ", ";
+                    }
+                    SQL = SQL.Remove(SQL.LastIndexOf(','), 1);
+                    SQL += " ); ";
+
+                    if (!ConcreteDb.Instance.CreateTable(SQL, false))
+                        throw new Exception(ConcreteDb.Instance.errorMessage);
+                    return true;
+                }
+                else
+                    return false;
             }
 
             public PRelation UpdateSystemRelation(PRelation pRelation)
