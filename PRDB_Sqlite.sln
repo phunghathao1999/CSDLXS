@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRDB_Sqlite", "PRDB_Sqlite\PRDB_Sqlite.csproj", "{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRDB_Sqlite.Sevice", "PRDB_Sqlite.Sevice\PRDB_Sqlite.Sevice.csproj", "{6D0F13A2-E79E-4BD2-9DC3-3984E755D772}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRDB_Sqlite.Domain", "PRDB_Sqlite.Domain\PRDB_Sqlite.Domain.csproj", "{E7A82340-0E09-4443-A3A9-5B7E3E69CE21}"
@@ -32,14 +30,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Debug|Any CPU.Build.0 = Debug|x86
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Debug|x86.ActiveCfg = Debug|x86
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Debug|x86.Build.0 = Debug|x86
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Release|Any CPU.ActiveCfg = Release|x86
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Release|Any CPU.Build.0 = Release|x86
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Release|x86.ActiveCfg = Release|x86
-		{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}.Release|x86.Build.0 = Release|x86
 		{6D0F13A2-E79E-4BD2-9DC3-3984E755D772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D0F13A2-E79E-4BD2-9DC3-3984E755D772}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D0F13A2-E79E-4BD2-9DC3-3984E755D772}.Debug|x86.ActiveCfg = Debug|Any CPU

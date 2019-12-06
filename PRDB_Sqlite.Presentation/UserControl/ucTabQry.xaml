@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.UserControl"
              mc:Ignorable="d" 
              KeyDown="UserControl_KeyDown"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="800">
     <ScrollViewer>
 
         <StackPanel Name="stpQry">
@@ -45,14 +45,14 @@
                             </StackPanel>
                         </Button>
                         <Separator/>
-                        <Button Name="btnExec"  ToolTip="Execute query">
+                        <Button Name="btnExec" ToolTip="Execute query">
                             <StackPanel Orientation="Horizontal">
                                 <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcute.png"/>
                                 <TextBlock Text=" Execute" FontSize="12" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button>
                         <Separator/>
-                        <Button Name="btnExecCur"  ToolTip="Execute Current line">
+                        <Button Name="btnExecCur" Click="btnExecCur_Click" ToolTip="Execute Current line">
                             <StackPanel Orientation="Horizontal">
                                 <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/IconExcuteLine.png"/>
                                 <TextBlock Text=" Execute Line" FontSize="12" VerticalAlignment="Center" />
@@ -69,8 +69,45 @@
 
                     <TabItem Header="New Tab 1"  Margin="0,0,0,0" Height="25"  Name="label_TabTitle" VerticalAlignment="Bottom" FontFamily="Courier" FontSize="14" >
                         <RichTextBox Name="rbxQry"
-                                 FontFamily="Courier"
-                                 FontSize="13">
+                                     MouseDown="rbxQry_MouseDown"
+                                     TextChanged="rbxQry_TextChanged"
+                                 FontFamily="Consolas"
+                                 FontSize="15">
+
+                            <RichTextBox.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Cut" Command="ApplicationCommands.Cut"/>
+                                    <MenuItem Header="Copy" Command="ApplicationCommands.Copy"/>
+                                    <MenuItem Header="Paste" Command="ApplicationCommands.Paste"/>
+                                    <MenuItem Header="Strategy">
+                                        <Separator ToolTip="Independence"/>
+                                        <Button Content="⊗_in(Conjunction) " Name="btnCon_in"
+                                            Background="#FF84C8F7"
+                                            Click="btnCon_in_Click" Width="120" Height="25"/>
+                                        <Button Content="⊕_in(Disjunction)" Name="btnDis_in"
+                                            Background="#FF84C8F7"
+                                            Click="btnDis_in_Click" Width="120" Height="25"/>
+
+                                        <Separator ToolTip="Ignorance"/>
+                                        <Button Content="⊗_ig(Conjunction)" Name="btnCon_ig"
+                                            Background="#FF84C8F7"
+                                            Click="btnCon_ig_Click" Width="120" Height="25" />
+                                        <Button Content="⊕_ig(Disjunction)" Name="btnDis_ig"
+                                            Background="#FF84C8F7"
+                                            Click="btnDis_ig_Click" Width="120" Height="25" />
+
+                                        <Separator ToolTip="Mutual Exclusion" />
+                                        <Button Content="⊗_me(Conjunction)" Name="btnCon_me"
+                                            Background="#FF84C8F7"
+                                            Click="btnCon_me_Click" Width="120" Height="25" />
+                                        <Button Content="⊕_me(Disjunction)" Name="btnDis_me"
+                                            Background="#FF84C8F7"
+                                            Click="btnDis_me_Click" Width="120" Height="25" />
+
+                                    </MenuItem>
+                                </ContextMenu>
+                            </RichTextBox.ContextMenu>
+                            
                         </RichTextBox>
                       
                     </TabItem>
@@ -100,7 +137,7 @@
                 </ToolBarTray>
 
                 <StackPanel Orientation="Vertical">
-                  
+
                     <DataGrid Name="dtgDataResult"
                       IsReadOnly="True"
                       CanUserAddRows="False"
@@ -109,9 +146,9 @@
                       HorizontalContentAlignment="Center"
                       RelativePanel.AlignLeftWithPanel="True"
                       RelativePanel.AlignRightWithPanel="True"
-                      GridLinesVisibility="All">
-            </DataGrid>
-                    
+                      GridLinesVisibility="All"/>
+
+
                 </StackPanel>
             </StackPanel>
 

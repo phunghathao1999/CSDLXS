@@ -243,7 +243,17 @@ namespace PRDB_Sqlite.Sevice.SysService
                     var pri = relation.schema.Attributes.Where(a => a.primaryKey).First();
                     var atr = String.Format("{0}.{1}", relation.relationName, pri.AttributeName);
                     if (!(pri is null))
-                        reVal = relation.tupes.Where(t => SelectCondition.EQUAL(t.valueSet[atr].First(), tupId.Trim(), pri.Type.TypeName)).First();
+                    {
+                        try
+                        {
+                            reVal = relation.tupes.Where(t => SelectCondition.EQUAL(t.valueSet[atr].First(), tupId.Trim(), pri.Type.TypeName)).First();
+                        }
+                        catch //ko tim thay (insert khi id is Empty)
+                        {
+                            if (String.IsNullOrEmpty(tupId))
+                                reVal = new PTuple(relation);
+                        }
+                    }
                     rel = relation;
                 }
             }
@@ -632,7 +642,7 @@ namespace PRDB_Sqlite.Sevice.SysService
                 if (pRelation.schema.Attributes.Count > 0)
                 {
                     string SQL = "";
-                    SQL += "INSERT INTO TABLE " + pRelation.relationName + " VALUES ( ";
+                    SQL += "INSERT INTO " + pRelation.relationName + " VALUES ( ";
                     foreach (var attribute in pRelation.schema.Attributes)
                     {
                         SQL +=  " " +  ", ";
@@ -921,8 +931,7 @@ namespace PRDB_Sqlite.Sevice.SysService
             public PTuple Insert(PTuple pTuple, PRelation pRelation)
             {
                 var sql = "";
-                sql += "INSERT INTO ";
-                sql += pRelation.relationName.ToLower().Trim();
+                sql += String.Format("INSERT INTO {0} ", pRelation.relationName.ToLower().Trim());
                 var atrrs = String.Join(",", pRelation.schema.Attributes.Select(a => a.AttributeName.Trim().ToLower()).ToArray());
                 sql += String.Format("({0}) VALUES", atrrs);
                 var vals = String.Join(",", pTuple.valueSet.ToArray());

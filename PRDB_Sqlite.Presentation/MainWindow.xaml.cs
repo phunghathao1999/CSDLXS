@@ -280,5 +280,17 @@ namespace PRDB_Sqlite.Presentation
         {
             string text = "⊕_me";
         }
+
+        private void tbiQry_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+            {
+                if (Parameter.resetMainF)
+                {
+                    this.reloadDb();
+                    Parameter.resetMainF = false;
+                }
+            }
+        }
     }
 }

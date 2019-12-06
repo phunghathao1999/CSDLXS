@@ -40,6 +40,14 @@ namespace PRDB_Sqlite.Domain.Model
             this.Ps = new ElemProb(0f, 1f);
             this.valueSet = new Dictionary<String, IList<String>>();
         }
+        public PTuple(PRelation pRelation)
+        {
+            this.Ps = new ElemProb(0f, 1f);
+                var valList = new Dictionary<String, IList<String>>();
+            this.valueSet = new Dictionary<String, IList<String>>();
+            foreach (var attr in pRelation.schema.Attributes)
+                this.valueSet.Add(String.Format("{0}.{1}", pRelation.relationName.ToLower(), attr.AttributeName.ToLower()), new List<String>());
+        }
         public PTuple(string strTuple)
         {
 

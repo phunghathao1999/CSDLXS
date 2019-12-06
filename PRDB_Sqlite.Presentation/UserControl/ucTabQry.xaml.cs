@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Automation.Peers;
 using System.Windows.Automation.Provider;
@@ -29,11 +30,12 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
             if (ConfigurationManager.AppSettings["devmode"].Contains("1"))
             {
-                // var sampleSql = "select * from patient where (patient.bloodtype = 'A' ⊗_in patient.height > 130)[0.3,0.8]";
-                //var sampleSql = "select * from patient natural join in physician";
-                //var sampleSql = "select patient.firstname from patient";
-                var sampleSql = "select * from patient natural join in physician\n\nselect * from patient where (patient.bloodtype = 'A' ⊗_in patient.height > 130)[0.3,0.8]\n\nselect consultation.dateofconsultation,consultation.diagnose,consultation.physicianid from consultation";
-                this.rbxQry.Document.Blocks.Add(new Paragraph(new Run(sampleSql.Trim())));
+                var sampleSql1 = "select * from patient where (patient.bloodtype = 'A' ⊗_in patient.height > 130)[0.3,0.8]";
+                var sampleSql2 = "select * from patient natural join in physician";
+                var sampleSql3 = "select patient.firstname from patient";
+                this.rbxQry.Document.Blocks.Add(new Paragraph(new Run(sampleSql1.Trim())));
+                this.rbxQry.Document.Blocks.Add(new Paragraph(new Run(sampleSql2.Trim())));
+                this.rbxQry.Document.Blocks.Add(new Paragraph(new Run(sampleSql3.Trim())));
             }
             setDefaultDismension();
             AddHandler();
@@ -46,8 +48,8 @@ namespace PRDB_Sqlite.Presentation.UserControl
             var rate = System.Windows.SystemParameters.PrimaryScreenHeight / 23;
             this.rbxQry.MinHeight = 4 * rate;
             this.rbxQry.MaxHeight = 4 * rate;
-            this.txtMessage.MinHeight = rate;
-            this.txtMessage.MaxHeight = rate;
+            this.txtMessage.MinHeight = 2 * rate;
+            this.txtMessage.MaxHeight = 2 * rate;
 
             this.dtgDataResult.MinHeight = 10 * rate;
             this.dtgDataResult.MaxHeight = 10 * rate;
@@ -74,19 +76,13 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     foreach (var col in this.dtgDataResult.Columns) col.Width = new DataGridLength(1.0, DataGridLengthUnitType.Star);
 
         }
-        private void AddStrategies( String text)
+        private void AddStrategies(String text)
         {
             foreach (TabItem tabItem in this.TbQry.Items)
             {
                 if (tabItem.IsSelected)
                 {
-                        RichTextBox richTextBox = (RichTextBox)tabItem.Content;
-                    TextPointer tp = richTextBox.CaretPosition;
-
-                    tp = tp.GetNextInsertionPosition(LogicalDirection.Forward);
-
-                    richTextBox.Selection.Select(richTextBox.CaretPosition, tp);
-
+                    this.rbxQry.CaretPosition.InsertTextInRun(text);
                 }
             }
         }
@@ -100,7 +96,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 newTAb.Height = 25;
                 newTAb.Title = name;
 
-                newTAb.Content = new RichTextBox() {  MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
+                newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
                 this.TbQry.Items.Add(newTAb);
                 newTAb.Focus();
             }
@@ -142,41 +138,13 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     else
                     {
                         txtMessage.Foreground = Brushes.Black;
-                        txtMessage.Text += String.Format("E threshold: {0}", Parameter.eulerThreshold.ToString());
+                        txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
                         txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
                         txtMessage.Text += String.Format("\nResult Tuple Count: {0}", query.relationResult.tupes.Count);
 
 
                     }
-                    //else
-                    //{
-                    //    GridViewResult.Columns.Add("NoNumber", "  Number ");
 
-                    //    foreach (ProbAttribute attribute in query.selectedAttributes)
-                    //    {
-                    //        GridViewResult.Columns.Add(attribute.AttributeName, attribute.AttributeName);
-                    //        GridViewResult.Columns[attribute.AttributeName].MinimumWidth = 150;
-                    //    }
-
-                    //    int j, i = -1;
-                    //    foreach (ProbTuple tuple in query.relationResult.tuples)
-                    //    {
-                    //        GridViewResult.Rows.Add();
-
-                    //        i++; j = 1;
-                    //        GridViewResult.Rows[i].Cells[0].Value = i + 1;
-
-                    //        foreach (ProbTriple triple in tuple.Triples)
-                    //        {
-
-                    //            GridViewResult.Rows[i].Cells[j++].Value = triple.GetStrValue();
-
-                    //        }
-                    //    }
-
-                    //    xtraTabControlQueryResult.SelectedTabPageIndex = 0;
-
-                    //}
                 }
                 else
                 {
@@ -281,7 +249,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
             {
                 foreach (TabItem tabItem in TbQry.Items)
                 {
-                    if( tabItem.IsSelected)
+                    if (tabItem.IsSelected)
                     {
                         using (var stream = dialog.OpenFile())
                         {
@@ -309,7 +277,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     var name = dialog.FileName;
                     int index = name.LastIndexOf(@"\");
                     TabQuery newTAb = new TabQuery();
-                    newTAb.Title = name.Substring(index + 1, name.Length - index -1 );
+                    newTAb.Title = name.Substring(index + 1, name.Length - index - 1);
 
                     newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
                     this.TbQry.Items.Add(newTAb);
@@ -333,7 +301,95 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 }
                 else
                     MessageBox.Show("Too more Tab cause your bad experience");
-                
+
+            }
+        }
+
+        private void rbxQry_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+
+        }
+        // "⊕_in", "⊕_ig", "⊕_me","⊗_in", "⊗_ig", "⊗_me"
+        private void btnCon_in_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(3)));
+        }
+
+        private void btnDis_in_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(0)));
+        }
+
+        private void btnCon_me_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(5)));
+        }
+
+        private void btnDis_me_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(2)));
+        }
+
+        private void btnCon_ig_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(4)));
+        }
+
+        private void btnDis_ig_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(1)));
+
+        }
+
+        private void rbxQry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var text = new TextRange(this.rbxQry.Document.ContentStart, this.rbxQry.Document.ContentEnd).Text;
+        }
+
+        private void btnExecCur_Click(object sender, RoutedEventArgs e)
+        {
+            var currentLine = new TextRange(this.rbxQry.CaretPosition.GetLineStartPosition(0), this.rbxQry.CaretPosition.GetLineStartPosition(1) ?? this.rbxQry.CaretPosition.DocumentEnd).Text.Trim();
+            try
+            {
+                var query = new QueryExecutor(currentLine, (SystemParam.StaticParams.currentDb));
+                //txtMessage.Text = "";
+
+                if (query.ExecuteQuery())
+                {
+                    this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(query.relationResult)).DefaultView;
+                    this.txtMessage.Text = String.Empty;
+
+                    if (query.relationResult.tupes.Count <= 0)
+                    {
+                        txtMessage.Foreground = Brushes.IndianRed;
+
+                        txtMessage.Text += "No tuple satisfies the condition";
+                    }
+                    else
+                    {
+                        txtMessage.Foreground = Brushes.Black;
+                        txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
+                        txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
+                        txtMessage.Text += String.Format("\nResult Tuple Count: {0}", query.relationResult.tupes.Count);
+
+
+                    }
+
+                }
+                else
+                {
+                    txtMessage.Foreground = Brushes.Red;
+                    txtMessage.Text = query.MessageError;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                ClearAll(); // đưa csdl về trạng thái ban đầu
             }
         }
     }

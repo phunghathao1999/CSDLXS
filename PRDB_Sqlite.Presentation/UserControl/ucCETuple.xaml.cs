@@ -1,5 +1,6 @@
 ﻿using PRDB_Sqlite.Domain.Model;
 using PRDB_Sqlite.Domain.ModelView;
+using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Sevice.SysService;
 using System;
 using System.Collections.Generic;
@@ -21,10 +22,12 @@ namespace PRDB_Sqlite.Presentation.UserControl
         public PAttribute pAttribute { get; set; }
         public ObservableCollection<ValueCellView> valueList;
         private bool rowBeingEdited;
+        //public bool ins_mode { get; set; }
+
 
         public ucCETuple()
         {
-            
+            //ins_mode = false;
             InitializeComponent();
             this.valueList = new ObservableCollection<ValueCellView>();
             this.dtgCellContent.ItemsSource = valueList;
@@ -53,8 +56,6 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     .ToList()
                     .ForEach(p => this.valueList.Add(new ValueCellView() { value = p.Trim() }));
             }
-
-
             setValCell(valueList.Select(p=>p.value).ToList());
 
 
@@ -94,54 +95,69 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void btnApply_Click(object sender, RoutedEventArgs e)
         {
+           
             if (!rowBeingEdited)
             {
-                String val = String.Empty;
-                if (this.rtbxCellContent.Visibility == Visibility.Visible)
+                try
                 {
-                    val = new TextRange(this.rtbxCellContent.Document.ContentStart, this.rtbxCellContent.Document.ContentEnd).Text.Trim();
-                    //val = String.Format("'{{ {0} }}", val);
-                }
-                if (this.dtgCellContent.Visibility == Visibility.Visible)
-                {
-                    val = String.Join(" , ", valueList.Select(p => p.value.Trim()).ToArray());
-                    //val = String.Format("'{{ {0} }}", val);
-
-                }
-                var datatype = this.pAttribute.Type;
-                if (datatype.CheckDataTypeOfVarLs(val))
-                {
-                    //check elem trung nhau
-                    removeDuplicateElements(ref val);
-
-
-                    var attr = this.txtInfo.Content.ToString().Trim().ToLower();
-
-                    //save
-                    if (this.curTuple.valueSet.Keys.Contains(attr)) 
+                    String val = String.Empty;
+                    if (this.rtbxCellContent.Visibility == Visibility.Visible)
                     {
-                        curTuple.valueSet[attr] = val.Split(',').Select(p=>p.Trim()).ToList();
+                        val = new TextRange(this.rtbxCellContent.Document.ContentStart, this.rtbxCellContent.Document.ContentEnd).Text.Trim();
+                        //val = String.Format("'{{ {0} }}", val);
                     }
-                    // Ps Attr
-                    else 
+                    if (this.dtgCellContent.Visibility == Visibility.Visible)
                     {
-                        curTuple.Ps = new ElemProb(val);
-                    }
-                    try
-                    {
-                        RawDatabaseService.Instance().Update(curTuple, pRelation, attr);
-                    }catch(Exception ex)
-                    {
+                        val = String.Join(" , ", valueList.Select(p => p.value.Trim()).ToArray());
+                        //val = String.Format("'{{ {0} }}", val);
 
                     }
+                    var datatype = this.pAttribute.Type;
+                    if (datatype.CheckDataTypeOfVarLs(val))
+                    {
+                        //check elem trung nhau
+                        removeDuplicateElements(ref val);
+
+
+                        var attr = this.txtInfo.Content.ToString().Trim().ToLower();
+
+                        //save
+                        if (this.curTuple.valueSet.Keys.Contains(attr))
+                        {
+                            curTuple.valueSet[attr] = val.Split(',').Select(p => p.Trim()).ToList();
+                        }
+                        // Ps Attr
+                        else
+                        {
+                            curTuple.Ps = new ElemProb(val);
+                        }
+                        try
+                        {
+                            RawDatabaseService.Instance().Update(curTuple, pRelation, attr);
+
+                            Parameter.resetMainF = true;
+                            Parameter.activeTabIdx = 1;
+                            Parameter.RelationIndex = (int)pRelation.id - 1;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                    else
+                        MessageBox.Show("The value is invalid with its Datatype", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                else 
-                    MessageBox.Show("The value is invalid with its Datatype", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                }
             }
             else
             {
                 MessageBox.Show("the Value have not Edited yet!","Alert",MessageBoxButton.OK,MessageBoxImage.Exclamation);
             }
+            
         }
 
         private void removeDuplicateElements(ref string rawVal)

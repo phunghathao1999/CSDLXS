@@ -51,11 +51,5 @@
   <ItemGroup>
     <Folder Include="Resource\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PRDB_Sqlite\PRDB_Sqlite.csproj">
-      <Project>{E21C8468-FD4B-40DD-A1F8-C4834D076CA3}</Project>
-      <Name>PRDB_Sqlite</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

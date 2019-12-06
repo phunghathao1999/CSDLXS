@@ -109,10 +109,10 @@
         </StackPanel>
         <ToolBarTray Orientation="Horizontal" FlowDirection="RightToLeft">
             <ToolBar>
-                    <Button x:Name="btnApply"  Click="btnApply_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/savedb (2).ico"/>
-                            <TextBlock Text=" Apply to DB" FontSize="12" VerticalAlignment="Center" />
+                    <Button x:Name="btnApply"  Click="btnApply_Click" ToolTip="Apply to DB">
+                        <StackPanel Orientation="Vertical">
+                            <Image  Width="70" Height="70" Source="/PRDB_Sqlite.Presentation;component/assets/Images/savedb (2).ico"/>
+                            <TextBlock Text="Apply Changes" FontSize="12" VerticalAlignment="Center" />
                         </StackPanel>
                     </Button>
                 </ToolBar>

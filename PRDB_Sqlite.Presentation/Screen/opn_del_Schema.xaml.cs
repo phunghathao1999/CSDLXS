@@ -69,7 +69,7 @@ namespace PRDB_Sqlite.Presentation.Screen
 
             if ("delsch".Equals(this.mode, StringComparison.CurrentCultureIgnoreCase))
             {
-                this.Title = "Delte Schema";
+                this.Title = "Delete Schema";
                 this.grpMain.Header = "Select Schema";
                 this.btnMain.Content = "Delete";
 
