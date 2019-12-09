@@ -8,6 +8,7 @@
              FontSize="12"
              Background="Transparent"
              BorderBrush="Blue"
+             Loaded="UserControl_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <Style x:Key="cellStyle" TargetType="DataGridCell">
@@ -42,19 +43,7 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Background" Value="White" />
         </Style>
-        <Style TargetType="Button" x:Key="TabButtonInsert">
-            <Setter Property="Background" Value="#FF5AF711" />
-            <Setter Property="TextBlock.TextAlignment" Value="Center" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="2,2,2,2" Background="#FFB8D9F3" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        
         <Style TargetType="Button" x:Key="TabButtonDelete">
             <Setter Property="Background" Value="#FF5AF711" />
             <Setter Property="TextBlock.TextAlignment" Value="Center" />
@@ -111,21 +100,14 @@
                         ToolTip="Delelte New Record"
                         Content="Delete" FontSize="13" Height="25"  Width="100" Style="{StaticResource TabButtonDelete}" Background="#FF85E25A" />
                     <Label/>
-                    <Button x:Name="btnIns"
-                        Click="btnIns_Click"
-                        ToolTip="Insert New Record"
-                        Content="Insert" FontSize="13" Height="25"  Width="100" Style="{StaticResource TabButtonInsert}">
-                        <Button.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FF99B1F1" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
+                    
 
                 </StackPanel>
             </GroupBox>
-            <!--<GroupBox Header="Action Database">
+            <GroupBox 
+                x:Name="gbDbact"
+                Header="Action Database"
+                      Visibility="Collapsed">
                 <StackPanel Orientation="Horizontal">
                     <Button Name="btnCmmt"
                         Click="btnCmmt_Click"
@@ -137,7 +119,7 @@
                         Content="Rollback"/>
 
                 </StackPanel>
-            </GroupBox>-->
+            </GroupBox>
         </StackPanel>
         <Grid x:Name="grdDtg"
             Grid.Row="2">
@@ -148,6 +130,7 @@
             </Grid.ColumnDefinitions>
             <DataGrid Name="dtg"
                           Grid.Column="0"
+                            BeginningEdit="begin_Edit"
                           SelectionChanged="dtg_SelectionChanged"
                           CurrentCellChanged="dtg_CurrentCellChanged"
                           IsReadOnly="True"

@@ -29,7 +29,7 @@
     <StackPanel>
         <ToolBarTray>
             <ToolBar>
-                    <Button x:Name="btnClr"  Click="btnClr_Click" Width="58">
+                    <Button x:Name="btnClr"  Click="btnClr_Click" Width="58" IsEnabled="False">
                         <StackPanel Orientation="Horizontal">
                             <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/clear-icon.png"/>
                             <TextBlock Text=" Clear" FontSize="12" VerticalAlignment="Center" />
@@ -109,10 +109,13 @@
         </StackPanel>
         <ToolBarTray Orientation="Horizontal" FlowDirection="RightToLeft">
             <ToolBar>
-                    <Button x:Name="btnApply"  Click="btnApply_Click" ToolTip="Apply to DB">
+                    <Button x:Name="btnApply"
+                            Click="btnApply_Click"
+                            IsEnabled="False"
+                            ToolTip="Apply to DB">
                         <StackPanel Orientation="Vertical">
                             <Image  Width="70" Height="70" Source="/PRDB_Sqlite.Presentation;component/assets/Images/savedb (2).ico"/>
-                            <TextBlock Text="Apply Changes" FontSize="12" VerticalAlignment="Center" />
+                            <TextBlock Text="Apply Changes into DB" FontSize="12" VerticalAlignment="Center" />
                         </StackPanel>
                     </Button>
                 </ToolBar>

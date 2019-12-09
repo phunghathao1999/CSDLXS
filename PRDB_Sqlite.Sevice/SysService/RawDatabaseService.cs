@@ -274,6 +274,11 @@ namespace PRDB_Sqlite.Sevice.SysService
             return PTupleService.Instance().Update(pTuple, pRelation, key);
         }
 
+        public PTuple insertEmptyTuple(PRelation pRelation,PAttribute pri, String idTuple)
+        {
+            return PTupleService.Instance().insertEmptyTuple(pRelation,pri,idTuple);
+        }
+
 
         #endregion
 
@@ -934,41 +939,137 @@ namespace PRDB_Sqlite.Sevice.SysService
                 sql += String.Format("INSERT INTO {0} ", pRelation.relationName.ToLower().Trim());
                 var atrrs = String.Join(",", pRelation.schema.Attributes.Select(a => a.AttributeName.Trim().ToLower()).ToArray());
                 sql += String.Format("({0}) VALUES", atrrs);
-                var vals = String.Join(",", pTuple.valueSet.ToArray());
-                sql += String.Format("{{0}}", vals);
-
-                return pTuple;
-            }
-
-            public PTuple Update(PTuple pTuple, PRelation pRelation, String key)
-            {
-                var priName = pRelation.schema.Attributes.Where(a => a.primaryKey).Select(p => p.AttributeName).Single().Trim().ToLower();
-                var standard = key.IndexOf(".") == -1 ? key : key.Substring(key.IndexOf(".") + 1).Trim();
-                var sql = "";
-                sql += String.Format("UPDATE {0} SET ", pRelation.relationName.ToLower().Trim());
-                var vals = String.Join(" , ", pTuple.valueSet[key].ToArray());
-                sql += String.Format("{0} = ", standard);
-                //note
-                sql += "'{ " + vals + " }'";
-                priName = String.Format("{0}.{1}", pRelation.relationName, priName);
-                var priVal = pTuple.valueSet[priName].First().Trim();
-                sql += String.Format(" WHERE {0} = ", priName);
-                //note
-                sql += "'{ " + priVal + " }'";
+                //value list
+                var vallist = new List<String>();
+                foreach (var key in pTuple.valueSet.Keys)
+                {
+                    if (!key.Substring(key.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        var vals = String.Join(",", pTuple.valueSet[key].ToArray());
+                        vallist.Add("'" + vals + "'");
+                    }
+                }
+                vallist.Add("'"+pTuple.Ps.ToString()+"'");
+                String strVal = String.Join(",", vallist.ToArray());
+                sql += $"({strVal})";
                 try
                 {
                     //in db
                     ConcreteDb.Instance.Update(sql);
                     //in ram
-                    var relation = SystemParam.StaticParams.currentDb.Relations.Where(p => p.id == pRelation.id).First();
-                    var tuple = relation.tupes.Where(t => t.valueSet[priName].First().Equals(pTuple.valueSet[priName].First(), StringComparison.CurrentCultureIgnoreCase)).First();
-                    tuple = pTuple;
+                    SystemParam.StaticParams.currentDb.Relations.Where(p => p.id == pRelation.id).First().tupes.Add(pTuple) ;
                 }
                 catch (Exception ex)
                 {
                     return null;
                 }
                 return pTuple;
+            }
+
+            public PTuple Update(PTuple pTuple, PRelation pRelation, String key)
+            {
+                try
+                {
+                    if (key.Substring(key.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    var priName = pRelation.schema.Attributes.Where(a => a.primaryKey).Select(p => p.AttributeName).Single().Trim().ToLower();
+                    var standard = key.IndexOf(".") == -1 ? key : key.Substring(key.IndexOf(".") + 1).Trim();
+                    var sql = "";
+                    sql += String.Format("UPDATE {0} SET ", pRelation.relationName.ToLower().Trim());
+                    sql += String.Format("{0} = ", standard);
+                    //note
+                    sql += "' " + pTuple.Ps.ToString() + " '";
+                    priName = String.Format("{0}.{1}", pRelation.relationName, priName);
+                    var priVal = pTuple.valueSet[priName].First().Trim();
+                    sql += String.Format(" WHERE {0} = ", priName);
+                    //note
+                    sql += "'{ " + priVal + " }'";
+                        //in db
+                        ConcreteDb.Instance.Update(sql);
+                        //in ram
+                        var relation = SystemParam.StaticParams.currentDb.Relations.Where(p => p.id == pRelation.id).First();
+                        var tuple = relation.tupes.Where(t => t.valueSet[priName].First().Equals(pTuple.valueSet[priName].First(), StringComparison.CurrentCultureIgnoreCase)).First();
+                        tuple = pTuple;
+                    }
+                else
+                {
+                    var priName = pRelation.schema.Attributes.Where(a => a.primaryKey).Select(p => p.AttributeName).Single().Trim().ToLower();
+                    var standard = key.IndexOf(".") == -1 ? key : key.Substring(key.IndexOf(".") + 1).Trim();
+                    var sql = "";
+                    sql += String.Format("UPDATE {0} SET ", pRelation.relationName.ToLower().Trim());
+                    var vals = String.Join(" , ", pTuple.valueSet[key].ToArray());
+                    sql += String.Format("{0} = ", standard);
+                    //note
+                    sql += "'{ " + vals + " }'";
+                    priName = String.Format("{0}.{1}", pRelation.relationName, priName);
+                    var priVal = pTuple.valueSet[priName].First().Trim();
+                    sql += String.Format(" WHERE {0} = ", priName);
+                    //note
+                    sql += "'{ " + priVal + " }'";
+                        //in db
+                        ConcreteDb.Instance.Update(sql);
+                        //in ram
+                        var relation = SystemParam.StaticParams.currentDb.Relations.Where(p => p.id == pRelation.id).First();
+                        var tuple = relation.tupes.Where(t => t.valueSet[priName].First().Equals(pTuple.valueSet[priName].First(), StringComparison.CurrentCultureIgnoreCase)).First();
+                        tuple = pTuple;
+                    }
+               
+                   
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+                return pTuple;
+            }
+
+            public PTuple insertEmptyTuple(PRelation pRelation,PAttribute pri,String IdTuple)
+            {
+                var relation = new PRelation() { id = pRelation.id };
+                    
+                var tupID = String.Empty;
+                //insert empty tuple
+                try
+                {
+                    var tuple = RawDatabaseService.Instance().GetTuplebyId(ref relation, tupID);
+                    tuple.valueSet[$"{relation.relationName.ToLower()}.{pri.AttributeName.ToLower()}"] = new List<String>() { "{ "+ IdTuple+" }" };
+
+                    foreach (var key in tuple.valueSet.Keys.ToList())
+                    {
+                        var atr = key.Substring(key.IndexOf(".") + 1);
+                        var Pri = $"{relation.relationName.ToLower()}.{pri.AttributeName.ToLower()}";
+                        if (!atr.Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase) &&
+                            key != Pri)
+                        {
+                            tuple.valueSet[key] = new List<String>() { "{ Insert Data }" };
+                        }
+                    }
+                    PTupleService.Instance().Insert(tuple, relation);
+                    return tuple;
+                }
+                catch(Exception Ex)
+                {
+                    return null;
+                }
+
+            }
+
+            public string getStrTupleId(PRelation pRelation)
+            {
+                var pri = pRelation.schema.Attributes.Where(p => p.primaryKey).FirstOrDefault();
+                var sql = String.Empty;
+                int i = 0;
+                //if(pri != null)
+                //{
+
+                //    while (true)
+                //    {
+                //        var count = ConcreteDb.Instance.ExecuteScalar($"SELECT * FROM {pRelation.relationName.ToLower()} WHERE {pri.AttributeName.ToLower()} = '{}'"));
+                //        if (count == 0d) break;
+                //        i++;
+                //    }
+                //}
+                return "";
             }
         }
     }

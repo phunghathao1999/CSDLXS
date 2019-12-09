@@ -13,6 +13,34 @@
         Closed="Window_Closed"
         Title="Probability Relation Database with uncertain information" Height="450" Width="800">
 
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="TabButtonInsert">
+            <Setter Property="Background" Value="#FF5AF711" />
+            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="2,2,2,2" Background="#FFB8D9F3" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="TabButtonUpdate">
+            <Setter Property="Background" Value="#FF5AF711" />
+            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="2,2,2,2" Margin="0,0,5,0" Background="#FFF3E277"  BorderBrush="Black" BorderThickness="1,1,1,1" >
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     
     <DockPanel>
         <StackPanel
@@ -155,7 +183,24 @@
                             </Button.Content>
                         </Button>
                     </RibbonGroup>
+
+                    <RibbonGroup Margin="1,10,1,1" ToolTipTitle="Tuple Function" >
+                        <Button x:Name="btnIns"
+                                 Margin="0,0,0,-3"
+                        Click="btnIns_Click"
+                        ToolTip="Insert New Record"
+                        FontSize="13"  Background="Transparent" BorderBrush="Transparent">
+                            <Button.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="assets\Images\add_record_icon.jpg" Width="40" Height="40"></Image>
+                                    <TextBlock Text="Insert New Tuple"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RibbonGroup>
+                   
                 </RibbonTab>
+                
                 <RibbonTab Header="Query" KeyTip="Q" Opacity="1" Margin="0,5,0,0" >
                     <RibbonGroup ToolTipTitle="SET UP PROJECTION">
                         <Grid >
@@ -202,73 +247,8 @@
                         </Grid>
                         
                     </RibbonGroup>
-                    <RibbonGroup ToolTipTitle="Independence"  Header="Independence">
-                        <Grid >
-                            <Button Content="⊗_in(Conjunction) " Name="Con_in"
-                                    Grid.Column="0"
-                                    Grid.Row="0"
-                                    Background="#FF84C8F7"
-                                    Click="Con_in_Click" Width="120" Height="25"/>
-                            <Button Content="⊕_in(Disjunction)" Name="Dis_in"
-                                    Grid.Column="0"
-                                    Background="#FF84C8F7"
-                                    Grid.Row="1"
-                                    Click="Dis_in_Click" Width="120" Height="25"/>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="30"/>
-                            </Grid.RowDefinitions>
-                        </Grid>
-                    </RibbonGroup>
-                    <RibbonGroup ToolTipTitle="Ignorance" Header="Ignorance">
-                        <Grid >
-                            <Button Content="⊗_ig(Conjunction)" Name="Con_ig"
-                                    Grid.Column="0"
-                                    Grid.Row="0"
-                                    Background="#FF84C8F7"
-                                    Click="Con_ig_Click" Width="120" Height="25" />
-                            <Button Content="⊕_ig(Disjunction)" Name="Dis_ig"
-                                    Grid.Column="0"
-                                    Grid.Row="1"
-                                    Background="#FF84C8F7"
-                                    Click="Dis_ig_Click" Width="120" Height="25" />
-                          
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="30"/>
-                            </Grid.RowDefinitions>
-                        </Grid>
-                    </RibbonGroup>
-                    <RibbonGroup ToolTipTitle="Mutual Exclusion" Header="Mutual Exclusion">
-                        <Grid >
-                            <Button Content="⊗_me(Conjunction)" Name="Con_me"
-                                    Grid.Column="0"
-                                    Grid.Row="0"
-                                    Background="#FF84C8F7"
-                                    Click="Con_me_Click" Width="120" Height="25" />
-                            <Button Content="⊕_me(Disjunction)" Name="Dis_me"
-                                    Grid.Column="0"
-                                    Grid.Row="1"
-                                    Background="#FF84C8F7"
-                                    Click="Dis_me_Click" Width="120" Height="25" />
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="30"/>
-                            </Grid.RowDefinitions>
-                        </Grid>
-                    </RibbonGroup>
+                   
+                    
                 </RibbonTab>
                 
             </Ribbon>
@@ -350,11 +330,11 @@
                                     Grid.Column="0"
                                     Grid.Row="0" Grid.RowSpan="2">
                                 <TabControl
-                  x:Name="tbMainTab"
-                  RelativePanel.AlignTopWithPanel="True"
-                  RelativePanel.AlignBottomWithPanel="True"
-                  RelativePanel.AlignLeftWithPanel="True"
-                  RelativePanel.AlignRightWithPanel="True">
+                                  x:Name="tbMainTab"
+                                  RelativePanel.AlignTopWithPanel="True"
+                                  RelativePanel.AlignBottomWithPanel="True"
+                                  RelativePanel.AlignLeftWithPanel="True"
+                                  RelativePanel.AlignRightWithPanel="True"> 
                                     <TabItem Name="tbiSch" Height="25" Uid="sch">
                                         <TabItem.Header>
                                             <StackPanel Orientation="Horizontal">

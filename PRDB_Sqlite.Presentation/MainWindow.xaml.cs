@@ -1,9 +1,11 @@
 ﻿using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Presentation.Module;
 using PRDB_Sqlite.Presentation.Screen;
+using PRDB_Sqlite.Sevice.SysService;
 using PRDB_Sqlite.SystemParam;
 using System;
 using System.Configuration;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
@@ -30,6 +32,7 @@ namespace PRDB_Sqlite.Presentation
             #region init
             Parameter.SchemaIndex = 0;
             Parameter.RelationIndex = 0;
+
             #endregion
             if (ConfigurationManager.AppSettings["devmode"].ToString().Contains("1"))
                 StaticParams.currentDb = MdlFileDialog.Instance().OpenDialogGetPDb();
@@ -97,12 +100,13 @@ namespace PRDB_Sqlite.Presentation
         //false == none Db
         private void loadHeader(bool v)
         {
+            
             if (v)
             {
                 //config options
                 //database
-                this.rgClsDb.Visibility = Visibility.Visible;
-                this.rgSaveDb.Visibility = Visibility.Visible;
+                //this.rgClsDb.Visibility = Visibility.Visible;
+                //this.rgSaveDb.Visibility = Visibility.Visible;
                 //schema
                 this.rgNewSch.Visibility = Visibility.Visible;
                 this.rgOpnSch.Visibility = Visibility.Visible;
@@ -245,41 +249,8 @@ namespace PRDB_Sqlite.Presentation
             showAbout.ShowDialog();
             this.Refresh();
         }
-        private void tbMainTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        
 
-        }
-       
-        private void Con_in_Click(object sender, RoutedEventArgs e)
-        {
-            string text = "⊗_in";
-            
-        }
-
-        private void Dis_in_Click(object sender, RoutedEventArgs e)
-        {
-            string text = "⊕_in";
-        }
-
-        private void Con_ig_Click(object sender, RoutedEventArgs e)
-        {
-            string text = "⊗_ig";
-        }
-
-        private void Dis_ig_Click(object sender, RoutedEventArgs e)
-        {
-            string text = "⊕_ig";
-        }
-
-        private void Con_me_Click(object sender, RoutedEventArgs e)
-        {
-            string text = "⊗_me";
-        }
-
-        private void Dis_me_Click(object sender, RoutedEventArgs e)
-        {
-            string text = "⊕_me";
-        }
 
         private void tbiQry_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -291,6 +262,39 @@ namespace PRDB_Sqlite.Presentation
                     Parameter.resetMainF = false;
                 }
             }
+        }
+
+        private void btnIns_Click(object sender, RoutedEventArgs e)
+        {
+            Parameter.activeTabIdx = 1;
+            addingNewTuple();
+            this.reloadDb();
+        }
+
+        private void addingNewTuple()
+        {
+
+            if (StaticParams.currentRelation != null)
+            {
+                var addIdform = new addingTuples();
+                addIdform.ShowDialog();
+                var idList = addIdform.idTupleList;
+                var pri = StaticParams.currentRelation.schema.Attributes.Where(a => a.primaryKey).FirstOrDefault();
+                var priAtr = $"{StaticParams.currentRelation.relationName.ToLower()}.{pri.AttributeName.ToLower()}";
+                foreach (var id in idList)
+                {
+                    var tup = RawDatabaseService.Instance().insertEmptyTuple(StaticParams.currentRelation,pri,id.IDtuple);
+                }
+                Parameter.activeTabIdx = 1;
+                this.reloadDb();
+            }
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Parameter.activeTabIdx = 1;
+            this.reloadDb();
         }
     }
 }

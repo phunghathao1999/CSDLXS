@@ -56,6 +56,7 @@
     <Compile Include="Interface\Service\IDbService.cs" />
     <Compile Include="Interface\Service\IRawDatabaseService.cs" />
     <Compile Include="ModelView\DataTypeMdView.cs" />
+    <Compile Include="ModelView\IDTupMView.cs" />
     <Compile Include="ModelView\SchemaModelView.cs" />
     <Compile Include="ModelView\ValueCellView.cs" />
     <Compile Include="Model\ElemProb.cs" />

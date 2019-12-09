@@ -7,5 +7,6 @@ namespace PRDB_Sqlite.SystemParam
     {
         public static PDatabase currentDb { get; set; }
         public static TreeView currentTreView { get; set; }
+        public static PRelation currentRelation { get; set; }
     }
 }

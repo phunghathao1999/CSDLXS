@@ -104,6 +104,9 @@
     <Compile Include="Screen\AddingSchema.xaml.cs">
       <DependentUpon>AddingSchema.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screen\addingTuples.xaml.cs">
+      <DependentUpon>addingTuples.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screen\EditingSchema.xaml.cs">
       <DependentUpon>EditingSchema.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screen\AddingSchema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\addingTuples.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -353,6 +360,9 @@
   <ItemGroup>
     <Resource Include="assets\Images\changeView.png" />
     <Resource Include="assets\Images\clear-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Images\add_record_icon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

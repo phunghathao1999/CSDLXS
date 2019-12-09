@@ -1,5 +1,7 @@
 ﻿using PRDB_Sqlite.Domain.Model;
+using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Infractructure.Constant;
+using PRDB_Sqlite.Presentation.Screen;
 using PRDB_Sqlite.Sevice.SysService;
 using System;
 using System.Collections.Generic;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Documents;
 
 namespace PRDB_Sqlite.Presentation.UserControl
 {
@@ -17,13 +20,12 @@ namespace PRDB_Sqlite.Presentation.UserControl
     public partial class ucTabContent : System.Windows.Controls.UserControl
     {
         CollectionView backup;
-        private bool ins_mode;
         public ucTabContent()
         {
-            ins_mode = false;
             InitializeComponent();
             //setAutoBinding();
             this.dtg.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(dgData_SelectionChanged);
+            
         }
 
         private void dgData_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,47 +55,21 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void btnIns_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            //PRelation relation = new PRelation() { id = int.Parse(this.cbx.SelectedValue.ToString()) };
-            //if (RawDatabaseService.Instance().InsertTupleIntoTableRelation(relation))
-            //{
-            //}
-            this.ins_mode = !this.ins_mode;
-            //dtg
-            if (this.ins_mode)
-            {
-                for (int i = 0; i < this.dtg.Items.Count; i++)
-                {
-                    DataGridRow r = this.dtg.ItemContainerGenerator.ContainerFromIndex(i) as DataGridRow;
-                    if (r != null)
-                        r.Tag = true; // readOnly
-                }
-                this.dtg.CanUserAddRows = true;
-                this.dtg.IsReadOnly = false;
-                //add handle
-                this.dtg.BeginningEdit += (begin_Edit);
-            }
-            else
-            {
-                for (int i = 0; i < this.dtg.Items.Count; i++)
-                {
-                    DataGridRow r = this.dtg.ItemContainerGenerator.ContainerFromIndex(i) as DataGridRow;
-                    if (r != null)
-                        r.Tag = null; // readOnly
-                }
-                this.dtg.CanUserAddRows = false;
-                this.dtg.IsReadOnly = true;
-                //remove handle
-                this.dtg.BeginningEdit -= (begin_Edit);
-            }
-            
+
+            var addTupleForm = new addingTuples();
+            addTupleForm.ShowDialog();
+      
         }
+        
 
         private void begin_Edit(object sender, DataGridBeginningEditEventArgs e)
         {
-            if (((DataGridRow)e.Row).Tag != null && !(bool)((DataGridRow)e.Row).Tag)
-            {
-                e.Cancel = true;
-            }
+            //if (((DataGridRow)e.Row).Tag != null && (bool)((DataGridRow)e.Row).Tag)
+            //{
+            //    e.Cancel = true;
+            //}
+            this.ucEdit.btnApply.IsEnabled = !this.ucEdit.IsEnabled;
+            e.Cancel = true;
         }
 
         private void btnDel_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -148,73 +124,61 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 {
                     this.ucEdit.txtInfo.Content = attrName.ToUpper();
                     this.ucEdit.curTuple = tuple;
-
                     this.ucEdit.setValCell(tuple.valueSet[attrName]);
                 }
                 else
                 {
                     this.ucEdit.txtInfo.Content = attrName.ToUpper();
                     this.ucEdit.curTuple = tuple;
-
                     this.ucEdit.setValCell(new List<String> { tuple.Ps.ToString() });
-
                 }
                 var att = relation.schema.Attributes.Where(p => p.AttributeName.Equals(header, StringComparison.CurrentCultureIgnoreCase)).First();
                 this.ucEdit.pAttribute = att;
                 this.ucEdit.txtDataType.Content = att.Type.TypeName;
                 this.ucEdit.chkPri.IsChecked = att.primaryKey;
                 this.ucEdit.pRelation = relation;
+
+                Parameter.currentColumn = this.dtg.CurrentCell.Column.DisplayIndex;
+                Parameter.currentRow = this.dtg.Items.IndexOf(this.dtg.CurrentItem);
             }
-            catch //insert
-            {
-                var tupID = String.Empty;
-                var tuple = RawDatabaseService.Instance().GetTuplebyId(ref relation, tupID);
-                var header = String.Empty;
-
-                try
-                {
-                    header = this.dtg.CurrentCell.Column.Header.ToString().ToLower();
-
-                }
-                catch
-                {
-                }
-                String attrName = header;
-                attrName = String.Format("{0}.{1}", relation.relationName, header);
-
-                if (!header.Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
-                {
-                    this.ucEdit.txtInfo.Content = attrName.ToUpper();
-                    this.ucEdit.curTuple = tuple;
-                    if(!String.IsNullOrEmpty(header))
-                    this.ucEdit.setValCell(tuple.valueSet[attrName]);
-                }
-                else
-                {
-                    this.ucEdit.txtInfo.Content = attrName.ToUpper();
-                    this.ucEdit.curTuple = tuple;
-                    if (!String.IsNullOrEmpty(header))
-                        this.ucEdit.setValCell(new List<String> { tuple.Ps.ToString() });
-
-                }
-                var att = relation.schema.Attributes.Where(p => p.AttributeName.Equals(header, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
-                if(att != null)
-                {
-                    this.ucEdit.pAttribute = att;
-                    this.ucEdit.txtDataType.Content = att.Type.TypeName;
-                    this.ucEdit.chkPri.IsChecked = att.primaryKey;
-                    this.ucEdit.pRelation = relation;
-                }
-                
-            }
+            catch { }
+            this.ucEdit.rtbxCellContent.Visibility = Visibility.Visible;
+            this.ucEdit.dtgCellContent.Visibility = Visibility.Collapsed;
         }
 
         private void dtg_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             //set UC data
+        }
+       
+        private void btnApply(object sender, RoutedEventArgs e)
+        {
+            var att = this.ucEdit.txtInfo.Content.ToString();
 
+            if (att.Substring(att.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+            {
+                this.ucEdit.btnView_Click(null, null);
+                var rowView = (this.dtg.Items[Parameter.currentRow] as DataRowView); //Get RowView
+                rowView.BeginEdit();
+                rowView[Parameter.currentColumn] =  new TextRange(this.ucEdit.rtbxCellContent.Document.ContentStart,this.ucEdit.rtbxCellContent.Document.ContentEnd).Text.Trim();
+                rowView.EndEdit();
+                this.dtg.Items.Refresh();
+            }
+            else
+            {
+                this.ucEdit.btnView_Click(null, null);
+                var rowView = (this.dtg.Items[Parameter.currentRow] as DataRowView); //Get RowView
+                rowView.BeginEdit();
+                rowView[Parameter.currentColumn] = "{ " + String.Join(",", this.ucEdit.valueList.Select(p => p.value).ToArray()) + " }";
+                rowView.EndEdit();
+                this.dtg.Items.Refresh();
+            }
+           
         }
 
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.ucEdit.btnApply.Click += this.btnApply;
+        }
     }
 }

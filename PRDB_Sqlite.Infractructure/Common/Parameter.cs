@@ -44,6 +44,10 @@ namespace PRDB_Sqlite.Infractructure.Common
         public static int RelationIndex { get; set; }
         public static int activeTabIdx { get; set; }
         public static bool resetMainF { get; set; }
+        public static int idLength { get => 3; }
+        public static int currentColumn { get; set; }
+        public static int currentRow { get; set; }
+
         public static IList<string> datatype
         {
             get

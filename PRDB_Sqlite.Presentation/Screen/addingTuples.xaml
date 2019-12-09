@@ -1,0 +1,51 @@
+﻿<Window x:Class="PRDB_Sqlite.Presentation.Screen.addingTuples"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.Screen"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        Title="Adding Tuple" Height="400" Width="400">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               FontSize="30"
+               FontWeight="DemiBold"
+               HorizontalContentAlignment="Center"
+               Content="ADDING TUPLES"/>
+        <StackPanel 
+            Margin="10"
+            Orientation="Horizontal"
+            FlowDirection="RightToLeft"
+            Grid.Row="3">
+            <Button Content="Commit" Name="btnCancle" Click="btnCommit_Click"></Button>
+            <Label/>
+            <Button Content="Cancel" Name="btnCommit" Click="btnCancle_Click"></Button>
+            <Label/>
+            <Button Content="Add row" Name="btnAdd" Click="btnAdd_Click"/>
+            <Label/>
+            <Label Name="lblRelation" Foreground="BlueViolet" FontSize="14"></Label>
+        </StackPanel>
+        <DataGrid Grid.Row="1"
+                  FontSize="14"
+                  IsSynchronizedWithCurrentItem="True"
+                  HorizontalContentAlignment="Center"
+                  IsTextSearchEnabled="True"
+                  HorizontalAlignment="Center"
+                  x:Name="dtg">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID Tuple" Width="*" Binding="{Binding IDtuple}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

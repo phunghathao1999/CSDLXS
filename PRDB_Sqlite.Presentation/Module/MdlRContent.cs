@@ -2,6 +2,7 @@
 using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Infractructure.Constant;
 using PRDB_Sqlite.Presentation.UserControl;
+using PRDB_Sqlite.SystemParam;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -84,6 +85,15 @@ namespace PRDB_Sqlite.Presentation.Module
                     reControl.cbx.Items.Add(new { Key = item.id, Value = item.relationName.ToUpper() });
                 if (this.pDatabase.Relations.Count >= Parameter.RelationIndex)
                     reControl.cbx.SelectedIndex = Parameter.RelationIndex;
+
+                var curItem = reControl.cbx.SelectedItem.GetType().GetProperty("Key");
+                var relation = StaticParams.currentDb.Relations.Where(r => r.id == (int)(curItem.GetValue(reControl.cbx.SelectedItem, null))).First();
+                if (relation != null)
+                {
+                    Parameter.RelationIndex = reControl.cbx.SelectedIndex;
+                    StaticParams.currentRelation = relation;
+                }
+
             }
             else
             if ("sch".Equals(uid.ToLower()))
@@ -138,7 +148,18 @@ namespace PRDB_Sqlite.Presentation.Module
                         //make up dtg
                         reControl.dtg.ItemsSource = dtS.DefaultView;
                     }
+                    var curItem = reControl.cbx.SelectedItem.GetType().GetProperty("Key");
+                    var relation = StaticParams.currentDb.Relations.Where(r => r.id == (int)(curItem.GetValue(reControl.cbx.SelectedItem, null))).First();
+                    if(relation != null)
+                    {
+                        Parameter.RelationIndex = reControl.cbx.SelectedIndex;
+                        StaticParams.currentRelation = relation;
+                    }
+
+                    // StaticParams.currentRelation = curItem;
+
                 }
+
                 if ("sch".Equals(uid.ToLower()))
                 {
                     reControl.dtg.ItemsSource = getDataSourceSch((int)reControl.cbx.SelectedValue);

@@ -1,6 +1,7 @@
 ﻿using PRDB_Sqlite.Domain.Model;
 using PRDB_Sqlite.Domain.ModelView;
 using PRDB_Sqlite.Infractructure.Common;
+using PRDB_Sqlite.Infractructure.Constant;
 using PRDB_Sqlite.Sevice.SysService;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
         public PRelation pRelation { get; set; }
         public PAttribute pAttribute { get; set; }
         public ObservableCollection<ValueCellView> valueList;
-        private bool rowBeingEdited;
+        public bool rowBeingEdited;
         //public bool ins_mode { get; set; }
 
 
@@ -31,11 +32,18 @@ namespace PRDB_Sqlite.Presentation.UserControl
             InitializeComponent();
             this.valueList = new ObservableCollection<ValueCellView>();
             this.dtgCellContent.ItemsSource = valueList;
+
+
         }
 
-        private void btnView_Click(object sender, RoutedEventArgs e)
+        public void btnView_Click(object sender, RoutedEventArgs e)
         {
+            var att = this.txtInfo.Content.ToString();
 
+            if (att.Substring(att.IndexOf(".")+1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+            {
+                return;
+            }
             if (this.dtgCellContent.Visibility == Visibility.Visible)
             {
                 //tat dtg
@@ -52,13 +60,13 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 var strVals = new TextRange(this.rtbxCellContent.Document.ContentStart, this.rtbxCellContent.Document.ContentEnd).Text.Trim();
                 removeDuplicateElements(ref strVals);
                 this.valueList.Clear();
+                strVals = strVals.Replace("[", "");
+                strVals = strVals.Replace("]", "");
                 strVals.Split(',')
                     .ToList()
                     .ForEach(p => this.valueList.Add(new ValueCellView() { value = p.Trim() }));
             }
             setValCell(valueList.Select(p=>p.value).ToList());
-
-
         }
 
         private void btnClr_Click(object sender, RoutedEventArgs e)
@@ -98,6 +106,20 @@ namespace PRDB_Sqlite.Presentation.UserControl
            
             if (!rowBeingEdited)
             {
+                var att = this.txtInfo.Content.ToString();
+
+                if (att.Substring(att.IndexOf(".")+1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    var strProb = new TextRange(this.rtbxCellContent.Document.ContentStart, this.rtbxCellContent.Document.ContentEnd).Text.Trim();
+                    try
+                    {
+                        new ElemProb(strProb);
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
                 try
                 {
                     String val = String.Empty;
@@ -160,7 +182,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
             
         }
 
-        private void removeDuplicateElements(ref string rawVal)
+        public void removeDuplicateElements(ref string rawVal)
         {
             rawVal = rawVal.Replace("{", "");
             rawVal = rawVal.Replace("}", "");
@@ -169,8 +191,6 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 var list = rawVal.Split(',').Select(e => e.Trim()).Distinct(); ;
                 rawVal = String.Join(",", list.ToArray());
             }
-          
-          
         }
 
         private void btnCommitEdit_Click(object sender, RoutedEventArgs e)
@@ -180,7 +200,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
             this.rtbxCellContent.IsReadOnly = true;
             this.dtgCellContent.IsEnabled = false;
 
-            
+           
         }
     }
 }

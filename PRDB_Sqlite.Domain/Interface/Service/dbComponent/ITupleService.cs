@@ -19,6 +19,9 @@ namespace PRDB_Sqlite.Domain.Interface.Service.dbComponent
         PTuple Insert(PTuple pTuple, PRelation pRelation); //by id
         PTuple Update(PTuple pTuple, PRelation pRelation,String Key); //by id
 
+        PTuple insertEmptyTuple(PRelation pRelation, PAttribute pri, String IdTuple);
+
+        String getStrTupleId(PRelation pRelation);
 
     }
 }
