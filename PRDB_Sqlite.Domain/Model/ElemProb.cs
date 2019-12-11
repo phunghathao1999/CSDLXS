@@ -50,7 +50,7 @@ namespace PRDB_Sqlite.Domain.Model
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show(ex.Message);
+                //System.Windows.MessageBox.Show(ex.Message);
                 this.upperBound = -1;
                 this.lowerBound = -1;
             }

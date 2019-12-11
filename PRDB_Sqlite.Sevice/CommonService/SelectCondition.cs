@@ -196,7 +196,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             }
 
         }
-        private static ElemProb convertConditionStrToProbInterVal(string S) //(patient.bloodtype_= 'b')[1,1]
+        private ElemProb convertConditionStrToProbInterVal(string S) //(patient.bloodtype_= 'b')[1,1]
         {
             try
             {
@@ -209,6 +209,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             }
             catch (Exception ex)
             {
+                MessageError = ex.Message;
                 return null;
             }
 
@@ -225,7 +226,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 return false;
 
 
-            if (SelectCondition.convertConditionStrToProbInterVal(conditionString) == null)
+            if (convertConditionStrToProbInterVal(conditionString) == null)
                 return false;
 
 
@@ -808,7 +809,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 case "Currency":
                     return IntCompare(Convert.ToInt16(valueOne), Convert.ToInt16(valueTwo), opratorStr);
                 case "String":
-                case "DateTime":
+                case "DateTime": //chu y ngay
                 case "UserDefined":
                 case "Binary":
                     return StrCompare(valueOne.ToString(), valueTwo, opratorStr);

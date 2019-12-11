@@ -237,9 +237,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
         {
             var listPAttribute = new List<PAttribute>();
             //////////////////////// Get Attributes //////////////////////
-            int posOne, posTwo;
+            int posOne, posTwo, posSelect = valueString.ToLower().IndexOf("select") + 6;
 
-
+            
             // * là chọn tất cả các thuộc tính
             if (valueString.Contains("*"))
             {
@@ -251,7 +251,11 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     MessageError = "Incorrect syntax near 'from'.";
                     return null;
                 }
-
+                if(valueString.Substring(posSelect,posTwo-posSelect).Split(',').Length > 1)
+                {
+                    MessageError = "Incorrect syntax near 'select'.";
+                    return null;
+                }
 
                 if (posOne < valueString.IndexOf("select"))
                 {
