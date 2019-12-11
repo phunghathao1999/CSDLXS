@@ -770,6 +770,11 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 case "_=": return (valueOne.ToLower().CompareTo(valueTwo) == 0);
                 case "!=": return (valueOne.ToLower().CompareTo(valueTwo) != 0);
+
+                case "_<": return (valueOne.ToLower().ToArray()[0] < valueTwo.ToLower().ToArray()[0]);
+                case "_>": return (valueOne.ToLower().ToArray()[0] > valueTwo.ToLower().ToArray()[0]);
+                case "<=": return (valueOne.ToLower().ToArray()[0] <= valueTwo.ToLower().ToArray()[0]);
+                case ">=": return (valueOne.ToLower().ToArray()[0] >= valueTwo.ToLower().ToArray()[0]);
                 default: return false;
             }
 
