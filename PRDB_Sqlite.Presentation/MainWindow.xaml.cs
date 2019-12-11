@@ -116,7 +116,9 @@ namespace PRDB_Sqlite.Presentation
                 this.rgNewRel.Visibility = Visibility.Visible;
                 this.rgOpnRel.Visibility = Visibility.Visible;
                 this.rgDelRel.Visibility = Visibility.Visible;
+                this.rgTup.Visibility = Visibility.Visible;
                 //query
+
             }
         }
 

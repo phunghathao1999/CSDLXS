@@ -121,9 +121,20 @@
                                             Background="#FFB6D9F3"
                                             ToolTip="Natural Join Mutual Exclusion"
                                             Click="btnJoin_me_Click" Width="120" Height="25"/>
-    
                                     </MenuItem>
-
+                                    
+                                    <MenuItem Header="Logic Operator">
+                                        <Button Content="AND" Name="btnAnd"
+                                            FontSize="14"
+                                            Background="#FF7BDECC"
+                                            ToolTip="Natural Join Independence"
+                                            Click="btnAnd_Click" Width="120" Height="25"/>
+                                        <Button Content="OR" Name="btnOr"
+                                            FontSize="14"
+                                            Background="#FF7BDECC"
+                                            ToolTip="Natural Join Independence"
+                                            Click="btnOr_Click" Width="120" Height="25"/>
+                                    </MenuItem>
                                 </ContextMenu>
                             </RichTextBox.ContextMenu>
                             

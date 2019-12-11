@@ -184,7 +184,7 @@
                         </Button>
                     </RibbonGroup>
 
-                    <RibbonGroup Margin="1,10,1,1" ToolTipTitle="Tuple Function" >
+                    <RibbonGroup Margin="1,10,1,1" Name="rgTup" ToolTipTitle="Tuple Function" Visibility="Collapsed" >
                         <Button x:Name="btnIns"
                                  Margin="0,0,0,-3"
                         Click="btnIns_Click"
