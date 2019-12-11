@@ -251,7 +251,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     MessageError = "Incorrect syntax near 'from'.";
                     return null;
                 }
-                if(valueString.Substring(posSelect,posTwo-posSelect).Split(',').Length > 1)
+                if(!valueString.Substring(posSelect,posTwo-posSelect).Trim().Equals("*"))
                 {
                     MessageError = "Incorrect syntax near 'select'.";
                     return null;
