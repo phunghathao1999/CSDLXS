@@ -392,5 +392,20 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 ClearAll(); // đưa csdl về trạng thái ban đầu
             }
         }
+
+        private void btnJoin_in_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "natural join in"));
+        }
+
+        private void btnJoin_ig_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "natural join ig"));
+        }
+
+        private void btnJoin_me_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "natural join me"));
+        }
     }
 }

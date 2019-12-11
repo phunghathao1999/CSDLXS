@@ -105,6 +105,25 @@
                                             Click="btnDis_me_Click" Width="120" Height="25" />
 
                                     </MenuItem>
+                                    <MenuItem Header="Join Operator">
+                                        <Button Content="⋈ in" Name="btnJoin_in"
+                                            FontSize="14"
+                                            Background="#FFB6D9F3"
+                                            ToolTip="Natural Join Independence"
+                                            Click="btnJoin_in_Click" Width="120" Height="25"/>
+                                        <Button Content="⋈ ig" Name="btnJoin_ig"
+                                            FontSize="14"
+                                            Background="#FFB6D9F3"
+                                            ToolTip="Natural Join Ignorance"
+                                            Click="btnJoin_ig_Click" Width="120" Height="25"/>
+                                        <Button Content="⋈ me" Name="btnJoin_me"
+                                            FontSize="14"
+                                            Background="#FFB6D9F3"
+                                            ToolTip="Natural Join Mutual Exclusion"
+                                            Click="btnJoin_me_Click" Width="120" Height="25"/>
+    
+                                    </MenuItem>
+
                                 </ContextMenu>
                             </RichTextBox.ContextMenu>
                             
