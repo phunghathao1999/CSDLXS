@@ -320,7 +320,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     {
                         if (conditionStr[j] == ']')
                         {
-                            
+
                             if (IsSelectionExpression(conditionStr.Substring(i, j - i + 1)))
                             {
                                 string expValue = ExpressionValue(conditionStr.Substring(i, j - i + 1)) ? "1" : "0";
@@ -609,6 +609,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     }
                     countValue = tuple.valueSet[(valueOne)].Count;
 
+                    prop = new ElemProb(0, 0);
 
                     foreach (var value in tuple.valueSet[(valueOne)])
                     {
@@ -616,19 +617,18 @@ namespace PRDB_Sqlite.Sevice.CommonService
                         {
                             try
                             {
-                                prop = new ElemProb(
-                               (1 / (float)countValue) * tuple.Ps.lowerBound,
-                               (1 / (float)countValue) * tuple.Ps.upperBound
-                               );
+                                prop.lowerBound += (1 / (float)countValue) ;
+                                prop.upperBound += (1 / (float)countValue) ;
                             }
                             catch (Exception ex)
                             {
                                 MessageError = ex.Message;
                             }
-                            break;
+                            //break;
                         }
-                        else prop = new ElemProb(0, 0);
                     }
+                    prop.lowerBound *= tuple.Ps.lowerBound;
+                    prop.upperBound *= tuple.Ps.upperBound;
 
                 }
                 else                     // Biểu thức kết hợp giữa hai khoảng xác suất
@@ -671,7 +671,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 string[] arr = value.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
                 int count = 0;
-               
+
                 if (count == 2)
                 {
                     MessageError = String.Format("The multi-part identifier {0} could not be bound.", value);
