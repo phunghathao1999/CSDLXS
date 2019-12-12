@@ -48,7 +48,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
         protected override void OnMouseEnter(MouseEventArgs e)
         {
             base.OnMouseEnter(e);
-            ((CloseableHeader)this.Header).button_close.Visibility = Visibility.Visible;
+                ((CloseableHeader)this.Header).button_close.Visibility = Visibility.Visible;
         }
         protected override void OnMouseLeave(MouseEventArgs e)
         {

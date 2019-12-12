@@ -79,30 +79,30 @@
                                     <MenuItem Header="Cut" Command="ApplicationCommands.Cut"/>
                                     <MenuItem Header="Copy" Command="ApplicationCommands.Copy"/>
                                     <MenuItem Header="Paste" Command="ApplicationCommands.Paste"/>
-                                    <MenuItem Header="Strategy">
+                                    <MenuItem Header="Strategy" FontSize="14" >
                                         <Separator ToolTip="Independence"/>
-                                        <Button Content="⊗_in(Conjunction) " Name="btnCon_in"
-                                            Background="#FF84C8F7"
-                                            Click="btnCon_in_Click" Width="120" Height="25"/>
-                                        <Button Content="⊕_in(Disjunction)" Name="btnDis_in"
-                                            Background="#FF84C8F7"
-                                            Click="btnDis_in_Click" Width="120" Height="25"/>
+                                        <Button Content="⊗_in (Conjunction) " HorizontalContentAlignment="Left" Name="btnCon_in"
+                                            Background="#FFC6E8FF" Padding="10,0,0,0" 
+                                            Click="btnCon_in_Click" Width="150" Height="25"/>
+                                        <Button Content="⊕_in (Disjunction)" HorizontalContentAlignment="Left" Name="btnDis_in"
+                                            Background="#FFC6E8FF" Padding="10,0,0,0" 
+                                            Click="btnDis_in_Click" Width="150" Height="25"/>
 
                                         <Separator ToolTip="Ignorance"/>
-                                        <Button Content="⊗_ig(Conjunction)" Name="btnCon_ig"
-                                            Background="#FF84C8F7"
-                                            Click="btnCon_ig_Click" Width="120" Height="25" />
-                                        <Button Content="⊕_ig(Disjunction)" Name="btnDis_ig"
-                                            Background="#FF84C8F7"
-                                            Click="btnDis_ig_Click" Width="120" Height="25" />
+                                        <Button Content="⊗_ig (Conjunction)" HorizontalContentAlignment="Left" Name="btnCon_ig"
+                                            Background="#FFC6E8FF" Padding="10,0,0,0" 
+                                            Click="btnCon_ig_Click" Width="150" Height="25" />
+                                        <Button Content="⊕_ig (Disjunction)" HorizontalContentAlignment="Left" Name="btnDis_ig"
+                                            Background="#FFC6E8FF" Padding="10,0,0,0" 
+                                            Click="btnDis_ig_Click" Width="150" Height="25" />
 
                                         <Separator ToolTip="Mutual Exclusion" />
-                                        <Button Content="⊗_me(Conjunction)" Name="btnCon_me"
-                                            Background="#FF84C8F7"
-                                            Click="btnCon_me_Click" Width="120" Height="25" />
-                                        <Button Content="⊕_me(Disjunction)" Name="btnDis_me"
-                                            Background="#FF84C8F7"
-                                            Click="btnDis_me_Click" Width="120" Height="25" />
+                                        <Button Content="⊗_me (Conjunction)" HorizontalContentAlignment="Left" Name="btnCon_me"
+                                            Background="#FFC6E8FF" Padding="10,0,0,0" 
+                                            Click="btnCon_me_Click" Width="150" Height="25" />
+                                        <Button Content="⊕_me (Disjunction)" HorizontalContentAlignment="Left" Name="btnDis_me"
+                                            Background="#FFC6E8FF" Padding="10,0,0,0" 
+                                            Click="btnDis_me_Click" Width="150" Height="25" />
 
                                     </MenuItem>
                                 </ContextMenu>
