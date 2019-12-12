@@ -221,6 +221,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PRDB_Sqlite.Data\PRDB_Sqlite.Data.csproj">
+      <Project>{170935DA-D3EE-4A03-AC85-AFE4CB2EC4CB}</Project>
+      <Name>PRDB_Sqlite.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PRDB_Sqlite.Domain\PRDB_Sqlite.Domain.csproj">
       <Project>{E7A82340-0E09-4443-A3A9-5B7E3E69CE21}</Project>
       <Name>PRDB_Sqlite.Domain</Name>

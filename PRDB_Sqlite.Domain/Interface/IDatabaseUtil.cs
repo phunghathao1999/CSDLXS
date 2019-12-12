@@ -25,6 +25,7 @@ namespace PRDB_Sqlite.Domain.Interface
         int? getNextSysId(string systblname);
 
         SQLiteTransaction BeginTransaction();
+        void resetConnection();
 
     }
 }

@@ -33,15 +33,16 @@
                       FontSize="14" 
                       MinHeight="200"
                       MinWidth="200"
+                      CanUserSortColumns="False"
                       IsSynchronizedWithCurrentItem="true"
                       MaxHeight="200"
                       ColumnWidth="*">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Attribute Name" Binding="{Binding attrName}"/>
-                    <DataGridTemplateColumn Header="isPrimary" >
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <CheckBox  IsChecked="{Binding isPri}"/>
+                    <DataGridTemplateColumn Header="isPrimary"  >
+                        <DataGridTemplateColumn.CellTemplate >
+                            <DataTemplate >
+                                <CheckBox  IsChecked="{Binding isPri,UpdateSourceTrigger=PropertyChanged}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

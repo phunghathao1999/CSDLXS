@@ -16,24 +16,23 @@ namespace PRDB_Sqlite.Presentation.Module
 {
     public class MdlRContent
     {
-        private PDatabase pDatabase;
+       // private PDatabase pDatabase;
         private static MdlRContent instance;
         private DataGrid dtg_temp;
-        protected MdlRContent(PDatabase db)
+        protected MdlRContent()
         {
-            this.pDatabase = db;
             this.dtg_temp = new DataGrid();
 
         }
-        protected MdlRContent()
+        //protected MdlRContent()
+        //{
+        //   // if (this.pDatabase == null) this.pDatabase = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
+        //    this.dtg_temp = new DataGrid();
+        //}
+        public static MdlRContent Instance()
         {
-            if (this.pDatabase == null) this.pDatabase = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
-            this.dtg_temp = new DataGrid();
-        }
-        public static MdlRContent Instance(PDatabase db = null)
-        {
-            if (db == null) db = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
-            return instance ?? (instance = new MdlRContent(db));
+            //if (db == null) db = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
+            return instance ?? (instance = new MdlRContent());
         }
         //get Tab Content
         public StackPanel getTabByUid(ref TabItem tab)
@@ -77,34 +76,34 @@ namespace PRDB_Sqlite.Presentation.Module
         {
             var reControl = new ucTabContent();
 
-            if (reControl.cbx.SelectedValue != null) { 
             #region Cbx setup
             if ("rel".Equals(uid.ToLower()))
             {
                 reControl.lblCbx.Content = "Relation list";
 
-                foreach (var item in this.pDatabase.Relations)
+                foreach (var item in StaticParams.currentDb.Relations)
                     reControl.cbx.Items.Add(new { Key = item.id, Value = item.relationName.ToUpper() });
-                if (this.pDatabase.Relations.Count >= Parameter.RelationIndex)
+                if (StaticParams.currentDb.Relations.Count >= Parameter.RelationIndex)
                     reControl.cbx.SelectedIndex = Parameter.RelationIndex;
-
-                var curItem = reControl.cbx.SelectedItem.GetType().GetProperty("Key");
-                var relation = StaticParams.currentDb.Relations.Where(r => r.id == (int)(curItem.GetValue(reControl.cbx.SelectedItem, null))).First();
-                if (relation != null)
+                if (reControl.cbx.SelectedValue != null)
                 {
-                    Parameter.RelationIndex = reControl.cbx.SelectedIndex;
-                    StaticParams.currentRelation = relation;
+                    var curItem = reControl.cbx.SelectedItem.GetType().GetProperty("Key");
+                    var relation = StaticParams.currentDb.Relations.Where(r => r.id == (int)(curItem.GetValue(reControl.cbx.SelectedItem, null))).First();
+                    if (relation != null)
+                    {
+                        Parameter.RelationIndex = reControl.cbx.SelectedIndex;
+                        StaticParams.currentRelation = relation;
+                    }
                 }
-
             }
             else
             if ("sch".Equals(uid.ToLower()))
             {
                 reControl.lblCbx.Content = "Schema list";
 
-                foreach (var item in this.pDatabase.Schemas)
+                foreach (var item in StaticParams.currentDb.Schemas)
                     reControl.cbx.Items.Add(new { Key = item.id, Value = item.SchemaName.ToUpper() });
-                if (this.pDatabase.Relations.Count >= Parameter.SchemaIndex)
+                if (StaticParams.currentDb.Schemas.Count >= Parameter.SchemaIndex)
                     reControl.cbx.SelectedIndex = Parameter.SchemaIndex;
                 reControl.stpAction.Visibility = Visibility.Hidden;
             }
@@ -118,18 +117,21 @@ namespace PRDB_Sqlite.Presentation.Module
 
             if ("sch".Equals(uid.ToLower()))
             {
-              
-                reControl.dtg.ItemsSource = getDataSourceSch((int)reControl.cbx.SelectedValue);
+                if (reControl.cbx.SelectedValue != null)
+                    reControl.dtg.ItemsSource = getDataSourceSch((int)reControl.cbx.SelectedValue);
             }
             if ("rel".Equals(uid.ToLower()))
             {
-                var data = getDataSourceRel((int)reControl.cbx.SelectedValue);
-                var dtS = dynamicGenDataTable(data);
-
+                if (reControl.cbx.SelectedValue != null)
                 {
-                    reControl.dtg.Columns.Clear();
-                    //make up dtg
-                    reControl.dtg.ItemsSource = dtS.DefaultView;
+                    var data = getDataSourceRel((int)reControl.cbx.SelectedValue);
+                    var dtS = dynamicGenDataTable(data);
+
+                    {
+                        reControl.dtg.Columns.Clear();
+                        //make up dtg
+                        reControl.dtg.ItemsSource = dtS.DefaultView;
+                    }
                 }
             }
 
@@ -137,34 +139,37 @@ namespace PRDB_Sqlite.Presentation.Module
             {
                 if ("rel".Equals(uid.ToLower()))
                 {
-                    var data = getDataSourceRel((int)reControl.cbx.SelectedValue);
-                    var dtS = dynamicGenDataTable(data);
-                    if (dtS is null)
+                    if (reControl.cbx.SelectedValue != null)
                     {
-                        reControl.dtg.AutoGenerateColumns = true;
-                        reControl.dtg.ItemsSource = dtS.DefaultView;
-                    }
-                    else
-                    {
-                        reControl.dtg.Columns.Clear();
-                        //make up dtg
-                        reControl.dtg.ItemsSource = dtS.DefaultView;
-                    }
-                    var curItem = reControl.cbx.SelectedItem.GetType().GetProperty("Key");
-                    var relation = StaticParams.currentDb.Relations.Where(r => r.id == (int)(curItem.GetValue(reControl.cbx.SelectedItem, null))).First();
-                    if(relation != null)
-                    {
-                        Parameter.RelationIndex = reControl.cbx.SelectedIndex;
-                        StaticParams.currentRelation = relation;
-                    }
+                        var data = getDataSourceRel((int)reControl.cbx.SelectedValue);
+                        var dtS = dynamicGenDataTable(data);
+                        if (dtS is null)
+                        {
+                            reControl.dtg.AutoGenerateColumns = true;
+                            reControl.dtg.ItemsSource = dtS.DefaultView;
+                        }
+                        else
+                        {
+                            reControl.dtg.Columns.Clear();
+                            //make up dtg
+                            reControl.dtg.ItemsSource = dtS.DefaultView;
+                        }
+                        var curItem = reControl.cbx.SelectedItem.GetType().GetProperty("Key");
+                        var relation = StaticParams.currentDb.Relations.Where(r => r.id == (int)(curItem.GetValue(reControl.cbx.SelectedItem, null))).First();
+                        if (relation != null)
+                        {
+                            Parameter.RelationIndex = reControl.cbx.SelectedIndex;
+                            StaticParams.currentRelation = relation;
+                        }
 
-                    // StaticParams.currentRelation = curItem;
-
+                        // StaticParams.currentRelation = curItem;
+                    }
                 }
 
                 if ("sch".Equals(uid.ToLower()))
                 {
-                    reControl.dtg.ItemsSource = getDataSourceSch((int)reControl.cbx.SelectedValue);
+                    if (reControl.cbx.SelectedValue != null)
+                        reControl.dtg.ItemsSource = getDataSourceSch((int)reControl.cbx.SelectedValue);
                     reControl.dtg.Columns[reControl.dtg.Columns.Count - 1].Visibility = Visibility.Collapsed;
                 }
             };
@@ -180,11 +185,10 @@ namespace PRDB_Sqlite.Presentation.Module
                 //reControl.dtg.SelectionUnit = DataGridSelectionUnit.Cell;
             }
 
-
                 reControl.dtg.FontSize = 15;
             #endregion
             stp.Children.Add(reControl);
-            }
+            
             return stp;
         }
 
@@ -234,7 +238,7 @@ namespace PRDB_Sqlite.Presentation.Module
         private IList<PAttribute> getDataSourceSch(int cbxIdx)
         {
             IList<PAttribute> dataSource = new List<PAttribute>();
-            foreach (var item in this.pDatabase.Schemas)
+            foreach (var item in StaticParams.currentDb.Schemas)
                 if (item.id.Equals(cbxIdx)) dataSource = item.Attributes;
             return dataSource;
         }
@@ -242,7 +246,7 @@ namespace PRDB_Sqlite.Presentation.Module
         {
             var reVal = new List<IDictionary<string, string>>();
 
-            foreach (var item in this.pDatabase.Relations)
+            foreach (var item in StaticParams.currentDb.Relations)
             {
                 if (item.id == cbxIdx)
                 {

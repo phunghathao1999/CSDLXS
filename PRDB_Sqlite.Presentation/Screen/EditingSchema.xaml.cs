@@ -1,6 +1,7 @@
 ﻿using PRDB_Sqlite.Domain.Interface.Service.dbComponent;
 using PRDB_Sqlite.Domain.Model;
 using PRDB_Sqlite.Domain.ModelView;
+using PRDB_Sqlite.Infractructure.Constant;
 using PRDB_Sqlite.Sevice.SysService;
 using PRDB_Sqlite.SystemParam;
 using System;
@@ -41,9 +42,10 @@ namespace PRDB_Sqlite.Presentation.Screen
             {
                 var select = s as ComboBox;
                 var schema = StaticParams.currentDb.Schemas.Where(p => p == select.SelectedItem as PSchema).FirstOrDefault();
-
+                attrs.Clear();
                 foreach (var item in schema.Attributes)
                 {
+                    if(!item.AttributeName.Equals(ContantCls.emlementProb,StringComparison.CurrentCultureIgnoreCase))
                     attrs.Add(new SchemaModelView(item.AttributeName,item.primaryKey,item.Type.DataType,item.Type.TypeName,item.Type.DomainString,item.Description));
                 }
                 this.dtg.ItemsSource = attrs;
@@ -200,5 +202,15 @@ namespace PRDB_Sqlite.Presentation.Screen
 
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.txtName.Text = (this.cbxSchName.SelectedItem as PSchema).SchemaName;
+            }
+            catch { }
+        }
+
+      
     }
 }

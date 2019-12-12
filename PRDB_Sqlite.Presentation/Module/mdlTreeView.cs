@@ -1,5 +1,6 @@
 ﻿using PRDB_Sqlite.Domain.Model;
 using PRDB_Sqlite.Infractructure.Common;
+using PRDB_Sqlite.SystemParam;
 using System;
 using System.Configuration;
 using System.Windows;
@@ -13,20 +14,17 @@ namespace PRDB_Sqlite.Presentation.Module
 {
     public class MdlTreeView
     {
-        private PDatabase pDatabase;
+       // private PDatabase pDatabase;
         private static MdlTreeView instance;
-        protected MdlTreeView(PDatabase db)
-        {
-            this.pDatabase = db;
-        }
+       
         protected MdlTreeView()
         {
-            if (this.pDatabase == null) this.pDatabase = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
+            //if (StaticParams.currentDb == null) StaticParams.currentDb = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
         }
-        public static MdlTreeView Instance(PDatabase db = null)
+        public static MdlTreeView Instance()
         {
-            if (db == null) db = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
-            return instance == null ? instance = new MdlTreeView(db) : instance;
+           // if (db == null) db = new PDatabase(ConfigurationManager.AppSettings["conectionString"].ToString());
+            return instance ??  (instance = new MdlTreeView());
         }
         public StackPanel GetStackPanelRoot1(String RootName , String urlImage , int sizeX = 20, int sizeY = 15)
         {
@@ -45,11 +43,11 @@ namespace PRDB_Sqlite.Presentation.Module
         {
 
             //make a Treeview
-            StackPanel stpDatabse = GetStackPanelRoot1("   " + this.pDatabase.DbName.ToString(), @"assets\Images\Icondatabase.png", 20 , 20);
+            StackPanel stpDatabse = GetStackPanelRoot1("   " + StaticParams.currentDb.DbName.ToString(), @"assets\Images\Icondatabase.png", 20 , 20);
             //make a root
             var root = new TreeViewItem();
             root.Header = stpDatabse;
-            root.ToolTip = this.pDatabase.ConnectString.ToString();
+            root.ToolTip = StaticParams.currentDb.ConnectString.ToString();
            // root.Background = Brushes.Aqua;
             root.Padding = new Thickness(5, 3, 5, 3);
            // root.FontWeight = FontWeights.Bold;
@@ -57,15 +55,15 @@ namespace PRDB_Sqlite.Presentation.Module
 
             StackPanel stpSchema = GetStackPanelRoot1("   Schema", @"assets\Images\iconFoldel.jpg");
             //fetch the Schemas
-            var schLst = new TreeViewItem() { Header = stpSchema, ToolTip = String.Format("rows", this.pDatabase.Schemas.Count) };
-            foreach (PSchema item in this.pDatabase.Schemas)
+            var schLst = new TreeViewItem() { Header = stpSchema, ToolTip = String.Format("rows", StaticParams.currentDb.Schemas.Count) };
+            foreach (PSchema item in StaticParams.currentDb.Schemas)
             {
                 StackPanel stpSchemaItem = GetStackPanelRoot1("   " + item.SchemaName.ToUpper().ToString(), @"assets\Images\iconFoldel.jpg");
-                var curSch = new TreeViewItem() { Header = stpSchemaItem, ToolTip = String.Format("{0} rows", item.Attributes.Count), Uid = item.id.ToString()/*, Foreground = Brushes.YellowGreen*/ };
+                var curSch = new TreeViewItem() { Header = stpSchemaItem, ToolTip = String.Format("{0} rows", item.Attributes.Count), Uid = StaticParams.currentDb.Schemas.IndexOf(item).ToString()/*, Foreground = Brushes.YellowGreen*/ };
                 curSch.MouseDoubleClick += (s, e) =>
                 {
                     var sender = s as TreeViewItem;
-                    Parameter.SchemaIndex = Convert.ToInt32(sender.Uid)-1;
+                    Parameter.SchemaIndex = Convert.ToInt32(sender.Uid);
                     Parameter.activeTabIdx = 0;
                     //Parameter.indexSchChange = true;
                     MainWindow.resetTab("sch");
@@ -100,20 +98,20 @@ namespace PRDB_Sqlite.Presentation.Module
 
             StackPanel stpRelation = GetStackPanelRoot1("   Relations", @"assets\Images\iconFoldel.jpg");
             //fetch the Relations
-            var rlLst = new TreeViewItem() { Header = stpRelation, ToolTip = String.Format("{0} rows", this.pDatabase.Relations.Count) };
-            foreach (PRelation item in this.pDatabase.Relations)
+            var rlLst = new TreeViewItem() { Header = stpRelation, ToolTip = String.Format("{0} rows", StaticParams.currentDb.Relations.Count) };
+            foreach (PRelation item in StaticParams.currentDb.Relations)
             {
                 StackPanel stpRelationFile = GetStackPanelRoot1("   " + item.relationName.ToUpper().ToString(), @"assets\Images\attributeTree.png");
                 var rel = new TreeViewItem()
                 {
                     Header = stpRelationFile,
                     ToolTip = String.Format("{0} row of tuples", item.tupes.Count),
-                    Uid = item.id.ToString()
+                    Uid = StaticParams.currentDb.Relations.IndexOf(item).ToString()
                 };
                 rel.MouseDoubleClick += (s, e) =>
                 {
                     var sender = s as TreeViewItem;
-                    Parameter.RelationIndex = Convert.ToInt32(sender.Uid)-1;
+                    Parameter.RelationIndex = Convert.ToInt32(sender.Uid);
                     Parameter.activeTabIdx = 1;
                     //Parameter.indexRelChange = true;
                     MainWindow.resetTab("rel");
@@ -123,8 +121,8 @@ namespace PRDB_Sqlite.Presentation.Module
             root.Items.Add(rlLst);
             //fetch the Query
             StackPanel stpQuery = GetStackPanelRoot1("   Queries", @"assets\Images\iconFoldel.jpg");
-            var qrLst = new TreeViewItem() { Header = stpQuery, ToolTip = String.Format("{0} rows", this.pDatabase.Queries.Count) };
-            foreach (PQuery item in this.pDatabase.Queries)
+            var qrLst = new TreeViewItem() { Header = stpQuery, ToolTip = String.Format("{0} rows", StaticParams.currentDb.Queries.Count) };
+            foreach (PQuery item in StaticParams.currentDb.Queries)
             {
                 StackPanel stpQueryFile = GetStackPanelRoot1("   " + item.QueryName, @"assets\Images\queryTree.png");
                 qrLst.Items.Add(new TreeViewItem() { Header = stpQueryFile, ToolTip = item.QueryString });

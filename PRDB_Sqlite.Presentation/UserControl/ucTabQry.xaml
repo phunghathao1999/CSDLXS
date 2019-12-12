@@ -75,7 +75,7 @@
                                  FontSize="15">
 
                             <RichTextBox.ContextMenu>
-                                <ContextMenu>
+                                <ContextMenu HorizontalContentAlignment="Left">
                                     <MenuItem Header="Cut" Command="ApplicationCommands.Cut"/>
                                     <MenuItem Header="Copy" Command="ApplicationCommands.Copy"/>
                                     <MenuItem Header="Paste" Command="ApplicationCommands.Paste"/>
@@ -124,12 +124,12 @@
                                     </MenuItem>
                                     
                                     <MenuItem Header="Logic Operator">
-                                        <Button Content="AND" Name="btnAnd"
+                                        <Button Content="∧ - AND" Name="btnAnd"
                                             FontSize="14"
                                             Background="#FF7BDECC"
                                             ToolTip="Natural Join Independence"
                                             Click="btnAnd_Click" Width="120" Height="25"/>
-                                        <Button Content="OR" Name="btnOr"
+                                        <Button Content="∨ - OR" Name="btnOr"
                                             FontSize="14"
                                             Background="#FF7BDECC"
                                             ToolTip="Natural Join Independence"

@@ -1,4 +1,5 @@
-﻿using PRDB_Sqlite.Domain.Interface.Service;
+﻿using PRDB_Sqlite.Data.Connector;
+using PRDB_Sqlite.Domain.Interface.Service;
 using PRDB_Sqlite.Domain.Model;
 using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Sevice.Factory;
@@ -107,7 +108,7 @@ namespace PRDB_Sqlite.Presentation.Module
             {
                 if (this.dialog.ShowDialog() == DialogResult.OK)
                 {
-
+                   
                     this.pDatabase = new PDatabase(this.dialog.FileName);
                     Parameter.connectionString = this.pDatabase.ConnectString;
                     if (this.dbService.OpenExistingDatabase(ref this.pDatabase) == null)
@@ -121,6 +122,9 @@ namespace PRDB_Sqlite.Presentation.Module
         }
         public PDatabase CreateNewDb()
         {
+            this.pDatabase = null;
+            Parameter.connectionString = String.Empty;
+
             this.setupDialog(isNewDb: true);
 
             if (this.dialog.ShowDialog() == DialogResult.OK)
