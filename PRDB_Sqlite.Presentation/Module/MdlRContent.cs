@@ -76,6 +76,8 @@ namespace PRDB_Sqlite.Presentation.Module
         private StackPanel getChild(ref StackPanel stp, string uid)
         {
             var reControl = new ucTabContent();
+
+            if (reControl.cbx.SelectedValue != null) { 
             #region Cbx setup
             if ("rel".Equals(uid.ToLower()))
             {
@@ -116,7 +118,7 @@ namespace PRDB_Sqlite.Presentation.Module
 
             if ("sch".Equals(uid.ToLower()))
             {
-
+              
                 reControl.dtg.ItemsSource = getDataSourceSch((int)reControl.cbx.SelectedValue);
             }
             if ("rel".Equals(uid.ToLower()))
@@ -182,6 +184,7 @@ namespace PRDB_Sqlite.Presentation.Module
                 reControl.dtg.FontSize = 15;
             #endregion
             stp.Children.Add(reControl);
+            }
             return stp;
         }
 
