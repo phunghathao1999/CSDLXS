@@ -1,23 +1,14 @@
-﻿using PRDB_Sqlite.Domain.Interface.Service.dbComponent;
-using PRDB_Sqlite.Domain.Model;
+﻿using PRDB_Sqlite.Domain.Model;
 using PRDB_Sqlite.Domain.ModelView;
 using PRDB_Sqlite.Infractructure.Constant;
 using PRDB_Sqlite.Sevice.SysService;
 using PRDB_Sqlite.SystemParam;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace PRDB_Sqlite.Presentation.Screen
 {
@@ -45,8 +36,8 @@ namespace PRDB_Sqlite.Presentation.Screen
                 attrs.Clear();
                 foreach (var item in schema.Attributes)
                 {
-                    if(!item.AttributeName.Equals(ContantCls.emlementProb,StringComparison.CurrentCultureIgnoreCase))
-                    attrs.Add(new SchemaModelView(item.AttributeName,item.primaryKey,item.Type.DataType,item.Type.TypeName,item.Type.DomainString,item.Description));
+                    if (!item.AttributeName.Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                        attrs.Add(new SchemaModelView(item.AttributeName, item.primaryKey, item.Type.DataType, item.Type.TypeName, item.Type.DomainString, item.Description));
                 }
                 this.dtg.ItemsSource = attrs;
                 this.txtName.Text = schema.SchemaName.ToUpper();
@@ -81,27 +72,29 @@ namespace PRDB_Sqlite.Presentation.Screen
         }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            var schema = this.cbxSchName.SelectedItem as PSchema;
-            if (RawDatabaseService.Instance().getRelByIdSch(schema).Count > 0)
-            {
-                MessageBox.Show("The Schema are being used by another Relation, Fail to Edit!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            //build attrs
-            var upAttrs = schema.Attributes.ToList();
-            schema.SchemaName = this.txtName.Text.ToLower();
-            for (int i = 0; i < upAttrs.Count; i++)
-            {
-                upAttrs[i].AttributeName = attrs[i].attrName;
-                upAttrs[i].primaryKey = attrs[i].isPri;
-                upAttrs[i].Type.TypeName = attrs[i].typeName;
-                upAttrs[i].Type.GetDomain(attrs[i].domain);
-                upAttrs[i].Type.GetDataType();
-                upAttrs[i].Schema = schema;
-            }
-            //update Attrs
             try
             {
+                var schema = this.cbxSchName.SelectedItem as PSchema;
+
+                if (RawDatabaseService.Instance().getRelByIdSch(schema).Count > 0)
+                {
+                    MessageBox.Show("The Schema are being used by another Relation, Fail to Edit!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                //build attrs
+                var upAttrs = schema.Attributes.ToList();
+                schema.SchemaName = this.txtName.Text.ToLower();
+                for (int i = 0; i < upAttrs.Count; i++)
+                {
+                    upAttrs[i].AttributeName = attrs[i].attrName;
+                    upAttrs[i].primaryKey = attrs[i].isPri;
+                    upAttrs[i].Type.TypeName = attrs[i].typeName;
+                    upAttrs[i].Type.GetDomain(attrs[i].domain);
+                    upAttrs[i].Type.GetDataType();
+                    upAttrs[i].Schema = schema;
+                }
+                //update Attrs
+
                 foreach (var item in upAttrs)
                 {
                     RawDatabaseService.Instance().Update(item);
@@ -109,7 +102,7 @@ namespace PRDB_Sqlite.Presentation.Screen
                 //update Sch
                 RawDatabaseService.Instance().Update(schema);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -211,6 +204,6 @@ namespace PRDB_Sqlite.Presentation.Screen
             catch { }
         }
 
-      
+
     }
 }

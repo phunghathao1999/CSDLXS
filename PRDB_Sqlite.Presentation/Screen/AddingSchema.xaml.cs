@@ -68,7 +68,7 @@ namespace PRDB_Sqlite.Presentation.Screen
                 MessageBox.Show("Schema name is not valid ( not match with keyword 'select', 'from', 'where')", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            foreach (var item in this.pDatabase.Schemas.ToList())
+            foreach (var item in StaticParams.currentDb.Schemas.ToList())
             {
                 if (item.SchemaName.ToLower().Equals(this.txtSchName.Text.ToLower(), StringComparison.CurrentCultureIgnoreCase))
                 {

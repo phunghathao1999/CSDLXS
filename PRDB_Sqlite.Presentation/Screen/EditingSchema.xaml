@@ -20,10 +20,10 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Label  Content="Schema name:" FontSize="13"  FontFamily="Arial" Foreground="Black" FontWeight="Normal" />
-                        <ComboBox x:Name="cbxSchName" FontSize="13"  SelectedIndex="0"  FontFamily="Arial" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" Foreground="Black"  VerticalAlignment="Center" />
+                        <ComboBox x:Name="cbxSchName" FontSize="13" FontFamily="Arial" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" Foreground="Black"  VerticalAlignment="Center" />
                         <Label/>
                         <Label/>
-                        <Label Content="Current name:" FontSize="13"   FontFamily="Arial" Foreground="Black" FontWeight="Normal"/>
+                        <Label Content="Current name:" FontSize="13"  FontFamily="Arial" Foreground="Black" FontWeight="Normal"/>
                         <TextBox x:Name="txtName"  FontSize="13"  Height="20"  FontFamily="Arial" Foreground="Black" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Center"/>
                     </StackPanel>
 

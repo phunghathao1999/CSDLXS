@@ -531,6 +531,7 @@ namespace PRDB_Sqlite.Sevice.SysService
 
             public PAttribute Update(PAttribute pAttribute)
             {
+                if (pAttribute.AttributeName.Equals(ContantCls.emlementProb,StringComparison.CurrentCultureIgnoreCase)) return null;
                 string sql = String.Format("UPDATE SystemAttribute SET PrimaryKey = '{0}',AttributeName='{1}', DataType='{2}', Domain='{3}', Description='{4}', SchemeID='{5}' WHERE ID= '{6}' ",
                     pAttribute.primaryKey ? "True" : "False",
                     pAttribute.AttributeName,
