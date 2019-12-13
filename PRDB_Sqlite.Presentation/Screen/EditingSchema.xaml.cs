@@ -89,15 +89,22 @@ namespace PRDB_Sqlite.Presentation.Screen
             }
             //build attrs
             var upAttrs = schema.Attributes.ToList();
+            //remove ps
+            
             schema.SchemaName = this.txtName.Text.ToLower();
             for (int i = 0; i < upAttrs.Count; i++)
             {
-                upAttrs[i].AttributeName = attrs[i].attrName;
-                upAttrs[i].primaryKey = attrs[i].isPri;
-                upAttrs[i].Type.TypeName = attrs[i].typeName;
-                upAttrs[i].Type.GetDomain(attrs[i].domain);
-                upAttrs[i].Type.GetDataType();
-                upAttrs[i].Schema = schema;
+                //ko update ps
+                if (!upAttrs[i].AttributeName.Equals(ContantCls.emlementProb,StringComparison.CurrentCultureIgnoreCase))
+                {
+                    upAttrs[i].AttributeName = attrs[i].attrName;
+                    upAttrs[i].primaryKey = attrs[i].isPri;
+                    upAttrs[i].Type.TypeName = attrs[i].typeName;
+                    upAttrs[i].Type.GetDomain(attrs[i].domain);
+                    upAttrs[i].Type.GetDataType();
+                    upAttrs[i].Schema = schema;
+                }
+                
             }
             //update Attrs
             try
