@@ -8,6 +8,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="ToolWindow"
+        Loaded="Window_Loaded"
         Title="EditingSchema" Width="650" Height="514">
     <DockPanel >
         <StackPanel Background="#FFDAE3EC">
@@ -16,16 +17,16 @@
             <Label/>
             <GroupBox Header="Schema Information" FontWeight="Normal"  FontFamily="Arial" FontSize="20" Padding="0,10" Margin="0,20,0,19">
                 <GroupItem>
-                    
+
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Label  Content="Schema name:" FontSize="13"  FontFamily="Arial" Foreground="Black" FontWeight="Normal" />
-                        <ComboBox x:Name="cbxSchName" FontSize="13"    FontFamily="Arial" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" Foreground="Black"  VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbxSchName" FontSize="13"  SelectedIndex="0"  FontFamily="Arial" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" Foreground="Black"  VerticalAlignment="Center" />
                         <Label/>
                         <Label/>
                         <Label Content="Current name:" FontSize="13"   FontFamily="Arial" Foreground="Black" FontWeight="Normal"/>
                         <TextBox x:Name="txtName"  FontSize="13"  Height="20"  FontFamily="Arial" Foreground="Black" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Center"/>
                     </StackPanel>
-                    
+
                 </GroupItem>
             </GroupBox>
             <ToolBarTray>
@@ -37,6 +38,7 @@
             <DataGrid x:Name="dtg"
                       FontSize="14" 
                       MinHeight="200"
+                      CanUserSortColumns="False"
                       IsSynchronizedWithCurrentItem="true"
                       MaxHeight="200"
                       ColumnWidth="*">
@@ -45,7 +47,7 @@
                     <DataGridTemplateColumn Header="isPrimary" >
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox  IsChecked="{Binding isPri}"/>
+                                <CheckBox  IsChecked="{Binding isPri,UpdateSourceTrigger=PropertyChanged}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
@@ -71,11 +73,11 @@
                 <Button x:Name="btnSave" Click="btnSave_Click" BorderThickness="0" >
                     <Button.Content>
                         <Border Width="80" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                            <TextBlock Text="Save" FontSize="20" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                            <TextBlock Text="Save" FontSize="20" Padding="5"  HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="0,0,14,0"/>
                         </Border>
                     </Button.Content>
                 </Button>
-                
+
                 <Label/>
                 <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0" >
                     <Button.Content>
@@ -84,7 +86,7 @@
                         </Border>
                     </Button.Content>
                 </Button>
-                
+
             </StackPanel>
             <Label/>
             <Label/>

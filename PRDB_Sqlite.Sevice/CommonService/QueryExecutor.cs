@@ -860,7 +860,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
             foreach (var item in psLs)
             {
                 relation.schema.Attributes.Remove(item);
-                var revAtt = this.selectedAttributes.Where(p => p.id == item.id).Single();
+                var revAtt = this.selectedAttributes.Where(p => p.id == item.id).FirstOrDefault();
+                if(revAtt != null)
                 this.selectedAttributes.Remove(revAtt);
             }
 

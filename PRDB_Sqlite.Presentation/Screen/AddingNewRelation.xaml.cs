@@ -31,7 +31,11 @@ namespace PRDB_Sqlite.Presentation.Screen
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
+            if (this.cbxSch.SelectedItem is null)
+            {
+                MessageBox.Show("Please choose any item of Combobox", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
             try
             {
                 if (this.txtRelName.Text.Trim().Length <= 0)
@@ -103,5 +107,7 @@ namespace PRDB_Sqlite.Presentation.Screen
             this.cbxSch.DisplayMemberPath= "SchemaName";
             this.cbxSch.SelectedValuePath = "id";
         }
+
+       
     }
 }

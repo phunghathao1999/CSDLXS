@@ -218,13 +218,19 @@ namespace PRDB_Sqlite.Sevice.CommonService
         {
 
             if (conditionString.Contains(" and ") || conditionString.Contains(" or ") || conditionString.Contains(" not "))
+            {
+                MessageError = "\nAnd/or doesn\'t handle the probabilistic Interval";
                 return false;
+
+            }
 
 
             string str = conditionString.Substring(conditionString.IndexOf("(") + 1, conditionString.IndexOf(")") - 1); //lay phan value
-            if (str == string.Empty || str.Contains("(") || str.Contains(")")) //check valid conStr
+            if (str == string.Empty || str.Contains("(") || str.Contains(")"))
+            { //check valid conStr
+                MessageError = "\nCondition String is Invalid";
                 return false;
-
+            }
 
             if (convertConditionStrToProbInterVal(conditionString) == null)
                 return false;
@@ -770,7 +776,6 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 case "_=": return (valueOne.ToLower().CompareTo(valueTwo) == 0);
                 case "!=": return (valueOne.ToLower().CompareTo(valueTwo) != 0);
-
                 case "_<": return (valueOne.ToLower().ToArray()[0] < valueTwo.ToLower().ToArray()[0]);
                 case "_>": return (valueOne.ToLower().ToArray()[0] > valueTwo.ToLower().ToArray()[0]);
                 case "<=": return (valueOne.ToLower().ToArray()[0] <= valueTwo.ToLower().ToArray()[0]);
@@ -803,6 +808,21 @@ namespace PRDB_Sqlite.Sevice.CommonService
             }
 
         }
+        private bool DtCompare(string valueOne, string valueTwo, string opratorStr)
+        {
+            var date1 = DateTime.ParseExact(valueOne, "MM/dd/yyyy", null);
+            var date2 = DateTime.ParseExact(valueTwo, "MM/dd/yyyy", null);
+            switch (opratorStr)
+            {
+                case "_<": return (date1.CompareTo(date2) < 0);
+                case "_>": return (date1.CompareTo(date2) > 0);
+                case "<=": return (date1.CompareTo(date2) <= 0);
+                case ">=": return (date1.CompareTo(date2) >= 0);
+                case "_=": return (date1.CompareTo(date2) == 0);
+                case "!=": return (date1.CompareTo(date2) != 0);
+                default: return false;
+            }
+        }
         public bool Compare(object valueOne, string valueTwo, string opratorStr, string typename)
         {
             switch (typename)
@@ -813,8 +833,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 case "Byte":
                 case "Currency":
                     return IntCompare(Convert.ToInt16(valueOne), Convert.ToInt16(valueTwo), opratorStr);
-                case "String":
                 case "DateTime": //chu y ngay
+                    return DtCompare(valueOne.ToString(), valueTwo, opratorStr);
+                case "String":
                 case "UserDefined":
                 case "Binary":
                     return StrCompare(valueOne.ToString(), valueTwo, opratorStr);
@@ -828,6 +849,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
             }
 
         }
+
+       
         #endregion
 
 

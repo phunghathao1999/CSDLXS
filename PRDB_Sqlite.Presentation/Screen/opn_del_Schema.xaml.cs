@@ -93,7 +93,11 @@ namespace PRDB_Sqlite.Presentation.Screen
 
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
-
+            if(this.cbx.SelectedItem is null)
+            {
+                MessageBox.Show("Please choose any item of Combobox", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
             if ("opnsch".Equals(this.mode, StringComparison.CurrentCultureIgnoreCase))
             {
                 Parameter.activeTabIdx = 0;

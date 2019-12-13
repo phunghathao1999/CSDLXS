@@ -43,6 +43,7 @@
                    Grid.Column="0"
                    Grid.Row="2" FontFamily="Times New Roman" FontWeight="Normal" FontSize="20"/>
             <ComboBox MinWidth="200"
+                      SelectedIndex="1"
                       Name="cbxSch"
                       Grid.Column="1"
                       Grid.Row="2" VerticalAlignment="Center" FontSize="20" FontFamily="Aria"/>

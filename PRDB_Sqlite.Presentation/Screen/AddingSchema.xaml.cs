@@ -68,7 +68,6 @@ namespace PRDB_Sqlite.Presentation.Screen
                 MessageBox.Show("Schema name is not valid ( not match with keyword 'select', 'from', 'where')", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-
             foreach (var item in this.pDatabase.Schemas.ToList())
             {
                 if (item.SchemaName.ToLower().Equals(this.txtSchName.Text.ToLower(), StringComparison.CurrentCultureIgnoreCase))
@@ -160,6 +159,7 @@ namespace PRDB_Sqlite.Presentation.Screen
                 MessageBox.Show("Error: Unable to create Schema. Schema attribute is required !", "Notification", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
+            var flagPri = false;
 
             foreach (SchemaModelView item in attrs)
             {
@@ -179,7 +179,7 @@ namespace PRDB_Sqlite.Presentation.Screen
                     MessageBox.Show("Attribute name is not valid ( not match with keyword 'select', 'from', 'where')", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return false;
                 }
-
+                if (item.isPri) flagPri = true;
                 //duplicat atribute
                 foreach (SchemaModelView item_ch in attrs)
                 {
@@ -190,6 +190,10 @@ namespace PRDB_Sqlite.Presentation.Screen
                         return false;
                     }
                 }
+            }
+            if (!flagPri) { 
+                MessageBox.Show("Schema must have at least 1 Primary Key!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
             return true;
 

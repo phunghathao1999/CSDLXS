@@ -18,6 +18,7 @@ namespace PRDB_Sqlite.Data.Connector
         private static ConcreteDb _instance;
         public static ConcreteDb Instance
         {
+            
             get
             {
                 if (_instance == null)
@@ -365,6 +366,11 @@ namespace PRDB_Sqlite.Data.Connector
         {
                 openConnection();
                 return this.connection.BeginTransaction();
+        }
+
+        public override void resetConnection()
+        {
+            _instance = null;
         }
     }
 }

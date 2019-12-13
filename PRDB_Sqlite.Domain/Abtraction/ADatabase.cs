@@ -39,13 +39,10 @@ namespace PRDB_Sqlite.Domain.Abtraction
        
 
         public abstract bool CreateTable(string sqlCreateTable,bool con);
+
+
+        public void Dispose() { }
         
-
-        public void Dispose()
-        {
-            this.Dispose();
-        }
-
         public abstract bool DropTable(string tblName,bool con);
 
 
@@ -72,6 +69,7 @@ namespace PRDB_Sqlite.Domain.Abtraction
 
         public abstract SQLiteTransaction BeginTransaction();
 
+        public abstract void resetConnection();
       
     }
 }

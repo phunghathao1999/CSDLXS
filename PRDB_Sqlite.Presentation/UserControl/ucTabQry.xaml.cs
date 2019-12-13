@@ -30,7 +30,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
             if (ConfigurationManager.AppSettings["devmode"].Contains("1"))
             {
-                var sampleSql1 = "select * from patient where (patient.bloodtype = 'A' ⊗_in patient.height > 130)[0.3,0.8]";
+                var sampleSql1 = "select * from patient where (patient.bloodtype = 'A' ⊗_in patient.height > 130)[0.03,0.8]";
                 var sampleSql2 = "select * from patient natural join in physician";
                 var sampleSql3 = "select patient.firstname from patient";
                 this.rbxQry.Document.Blocks.Add(new Paragraph(new Run(sampleSql1.Trim())));
@@ -96,7 +96,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 newTAb.Height = 25;
                 newTAb.Title = name;
 
-                newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
+                newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f,Uid=name ,Name=name};
                 this.TbQry.Items.Add(newTAb);
                 newTAb.Focus();
             }
@@ -112,8 +112,16 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 this.dtgDataResult.Columns.Clear();
 
                 var strQry = String.Empty;
-                strQry = new TextRange(this.rbxQry.Document.ContentStart, this.rbxQry.Document.ContentEnd).Text;
-                strQry = (String.IsNullOrEmpty(this.rbxQry.Selection.Text) ? strQry : this.rbxQry.Selection.Text);
+
+                foreach (TabItem tab in TbQry.Items)
+                {
+                    if (tab.IsSelected)
+                    {
+                        
+                        strQry = new TextRange(this.rbxQry.Document.ContentStart, this.rbxQry.Document.ContentEnd).Text;
+                        strQry = (String.IsNullOrEmpty(this.rbxQry.Selection.Text) ? strQry : this.rbxQry.Selection.Text);
+                    }
+                }
 
                 if (String.IsNullOrEmpty(strQry))
                 {
@@ -231,6 +239,11 @@ namespace PRDB_Sqlite.Presentation.UserControl
         {
             switch (e.Key)
             {
+                case Key.F6:
+                    ButtonAutomationPeer peerCur = new ButtonAutomationPeer(this.btnExecCur);
+                    IInvokeProvider invokeProvCur = peerCur.GetPattern(PatternInterface.Invoke) as IInvokeProvider;
+                    invokeProvCur.Invoke();
+                    break;
                 case Key.F5:
                     ButtonAutomationPeer peer = new ButtonAutomationPeer(this.btnExec);
                     IInvokeProvider invokeProv = peer.GetPattern(PatternInterface.Invoke) as IInvokeProvider;
@@ -349,7 +362,14 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void btnExecCur_Click(object sender, RoutedEventArgs e)
         {
-            var currentLine = new TextRange(this.rbxQry.CaretPosition.GetLineStartPosition(0), this.rbxQry.CaretPosition.GetLineStartPosition(1) ?? this.rbxQry.CaretPosition.DocumentEnd).Text.Trim();
+
+            var currentLine = String.Empty;
+            foreach (TabItem tab in this.TbQry.Items)
+            {
+                
+                if(tab.IsSelected)
+                currentLine = new TextRange(this.rbxQry.CaretPosition.GetLineStartPosition(0), this.rbxQry.CaretPosition.GetLineStartPosition(1) ?? this.rbxQry.CaretPosition.DocumentEnd).Text.Trim();
+            }
             try
             {
                 var query = new QueryExecutor(currentLine, (SystemParam.StaticParams.currentDb));
@@ -391,6 +411,31 @@ namespace PRDB_Sqlite.Presentation.UserControl
             {
                 ClearAll(); // đưa csdl về trạng thái ban đầu
             }
+        }
+
+        private void btnJoin_in_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "natural join in"));
+        }
+
+        private void btnJoin_ig_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "natural join ig"));
+        }
+
+        private void btnJoin_me_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "natural join me"));
+        }
+
+        private void btnAnd_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "and"));
+        }
+
+        private void btnOr_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "or"));
         }
     }
 }

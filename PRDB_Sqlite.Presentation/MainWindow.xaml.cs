@@ -85,13 +85,13 @@ namespace PRDB_Sqlite.Presentation
                 if (loadLeft)
                 {
                     tvLeftNode.Items.Clear();
-                    tvLeftNode.Items.Add(MdlTreeView.Instance(StaticParams.currentDb).getTreeViewItemFromDb());
+                    tvLeftNode.Items.Add(MdlTreeView.Instance().getTreeViewItemFromDb());
                 }
                 //load rightContent
                 this.tbMainTab.SelectedIndex = Parameter.activeTabIdx;
-                MdlRContent.Instance(StaticParams.currentDb).getTabByUid(ref this.tbiSch);
-                MdlRContent.Instance(StaticParams.currentDb).getTabByUid(ref this.tbiRel);
-                MdlRContent.Instance(StaticParams.currentDb).getTabByUid(ref this.tbiQry);
+                MdlRContent.Instance().getTabByUid(ref this.tbiSch);
+                MdlRContent.Instance().getTabByUid(ref this.tbiRel);
+                MdlRContent.Instance().getTabByUid(ref this.tbiQry);
             }
 
             this.cbxStrategy.ItemsSource = Parameter.strategies;
@@ -116,7 +116,9 @@ namespace PRDB_Sqlite.Presentation
                 this.rgNewRel.Visibility = Visibility.Visible;
                 this.rgOpnRel.Visibility = Visibility.Visible;
                 this.rgDelRel.Visibility = Visibility.Visible;
+                this.rgTup.Visibility = Visibility.Visible;
                 //query
+
             }
         }
 
@@ -281,10 +283,9 @@ namespace PRDB_Sqlite.Presentation
                 var idList = addIdform.idTupleList;
                 var pri = StaticParams.currentRelation.schema.Attributes.Where(a => a.primaryKey).FirstOrDefault();
                 var priAtr = $"{StaticParams.currentRelation.relationName.ToLower()}.{pri.AttributeName.ToLower()}";
-                foreach (var id in idList)
-                {
-                    var tup = RawDatabaseService.Instance().insertEmptyTuple(StaticParams.currentRelation,pri,id.IDtuple);
-                }
+                if (idList != null)
+                    foreach (var id in idList)
+                        RawDatabaseService.Instance().insertEmptyTuple(StaticParams.currentRelation, pri, id.IDtuple);
                 Parameter.activeTabIdx = 1;
                 this.reloadDb();
             }

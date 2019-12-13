@@ -29,7 +29,7 @@
         <Label Name="lblHeader" Content="Replace Content" HorizontalAlignment="Center" FontSize="40" FontWeight="Normal"
                FontFamily="Times New Roman" Margin="0,0,0,20"/>
         <GroupBox x:Name="grpMain" Header="Replace Content" FontFamily="Times New Roman" FontWeight="Normal" Margin="0,0,0,20" FontSize="20" >
-            <ComboBox Name="cbx" FontWeight="Normal" FontFamily="Aria"  Width="250"/>
+            <ComboBox Name="cbx" FontWeight="Normal" FontFamily="Aria" SelectedIndex="1"  Width="250"/>
         </GroupBox>
         <Label/>
         <StackPanel  HorizontalAlignment="Center" Orientation="Horizontal">

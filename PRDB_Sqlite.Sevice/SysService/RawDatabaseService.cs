@@ -40,12 +40,17 @@ namespace PRDB_Sqlite.Sevice.SysService
 
         public PDatabase CreateNewDatabase(ref PDatabase dbInfo)
         {
+
+            //reset Concrete
+            ConcreteDb.Instance.resetConnection();
             try
             {
                 SQLiteConnection.CreateFile(dbInfo.DBPath);
 
                 Parameter.connectionString = dbInfo.ConnectString; //chac chan param da mang value
                 ConcreteDb db = ConcreteDb.Instance;
+
+
                 string strSQL = "";
 
                 // Record set of schemes to the database system
@@ -77,6 +82,7 @@ namespace PRDB_Sqlite.Sevice.SysService
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message);
+                Parameter.connectionString = String.Empty;
                 return null;
             }
             //get full info before
@@ -95,6 +101,8 @@ namespace PRDB_Sqlite.Sevice.SysService
 
         public PDatabase OpenExistingDatabase(ref PDatabase pDatabase)
         {
+            //reset Concrete
+            ConcreteDb.Instance.resetConnection();
             try
             {
                 //IList<PSchema> Schemas = new List<PSchema>();
@@ -347,12 +355,20 @@ namespace PRDB_Sqlite.Sevice.SysService
             {
                 var newSchemas = new List<PSchema>();
                 var dts = new DataSet();
-                dts.Tables.Add(ConcreteDb.Instance.getDataTable("SELECT * FROM SystemScheme", "system_scheme"));
-                foreach (DataRow row in dts.Tables["system_scheme"].Rows)
+                try
                 {
-                    IList<PAttribute> attributes = AttributeService.Instance().getListAttributeByScheme(new PSchema(Convert.ToInt16(row[0])));
-                    newSchemas.Add(new PSchema(Convert.ToInt32(row[0]), row[1].ToString(), attributes));
+                    dts.Tables.Add(ConcreteDb.Instance.getDataTable("SELECT * FROM SystemScheme", "system_scheme"));
+                    foreach (DataRow row in dts.Tables["system_scheme"].Rows)
+                    {
+                        IList<PAttribute> attributes = AttributeService.Instance().getListAttributeByScheme(new PSchema(Convert.ToInt16(row[0])));
+                        newSchemas.Add(new PSchema(Convert.ToInt32(row[0]), row[1].ToString(), attributes));
+                    }
                 }
+                catch
+                {
+
+                }
+               
                 return newSchemas;
             }
 
@@ -406,8 +422,8 @@ namespace PRDB_Sqlite.Sevice.SysService
             {
                 string SQL = "";
                 SQL += "Update SystemScheme  SET ";
-                SQL += " SchemeName  = " + pSchema.SchemaName;
-                SQL += " Where  ID = " + pSchema.id;
+                SQL += " SchemeName  = '" + pSchema.SchemaName+"'";
+                SQL += " Where  ID = '" + pSchema.id+"'";
                 if (ConcreteDb.Instance.Update(SQL) < 0)
                     throw new Exception("Failed to Update Schema, plz try again!");
                 return pSchema;
@@ -515,7 +531,7 @@ namespace PRDB_Sqlite.Sevice.SysService
 
             public PAttribute Update(PAttribute pAttribute)
             {
-                string sql = String.Format("UPDATE SystemAttribute SET Primary = '{0}',AttributeName='{1}', DataType='{2}', Domain='{3}', Description='{4}', SchemeID='{5}' WHERE ID= '{6}' ",
+                string sql = String.Format("UPDATE SystemAttribute SET PrimaryKey = '{0}',AttributeName='{1}', DataType='{2}', Domain='{3}', Description='{4}', SchemeID='{5}' WHERE ID= '{6}' ",
                     pAttribute.primaryKey ? "True" : "False",
                     pAttribute.AttributeName,
                     pAttribute.Type.DataType,
@@ -590,17 +606,24 @@ namespace PRDB_Sqlite.Sevice.SysService
 
                 var relations = new List<PRelation>();
                 DataSet dts = new DataSet();
-                dts.Tables.Add(ConcreteDb.Instance.getDataTable("SELECT * FROM SystemRelation", "system_relation"));
-
-                foreach (DataRow row in dts.Tables["system_relation"].Rows)
+                try
                 {
-                    string relationname = row[1].ToString();
-                    PSchema schema = SchemaService.Instance().getSchemeById(Convert.ToInt16(row[2]));
-                    var tuple = PTupleService.Instance().getAllTupleByRelationName(relationname, schema.Attributes);
-                    if (tuple is null) tuple = new List<PTuple>();
-                    PRelation relation = new PRelation(Convert.ToInt16(row[0]), schema, relationname, tuple);
-                    relations.Add(relation);
+                    dts.Tables.Add(ConcreteDb.Instance.getDataTable("SELECT * FROM SystemRelation", "system_relation"));
+                    foreach (DataRow row in dts.Tables["system_relation"].Rows)
+                    {
+                        string relationname = row[1].ToString();
+                        PSchema schema = SchemaService.Instance().getSchemeById(Convert.ToInt16(row[2]));
+                        var tuple = PTupleService.Instance().getAllTupleByRelationName(relationname, schema.Attributes);
+                        if (tuple is null) tuple = new List<PTuple>();
+                        PRelation relation = new PRelation(Convert.ToInt16(row[0]), schema, relationname, tuple);
+                        relations.Add(relation);
+                    }
                 }
+                catch
+                {
+
+                }
+             
                 return relations;
             }
 
@@ -724,18 +747,25 @@ namespace PRDB_Sqlite.Sevice.SysService
             {
                 var probQueries = new List<PQuery>();
                 DataSet dts = dts = new DataSet();
-                dts.Tables.Add(ConcreteDb.Instance.getDataTable("SELECT * FROM SystemQuery", "system_query"));
-
-                foreach (DataRow queryRow in dts.Tables["system_query"].Rows)
+                try
                 {
-                    var NewQuery = new PQuery();
-                    NewQuery.IDQuery = Convert.ToInt16(queryRow[0].ToString());
-                    NewQuery.QueryName = queryRow[1].ToString();
-                    if (queryRow[2].ToString() != "Empty")
-                        NewQuery.QueryString = queryRow[2].ToString();
-                    else
-                        NewQuery.QueryString = "";
-                    probQueries.Add(NewQuery);
+                    dts.Tables.Add(ConcreteDb.Instance.getDataTable("SELECT * FROM SystemQuery", "system_query"));
+
+                    foreach (DataRow queryRow in dts.Tables["system_query"].Rows)
+                    {
+                        var NewQuery = new PQuery();
+                        NewQuery.IDQuery = Convert.ToInt16(queryRow[0].ToString());
+                        NewQuery.QueryName = queryRow[1].ToString();
+                        if (queryRow[2].ToString() != "Empty")
+                            NewQuery.QueryString = queryRow[2].ToString();
+                        else
+                            NewQuery.QueryString = "";
+                        probQueries.Add(NewQuery);
+                    }
+                }
+                catch
+                {
+
                 }
 
                 return probQueries;
