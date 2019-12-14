@@ -154,26 +154,105 @@ namespace PRDB_Sqlite.Presentation.UserControl
         private void btnApply(object sender, RoutedEventArgs e)
         {
             var att = this.ucEdit.txtInfo.Content.ToString();
-
-            if (att.Substring(att.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+            if (!this.ucEdit.rowBeingEdited)
             {
-                this.ucEdit.btnView_Click(null, null);
-                var rowView = (this.dtg.Items[Parameter.currentRow] as DataRowView); //Get RowView
-                rowView.BeginEdit();
-                rowView[Parameter.currentColumn] =  new TextRange(this.ucEdit.rtbxCellContent.Document.ContentStart,this.ucEdit.rtbxCellContent.Document.ContentEnd).Text.Trim();
-                rowView.EndEdit();
-                this.dtg.Items.Refresh();
+                
+
+                if (att.Substring(att.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    var strProb = new TextRange(this.ucEdit.rtbxCellContent.Document.ContentStart, this.ucEdit.rtbxCellContent.Document.ContentEnd).Text.Trim();
+                    try
+                    {
+                        new ElemProb(strProb);
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
+                try
+                {
+                    String val = String.Empty;
+                    if (this.ucEdit.rtbxCellContent.Visibility == Visibility.Visible)
+                    {
+                        val = new TextRange(this.ucEdit.rtbxCellContent.Document.ContentStart, this.ucEdit.rtbxCellContent.Document.ContentEnd).Text.Trim();
+                        //val = String.Format("'{{ {0} }}", val);
+                    }
+                    if (this.ucEdit.dtgCellContent.Visibility == Visibility.Visible)
+                    {
+                        val = String.Join(" , ", this.ucEdit.valueList.Select(p => p.value.Trim()).ToArray());
+                        //val = String.Format("'{{ {0} }}", val);
+
+                    }
+                    var datatype = this.ucEdit.pAttribute.Type;
+                    if (datatype.CheckDataTypeOfVarLs(val))
+                    {
+                        //check elem trung nhau
+                        this.ucEdit.removeDuplicateElements(ref val);
+
+
+                        var attr = this.ucEdit.txtInfo.Content.ToString().Trim().ToLower();
+
+                        //save
+                        if (this.ucEdit.curTuple.valueSet.Keys.Contains(attr))
+                        {
+                            this.ucEdit.curTuple.valueSet[attr] = val.Split(',').Select(p => p.Trim()).ToList();
+                        }
+                        // Ps Attr
+                        else
+                        {
+                            this.ucEdit.curTuple.Ps = new ElemProb(val);
+                        }
+                        try
+                        {
+                            RawDatabaseService.Instance().Update(this.ucEdit.curTuple, this.ucEdit.pRelation, attr);
+
+                            Parameter.resetMainF = true;
+                            Parameter.activeTabIdx = 1;
+                            Parameter.RelationIndex = (int)this.ucEdit.pRelation.id - 1;
+
+                            //update dtg
+
+
+                            if (att.Substring(att.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                            {
+                                this.ucEdit.btnView_Click(null, null);
+                                var rowView = (this.dtg.Items[Parameter.currentRow] as DataRowView); //Get RowView
+                                rowView.BeginEdit();
+                                rowView[Parameter.currentColumn] = new TextRange(this.ucEdit.rtbxCellContent.Document.ContentStart, this.ucEdit.rtbxCellContent.Document.ContentEnd).Text.Trim();
+                                rowView.EndEdit();
+                                this.dtg.Items.Refresh();
+                            }
+                            else
+                            {
+                                this.ucEdit.btnView_Click(null, null);
+                                var rowView = (this.dtg.Items[Parameter.currentRow] as DataRowView); //Get RowView
+                                rowView.BeginEdit();
+                                rowView[Parameter.currentColumn] = "{ " + String.Join(",", this.ucEdit.valueList.Select(p => p.value).ToArray()) + " }";
+                                rowView.EndEdit();
+                                this.dtg.Items.Refresh();
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                    else
+                        MessageBox.Show("The value is invalid with its Datatype", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                }
             }
             else
             {
-                this.ucEdit.btnView_Click(null, null);
-                var rowView = (this.dtg.Items[Parameter.currentRow] as DataRowView); //Get RowView
-                rowView.BeginEdit();
-                rowView[Parameter.currentColumn] = "{ " + String.Join(",", this.ucEdit.valueList.Select(p => p.value).ToArray()) + " }";
-                rowView.EndEdit();
-                this.dtg.Items.Refresh();
+                MessageBox.Show("the Value have not Edited yet!", "Alert", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
-           
+          
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)

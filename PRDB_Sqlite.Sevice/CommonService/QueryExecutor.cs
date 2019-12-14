@@ -19,10 +19,10 @@ namespace PRDB_Sqlite.Sevice.CommonService
         public string conditionString { get; set; }
         public bool flagNaturalJoin { get; set; }
         private string OperationNaturalJoin = string.Empty;
-        private int i;
 
         public string MessageError { get; set; }
         public PRelation DescartesAndNaturalJoin { get; set; }
+        public IList<String> querys { get; set; }
 
         public QueryExecutor(string queryString, PDatabase PDatabase)
         {
@@ -239,7 +239,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             //////////////////////// Get Attributes //////////////////////
             int posOne, posTwo, posSelect = valueString.ToLower().IndexOf("select") + 6;
 
-            
+
             // * là chọn tất cả các thuộc tính
             if (valueString.Contains("*"))
             {
@@ -251,7 +251,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     MessageError = "Incorrect syntax near 'from'.";
                     return null;
                 }
-                if(!valueString.Substring(posSelect,posTwo-posSelect).Trim().Equals("*"))
+                if (!valueString.Substring(posSelect, posTwo - posSelect).Trim().Equals("*"))
                 {
                     MessageError = "Incorrect syntax near 'select'.";
                     return null;
@@ -538,6 +538,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
         public bool ExecuteQuery()
         {
+
+            // multiQueryAnalyze();
             try
             {
                 if (!QueryAnalyze()) return false;
@@ -604,7 +606,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
             return true;
         }
 
-        private PRelation getRelationBySelectAttribute(PRelation pRelation, IList<PAttribute> selectedAttributes)
+
+
+        public PRelation getRelationBySelectAttribute(PRelation pRelation, IList<PAttribute> selectedAttributes)
         {
             var relation = new PRelation();
             relation.relationName = pRelation.relationName;
@@ -622,7 +626,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             }
 
             #region projection
-             e_Val_Equivalent(ref relation, selectedAttributes);
+            e_Val_Equivalent(ref relation, selectedAttributes);
             #endregion projection
 
             relation.schema.Attributes = selectedAttributes;
@@ -686,9 +690,11 @@ namespace PRDB_Sqlite.Sevice.CommonService
             //get val
             foreach (var att in pAttributes)
             {
-                #region 
-                float p = 1f;
-                reTuple.valueSet.Add(att.AttributeName, getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName));
+
+                    #region 
+                    float p = 1f;
+                if (!getStandardAttrName(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                    reTuple.valueSet.Add(att.AttributeName, getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName));
                 #endregion
             }
             //get Prob
@@ -696,9 +702,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
             var prop1 = new ElemProb(pTuple_1.Ps);
             var prop2 = new ElemProb(pTuple_2.Ps);
             var strategy = Parameter.curStrategy;
-            switch (strategy.Substring(strategy.IndexOf("_")+1))
+            switch (strategy.Substring(strategy.IndexOf("_") + 1))
             {
-                
+
                 case "ig": reTuple.Ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
                 case "in": reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
                 case "me": reTuple.Ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
@@ -709,28 +715,62 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
             return reTuple;
         }
+        private static PTuple getTupleCollapse_static(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var reTuple = new PTuple();
+            //get val
+            foreach (var att in pAttributes)
+            {
+
+                #region 
+                float p = 1f;
+                if (!getStandardAttrName_static(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                    reTuple.valueSet.Add(att.AttributeName, getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName));
+                #endregion
+            }
+            //get Prob
+
+            var prop1 = new ElemProb(pTuple_1.Ps);
+            var prop2 = new ElemProb(pTuple_2.Ps);
+            var strategy = Parameter.curStrategy;
+            switch (strategy.Substring(strategy.IndexOf("_") + 1))
+            {
+
+                case "ig": reTuple.Ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                case "in": reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
+                case "me": reTuple.Ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                default:
+                    break;
+            }
+
+            return reTuple;
+        }
         private bool check_e_Val_eql(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
         {
             var probs = new List<float>();
-            var eulerElem = new ElemProb(0,0);
+            var eulerElem = new ElemProb(0, 0);
             foreach (var att in pAttributes)
             {
-                #region 
-                //check equal
-                float p = 1f;
-                var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
+                if (!getStandardAttrName(att.AttributeName).Equals( ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    #region 
+                    //check equal
+                    float p = 1f;
+                    var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
 
-                if (!(innerSet is null) && innerSet.Count != 0)
-                    if (probs.Count > 0)
-                    {
-                        probs.Add(p);
-                        eulerElem = calProp_e(ref probs);
-                    }
-                    else probs.Add(p);
-                else
-                    return false;
+                    if (!(innerSet is null) && innerSet.Count != 0)
+                        if (probs.Count > 0)
+                        {
+                            probs.Add(p);
+                            eulerElem = calProp_e(ref probs);
+                        }
+                        else probs.Add(p);
+                    else
+                        return false;
 
-                #endregion
+                    #endregion
+                }
+
             }
 
             return Parameter.eulerThreshold <= eulerElem.lowerBound && eulerElem.upperBound >= Parameter.eulerThreshold;
@@ -743,9 +783,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
             var second = probs.First();
             probs.Remove(second);
 
-            var prop1 = new ElemProb(first,first);
-            var prop2 = new ElemProb(second,second);
-            ElemProb ps = new ElemProb(0,0); 
+            var prop1 = new ElemProb(first, first);
+            var prop2 = new ElemProb(second, second);
+            ElemProb ps = new ElemProb(0, 0);
             switch (Parameter.curStrategy)
             {
                 case "⊗_ig": ps = new ElemProb(Math.Max(0, prop1.lowerBound + prop2.lowerBound - 1), Math.Min(prop1.upperBound, prop2.upperBound)); break;
@@ -756,6 +796,29 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 case "⊕_me": ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
                 default:
                     MessageError = "Invalid Current Strategy: " + Parameter.curStrategy;
+                    break;
+            }
+            return ps;
+        }
+        private static ElemProb calProp_e_static(ref List<float> probs)
+        {
+            var first = probs.First();
+            probs.Remove(first);
+            var second = probs.First();
+            probs.Remove(second);
+
+            var prop1 = new ElemProb(first, first);
+            var prop2 = new ElemProb(second, second);
+            ElemProb ps = new ElemProb(0, 0);
+            switch (Parameter.curStrategy)
+            {
+                case "⊗_ig": ps = new ElemProb(Math.Max(0, prop1.lowerBound + prop2.lowerBound - 1), Math.Min(prop1.upperBound, prop2.upperBound)); break;
+                case "⊗_in": ps = new ElemProb(prop1.lowerBound * prop2.lowerBound, prop1.upperBound * prop2.upperBound); break;
+                case "⊗_me": ps = new ElemProb(0, 0); break;
+                case "⊕_ig": ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                case "⊕_in": ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
+                case "⊕_me": ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                default:
                     break;
             }
             return ps;
@@ -861,8 +924,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 relation.schema.Attributes.Remove(item);
                 var revAtt = this.selectedAttributes.Where(p => p.id == item.id).FirstOrDefault();
-                if(revAtt != null)
-                this.selectedAttributes.Remove(revAtt);
+                if (revAtt != null)
+                    this.selectedAttributes.Remove(revAtt);
             }
 
             lst.AttributeName = getStandardAttrName(lst.AttributeName);
@@ -927,10 +990,10 @@ namespace PRDB_Sqlite.Sevice.CommonService
             this.selectedAttributes.Remove(attr2);
 
         }
-        private IList<string> getInterset(ref float p, IList<string> set1, IList<string> set2, string typeName)
+        private static IList<string> getInterset(ref float p, IList<string> set1, IList<string> set2, string typeName)
         {
             var interSet = new List<String>();
-            var omega = set1.Count * set2.Count;
+            var omega = getOmerga(set1, set2, typeName).Count;
 
             foreach (var item_set1 in set1)
             {
@@ -948,6 +1011,21 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
             return interSet.Count < 0 ? null : interSet;
         }
+
+        private static IList<String> getOmerga(IList<string> set1, IList<string> set2, String typeName)
+        {
+            var omergaList = new List<String>();
+            omergaList.AddRange(set1);
+            foreach (var item_set2 in set2.ToList())
+                foreach (var item_omg in omergaList.ToList())
+                    //string is err 
+                    if (!SelectCondition.EQUAL( item_set2.Trim(), item_omg.Trim(), typeName))
+                    {
+                        omergaList.Add(item_set2);
+                    }
+            return omergaList;
+        }
+
         private ElemProb calProp(IList<ElemProb> probs, float propSet = 1f, string Opr = "in") //SE satified elements
         {
             ElemProb reVal = new ElemProb(0, 1); //ME
@@ -989,6 +1067,15 @@ namespace PRDB_Sqlite.Sevice.CommonService
             }
             return attributeName;
         }
+        private static string getStandardAttrName_static(string attributeName)
+        {
+            if (attributeName.IndexOf('.') != -1)
+            {
+                var reVal = attributeName.Trim();
+                return reVal.Substring(reVal.IndexOf('.') + 1).ToString();  //discard a dot
+            }
+            return attributeName;
+        }
         private bool equalSchemaName(string qryAttr1, string qryAttr2)
         {
             var schemaName1 = getRelationNamebyStrAttr(qryAttr1);
@@ -999,6 +1086,86 @@ namespace PRDB_Sqlite.Sevice.CommonService
         private string getRelationNamebyStrAttr(string attr)
         {
             return attr.Split('.').FirstOrDefault().Trim().ToString();
+        }
+        public static PRelation unionOperator(PRelation pRelation1, PRelation pRelation2)
+        {
+            //clone
+            var reVal = new PRelation()
+            {
+                id = pRelation1.id,
+                schema = pRelation1.schema,
+                relationName = pRelation1.relationName,
+                tupes = pRelation1.tupes
+            };
+            foreach (var item in pRelation2.tupes)
+            {
+                reVal.tupes.Add(item);
+            }
+            return reVal;
+        }
+        public static PRelation intersertOperator(PRelation pRelation1, PRelation pRelation2,IList<PAttribute> pAttributes)
+        {
+            //clone
+            var reVal = new PRelation();
+           
+
+            {
+                {
+                    for (int i = 0; i < pRelation1.tupes.Count; i++)
+                    {
+                        for (int j = 0; j < pRelation2.tupes.Count; j++)
+                        {
+                            if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
+                            {
+                                reVal.tupes.Add(getTupleCollapse_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                                //pRelation.tupes.RemoveAt(j);
+                            }
+                        }
+                    }
+                }
+            }
+            return reVal;
+        }
+        public static PRelation exceptOperator(PRelation pRelation1, PRelation pRelation2)
+        {
+            var reVal = new PRelation()
+            {
+                id = pRelation1.id,
+                schema = pRelation1.schema,
+                relationName = pRelation1.relationName,
+                tupes = pRelation1.tupes
+            };
+            return reVal;
+        }
+        private static bool check_e_Val_eq(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var probs = new List<float>();
+            var eulerElem = new ElemProb(0, 0);
+            foreach (var att in pAttributes)
+            {
+                if (!getStandardAttrName_static(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    #region 
+                    //check equal
+                    float p = 1f;
+                    var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
+
+                    if (!(innerSet is null) && innerSet.Count != 0)
+                        if (probs.Count > 0)
+                        {
+                            probs.Add(p);
+                            eulerElem = calProp_e_static(ref probs);
+                        }
+                        else probs.Add(p);
+                    else
+                        return false;
+
+                    #endregion
+                }
+
+            }
+
+            return Parameter.eulerThreshold <= eulerElem.lowerBound && eulerElem.upperBound >= Parameter.eulerThreshold;
         }
     }
 }

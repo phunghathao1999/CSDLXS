@@ -740,20 +740,22 @@ namespace PRDB_Sqlite.Sevice.CommonService
         {
             switch (type)
             {
+                
                 case "Int16":
                 case "Int64":
                 case "Int32":
                 case "Byte":
                 case "Currency": return int.Parse(a.ToString()) == int.Parse(b.ToString());
-                case "String":
                 case "DateTime":
+                    //return SelectCondition.DtCompare(a.ToString(), b.ToString(), "_=");
+                case "String":
                 case "UserDefined":
                 case "Binary": return (a.ToString().CompareTo(b.ToString()) == 0);
                 case "Decimal":
                 case "Single":
                 case "Double": return (Math.Abs((double)a - (double)b) < 0.001);
                 case "Boolean": return Boolean.Parse(a.ToString()) == Boolean.Parse(b.ToString());
-                default: return false;
+                default: return (a.ToString().CompareTo(b.ToString()) == 0);break;
             }
         }
         public static bool IntCompare(Int16 valueOne, Int16 valueTwo, string OpratorStr)
@@ -808,20 +810,29 @@ namespace PRDB_Sqlite.Sevice.CommonService
             }
 
         }
-        private bool DtCompare(string valueOne, string valueTwo, string opratorStr)
+        private static bool DtCompare(string valueOne, string valueTwo, string opratorStr)
         {
-            var date1 = DateTime.ParseExact(valueOne, "MM/dd/yyyy", null);
-            var date2 = DateTime.ParseExact(valueTwo, "MM/dd/yyyy", null);
-            switch (opratorStr)
+
+            try
             {
-                case "_<": return (date1.CompareTo(date2) < 0);
-                case "_>": return (date1.CompareTo(date2) > 0);
-                case "<=": return (date1.CompareTo(date2) <= 0);
-                case ">=": return (date1.CompareTo(date2) >= 0);
-                case "_=": return (date1.CompareTo(date2) == 0);
-                case "!=": return (date1.CompareTo(date2) != 0);
-                default: return false;
+                var date1 = DateTime.ParseExact(valueOne, "MM/dd/yyyy", null);
+                var date2 = DateTime.ParseExact(valueTwo, "MM/dd/yyyy", null);
+                switch (opratorStr)
+                {
+                    case "_<": return (date1.CompareTo(date2) < 0);
+                    case "_>": return (date1.CompareTo(date2) > 0);
+                    case "<=": return (date1.CompareTo(date2) <= 0);
+                    case ">=": return (date1.CompareTo(date2) >= 0);
+                    case "_=": return (date1.CompareTo(date2) == 0);
+                    case "!=": return (date1.CompareTo(date2) != 0);
+                    default: return false;
+                }
             }
+            catch
+            {
+                throw new Exception("Cannot Convert data to DateTime!");
+            }
+           
         }
         public bool Compare(object valueOne, string valueTwo, string opratorStr, string typename)
         {

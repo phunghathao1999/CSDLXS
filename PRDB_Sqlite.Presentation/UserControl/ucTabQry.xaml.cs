@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Automation.Peers;
 using System.Windows.Automation.Provider;
@@ -58,9 +59,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void AddHandler()
         {
-            //this.btnExec.Click += (s,e) => {
-            //    MessageBox.Show("oc");
-            //};
+
             this.btnExec.Click += new RoutedEventHandler(this.executeQuery);
             this.btnNewtab.Click += new RoutedEventHandler(this.btnNewtab_Click);
             this.btnView.Click += new RoutedEventHandler(this.btnChangeView_Click);
@@ -96,12 +95,55 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 newTAb.Height = 25;
                 newTAb.Title = name;
 
-                newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f,Uid=name ,Name=name};
+                newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f, Uid = name, Name = name };
                 this.TbQry.Items.Add(newTAb);
                 newTAb.Focus();
             }
             else
                 MessageBox.Show("Too more Tab cause your bad experience");
+        }
+        private bool multiQueryAnalyze(ref IList<String> queries, ref IList<String> operatorQry, String queryString)
+        {
+
+            queries.Clear();
+            operatorQry.Clear();
+            if (queryString.Contains("union") ||
+                queryString.Contains("intersert") ||
+                queryString.Contains("except"))
+            {
+                queries = queryString.Split(new[] { "union", "intersert", "except", }, StringSplitOptions.None);
+                //format
+                for (int i = 0; i < queries.Count; i++)
+                {
+                    //if (String.IsNullOrEmpty(queries[i])) throw new Exception("Qu");
+                    queries[i] = queries[i].Replace(";", "").Trim();
+                    if (queries[i].Contains("\r"))
+                        throw new Exception("Syntax query is Error");
+                }
+                //queryString = queries.First().ToString() ?? String.Empty;
+
+                #region update stack operator
+                queryString = queryString.Replace("union", "|_u_|");
+                queryString = queryString.Replace("intersert", " |_i_| ");
+                queryString = queryString.Replace("except", " |_e_| ");
+                //^((?!hede).)*$
+                //\s+_[uie]_\s+
+
+                //select patient.firstname from patient union select patient.firstname from patient  union select patient.firstname from patient  union select patient.firstname from patient 
+                var ls = queryString.Split('|').ToList();
+                operatorQry.Add("FisrtTime");
+                foreach (var item in ls ?? new List<String>())
+                    if (Regex.IsMatch(item, @"_[uie]_"))
+                        operatorQry.Add(item); //add in stack
+
+                #endregion
+                return true;
+            }
+            else
+            {
+                queries.Add(queryString);
+            }
+            return false;
         }
 
         private void executeQuery(object sender, EventArgs e)
@@ -117,7 +159,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 {
                     if (tab.IsSelected)
                     {
-                        
+
                         strQry = new TextRange(this.rbxQry.Document.ContentStart, this.rbxQry.Document.ContentEnd).Text;
                         strQry = (String.IsNullOrEmpty(this.rbxQry.Selection.Text) ? strQry : this.rbxQry.Selection.Text);
                     }
@@ -129,36 +171,79 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     return;
                 }
 
-                var query = new QueryExecutor(strQry, (SystemParam.StaticParams.currentDb));
-                //txtMessage.Text = "";
+                IList<String> queries = new List<String>();
+                IList<String> operatorQry = new List<String>();
 
-                if (query.ExecuteQuery())
+                var relationResult = new PRelation();
+
+                multiQueryAnalyze(queries: ref queries, operatorQry: ref operatorQry, queryString: strQry);
+
+                for (int i = 0; i < queries.Count; i++)
                 {
-                    this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(query.relationResult)).DefaultView;
-                    this.txtMessage.Text = String.Empty;
-
-                    if (query.relationResult.tupes.Count <= 0)
+                    if (String.IsNullOrEmpty(queries[i]))
                     {
-                        txtMessage.Foreground = Brushes.IndianRed;
-
-                        txtMessage.Text += "No tuple satisfies the condition";
+                        MessageBox.Show("Query syntax Error");
+                        return;
                     }
+                    var query = new QueryExecutor(queries[i], (SystemParam.StaticParams.currentDb));
+                    if (query.ExecuteQuery())
+                    {
+                        if (!String.IsNullOrEmpty(queries[i])&&queries.Count > 1 && operatorQry.Count > 0)
+                            switch (operatorQry.First())
+                            {
+                                case "_u_":
+                                    relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult); break;
+                                case "_i_":
+                                    relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult,query.selectedAttributes); break;
+                                case "_e_":
+                                    relationResult = QueryExecutor.exceptOperator(relationResult, query.relationResult); break;
+                                default: relationResult = query.relationResult; break; //the first time
+                            }
+                        else
+                            relationResult = query.relationResult;
+                        //remove stack
+                        if (operatorQry.Count > 0)
+                            operatorQry.Remove(operatorQry.First());
+                    }
+
                     else
                     {
-                        txtMessage.Foreground = Brushes.Black;
-                        txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
-                        txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
-                        txtMessage.Text += String.Format("\nResult Tuple Count: {0}", query.relationResult.tupes.Count);
-
-
+                        txtMessage.Foreground = Brushes.Red;
+                        txtMessage.Text += query.MessageError;
                     }
 
+
+                    #region projecttions
+                    try
+                    {
+                        relationResult = query.getRelationBySelectAttribute(relationResult, query.selectedAttributes);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Selected Attributes must be same in each Query");
+                        return;
+                    }
+                    #endregion
+
+                }
+
+                if (relationResult.tupes.Count <= 0)
+                {
+                    txtMessage.Foreground = Brushes.IndianRed;
+
+                    txtMessage.Text += "No tuple satisfies the condition";
                 }
                 else
                 {
-                    txtMessage.Foreground = Brushes.Red;
-                    txtMessage.Text = query.MessageError;
+                    this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(relationResult)).DefaultView;
+                    this.txtMessage.Text = String.Empty;
+                    txtMessage.Foreground = Brushes.Black;
+                    txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
+                    txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
+                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}", relationResult.tupes.Count);
+
                 }
+
             }
             catch (Exception ex)
             {
@@ -169,7 +254,38 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 ClearAll(); // đưa csdl về trạng thái ban đầu
             }
         }
+        private void excuteOneQuery(String strQry)
+        {
+            var query = new QueryExecutor(strQry, (SystemParam.StaticParams.currentDb));
+            //txtMessage.Text = "";
 
+            if (query.ExecuteQuery())
+            {
+                this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(query.relationResult)).DefaultView;
+                this.txtMessage.Text = String.Empty;
+
+                if (query.relationResult.tupes.Count <= 0)
+                {
+                    txtMessage.Foreground = Brushes.IndianRed;
+
+                    txtMessage.Text += "\nNo tuple satisfies the condition";
+                }
+                else
+                {
+                    txtMessage.Foreground = Brushes.Black;
+                    txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
+                    txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
+                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}", query.relationResult.tupes.Count);
+
+                }
+
+            }
+            else
+            {
+                txtMessage.Foreground = Brushes.Red;
+                txtMessage.Text = query.MessageError;
+            }
+        }
         private void ClearAll()
         {
         }
@@ -366,42 +482,82 @@ namespace PRDB_Sqlite.Presentation.UserControl
             var currentLine = String.Empty;
             foreach (TabItem tab in this.TbQry.Items)
             {
-                
-                if(tab.IsSelected)
-                currentLine = new TextRange(this.rbxQry.CaretPosition.GetLineStartPosition(0), this.rbxQry.CaretPosition.GetLineStartPosition(1) ?? this.rbxQry.CaretPosition.DocumentEnd).Text.Trim();
+
+                if (tab.IsSelected)
+                    currentLine = new TextRange(this.rbxQry.CaretPosition.GetLineStartPosition(0), this.rbxQry.CaretPosition.GetLineStartPosition(1) ?? this.rbxQry.CaretPosition.DocumentEnd).Text.Trim();
             }
+
             try
             {
-                var query = new QueryExecutor(currentLine, (SystemParam.StaticParams.currentDb));
-                //txtMessage.Text = "";
+                IList<String> queries = new List<String>();
+                IList<String> operatorQry = new List<String>();
 
-                if (query.ExecuteQuery())
+                var relationResult = new PRelation();
+
+                multiQueryAnalyze(queries: ref queries, operatorQry: ref operatorQry, queryString: currentLine);
+
+                for (int i = 0; i < queries.Count; i++)
                 {
-                    this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(query.relationResult)).DefaultView;
-                    this.txtMessage.Text = String.Empty;
 
-                    if (query.relationResult.tupes.Count <= 0)
+                    var query = new QueryExecutor(queries[i], (SystemParam.StaticParams.currentDb));
+                    if (query.ExecuteQuery())
                     {
-                        txtMessage.Foreground = Brushes.IndianRed;
-
-                        txtMessage.Text += "No tuple satisfies the condition";
+                        if (queries.Count > 1 && operatorQry.Count > 0)
+                            switch (operatorQry.First())
+                            {
+                                case "_u_":
+                                    relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult); break;
+                                case "_i_":
+                                    relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult,query.selectedAttributes); break;
+                                case "_e_":
+                                    relationResult = QueryExecutor.exceptOperator(relationResult, query.relationResult); break;
+                                default: relationResult = query.relationResult; break; //the first time
+                            }
+                        else
+                            relationResult = query.relationResult;
+                        //remove stack
+                        if (operatorQry.Count > 0)
+                            operatorQry.Remove(operatorQry.First());
                     }
+
                     else
                     {
-                        txtMessage.Foreground = Brushes.Black;
-                        txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
-                        txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
-                        txtMessage.Text += String.Format("\nResult Tuple Count: {0}", query.relationResult.tupes.Count);
-
-
+                        txtMessage.Foreground = Brushes.Red;
+                        txtMessage.Text += query.MessageError;
                     }
 
+
+                    #region projecttions
+                    try
+                    {
+                        relationResult = query.getRelationBySelectAttribute(relationResult, query.selectedAttributes);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Selected Attributes must be same in each Query");
+                        return;
+                    }
+                    #endregion
+
+                }
+
+                if (relationResult.tupes.Count <= 0)
+                {
+                    txtMessage.Foreground = Brushes.IndianRed;
+
+                    txtMessage.Text += "\nNo tuple satisfies the condition";
                 }
                 else
                 {
-                    txtMessage.Foreground = Brushes.Red;
-                    txtMessage.Text = query.MessageError;
+                    this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(relationResult)).DefaultView;
+                    this.txtMessage.Text = String.Empty;
+                    txtMessage.Foreground = Brushes.Black;
+                    txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
+                    txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
+                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}", relationResult.tupes.Count);
+
                 }
+
             }
             catch (Exception ex)
             {
@@ -436,6 +592,21 @@ namespace PRDB_Sqlite.Presentation.UserControl
         private void btnOr_Click(object sender, RoutedEventArgs e)
         {
             AddStrategies(String.Format(" {0} ", "or"));
+        }
+
+        private void btnUnion_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "union"));
+        }
+
+        private void btnInter_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "intersert"));
+        }
+
+        private void btnExcept_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", "except"));
         }
     }
 }

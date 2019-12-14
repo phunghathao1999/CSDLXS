@@ -110,7 +110,7 @@
         <ToolBarTray Orientation="Horizontal" FlowDirection="RightToLeft">
             <ToolBar>
                     <Button x:Name="btnApply"
-                            Click="btnApply_Click"
+                            
                             IsEnabled="False"
                             ToolTip="Apply to DB">
                         <StackPanel Orientation="Vertical">

@@ -198,7 +198,7 @@ namespace PRDB_Sqlite.Presentation
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
+            Regex regex = new Regex("[^0-9.]+");
             var oldVal = (sender as TextBox).Text;
             //Regex regex = new Regex("[+]?([0-1]*[.])?[0-9]+");
             e.Handled = (regex.IsMatch(e.Text));
