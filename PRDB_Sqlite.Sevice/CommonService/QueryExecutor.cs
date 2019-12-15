@@ -759,14 +759,20 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
 
                     if (!(innerSet is null) && innerSet.Count != 0)
-                        if (probs.Count > 0)
+                        if (pAttributes.Count == 1) { eulerElem.upperBound = p; eulerElem.lowerBound = p; }
+                        else
                         {
-                            probs.Add(p);
-                            eulerElem = calProp_e(ref probs);
+                            if (probs.Count > 0)
+                            {
+                                probs.Add(p);
+                                eulerElem = calProp_e_static(ref probs);
+                            }
+                            else probs.Add(p);
                         }
-                        else probs.Add(p);
                     else
-                        return false;
+                                return false;
+                        
+                         
 
                     #endregion
                 }
@@ -968,7 +974,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     var getval2 = tuple.valueSet[attr2.AttributeName];
                     float pSet = 1f;
                     var interSet = getInterset(ref pSet, getval1, getval2, attr1.Type.TypeName);
-                    if (interSet is null)
+                    if (interSet is null || interSet.Count == 0)
                     {
                         //equal => get; otherwise => discard
                         relation.tupes.Remove(tuple);
@@ -977,7 +983,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     {
                         tuple.valueSet[attr1.AttributeName] = interSet;
                         //cal prop 
-                        tuple.Ps = calProp(tuple.PsList, propSet: 1, Opr: this.OperationNaturalJoin);
+                        tuple.Ps = calProp(tuple.PsList, propSet: pSet, Opr: this.OperationNaturalJoin);
                         //discard a duplicate attr
                         tuple.valueSet.Remove(attr2.AttributeName);
                     }
@@ -1166,7 +1172,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
                     if (!(innerSet is null) && innerSet.Count != 0)
                     {
-                        if (pAttributes.Count == 1) { eulerElem.upperBound = 1;eulerElem.lowerBound = 1; }
+                        if (pAttributes.Count == 1) { eulerElem.upperBound = p;eulerElem.lowerBound = p; }
                         else
                         {
                             if (probs.Count > 0)

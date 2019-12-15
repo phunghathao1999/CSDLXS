@@ -77,13 +77,12 @@ namespace PRDB_Sqlite.Presentation.UserControl
         }
         private void AddStrategies(String text)
         {
-           
+
             foreach (TabItem tabItem in this.TbQry.Items)
             {
                 if (tabItem.IsSelected)
                 {
                     this.rbxQry.CaretPosition.InsertTextInRun(text);
-                    // tr.ApplyPropertyValue(TextElement.­ForegroundProperty, Brushes.Red);
                 }
             }
         }
@@ -190,15 +189,15 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     var query = new QueryExecutor(queries[i], (SystemParam.StaticParams.currentDb));
                     if (query.ExecuteQuery())
                     {
-                        if (!String.IsNullOrEmpty(queries[i])&&queries.Count > 1 && operatorQry.Count > 0)
+                        if (!String.IsNullOrEmpty(queries[i]) && queries.Count > 1 && operatorQry.Count > 0)
                             switch (operatorQry.First())
                             {
                                 case "_u_":
                                     relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult); break;
                                 case "_i_":
-                                    relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult,query.selectedAttributes); break;
+                                    relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 case "_e_":
-                                    relationResult = QueryExecutor.exceptOperator(relationResult, query.relationResult,query.selectedAttributes); break;
+                                    relationResult = QueryExecutor.exceptOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 default: relationResult = query.relationResult; break; //the first time
                             }
                         else
@@ -232,15 +231,15 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 if (relationResult.tupes.Count <= 0)
                 {
                     txtMessage.Foreground = Brushes.IndianRed;
-
-                    txtMessage.Text = "There is no tuple satisfies the condition";
+                    if (String.IsNullOrEmpty(txtMessage.Text)) txtMessage.Text = "There is no tuple satisfies the condition";
                 }
                 else
                 {
                     var data = dynamicGenDataTable(getDataSource(relationResult)).DefaultView;
 
                     this.dtgDataResult.ItemsSource = data;
-                    if(this.dtgDataResult.Columns.Count == 1){
+                    if (this.dtgDataResult.Columns.Count == 1)
+                    {
                         txtMessage.Foreground = Brushes.Red;
 
                         this.txtMessage.Text = "Something when wrong with the query!";
@@ -250,9 +249,9 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
                     this.txtMessage.Text = String.Empty;
                     txtMessage.Foreground = Brushes.Black;
-                    txtMessage.Text = String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
-                    txtMessage.Text = String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
-                    txtMessage.Text = String.Format("\nResult Tuple Count: {0}", relationResult.tupes.Count);
+                    txtMessage.Text = String.Format("\nε threshold: {0}", Parameter.eulerThreshold.ToString());
+                    txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
+                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}\n", relationResult.tupes.Count);
 
                 }
 
@@ -520,9 +519,9 @@ namespace PRDB_Sqlite.Presentation.UserControl
                                 case "_u_":
                                     relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult); break;
                                 case "_i_":
-                                    relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult,query.selectedAttributes); break;
+                                    relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 case "_e_":
-                                    relationResult = QueryExecutor.exceptOperator(relationResult, query.relationResult,query.selectedAttributes); break;
+                                    relationResult = QueryExecutor.exceptOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 default: relationResult = query.relationResult; break; //the first time
                             }
                         else
@@ -557,16 +556,23 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 {
                     txtMessage.Foreground = Brushes.IndianRed;
 
-                    txtMessage.Text += "\nNo tuple satisfies the condition";
+                    if (this.dtgDataResult.Columns.Count == 1)
+                    {
+                        txtMessage.Foreground = Brushes.Red;
+
+                        this.txtMessage.Text = "Something when wrong with the query!";
+                        this.dtgDataResult.Items.Clear();
+                        this.dtgDataResult.Items.Refresh();
+                    }
                 }
                 else
                 {
                     this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(relationResult)).DefaultView;
-                    this.txtMessage.Text = String.Empty;
-                    txtMessage.Foreground = Brushes.Black;
-                    txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
-                    txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
-                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}", relationResult.tupes.Count);
+                    if (!String.IsNullOrEmpty(this.txtMessage.Text)){
+                        txtMessage.Foreground = Brushes.Black;
+                        txtMessage.Text += String.Format("\nε threshold: {0}", Parameter.eulerThreshold.ToString());
+                        txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
+                        txtMessage.Text += String.Format("\nResult Tuple Count: {0}\n", relationResult.tupes.Count); }
 
                 }
 
