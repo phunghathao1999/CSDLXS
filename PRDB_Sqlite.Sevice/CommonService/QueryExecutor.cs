@@ -1109,8 +1109,6 @@ namespace PRDB_Sqlite.Sevice.CommonService
             var reVal = new PRelation();
            
 
-            {
-                {
                     for (int i = 0; i < pRelation1.tupes.Count; i++)
                     {
                         for (int j = 0; j < pRelation2.tupes.Count; j++)
@@ -1122,11 +1120,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
                             }
                         }
                     }
-                }
-            }
             return reVal;
         }
-        public static PRelation exceptOperator(PRelation pRelation1, PRelation pRelation2)
+        public static PRelation exceptOperator(PRelation pRelation1, PRelation pRelation2, IList<PAttribute> pAttributes)
         {
             var reVal = new PRelation()
             {
@@ -1135,6 +1131,24 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 relationName = pRelation1.relationName,
                 tupes = pRelation1.tupes
             };
+           // pRelation2.tupes.ToList().ForEach(p => reVal.tupes.Add(p));
+
+            var interset = intersertOperator(pRelation1, pRelation2, pAttributes);
+            for (int i = 0; i < reVal.tupes.Count; i++)
+            {
+                for (int j = 0; j < interset.tupes.Count; j++)
+                {
+                    if (check_e_Val_eq(reVal.tupes[i], interset.tupes[j], pAttributes))
+                    {
+                        try
+                        {
+                            reVal.tupes.RemoveAt(i);
+                        }
+                        catch { continue; }
+                    }
+
+                }
+            }
             return reVal;
         }
         private static bool check_e_Val_eq(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
@@ -1151,12 +1165,20 @@ namespace PRDB_Sqlite.Sevice.CommonService
                     var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
 
                     if (!(innerSet is null) && innerSet.Count != 0)
-                        if (probs.Count > 0)
+                    {
+                        if (pAttributes.Count == 1) { eulerElem.upperBound = 1;eulerElem.lowerBound = 1; }
+                        else
                         {
-                            probs.Add(p);
-                            eulerElem = calProp_e_static(ref probs);
+                            if (probs.Count > 0)
+                            {
+                                probs.Add(p);
+                                eulerElem = calProp_e_static(ref probs);
+                            }
+                            else probs.Add(p);
                         }
-                        else probs.Add(p);
+                       
+                    }
+                        
                     else
                         return false;
 
