@@ -1022,13 +1022,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
         {
             var omergaList = new List<String>();
             omergaList.AddRange(set1);
-            foreach (var item_set2 in set2.ToList())
-                foreach (var item_omg in omergaList.ToList())
-                    //string is err 
-                    if (!SelectCondition.EQUAL( item_set2.Trim(), item_omg.Trim(), typeName))
-                    {
-                        omergaList.Add(item_set2);
-                    }
+            omergaList.AddRange(set2);
             return omergaList;
         }
 
