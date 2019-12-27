@@ -193,7 +193,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                             switch (operatorQry.First())
                             {
                                 case "_u_":
-                                    relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult); break;
+                                    relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 case "_i_":
                                     relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 case "_e_":
@@ -517,7 +517,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                             switch (operatorQry.First())
                             {
                                 case "_u_":
-                                    relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult); break;
+                                    relationResult = QueryExecutor.unionOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 case "_i_":
                                     relationResult = QueryExecutor.intersertOperator(relationResult, query.relationResult, query.selectedAttributes); break;
                                 case "_e_":
