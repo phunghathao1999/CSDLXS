@@ -9,6 +9,7 @@ namespace PRDB_Sqlite.Infractructure.Common
         private static string _connectionString;
         private static float _eulerThreshold;
         private static string _curStrategy;
+        private static string _curStrategy_case;
 
         #endregion
         #region Tra_get_seter
@@ -33,6 +34,19 @@ namespace PRDB_Sqlite.Infractructure.Common
                 if (string.IsNullOrEmpty(_curStrategy))
                     return "⊗_in";
                 return _curStrategy;
+            }
+        }
+        public static string curStrategy_case
+        {
+            set
+            {
+                _curStrategy_case = value;
+            }
+            get
+            {
+                if (string.IsNullOrEmpty(_curStrategy_case))
+                    return "in";
+                return _curStrategy_case;
             }
         }
 
@@ -76,6 +90,15 @@ namespace PRDB_Sqlite.Infractructure.Common
             {
                 return new List<string> {
                     "⊗_in", "⊗_ig", "⊗_me","⊕_in", "⊕_ig", "⊕_me"
+                };
+            }
+        }
+        public static IList<string> strategies_case
+        {
+            get
+            {
+                return new List<string> {
+                    "in", "ig", "me"
                 };
             }
         }

@@ -10,6 +10,7 @@
         WindowStyle="SingleBorderWindow"
         Padding="15"
         FontSize="12"
+        Loaded="Window_Loaded"
         Closed="Window_Closed"
         Title="Probability Relation Database with uncertain information" Height="450" Width="800">
 
@@ -247,8 +248,12 @@
                         </Grid>
                         
                     </RibbonGroup>
-                   
-                    
+                    <RibbonGroup ToolTipTitle="Basic of operatons in SET" Header="Basic of operatons in SET">
+                        <StackPanel Margin="2">
+                            <ComboBox Name="cbxSetOpr" MinWidth="130" SelectedIndex="0"></ComboBox>
+                        </StackPanel>
+                    </RibbonGroup>
+
                 </RibbonTab>
                 
             </Ribbon>

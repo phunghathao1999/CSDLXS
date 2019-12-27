@@ -691,8 +691,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
             foreach (var att in pAttributes)
             {
 
-                    #region 
-                    float p = 1f;
+                #region 
+                float p = 1f;
                 if (!getStandardAttrName(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
                     reTuple.valueSet.Add(att.AttributeName, getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName));
                 #endregion
@@ -715,7 +715,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
             return reTuple;
         }
-        private static PTuple getTupleCollapse_static(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        private static PTuple getTupleCollapse_Inter_static(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
         {
             var reTuple = new PTuple();
             //get val
@@ -732,14 +732,80 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
             var prop1 = new ElemProb(pTuple_1.Ps);
             var prop2 = new ElemProb(pTuple_2.Ps);
-            var strategy = Parameter.curStrategy;
-            switch (strategy.Substring(strategy.IndexOf("_") + 1))
+            var strategy = Parameter.curStrategy_case;
+
+            //conjunction
+            switch (strategy)
+            {
+                case "ig": reTuple.Ps = new ElemProb(Math.Max(0, prop1.lowerBound + prop2.lowerBound - 1), Math.Min(prop1.upperBound, prop2.upperBound)); break;
+                case "in": reTuple.Ps = new ElemProb(prop1.lowerBound * prop2.lowerBound, prop1.upperBound * prop2.upperBound); break;
+                case "me": reTuple.Ps = new ElemProb(0, 0); break;
+                default:
+                    reTuple.Ps = new ElemProb(prop1.lowerBound * prop2.lowerBound, prop1.upperBound * prop2.upperBound);
+                    break;
+            }
+
+            return reTuple;
+        }
+        private static PTuple getTupleCollapse_Uni_static(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var reTuple = new PTuple();
+            //get val
+            foreach (var att in pAttributes)
             {
 
+                #region 
+                float p = 1f;
+                if (!getStandardAttrName_static(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                    reTuple.valueSet.Add(att.AttributeName, getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName));
+                #endregion
+            }
+            //get Prob
+
+            var prop1 = new ElemProb(pTuple_1.Ps);
+            var prop2 = new ElemProb(pTuple_2.Ps);
+            var strategy = Parameter.curStrategy_case;
+
+            //disjunction
+            switch (strategy)
+            {
                 case "ig": reTuple.Ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
                 case "in": reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
                 case "me": reTuple.Ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
                 default:
+                    reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
+            }
+
+            return reTuple;
+        }
+        private static PTuple getTupleCollapse_Exc_static(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var reTuple = new PTuple();
+            //get val
+            foreach (var att in pAttributes)
+            {
+
+                #region 
+                float p = 1f;
+                if (!getStandardAttrName_static(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                    reTuple.valueSet.Add(att.AttributeName, getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName));
+                #endregion
+            }
+            //get Prob
+
+            var prop1 = new ElemProb(pTuple_1.Ps);
+            var prop2 = new ElemProb(pTuple_2.Ps);
+            var strategy = Parameter.curStrategy_case;
+
+            //diferent
+            switch (strategy)
+            {
+                case "ig": reTuple.Ps = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Min(prop1.upperBound, 1 - prop2.lowerBound)); break;
+                case "pc": reTuple.Ps = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Max(0, prop1.upperBound - prop2.lowerBound)); break;
+                case "in": reTuple.Ps = new ElemProb(prop1.lowerBound * (1 - prop2.upperBound), prop1.upperBound * (1 - prop2.lowerBound)); break;
+                case "me": reTuple.Ps = new ElemProb(prop1.lowerBound, Math.Min(prop1.upperBound,1 - prop2.lowerBound)); break;
+                default:
+                    reTuple.Ps = new ElemProb(prop1.lowerBound * prop2.lowerBound, prop1.upperBound * prop2.upperBound);
                     break;
             }
 
@@ -751,7 +817,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             var eulerElem = new ElemProb(0, 0);
             foreach (var att in pAttributes)
             {
-                if (!getStandardAttrName(att.AttributeName).Equals( ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                if (!getStandardAttrName(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
                 {
                     #region 
                     //check equal
@@ -770,9 +836,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
                             else probs.Add(p);
                         }
                     else
-                                return false;
-                        
-                         
+                        return false;
+
+
 
                     #endregion
                 }
@@ -1087,66 +1153,63 @@ namespace PRDB_Sqlite.Sevice.CommonService
         {
             return attr.Split('.').FirstOrDefault().Trim().ToString();
         }
-        public static PRelation unionOperator(PRelation pRelation1, PRelation pRelation2)
-        {
-            //clone
-            var reVal = new PRelation()
-            {
-                id = pRelation1.id,
-                schema = pRelation1.schema,
-                relationName = pRelation1.relationName,
-                tupes = pRelation1.tupes
-            };
-            foreach (var item in pRelation2.tupes)
-            {
-                reVal.tupes.Add(item);
-            }
-            return reVal;
-        }
-        public static PRelation intersertOperator(PRelation pRelation1, PRelation pRelation2,IList<PAttribute> pAttributes)
+        public static PRelation unionOperator(PRelation pRelation1, PRelation pRelation2, IList<PAttribute> pAttributes)
         {
             //clone
             var reVal = new PRelation();
-           
-
-                    for (int i = 0; i < pRelation1.tupes.Count; i++)
+            for (int i = 0; i < pRelation1.tupes.Count; i++)
+            {
+                for (int j = 0; j < pRelation2.tupes.Count; j++)
+                {
+                    if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
                     {
-                        for (int j = 0; j < pRelation2.tupes.Count; j++)
-                        {
-                            if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
-                            {
-                                reVal.tupes.Add(getTupleCollapse_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
-                                //pRelation.tupes.RemoveAt(j);
-                            }
-                        }
+                        reVal.tupes.Add(getTupleCollapse_Uni_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                        //pRelation.tupes.RemoveAt(j);
                     }
+                    else
+                    {
+                        reVal.tupes.Add(pRelation1.tupes[i]);
+                        reVal.tupes.Add(pRelation1.tupes[j]);
+                    }
+                }
+            }
+            return reVal;
+        }
+        public static PRelation intersertOperator(PRelation pRelation1, PRelation pRelation2, IList<PAttribute> pAttributes)
+        {
+            //clone
+            var reVal = new PRelation();
+
+
+            for (int i = 0; i < pRelation1.tupes.Count; i++)
+            {
+                for (int j = 0; j < pRelation2.tupes.Count; j++)
+                {
+                    if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
+                    {
+                        reVal.tupes.Add(getTupleCollapse_Inter_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                        //pRelation.tupes.RemoveAt(j);
+                    }
+                }
+            }
             return reVal;
         }
         public static PRelation exceptOperator(PRelation pRelation1, PRelation pRelation2, IList<PAttribute> pAttributes)
         {
-            var reVal = new PRelation()
+            var reVal = new PRelation();
+            for (int i = 0; i < pRelation1.tupes.Count; i++)
             {
-                id = pRelation1.id,
-                schema = pRelation1.schema,
-                relationName = pRelation1.relationName,
-                tupes = pRelation1.tupes
-            };
-           // pRelation2.tupes.ToList().ForEach(p => reVal.tupes.Add(p));
-
-            var interset = intersertOperator(pRelation1, pRelation2, pAttributes);
-            for (int i = 0; i < reVal.tupes.Count; i++)
-            {
-                for (int j = 0; j < interset.tupes.Count; j++)
+                for (int j = 0; j < pRelation2.tupes.Count; j++)
                 {
-                    if (check_e_Val_eq(reVal.tupes[i], interset.tupes[j], pAttributes))
+                    if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
                     {
-                        try
-                        {
-                            reVal.tupes.RemoveAt(i);
-                        }
-                        catch { continue; }
+                        reVal.tupes.Add(getTupleCollapse_Exc_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                        //pRelation.tupes.RemoveAt(j);
                     }
-
+                    else
+                    {
+                        reVal.tupes.Add(pRelation1.tupes[i]);
+                    }
                 }
             }
             return reVal;
@@ -1166,7 +1229,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
 
                     if (!(innerSet is null) && innerSet.Count != 0)
                     {
-                        if (pAttributes.Count == 1) { eulerElem.upperBound = p;eulerElem.lowerBound = p; }
+                        if (pAttributes.Count == 1) { eulerElem.upperBound = p; eulerElem.lowerBound = p; }
                         else
                         {
                             if (probs.Count > 0)
@@ -1176,9 +1239,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
                             }
                             else probs.Add(p);
                         }
-                       
+
                     }
-                        
+
                     else
                         return false;
 
@@ -1191,3 +1254,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
         }
     }
 }
+//                case "⊗_ig": prop = new ElemProb(Math.Max(0, prop1.lowerBound + prop2.lowerBound - 1), Math.Min(prop1.upperBound, prop2.upperBound)); break;
+//                case "⊗_in": prop = new ElemProb(prop1.lowerBound* prop2.lowerBound, prop1.upperBound* prop2.upperBound); break;
+//                case "⊗_me": prop = new ElemProb(0, 0); break;
+//                case "⊕_ig": prop = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+//                case "⊕_in": prop = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound* prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound* prop2.upperBound)); break;
+//                case "⊕_me": prop = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;

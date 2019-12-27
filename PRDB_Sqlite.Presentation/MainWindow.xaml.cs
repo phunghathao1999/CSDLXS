@@ -95,6 +95,7 @@ namespace PRDB_Sqlite.Presentation
             }
 
             this.cbxStrategy.ItemsSource = Parameter.strategies;
+            this.cbxSetOpr.ItemsSource = Parameter.strategies_case;
             this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
         }
         //false == none Db
@@ -296,6 +297,14 @@ namespace PRDB_Sqlite.Presentation
         {
             Parameter.activeTabIdx = 1;
             this.reloadDb();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.cbxSetOpr.SelectionChanged += (s, evt) =>
+            {
+                Parameter.curStrategy_case = this.cbxSetOpr.SelectedItem.ToString();
+            };
         }
     }
 }
