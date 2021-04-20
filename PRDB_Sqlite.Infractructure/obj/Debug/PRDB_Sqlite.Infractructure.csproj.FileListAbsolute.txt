@@ -1,0 +1,477 @@
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\attribute.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\Blue cube.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\exit.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key-icon.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.bmp
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\new relation.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\newdb.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\open relation.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\opendb (2).ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query delete.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query new.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query open.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query save.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query add.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove db d.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove relation.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\save realtion.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\savedb (2).ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme open.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme edit.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme delete.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme add.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.resx
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.designer.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.BonusSkins.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Images.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe.config
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\attribute.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\Blue cube.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\exit.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key-icon.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.bmp
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\new relation.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\newdb.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\open relation.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\opendb (2).ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query delete.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query new.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query open.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query save.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query add.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove db d.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove relation.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\save realtion.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\savedb (2).ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme open.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme edit.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme delete.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme add.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.resx
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.cs
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.designer.cs
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\System.Data.SQLite.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.BonusSkins.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Images.v19.1.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe.config
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraBars.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraBars.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraBars.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraBars.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraGrid.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraGrid.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraGrid.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraGrid.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraLayout.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraLayout.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraLayout.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraLayout.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Office.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csproj.CopyComplete
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.pdb
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\attribute.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\Blue cube.ico
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\exit.ico
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\key-icon.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.bmp
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\new relation.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\newdb.ico
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\open relation.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\opendb (2).ico
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\query delete.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\query new.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\query open.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\query save.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\query add.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove db d.ico
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove relation.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\save realtion.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\savedb (2).ico
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme open.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme edit.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme delete.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme add.png
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.resx
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.cs
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.designer.cs
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\System.Data.SQLite.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.BonusSkins.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Images.v19.1.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.pdb
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe.config
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.xml
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraBars.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraBars.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraBars.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraBars.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraGrid.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraGrid.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraGrid.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraGrid.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraLayout.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraLayout.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraLayout.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraLayout.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraPrinting.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.RichEdit.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraTreeList.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Office.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache
+C:\KLTN\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csproj.CopyComplete
+C:\KLTN\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.dll
+C:\KLTN\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\attribute.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\Blue cube.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\exit.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key-icon.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.bmp
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\key.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\new relation.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\newdb.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\open relation.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\opendb (2).ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query delete.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query new.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query open.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query save.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\query add.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove db d.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\remove relation.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\save realtion.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\savedb (2).ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme open.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme edit.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme delete.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\Images\scheme add.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.resx
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\GUI\frm_new_scheme.designer.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\System.Data.SQLite.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.BonusSkins.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Images.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.exe.config
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Utils.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraEditors.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraBars.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraGrid.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Data.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraLayout.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraPrinting.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.RichEdit.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.XtraTreeList.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\DevExpress.Office.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\de\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csproj.CopyComplete
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Infractructure\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Debug\PRDB_Sqlite.Infractructure.pdb

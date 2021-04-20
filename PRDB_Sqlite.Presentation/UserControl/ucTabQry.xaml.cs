@@ -47,8 +47,8 @@ namespace PRDB_Sqlite.Presentation.UserControl
         private void setDefaultDismension()
         {
             var rate = System.Windows.SystemParameters.PrimaryScreenHeight / 23;
-            this.rbxQry.MinHeight = 4 * rate;
-            this.rbxQry.MaxHeight = 4 * rate;
+            this.rbxQry.MinHeight = 6 * rate;
+            this.rbxQry.MaxHeight = 6 * rate;
             this.txtMessage.MinHeight = 2 * rate;
             this.txtMessage.MaxHeight = 2 * rate;
 
@@ -149,6 +149,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void executeQuery(object sender, EventArgs e)
         {
+            this.txtMessage.Visibility = Visibility.Collapsed;
             try
             {
                 this.dtgDataResult.ItemsSource = null;
@@ -178,7 +179,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 var relationResult = new PRelation();
 
                 multiQueryAnalyze(queries: ref queries, operatorQry: ref operatorQry, queryString: strQry);
-
+                
                 for (int i = 0; i < queries.Count; i++)
                 {
                     if (String.IsNullOrEmpty(queries[i]))
@@ -187,8 +188,10 @@ namespace PRDB_Sqlite.Presentation.UserControl
                         return;
                     }
                     var query = new QueryExecutor(queries[i], (SystemParam.StaticParams.currentDb));
+                    
                     if (query.ExecuteQuery())
                     {
+
                         if (!String.IsNullOrEmpty(queries[i]) && queries.Count > 1 && operatorQry.Count > 0)
                             switch (operatorQry.First())
                             {
@@ -202,6 +205,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                             }
                         else
                             relationResult = query.relationResult;
+                        
                         //remove stack
                         if (operatorQry.Count > 0)
                             operatorQry.Remove(operatorQry.First());
@@ -209,6 +213,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
                     else
                     {
+                        this.txtMessage.Visibility = Visibility.Visible;
                         txtMessage.Foreground = Brushes.Red;
                         txtMessage.Text += query.MessageError;
                     }
@@ -231,7 +236,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 if (relationResult.tupes.Count <= 0)
                 {
                     txtMessage.Foreground = Brushes.IndianRed;
-                    if (String.IsNullOrEmpty(txtMessage.Text)) txtMessage.Text = "There is no tuple satisfies the condition";
+                    if (String.IsNullOrEmpty(txtMessage.Text)) {this.txtMessage.Visibility = Visibility.Visible; txtMessage.Text = "There is no tuple satisfies the condition"; }
                 }
                 else
                 {
@@ -240,6 +245,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     this.dtgDataResult.ItemsSource = data;
                     if (this.dtgDataResult.Columns.Count == 1)
                     {
+                        this.txtMessage.Visibility = Visibility.Visible;
                         txtMessage.Foreground = Brushes.Red;
 
                         this.txtMessage.Text = "Something when wrong with the query!";
@@ -249,9 +255,8 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
                     this.txtMessage.Text = String.Empty;
                     txtMessage.Foreground = Brushes.Black;
-                    txtMessage.Text = String.Format("\nε threshold: {0}", Parameter.eulerThreshold.ToString());
                     txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
-                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}\n", relationResult.tupes.Count);
+                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}\n", dtgDataResult.Items.Count);
 
                 }
 
@@ -265,38 +270,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 ClearAll(); // đưa csdl về trạng thái ban đầu
             }
         }
-        private void excuteOneQuery(String strQry)
-        {
-            var query = new QueryExecutor(strQry, (SystemParam.StaticParams.currentDb));
-            //txtMessage.Text = "";
-
-            if (query.ExecuteQuery())
-            {
-                this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(query.relationResult)).DefaultView;
-                this.txtMessage.Text = String.Empty;
-
-                if (query.relationResult.tupes.Count <= 0)
-                {
-                    txtMessage.Foreground = Brushes.IndianRed;
-
-                    txtMessage.Text += "\nNo tuple satisfies the condition";
-                }
-                else
-                {
-                    txtMessage.Foreground = Brushes.Black;
-                    txtMessage.Text += String.Format("ε threshold: {0}", Parameter.eulerThreshold.ToString());
-                    txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
-                    txtMessage.Text += String.Format("\nResult Tuple Count: {0}", query.relationResult.tupes.Count);
-
-                }
-
-            }
-            else
-            {
-                txtMessage.Foreground = Brushes.Red;
-                txtMessage.Text = query.MessageError;
-            }
-        }
+       
         private void ClearAll()
         {
         }
@@ -419,7 +393,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     TabQuery newTAb = new TabQuery();
                     newTAb.Title = name.Substring(index + 1, name.Length - index - 1);
 
-                    newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 14f };
+                    newTAb.Content = new RichTextBox() { MaxHeight = 200, MinHeight = 200, FontFamily = new FontFamily("Consolas"), FontSize = 20f };
                     this.TbQry.Items.Add(newTAb);
                     // read file
                     FileStream fStream;
@@ -489,15 +463,13 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void btnExecCur_Click(object sender, RoutedEventArgs e)
         {
-
+            this.txtMessage.Visibility = Visibility.Collapsed;
             var currentLine = String.Empty;
             foreach (TabItem tab in this.TbQry.Items)
             {
-
                 if (tab.IsSelected)
                     currentLine = new TextRange(this.rbxQry.CaretPosition.GetLineStartPosition(0), this.rbxQry.CaretPosition.GetLineStartPosition(1) ?? this.rbxQry.CaretPosition.DocumentEnd).Text.Trim();
             }
-
             try
             {
                 IList<String> queries = new List<String>();
@@ -525,7 +497,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                                 default: relationResult = query.relationResult; break; //the first time
                             }
                         else
-                            relationResult = query.relationResult;
+                        relationResult = query.relationResult;
                         //remove stack
                         if (operatorQry.Count > 0)
                             operatorQry.Remove(operatorQry.First());
@@ -533,6 +505,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
                     else
                     {
+                        this.txtMessage.Visibility = Visibility.Visible;
                         txtMessage.Foreground = Brushes.Red;
                         txtMessage.Text += query.MessageError;
                     }
@@ -558,6 +531,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
                     if (this.dtgDataResult.Columns.Count == 1)
                     {
+                        this.txtMessage.Visibility = Visibility.Visible;
                         txtMessage.Foreground = Brushes.Red;
 
                         this.txtMessage.Text = "Something when wrong with the query!";
@@ -570,9 +544,8 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     this.dtgDataResult.ItemsSource = dynamicGenDataTable(getDataSource(relationResult)).DefaultView;
                     if (!String.IsNullOrEmpty(this.txtMessage.Text)){
                         txtMessage.Foreground = Brushes.Black;
-                        txtMessage.Text += String.Format("\nε threshold: {0}", Parameter.eulerThreshold.ToString());
                         txtMessage.Text += String.Format("\nProjection Strategy: {0}", Parameter.curStrategy.ToString());
-                        txtMessage.Text += String.Format("\nResult Tuple Count: {0}\n", relationResult.tupes.Count); }
+                        txtMessage.Text += String.Format("\nResult Tuple Count: {0}\n", dtgDataResult.Items.Count); }
 
                 }
 
@@ -625,6 +598,14 @@ namespace PRDB_Sqlite.Presentation.UserControl
         private void btnExcept_Click(object sender, RoutedEventArgs e)
         {
             AddStrategies(String.Format(" {0} ", "except"));
+        }
+
+        private void btnViewMsg_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.txtMessage.Visibility == Visibility.Collapsed)
+                this.txtMessage.Visibility = Visibility.Visible;
+            else
+                this.txtMessage.Visibility = Visibility.Collapsed;
         }
     }
 }

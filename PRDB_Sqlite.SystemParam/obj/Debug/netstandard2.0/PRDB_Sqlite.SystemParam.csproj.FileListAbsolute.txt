@@ -1,0 +1,348 @@
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\attribute.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\Blue cube.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\exit.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\key-icon.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\key.bmp
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\key.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\new relation.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\newdb.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\open relation.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\opendb (2).ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query delete.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query new.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query open.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query save.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query add.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\remove db d.ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\remove relation.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\save realtion.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\savedb (2).ico
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme open.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme edit.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme delete.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme add.png
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\GUI\frm_new_scheme.resx
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\GUI\frm_new_scheme.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\GUI\frm_new_scheme.designer.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.deps.json
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Utils.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraEditors.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraBars.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraGrid.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.BonusSkins.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Data.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Printing.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Sparkline.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraLayout.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraPrinting.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Pdf.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.RichEdit.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraTreeList.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Office.v19.1.Core.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Images.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.exe.config
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Utils.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraEditors.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraBars.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraGrid.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Data.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Printing.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Sparkline.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraLayout.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraPrinting.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Pdf.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.RichEdit.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraTreeList.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Office.v19.1.Core.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Utils.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraEditors.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraBars.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraGrid.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Printing.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraLayout.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Office.v19.1.Core.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfoInputs.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfo.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\attribute.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\Blue cube.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\exit.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\key-icon.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\key.bmp
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\key.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\new relation.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\newdb.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\open relation.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\opendb (2).ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query delete.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query new.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query open.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query save.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\query add.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\remove db d.ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\remove relation.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\save realtion.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\savedb (2).ico
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme open.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme edit.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme delete.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Images\scheme add.png
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\GUI\frm_new_scheme.resx
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\GUI\frm_new_scheme.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\GUI\frm_new_scheme.designer.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.deps.json
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.exe
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Data.SQLite.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Utils.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraEditors.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraBars.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraGrid.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.BonusSkins.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Data.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Printing.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Sparkline.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraLayout.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraPrinting.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Pdf.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.RichEdit.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraTreeList.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Office.v19.1.Core.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Images.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.exe.config
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Utils.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraEditors.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraBars.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraGrid.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Data.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Printing.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Sparkline.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraLayout.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraPrinting.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Pdf.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.RichEdit.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.XtraTreeList.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\DevExpress.Office.v19.1.Core.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Utils.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraEditors.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraBars.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraGrid.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraLayout.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraPrinting.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.RichEdit.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.XtraTreeList.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\de\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\es\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ja\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\ru\DevExpress.Office.v19.1.Core.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csprojAssemblyReference.cache
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfoInputs.cache
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfo.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CopyComplete
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.deps.json
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Data.SQLite.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csprojAssemblyReference.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfoInputs.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfo.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CopyComplete
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.deps.json
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfoInputs.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfo.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.deps.json
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Security.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\Accessibility.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Deployment.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfoInputs.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfo.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Debug\netstandard2.0\PRDB_Sqlite.SystemParam.pdb

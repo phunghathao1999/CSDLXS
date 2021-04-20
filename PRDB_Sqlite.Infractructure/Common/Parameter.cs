@@ -7,7 +7,6 @@ namespace PRDB_Sqlite.Infractructure.Common
     {
         #region Tra_Prop
         private static string _connectionString;
-        private static float _eulerThreshold;
         private static string _curStrategy;
         private static string _curStrategy_case;
 
@@ -18,11 +17,7 @@ namespace PRDB_Sqlite.Infractructure.Common
             get => string.IsNullOrEmpty(_connectionString) ? ConfigurationManager.AppSettings["conectionString"].ToString() : _connectionString;
             set => _connectionString = value;
         }
-        public static float eulerThreshold
-        {
-            get => (_eulerThreshold == 0f) ? 0.01f : _eulerThreshold;
-            set => _eulerThreshold = value;
-        }
+    
         public static string curStrategy
         {
             set

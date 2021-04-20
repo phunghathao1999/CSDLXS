@@ -1,0 +1,56 @@
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\System.Data.SQLite.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\DevExpress.Data.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\DevExpress.Xpo.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\DevExpress.Data.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\DevExpress.Xpo.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\de\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\es\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\ja\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\ru\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\de\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\es\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csproj.CoreCompileInputs.cache
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csproj.CopyComplete
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.pdb

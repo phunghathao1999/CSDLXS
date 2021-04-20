@@ -1,0 +1,219 @@
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\attribute.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\Blue cube.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\exit.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\key-icon.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\key.bmp
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\key.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\new relation.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\newdb.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\open relation.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\opendb (2).ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\query delete.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\query new.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\query open.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\query save.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\query add.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\remove db d.ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\remove relation.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\save realtion.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\savedb (2).ico
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme open.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme edit.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme delete.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme add.png
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\GUI\frm_new_scheme.resx
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\GUI\frm_new_scheme.cs
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\GUI\frm_new_scheme.designer.cs
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\System.Data.SQLite.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.xml
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csproj.CopyComplete
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.dll
+C:\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.pdb
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\attribute.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\Blue cube.ico
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\exit.ico
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\key-icon.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\key.bmp
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\key.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\new relation.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\newdb.ico
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\open relation.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\opendb (2).ico
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\query delete.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\query new.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\query open.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\query save.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\query add.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\remove db d.ico
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\remove relation.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\save realtion.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\savedb (2).ico
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme open.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme edit.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme delete.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\Images\scheme add.png
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\GUI\frm_new_scheme.resx
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\GUI\frm_new_scheme.cs
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\GUI\frm_new_scheme.designer.cs
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.pdb
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\System.Data.SQLite.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.pdb
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.pdb
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.xml
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+C:\KLTN\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+C:\KLTN\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csproj.CopyComplete
+C:\KLTN\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.dll
+C:\KLTN\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\System.Data.SQLite.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\System.Data.SQLite.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Data.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Debug\PRDB_Sqlite.Sevice.pdb

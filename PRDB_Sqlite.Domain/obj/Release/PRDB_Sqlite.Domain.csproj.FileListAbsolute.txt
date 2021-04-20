@@ -1,0 +1,26 @@
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\System.Data.SQLite.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csprojAssemblyReference.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CopyComplete
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.pdb
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csprojAssemblyReference.cache
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CoreCompileInputs.cache
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CopyComplete
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.dll
+C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.pdb

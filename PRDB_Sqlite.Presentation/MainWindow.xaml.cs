@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
+using System.Windows.Automation.Peers;
+using System.Windows.Automation.Provider;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -96,7 +98,7 @@ namespace PRDB_Sqlite.Presentation
 
             this.cbxStrategy.ItemsSource = Parameter.strategies;
             this.cbxSetOpr.ItemsSource = Parameter.strategies_case;
-            this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
+            //this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
         }
         //false == none Db
         private void loadHeader(bool v)
@@ -224,20 +226,8 @@ namespace PRDB_Sqlite.Presentation
             return null;
         }
 
-        private void loadCurE_Click(object sender, RoutedEventArgs e)
-        {
-            this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
-        }
-
         private void Set_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(this.NumberTextBox.Text))
-                loadCurE_Click(sender, e);
-            var num = checkEuler(this.NumberTextBox.Text);
-            if (num != null)
-                Parameter.eulerThreshold = (float)num;
-            else
-                MessageBox.Show("Invalid Euler Threshold", "NOtification", MessageBoxButton.OK, MessageBoxImage.Information);
             Parameter.curStrategy = this.cbxStrategy.SelectedItem.ToString();
         }
 
@@ -305,6 +295,17 @@ namespace PRDB_Sqlite.Presentation
             {
                 Parameter.curStrategy_case = this.cbxSetOpr.SelectedItem.ToString();
             };
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.RightAlt:
+                    reloadDb();
+                    break;
+                default: break;
+            }
         }
     }
 }

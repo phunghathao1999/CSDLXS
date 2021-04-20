@@ -72,7 +72,7 @@
                                      MouseDown="rbxQry_MouseDown"
                                      TextChanged="rbxQry_TextChanged"
                                  FontFamily="Consolas"
-                                 FontSize="15">
+                                 FontSize="20">
 
                             <RichTextBox.ContextMenu>
                                 <ContextMenu HorizontalContentAlignment="Left">
@@ -162,26 +162,31 @@
         </StackPanel>
 
         <StackPanel Name="stpData">
-            <Border Grid.Row="1"
+                <ToolBarTray x:Name="tbDtgAction" Orientation="Horizontal">
+                    <ToolBar>
+                        <Button Name="btnView" Content="View" ToolTip="Change View"/>
+                        <Separator/>
+                        <Button Name="btnViewMsg" Content="Show Message" ToolTip="View Message" Click="btnViewMsg_Click"/>
+                    </ToolBar>
+                </ToolBarTray>
+                <Border Grid.Row="1"
                 Grid.Column="1"
                 Opacity="1"
                 BorderBrush="#FF9DBCCB" 
                     CornerRadius="0"
                 BorderThickness="20,2,20,5">
-                <TextBlock x:Name="txtMessage"
+                <TextBox x:Name="txtMessage"
+                           Visibility="Collapsed"
                             HorizontalAlignment="Center"
                             FontFamily="Consolas"
                             FontSize="13"
+                         BorderBrush="White"
                             Foreground="OrangeRed"
-                            IsEnabled="False"
+                            IsReadOnly="True"
                            MinHeight="70">
-                </TextBlock>
-            </Border>
-                <ToolBarTray x:Name="tbDtgAction" Orientation="Horizontal">
-                    <ToolBar>
-                        <Button Name="btnView" Content="View" ToolTip="Change View"/>
-                    </ToolBar>
-                </ToolBarTray>
+                </TextBox>
+                </Border>
+               
 
                 <StackPanel Orientation="Vertical">
 
@@ -194,7 +199,6 @@
                       RelativePanel.AlignLeftWithPanel="True"
                       RelativePanel.AlignRightWithPanel="True"
                       GridLinesVisibility="All"/>
-
 
                 </StackPanel>
             </StackPanel>

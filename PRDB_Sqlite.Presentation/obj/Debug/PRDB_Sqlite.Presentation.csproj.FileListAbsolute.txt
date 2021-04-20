@@ -1,0 +1,302 @@
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe.config
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\App.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.lref
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.g.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.Properties.Resources.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.GenerateResource.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.CoreCompileInputs.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\PRDB Visual Management System 130918\PRDB Visual Management System 130918\PRDB Source Codes\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe.config
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Data.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Data.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\App.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.lref
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.g.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.Properties.Resources.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.GenerateResource.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe.config
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Data.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\System.Data.SQLite.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Data.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.xml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csprojAssemblyReference.cache
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\App.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.cache
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.lref
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.g.resources
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.Properties.Resources.resources
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.GenerateResource.cache
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.CopyComplete
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.exe
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.pdb
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.g.cs
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.baml
+D:\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe.config
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\System.Data.SQLite.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.dll
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.xml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csprojAssemblyReference.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\About.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\CloseableHeader.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\App.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.lref
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\About.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\CloseableHeader.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.baml
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.g.resources
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.Properties.Resources.resources
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.GenerateResource.cache
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.CopyComplete
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.exe
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.pdb
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\addingTuples.g.cs
+D:\Project PRDB\Project PRDB\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\addingTuples.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe.config
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\About.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\addingTuples.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\CloseableHeader.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\App.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.lref
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\About.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\addingTuples.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\CloseableHeader.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.g.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.Properties.Resources.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.GenerateResource.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe.config
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Presentation.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\System.Data.SQLite.dll
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Data.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Domain.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Infractructure.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.Sevice.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\PRDB_Sqlite.SystemParam.pdb
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\Newtonsoft.Json.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\bin\Debug\UniversalWPF.RelativePanel.xml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csprojAssemblyReference.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\About.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\addingTuples.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\CloseableHeader.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\App.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation_MarkupCompile.lref
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\MainWindow.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\About.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingNewRelation.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\AddingSchema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\addingTuples.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\EditingSchema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\FormTest.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\Inp_DataType.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\Screen\opn_del_Schema.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\CloseableHeader.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucCETuple.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabContent.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\UserControl\ucTabQry.baml
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.g.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.Properties.Resources.resources
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.GenerateResource.cache
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.csproj.CopyComplete
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.exe
+D:\uni\2018-2019\KHOALUANTOTNGHIEP\final_Project\PRDB_Sqlite\PRDB_Sqlite.Presentation\obj\Debug\PRDB_Sqlite.Presentation.pdb
