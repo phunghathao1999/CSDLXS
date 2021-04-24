@@ -30,3 +30,14 @@ C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ V�
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.csproj.CopyComplete
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.dll
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.pdb
+D:\CSDLXS\PRDB_Sqlite.Data\bin\Release\PRDB_Sqlite.Data.dll
+D:\CSDLXS\PRDB_Sqlite.Data\bin\Release\PRDB_Sqlite.Data.pdb
+D:\CSDLXS\PRDB_Sqlite.Data\bin\Release\PRDB_Sqlite.Domain.dll
+D:\CSDLXS\PRDB_Sqlite.Data\bin\Release\PRDB_Sqlite.Infractructure.dll
+D:\CSDLXS\PRDB_Sqlite.Data\bin\Release\PRDB_Sqlite.Domain.pdb
+D:\CSDLXS\PRDB_Sqlite.Data\bin\Release\PRDB_Sqlite.Infractructure.pdb
+D:\CSDLXS\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.csprojAssemblyReference.cache
+D:\CSDLXS\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.csproj.CoreCompileInputs.cache
+D:\CSDLXS\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.csproj.CopyComplete
+D:\CSDLXS\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.dll
+D:\CSDLXS\PRDB_Sqlite.Data\obj\Release\PRDB_Sqlite.Data.pdb
