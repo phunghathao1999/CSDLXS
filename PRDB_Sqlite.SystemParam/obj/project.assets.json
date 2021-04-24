@@ -212,19 +212,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\phung\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
+      "projectUniqueName": "D:\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
       "projectName": "PRDB_Sqlite.SystemParam",
-      "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
-      "packagesPath": "C:\\Users\\phung\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\obj\\",
+      "projectPath": "D:\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\CSDLXS\\PRDB_Sqlite.SystemParam\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -238,8 +238,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
-              "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj"
+            "D:\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
+              "projectPath": "D:\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj"
             }
           }
         }
@@ -271,7 +271,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

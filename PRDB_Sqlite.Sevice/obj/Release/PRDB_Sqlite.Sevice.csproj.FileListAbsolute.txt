@@ -54,3 +54,18 @@ C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ V�
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csproj.CopyComplete
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.dll
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.pdb
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.dll
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Sevice.pdb
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.dll
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.dll
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.dll
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.dll
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Data.pdb
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Domain.pdb
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.Infractructure.pdb
+D:\CSDLXS\PRDB_Sqlite.Sevice\bin\Release\PRDB_Sqlite.SystemParam.pdb
+D:\CSDLXS\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csprojAssemblyReference.cache
+D:\CSDLXS\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csproj.CoreCompileInputs.cache
+D:\CSDLXS\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.csproj.CopyComplete
+D:\CSDLXS\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.dll
+D:\CSDLXS\PRDB_Sqlite.Sevice\obj\Release\PRDB_Sqlite.Sevice.pdb

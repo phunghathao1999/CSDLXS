@@ -77,3 +77,30 @@ C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ V�
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CopyComplete
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.dll
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\PRDB_Sqlite.SystemParam.deps.json
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\PRDB_Sqlite.Domain.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\PRDB_Sqlite.Infractructure.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Windows.Forms.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Data.SQLite.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Configuration.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Security.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\Accessibility.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Deployment.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\PRDB_Sqlite.Domain.pdb
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\PRDB_Sqlite.Infractructure.pdb
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Windows.Forms.xml
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Configuration.xml
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Security.xml
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\Accessibility.xml
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Deployment.xml
+D:\CSDLXS\PRDB_Sqlite.SystemParam\bin\Release\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\CSDLXS\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.csprojAssemblyReference.cache
+D:\CSDLXS\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfoInputs.cache
+D:\CSDLXS\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.AssemblyInfo.cs
+D:\CSDLXS\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CoreCompileInputs.cache
+D:\CSDLXS\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.csproj.CopyComplete
+D:\CSDLXS\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.dll
+D:\CSDLXS\PRDB_Sqlite.SystemParam\obj\Release\netstandard2.0\PRDB_Sqlite.SystemParam.pdb
