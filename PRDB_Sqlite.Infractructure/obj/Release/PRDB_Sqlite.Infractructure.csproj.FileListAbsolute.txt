@@ -13,3 +13,9 @@ C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ V�
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.csproj.CoreCompileInputs.cache
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.dll
 C:\Users\phung\Desktop\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\PRDB_Sqlite\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.pdb
+D:\CSDLXS\PRDB_Sqlite.Infractructure\bin\Release\PRDB_Sqlite.Infractructure.dll
+D:\CSDLXS\PRDB_Sqlite.Infractructure\bin\Release\PRDB_Sqlite.Infractructure.pdb
+D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.csproj.CoreCompileInputs.cache
+D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.dll
+D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.pdb
+D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache

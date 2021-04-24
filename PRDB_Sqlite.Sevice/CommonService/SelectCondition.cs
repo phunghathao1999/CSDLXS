@@ -9,10 +9,11 @@ namespace PRDB_Sqlite.Sevice.CommonService
     public class SelectCondition
     {
         // xu ly cau dieu kien where
+        
         public PRelation relations { get; set; }
         public PTuple tuple { get; set; }
         public string conditionString { get; set; }
-        static public string[] Operator = new string[15] { "_<", "_>", "<=", ">=", "_=", "!=", "⊗_in", "⊗_ig", "⊗_me", "⊕_in", "⊕_ig", "⊕_me", "equal_in", "equal_ig", "equal_me" };
+        static public string[] Operator = new string[18] { "_<", "_>", "<=", ">=", "_=", "!=", "⊗_in", "⊗_ig", "⊗_me", "⊕_in", "⊕_ig", "⊕_me", "⊖_me", "⊖_in", "⊖_ig", "equal_in", "equal_ig", "equal_me" };
         private readonly IList<PAttribute> Attributes = new List<PAttribute>();
         public string MessageError { get; set; }
         public SelectCondition(PRelation probRelation, string conditionString)
@@ -386,6 +387,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
             Str = Str.Replace("⊕_in", "|⊕_in|");
             Str = Str.Replace("⊕_ig", "|⊕_ig|");
             Str = Str.Replace("⊕_me", "|⊕_me|");
+            Str = Str.Replace("⊖_me", "|⊖_me|");
+            Str = Str.Replace("⊖_me", "|⊖_in|");
+            Str = Str.Replace("⊖_me", "|⊖_ig|");
             Str = Str.Replace("equal_in", "|equal_in|");
             Str = Str.Replace("equal_ig", "|equal_ig|");
             Str = Str.Replace("equal_me", "|equal_me|");
@@ -466,6 +470,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 case "equal_ig":
                 case "equal_in":
                 case "equal_me": return 3;
+                case "⊖_ig":
+                case "⊖_in":
+                case "⊖_me":
                 case "⊗_ig":
                 case "⊗_in":
                 case "⊗_me":
@@ -649,6 +656,9 @@ namespace PRDB_Sqlite.Sevice.CommonService
                         case "⊕_ig": prop = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
                         case "⊕_in": prop = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
                         case "⊕_me": prop = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                        case "⊖_ig": prop = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Min(prop1.upperBound,1-prop2.lowerBound));break;
+                        case "⊖_in": prop = new ElemProb(prop1.lowerBound * (1 - prop2.upperBound), prop1.upperBound * (1 - prop2.lowerBound));break;
+                        case "⊖_me": prop = new ElemProb(prop1.lowerBound, 1 - prop2.lowerBound);break;
                         default:
                             MessageError = "Incorrect syntax near 'where'.";
                             break;

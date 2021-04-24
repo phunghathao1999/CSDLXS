@@ -424,7 +424,6 @@ namespace PRDB_Sqlite.Sevice.CommonService
         }
         private IList<PRelation> GetAllRelation(string pquery)
         {
-            Console.WriteLine("pquery: " + pquery);
             int posOne;
             int posTwo;
             string relationsString = string.Empty;
@@ -442,7 +441,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 posTwo = pquery.IndexOf("where") - 1;
 
             relationsString = pquery.Substring(posOne, posTwo - posOne + 1).Trim();   // Get Relation in the Query Text     
-            Console.WriteLine("relationsString: " + relationsString);
+
 
 
 
@@ -644,7 +643,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 {
                     if (tup1 == tup2) continue;
                     var tuple = new PTuple();
-                   
+                    if (check_e_Val_eql(tup1, tup2, pAttributes))
+                    {
                         var collapsedTuple = getTupleCollapse(tup1, tup2, pAttributes);
                         /*
                          * remove tup1 and tup2
@@ -660,6 +660,8 @@ namespace PRDB_Sqlite.Sevice.CommonService
                             pRelation.tupes.Remove(pRelation.tupes.ElementAt(tupidx_2));
 
                         t1 = collapsedTuple;
+
+                    }
                 }
             }
 
@@ -672,7 +674,7 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 for (int j = 0; j < pRelation.tupes.Count; j++)
                 {
-                    if (i != j )
+                    if (i != j && check_e_Val_eql(pRelation.tupes[i], pRelation.tupes[j], pAttributes))
                     {
                         pRelation.tupes[i] = getTupleCollapse(pRelation.tupes[i], pRelation.tupes[j], pAttributes);
                         pRelation.tupes.RemoveAt(j);
@@ -801,13 +803,50 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 case "ig": reTuple.Ps = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Min(prop1.upperBound, 1 - prop2.lowerBound)); break;
                 case "pc": reTuple.Ps = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Max(0, prop1.upperBound - prop2.lowerBound)); break;
                 case "in": reTuple.Ps = new ElemProb(prop1.lowerBound * (1 - prop2.upperBound), prop1.upperBound * (1 - prop2.lowerBound)); break;
-                case "me": reTuple.Ps = new ElemProb(prop1.lowerBound, Math.Min(prop1.upperBound,1 - prop2.lowerBound)); break;
+                case "me": reTuple.Ps = new ElemProb(prop1.lowerBound, Math.Min(prop1.upperBound, 1 - prop2.lowerBound)); break;
                 default:
                     reTuple.Ps = new ElemProb(prop1.lowerBound * prop2.lowerBound, prop1.upperBound * prop2.upperBound);
                     break;
             }
 
             return reTuple;
+        }
+        private bool check_e_Val_eql(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var probs = new List<float>();
+            var eulerElem = new ElemProb(0, 0);
+            foreach (var att in pAttributes)
+            {
+                if (!getStandardAttrName(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    #region 
+                    //check equal
+                    float p = 1f;
+                    var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
+
+                    if (!(innerSet is null) && innerSet.Count != 0)
+                        if (pAttributes.Count == 1) { eulerElem.upperBound = p; eulerElem.lowerBound = p; }
+                        else
+                        {
+                            if (probs.Count > 0)
+                            {
+                                probs.Add(p);
+                                eulerElem = calProp_e_static(ref probs);
+                            }
+                            else probs.Add(p);
+                        }
+                    else
+                        return false;
+
+
+
+                    #endregion
+                }
+
+            }
+            return true;
+
+            // return Parameter.eulerThreshold <= eulerElem.lowerBound && eulerElem.upperBound >= Parameter.eulerThreshold;
         }
 
         private ElemProb calProp_e(ref List<float> probs)
@@ -828,6 +867,10 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 case "⊕_ig": ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
                 case "⊕_in": ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
                 case "⊕_me": ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+
+                case "⊖_ig": ps = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Min(prop1.upperBound, 1 - prop2.lowerBound)); break;
+                case "⊖_in": ps = new ElemProb(prop1.lowerBound * (1 - prop2.upperBound), prop1.upperBound * (1 - prop2.lowerBound)); break;
+                case "⊖_me": ps = new ElemProb(prop1.lowerBound, 1 - prop2.lowerBound); break;
                 default:
                     MessageError = "Invalid Current Strategy: " + Parameter.curStrategy;
                     break;
@@ -852,6 +895,10 @@ namespace PRDB_Sqlite.Sevice.CommonService
                 case "⊕_ig": ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
                 case "⊕_in": ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
                 case "⊕_me": ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+
+                case "⊖_ig": ps = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Min(prop1.upperBound, 1 - prop2.lowerBound)); break;
+                case "⊖_in": ps = new ElemProb(prop1.lowerBound * (1 - prop2.upperBound), prop1.upperBound * (1 - prop2.lowerBound)); break;
+                case "⊖_me": ps = new ElemProb(prop1.lowerBound, 1 - prop2.lowerBound); break;
                 default:
                     break;
             }
@@ -1123,8 +1170,16 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 for (int j = 0; j < pRelation2.tupes.Count; j++)
                 {
-                    reVal.tupes.Add(getTupleCollapse_Uni_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
-                    //pRelation.tupes.RemoveAt(j);
+                    if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
+                    {
+                        reVal.tupes.Add(getTupleCollapse_Uni_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                        //pRelation.tupes.RemoveAt(j);
+                    }
+                    else
+                    {
+                        reVal.tupes.Add(pRelation1.tupes[i]);
+                        reVal.tupes.Add(pRelation1.tupes[j]);
+                    }
                 }
             }
             return reVal;
@@ -1139,8 +1194,11 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 for (int j = 0; j < pRelation2.tupes.Count; j++)
                 {
-                    reVal.tupes.Add(getTupleCollapse_Inter_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
-                    //pRelation.tupes.RemoveAt(j);
+                    if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
+                    {
+                        reVal.tupes.Add(getTupleCollapse_Inter_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                        //pRelation.tupes.RemoveAt(j);
+                    }
                 }
             }
             return reVal;
@@ -1152,10 +1210,56 @@ namespace PRDB_Sqlite.Sevice.CommonService
             {
                 for (int j = 0; j < pRelation2.tupes.Count; j++)
                 {
-                     reVal.tupes.Add(getTupleCollapse_Exc_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                    if (check_e_Val_eq(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes))
+                    {
+                        reVal.tupes.Add(getTupleCollapse_Exc_static(pRelation1.tupes[i], pRelation2.tupes[j], pAttributes));
+                        //pRelation.tupes.RemoveAt(j);
+                    }
+                    else
+                    {
+                        reVal.tupes.Add(pRelation1.tupes[i]);
+                    }
                 }
             }
             return reVal;
+        }
+        private static bool check_e_Val_eq(PTuple pTuple_1, PTuple pTuple_2, IList<PAttribute> pAttributes)
+        {
+            var probs = new List<float>();
+            var eulerElem = new ElemProb(0, 0);
+            foreach (var att in pAttributes)
+            {
+                if (!getStandardAttrName_static(att.AttributeName).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    #region 
+                    //check equal
+                    float p = 1f;
+                    var innerSet = getInterset(ref p, pTuple_1.valueSet[att.AttributeName], pTuple_2.valueSet[att.AttributeName], att.Type.TypeName);
+
+                    if (!(innerSet is null) && innerSet.Count != 0)
+                    {
+                        if (pAttributes.Count == 1) { eulerElem.upperBound = p; eulerElem.lowerBound = p; }
+                        else
+                        {
+                            if (probs.Count > 0)
+                            {
+                                probs.Add(p);
+                                eulerElem = calProp_e_static(ref probs);
+                            }
+                            else probs.Add(p);
+                        }
+
+                    }
+
+                    else
+                        return false;
+
+                    #endregion
+                }
+
+            }
+            return true;
+            //  return Parameter.eulerThreshold <= eulerElem.lowerBound && eulerElem.upperBound >= Parameter.eulerThreshold;
         }
     }
 }
