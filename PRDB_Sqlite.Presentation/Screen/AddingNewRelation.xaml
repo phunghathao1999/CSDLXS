@@ -9,8 +9,8 @@
         ResizeMode="NoResize"
         Loaded="Window_Loaded"
         WindowStyle="ToolWindow"
-        Title="Adding New Relation" Height="300" Width="600" FontWeight="Normal" FontFamily="Times New Roman">
-    <StackPanel>
+        Title="Adding New Relation" Height="272.727" Width="474.126" FontWeight="Normal" FontFamily="Times New Roman">
+    <StackPanel Margin="0,0,-0.4,0.2">
         <Label/>
         <Grid HorizontalAlignment="Center">
         <Grid.ColumnDefinitions>

@@ -307,5 +307,10 @@ namespace PRDB_Sqlite.Presentation
                 default: break;
             }
         }
+
+        private void File_DpiChanged(object sender, DpiChangedEventArgs e)
+        {
+
+        }
     }
 }

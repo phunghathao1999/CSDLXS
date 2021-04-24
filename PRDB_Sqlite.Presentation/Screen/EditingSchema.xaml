@@ -6,41 +6,37 @@
         xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.Screen"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        Title="Edit schema"
+        WindowStyle="ThreeDBorderWindow"
         ResizeMode="NoResize"
-        WindowStyle="ToolWindow"
-        Loaded="Window_Loaded"
-        Title="EditingSchema" Width="650" Height="514">
+        Width="685" Height="440" 
+        Background="#f0f0f0" FontFamily="Arial">
     <DockPanel >
-        <StackPanel Background="#FFDAE3EC">
+        <StackPanel Margin="0,0,0,0" Width="680" Height="410">
 
-            <Label Content="Edit Schema" HorizontalAlignment="Center" FontFamily="Bookman Old Style" FontSize="50" FontWeight="Normal" />
-            <Label/>
-            <GroupBox Header="Schema Information" FontWeight="Normal"  FontFamily="Arial" FontSize="20" Padding="0,10" Margin="0,20,0,19">
+            <GroupBox Header=""  FontWeight="Normal" FontSize="16" Padding="0,0" Margin="0,0,0,0" Height="50">
                 <GroupItem>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Label  Content="Schema name:" FontSize="13"  FontFamily="Arial" Foreground="Black" FontWeight="Normal" />
-                        <ComboBox x:Name="cbxSchName" FontSize="13" FontFamily="Arial" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" Foreground="Black"  VerticalAlignment="Center" />
-                        <Label/>
-                        <Label/>
-                        <Label Content="Current name:" FontSize="13"  FontFamily="Arial" Foreground="Black" FontWeight="Normal"/>
-                        <TextBox x:Name="txtName"  FontSize="13"  Height="20"  FontFamily="Arial" Foreground="Black" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbxSchName" FontSize="13" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" Foreground="Black"  VerticalAlignment="Center" />
+                        <Label Content="Current name:" FontSize="13"  Foreground="Black" FontWeight="Normal"/>
+                        <TextBox x:Name="txtName"  FontSize="13"  Height="20" Foreground="Black" MinWidth="200" FontWeight="Normal" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Center"/>
                     </StackPanel>
 
                 </GroupItem>
             </GroupBox>
-            <ToolBarTray>
+            <ToolBarTray Background="#f0f0f0">
                 <ToolBar>
-                    <Button x:Name="btnAddRow" Click="btnAddRow_Click" Content="Add New Row" FontFamily="Arial" FontWeight="Bold"/>
-                    <Button x:Name="btnDelRow" Click="btnDelRow_Click" Content="Delele Current Row" FontFamily="Arial" FontWeight="Bold"/>
+                    <Button x:Name="btnAddRow" Click="btnAddRow_Click" Content="Add New Row" FontWeight="Bold"/>
+                    <Button x:Name="btnDelRow" Click="btnDelRow_Click" Content="Delele Current Row" FontWeight="Bold"/>
                 </ToolBar>
             </ToolBarTray>
             <DataGrid x:Name="dtg"
                       FontSize="14" 
-                      MinHeight="200"
+                      MinWidth="200"
                       CanUserSortColumns="False"
                       IsSynchronizedWithCurrentItem="true"
-                      MaxHeight="200"
+                      Height="275"
                       ColumnWidth="*">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Attribute Name" Binding="{Binding attrName}"/>
@@ -66,30 +62,23 @@
                 </DataGrid.Columns>
 
             </DataGrid>
-            <Label/>
-            <StackPanel Orientation="Horizontal"
-                       HorizontalAlignment="Center">
-                <Label/>
+            <StackPanel Orientation="Horizontal" Width="185" Margin="450,17,0,0">
                 <Button x:Name="btnSave" Click="btnSave_Click" BorderThickness="0" >
                     <Button.Content>
-                        <Border Width="80" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                            <TextBlock Text="Save" FontSize="20" Padding="5"  HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Times New Roman" Margin="0,0,14,0"/>
+                        <Border Width="80" CornerRadius="0" Height="20" Background="#e1e1e1" Margin="0" BorderThickness="1,1,1,1" >
+                            <TextBlock Text="OK" Width="80" Height="25" Padding="0,5,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </Button.Content>
                 </Button>
-
-                <Label/>
-                <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0" >
+                <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0"  Margin="20,0,0,0">
                     <Button.Content>
-                        <Border CornerRadius="5" Width="80"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                            <TextBlock Text="Cancel" FontSize="20" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                        <Border CornerRadius="0" Width="80" Height="20" Background="#e1e1e1" BorderThickness="1,1,1,1" >
+                            <TextBlock Text="CANCEL" Width="80" Height="25" Padding="0,5,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </Button.Content>
                 </Button>
 
             </StackPanel>
-            <Label/>
-            <Label/>
         </StackPanel>
     </DockPanel>
 </Window>

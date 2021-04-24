@@ -10,6 +10,7 @@
         WindowStyle="SingleBorderWindow"
         Padding="15"
         FontSize="12"
+        Background="#f0f0f0"
         Loaded="Window_Loaded"
         Closed="Window_Closed"
         KeyDown="Window_KeyDown"
@@ -22,7 +23,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="2,2,2,2" Background="#FFB8D9F3" BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <Border CornerRadius="2,2,2,2" BorderBrush="Black" BorderThickness="1,1,1,1" >
                             <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                     </ControlTemplate>
@@ -35,7 +36,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="2,2,2,2" Margin="0,0,5,0" Background="#FFF3E277"  BorderBrush="Black" BorderThickness="1,1,1,1" >
+                        <Border CornerRadius="2,2,2,2" Margin="0,0,5,0"  BorderBrush="Black" BorderThickness="1,1,1,1" >
                             <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                     </ControlTemplate>
@@ -49,25 +50,29 @@
                 x:Name="rlpHeader"    
                 HorizontalAlignment="Stretch"
 	            VerticalAlignment="Stretch"
-                DockPanel.Dock="Top"
-                Background="Turquoise">
-
-            <Ribbon x:Name="tbtHeader" FontSize="13" FontWeight="Normal"  Height="Auto">
+                DockPanel.Dock="Top">
+            <Menu x:Name="menu" Height="25">
+                <Border >
+                    <MenuItem Height="25" Width="100" Name="FILE"></MenuItem>
+                </Border>
+            </Menu>
+            <Ribbon x:Name="tbtHeader" FontWeight="Normal"  Height="Auto">
                 <Ribbon.HelpPaneContent>
-                    <RibbonButton Margin="1,3,2,0"  Label="Help" ></RibbonButton>
+                    <RibbonButton Margin="1,3,2,0" Label="Help" ></RibbonButton>
                 </Ribbon.HelpPaneContent>
-
                 <Ribbon.ApplicationMenu>
-                    <RibbonApplicationMenu KeyTip="F" FontWeight="Normal">
-                        <RibbonApplicationMenuItem Header="Reload Db"  Name="btnReload" Click="btnReload_Click" />
-                        <RibbonApplicationMenuItem Header="Exit"  Name="btnExit" Click="btnExit_Click"/>
-                        <RibbonApplicationMenuItem Header="About"  Name="btnAbout" Click="btnAbout_Click"/>
+                    <RibbonApplicationMenu Name="File">
+                        <RibbonApplicationMenuItem Height="25" Header="New database"  Name="btnNewDb" Click="btnNewDb_Click"/>
+                        <RibbonApplicationMenuItem Height="25" Header="Open database"  Name="btnOpnDb" Click="btnOpenDb_Click" />
+                        <RibbonApplicationMenuItem Height="25" Header="Reload Db"  Name="btnReload" Click="btnReload_Click" />
+                        <RibbonApplicationMenuItem Height="25" Header="Exit"  Name="btnExit" Click="btnExit_Click"/>
+                        <RibbonApplicationMenuItem Height="25" Header="About"  Name="btnAbout" Click="btnAbout_Click"/>
                     </RibbonApplicationMenu>
                 </Ribbon.ApplicationMenu>
 
                 <RibbonTab Header="Database" FontWeight="Normal"  KeyTip="D" HorizontalContentAlignment="Center"  >
-                    <RibbonGroup Margin="1,10,1,1"  >
-                        <Button Name="btnNewDb" Margin="0,0,0,-3" Click="btnNewDb_Click" Background="Transparent" BorderBrush="Transparent"   >
+                    <!--<RibbonGroup Margin="1,10,1,1"  >
+                        <Button Name="btnNewDb" Margin="0,0,0,-3" Click="btnNewDb_Click" BorderBrush="Transparent"   >
                             <Button.Content >
                                 <StackPanel Orientation="Vertical" Height="60"  >
                                     <Image Source="assets\Images\newdb.ico" Width="40" Height="40"></Image>
@@ -77,7 +82,7 @@
                         </Button>  
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1">
-                        <Button Margin="0,0,0,-3" Name="btnOpnDb" Click="btnOpenDb_Click"  Background="Transparent" BorderBrush="Transparent" >
+                        <Button Margin="0,0,0,-3" Name="btnOpnDb" Click="btnOpenDb_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\opendb.ico" Width="40" Height="40"></Image>
@@ -85,9 +90,9 @@
                                 </StackPanel>
                             </Button.Content>
                         </Button>
-                    </RibbonGroup>
+                    </RibbonGroup>-->
                     <RibbonGroup Margin="1,10,1,1" Name="rgSaveDb" Visibility="Collapsed">
-                        <Button Margin="0,0,0,-3" Name="btnSveDb" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Margin="0,0,0,-3" Name="btnSveDb" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\savedb (2).ico" Width="40" Height="40"></Image>
@@ -97,7 +102,7 @@
                         </Button>
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgClsDb" Visibility="Collapsed">
-                        <Button Name="btnClsDb" Margin="0,0,0,-3"  Background="Transparent" BorderBrush="Transparent">
+                        <Button Name="btnClsDb" Margin="0,0,0,-3" BorderBrush="Transparent">
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\remove db d.ico" Width="40" Height="40"></Image>
@@ -110,7 +115,7 @@
 
                 <RibbonTab Header="Schema" FontWeight="Normal" KeyTip="S" >
                     <RibbonGroup Margin="1,10,1,1" Name="rgNewSch" Visibility="Collapsed">
-                        <Button Name="btnNewSch" Margin="0,0,0,-3" Click="btnNewSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Name="btnNewSch" Margin="0,0,0,-3" Click="btnNewSch_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme add.png" Width="40" Height="40"></Image>
@@ -120,7 +125,7 @@
                         </Button>
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgEdtSch" Visibility="Collapsed">
-                        <Button Name="btnEdtSch" Margin="0,0,0,-3" Click="btnEdtSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Name="btnEdtSch" Margin="0,0,0,-3" Click="btnEdtSch_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme edit.png" Width="40" Height="40"></Image>
@@ -130,7 +135,7 @@
                         </Button>
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgOpnSch" Visibility="Collapsed">
-                        <Button Name="btnOpnSch" Margin="0,0,0,-3" Click="btnOpnSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Name="btnOpnSch" Margin="0,0,0,-3" Click="btnOpnSch_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme open.png" Width="40" Height="40"></Image>
@@ -140,7 +145,7 @@
                         </Button>
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgDelSch" Visibility="Collapsed">
-                        <Button Name="btnDelSch" Margin="0,0,0,-3" Click="btnDelSch_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Name="btnDelSch" Margin="0,0,0,-3" Click="btnDelSch_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\scheme delete.png" Width="40" Height="40"></Image>
@@ -150,13 +155,13 @@
                         </Button>                   
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgClsSch" Visibility="Collapsed">
-                        <Button x:Name="btnClsSch" Margin="0,0,0,-3" Content="Close Schema" Background="Transparent" BorderBrush="Transparent" />
+                        <Button x:Name="btnClsSch" Margin="0,0,0,-3" Content="Close Schema" BorderBrush="Transparent" />
                     </RibbonGroup>
                 </RibbonTab>
 
                 <RibbonTab  Header="Relation" FontWeight="Normal" KeyTip="R" >
                     <RibbonGroup Margin="1,10,1,1" Name="rgNewRel" Visibility="Collapsed">
-                        <Button Name="btnNewRel" Margin="0,0,0,-3" Click="btnNewRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Name="btnNewRel" Margin="0,0,0,-3" Click="btnNewRel_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\new relation.png" Width="40" Height="40"></Image>
@@ -166,7 +171,7 @@
                         </Button>                   
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgOpnRel" Visibility="Collapsed">
-                        <Button Name="btnOpnRel" Margin="0,0,0,-3" Click="btnOpnRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Name="btnOpnRel" Margin="0,0,0,-3" Click="btnOpnRel_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\open relation.png" Width="40" Height="40"></Image>
@@ -176,7 +181,7 @@
                         </Button>                    
                     </RibbonGroup>
                     <RibbonGroup Margin="1,10,1,1" Name="rgDelRel" Visibility="Collapsed">
-                        <Button Name="btnDelRel" Margin="0,0,0,-3" Click="btnDelRel_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Button Name="btnDelRel" Margin="0,0,0,-3" Click="btnDelRel_Click" BorderBrush="Transparent" >
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\remove relation.png" Width="40" Height="40"></Image>
@@ -190,8 +195,7 @@
                         <Button x:Name="btnIns"
                                  Margin="0,0,0,-3"
                         Click="btnIns_Click"
-                        ToolTip="Insert New Record"
-                        FontSize="13"  Background="Transparent" BorderBrush="Transparent">
+                        ToolTip="Insert New Record" BorderBrush="Transparent">
                             <Button.Content>
                                 <StackPanel Orientation="Vertical">
                                     <Image Source="assets\Images\add_record_icon.jpg" Width="40" Height="40"></Image>
@@ -234,7 +238,6 @@
                                     Click="loadCurE_Click" Width="100" Height="25" />-->
                             <Button Content="Set" Name="Set"
                                     Grid.Column="0"
-                                    Background="#FF3CFD5F"
                                     Grid.Row="0"
                                     Click="Set_Click" Width="100" Height="25"/>
 
@@ -345,7 +348,7 @@
                                         <TabItem.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="assets\Images\scheme.png" Width="12" Margin="0,3,0,0"   Height="12"/>
-                                                <TextBlock Text="  Schemas" Margin="3,0,0,0" Foreground="Black" FontSize="13"/>
+                                                <TextBlock Text="  Schemas" Margin="3,0,0,0" Foreground="Black" />
                                             </StackPanel>
                                         </TabItem.Header>
                                     </TabItem>
@@ -353,7 +356,7 @@
                                         <TabItem.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="assets\Images\relation.png" Width="12"   Margin="0,3,0,0"   Height="12"/>
-                                                <TextBlock Text=" Relations" Margin="3,0,0,0" Foreground="Black" FontSize="13"   FontWeight="Normal"/>
+                                                <TextBlock Text=" Relations" Margin="3,0,0,0" Foreground="Black" FontWeight="Normal"/>
                                             </StackPanel>
                                         </TabItem.Header>
                                     </TabItem>
@@ -361,7 +364,7 @@
                                         <TabItem.Header>
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="assets\Images\query.png" Width="12" Margin="0,3,0,0"   Height="12"/>
-                                                <TextBlock Text=" Execute Query" Margin="3,0,0,0" Foreground="Black"  FontSize="13"  FontWeight="Normal"/>
+                                                <TextBlock Text=" Execute Query" Margin="3,0,0,0" Foreground="Black" FontWeight="Normal"/>
                                             </StackPanel>
                                         </TabItem.Header>
                                     </TabItem>
@@ -376,10 +379,9 @@
                 HorizontalAlignment="Center"
                 Name="stpFooter"
                 Grid.Row="2"
-                Grid.ColumnSpan="2"
-                Background="Turquoise">
+                Grid.ColumnSpan="2">
       <DockPanel>
-        <Label DockPanel.Dock="Bottom" Background="White">Thank for using our applications!</Label>
+        <Label DockPanel.Dock="Bottom" >Thank for using our applications!</Label>
       </DockPanel>
     </StackPanel>
   </Grid>

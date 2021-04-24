@@ -111,9 +111,6 @@
     <Compile Include="Screen\EditingSchema.xaml.cs">
       <DependentUpon>EditingSchema.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screen\FormTest.xaml.cs">
-      <DependentUpon>FormTest.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Screen\Inp_DataType.xaml.cs">
       <DependentUpon>Inp_DataType.xaml</DependentUpon>
     </Compile>
@@ -162,10 +159,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screen\EditingSchema.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screen\FormTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
