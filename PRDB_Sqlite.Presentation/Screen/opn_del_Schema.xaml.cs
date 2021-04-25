@@ -86,9 +86,6 @@ namespace PRDB_Sqlite.Presentation.Screen
                 this.cbx.ItemsSource = StaticParams.currentDb.Relations.ToList();
                 this.cbx.DisplayMemberPath = "relationName";
             }
-
-            
-            this.lblHeader.Content = this.Title;
         }
 
         private void btnMain_Click(object sender, RoutedEventArgs e)

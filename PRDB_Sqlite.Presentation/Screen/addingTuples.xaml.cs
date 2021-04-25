@@ -33,7 +33,6 @@ namespace PRDB_Sqlite.Presentation.Screen
             this.lblRelation.Content = $"INSERT INTO {StaticParams.currentRelation.relationName.ToUpper()}";
         }
 
-
         private void buildDtg()
         {
             this.dtg.AutoGenerateColumns = false;
