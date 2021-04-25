@@ -6,43 +6,42 @@
         xmlns:local="clr-namespace:PRDB_Sqlite.Presentation.Screen"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="ToolWindow"
+        WindowStyle="ThreeDBorderWindow"
         ResizeMode="NoResize"
-        Title="INPUT DATATYPE" Width="500" Height="450" Background="#FFCBDAE2" >
+        Title="Input Datatype" 
+        Width="400" Height="260" 
+        Background="#f0f0f0" 
+        FontFamily="Arial"
+        FontSize="13">
     
-    <StackPanel Margin="0,0,4,-16" >
-        <Label Content="INPUT DATATYPE" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="ExtraBold" FontSize="30"/>
-        <Label />
-        <StackPanel Orientation="Horizontal" Margin="15,5,5,5">
-            <Label Content="Data Type" FontSize="20" RelativePanel.AlignLeftWithPanel="True" FontWeight="Bold"/>
-            <ComboBox Name="cbxDtt" Height="30" Width="200" SelectionChanged="cbxDtt_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel Height="230" Width="390">
+        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+            <Label Content="Data Type" Margin="6,0,20,0" RelativePanel.AlignLeftWithPanel="True"/>
+            <ComboBox Name="cbxDtt" Height="20" Width="200" SelectionChanged="cbxDtt_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
-        <Label/>
-        <GroupBox Header="Details" Margin="10,20,10,10"  FontSize="20" Foreground="#FF090A0A" FontWeight="Bold">
+        <GroupBox Header="Details" >
             <StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="20,10,10,10"> 
-                <Label Content="Data Name:"   FontSize="15" FontWeight="Normal"/>
-                    <TextBox Name="txtTypeName" IsEnabled="False" FontWeight="Normal" FontSize="12" Width="310" Height="25" />
+            <StackPanel Orientation="Horizontal" Margin="20,5,20,0"> 
+                <Label Content="Data Name:"/>
+                    <TextBox Name="txtTypeName" IsEnabled="False" FontWeight="Normal" Width="260" Height="20" />
                 <Label />
             </StackPanel>
-                <RichTextBox Name="rbValls" Height="90" FontSize="12" FontWeight="Normal" Margin="5,10,5,5" IsEnabled="False" ></RichTextBox>
+                <RichTextBox Name="rbValls" Height="90" FontWeight="Normal" IsEnabled="False" ></RichTextBox>
             </StackPanel>
 
         </GroupBox>
-        <Label/>
-        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Width="185" Margin="180,17,0,0">
             <Button Name="btnOk" Click="btnOk_Click" BorderThickness="0" >
                 <Button.Content>
-                    <Border Width="60" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                        <TextBlock FontSize="18" Padding="5" Text="OK"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    <Border Width="80" CornerRadius="0" Height="20" Background="#e1e1e1" Margin="0" BorderThickness="1,1,1,1" >
+                        <TextBlock Text="OK" Width="80" Height="25" Padding="0,5,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                 </Button.Content>
             </Button>
-            <Label/>
-            <Button Name="btnCancel" Click="btnCancel_Click"   BorderThickness="0" >
+            <Button Name="btnCancel" Click="btnCancel_Click"   BorderThickness="0"  Margin="20,0,0,0">
                 <Button.Content>
-                    <Border Width="60" CornerRadius="5"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                        <TextBlock FontSize="18" Padding="5" Text="Cancel"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    <Border CornerRadius="0" Width="80" Height="20" Background="#e1e1e1" BorderThickness="1,1,1,1" >
+                        <TextBlock Text="CANCEL" Width="80" Height="25" Padding="0,5,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                 </Button.Content>
             </Button>
