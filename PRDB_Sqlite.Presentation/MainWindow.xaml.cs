@@ -100,7 +100,7 @@ namespace PRDB_Sqlite.Presentation
                 MdlRContent.Instance().getTabByUid(ref this.tbiQry);
             }
 
-            this.cbxStrategy.ItemsSource = Parameter.strategies;
+            //this.cbxStrategy.ItemsSource = Parameter.strategies;
             //this.cbxStrategy.Items = true;
             //this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
         }
@@ -234,7 +234,9 @@ namespace PRDB_Sqlite.Presentation
         {
             
             MenuItem item = e.Source as MenuItem;
-            Parameter.curStrategy = (string)item.Items.CurrentItem;
+            Parameter.curStrategy = item.Header.ToString();
+            Console.WriteLine("item.Items.CurrentItem.ToString(): " + item.Header.ToString());
+            Console.WriteLine("Main: " + Parameter.curStrategy);
         }
 
         private void tvLeftNode_MouseDoubleClick(object sender, MouseButtonEventArgs e)
