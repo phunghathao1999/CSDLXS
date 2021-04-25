@@ -9,9 +9,8 @@
         ResizeMode="NoResize"
         Loaded="Window_Loaded"
         WindowStyle="ToolWindow"
-        Title="Adding New Relation" Height="272.727" Width="474.126" FontWeight="Normal" FontFamily="Times New Roman">
+        Title="Adding New Relation" Height="177.368" Width="388.939" FontWeight="Normal" FontFamily="Times New Roman">
     <StackPanel Margin="0,0,-0.4,0.2">
-        <Label/>
         <Grid HorizontalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -22,15 +21,7 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
-        
-        <Label Content="Create New Relation" 
-               Grid.Row="0"
-               Grid.ColumnSpan="2"
-               HorizontalAlignment="Center" 
-               FontSize="40" 
-               FontWeight="Normal"
-               FontFamily="Bookman Old Style" Margin="0,0,0,20"/>
-           
+
             <Label Grid.Row="1"
                    Grid.Column="0"
                    Content="Relation Name" FontFamily="Times New Roman" FontWeight="Normal" Margin="0,0,0,20" FontSize="20" />
@@ -49,8 +40,6 @@
                       Grid.Row="2" VerticalAlignment="Center" FontSize="20" FontFamily="Aria"/>
             
     </Grid>
-        <Label/>
-        <Label/>
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <Button x:Name="btnSave" Click="btnSave_Click" BorderThickness="0" >
@@ -60,8 +49,6 @@
                     </Border>
                 </Button.Content>
             </Button>
-            <Label/>
-            <Label/>
             <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0" >
                 <Button.Content>
                     <Border CornerRadius="5" Width="60"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >

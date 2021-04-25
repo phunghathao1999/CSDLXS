@@ -1,9 +1,12 @@
-﻿using PRDB_Sqlite.Infractructure.Common;
+﻿using Caliburn.Micro;
+using PRDB_Sqlite.Infractructure.Common;
 using PRDB_Sqlite.Presentation.Module;
 using PRDB_Sqlite.Presentation.Screen;
 using PRDB_Sqlite.Sevice.SysService;
 using PRDB_Sqlite.SystemParam;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -44,7 +47,8 @@ namespace PRDB_Sqlite.Presentation
             Refresh();
             //setAutoBinding();
         }
-       
+
+
         private void setAutoBinding()
         {
                 if (Parameter.indexRelChange)
@@ -97,7 +101,7 @@ namespace PRDB_Sqlite.Presentation
             }
 
             this.cbxStrategy.ItemsSource = Parameter.strategies;
-            this.cbxSetOpr.ItemsSource = Parameter.strategies_case;
+            //this.cbxStrategy.Items = true;
             //this.NumberTextBox.Text = Parameter.eulerThreshold.ToString();
         }
         //false == none Db
@@ -111,15 +115,15 @@ namespace PRDB_Sqlite.Presentation
                 //this.rgClsDb.Visibility = Visibility.Visible;
                 //this.rgSaveDb.Visibility = Visibility.Visible;
                 //schema
-                this.rgNewSch.Visibility = Visibility.Visible;
-                this.rgOpnSch.Visibility = Visibility.Visible;
-                this.rgEdtSch.Visibility = Visibility.Visible;
-                this.rgDelSch.Visibility = Visibility.Visible;
+                this.btnNewSch.Visibility = Visibility.Visible;
+                this.btnEdtSch.Visibility = Visibility.Visible;
+                this.btnOpnSch.Visibility = Visibility.Visible;
+                this.btnDelSch.Visibility = Visibility.Visible;
                 //relation
-                this.rgNewRel.Visibility = Visibility.Visible;
-                this.rgOpnRel.Visibility = Visibility.Visible;
-                this.rgDelRel.Visibility = Visibility.Visible;
-                this.rgTup.Visibility = Visibility.Visible;
+                this.btnNewRel.Visibility = Visibility.Visible;
+                this.btnOpnRel.Visibility = Visibility.Visible;
+                this.btnDelRel.Visibility = Visibility.Visible;
+                this.btnIns.Visibility = Visibility.Visible;
                 //query
 
             }
@@ -228,7 +232,9 @@ namespace PRDB_Sqlite.Presentation
 
         private void Set_Click(object sender, RoutedEventArgs e)
         {
-            Parameter.curStrategy = this.cbxStrategy.SelectedItem.ToString();
+            
+            MenuItem item = e.Source as MenuItem;
+            Parameter.curStrategy = (string)item.Items.CurrentItem;
         }
 
         private void tvLeftNode_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -291,10 +297,12 @@ namespace PRDB_Sqlite.Presentation
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.cbxSetOpr.SelectionChanged += (s, evt) =>
-            {
-                Parameter.curStrategy_case = this.cbxSetOpr.SelectedItem.ToString();
-            };
+
+            //this.cbxSetOpr.SelectionChanged += (s, evt) =>
+            //{
+            //    Parameter.curStrategy_case = this.cbxSetOpr.SelectedItem.ToString();
+            //};
+
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -311,6 +319,60 @@ namespace PRDB_Sqlite.Presentation
         private void File_DpiChanged(object sender, DpiChangedEventArgs e)
         {
 
+        }
+
+        public class MenuItemViewModel
+        {
+            private readonly ICommand _command;
+
+            public MenuItemViewModel()
+            {
+                _command = new CommandViewModel(Execute);
+            }
+
+            public string Header { get; set; }
+
+            public ObservableCollection<MenuItemViewModel> MenuItems { get; set; }
+
+            public ICommand Command
+            {
+                get
+                {
+                    return _command;
+                }
+            }
+
+            private void Execute()
+            {
+                // (NOTE: In a view model, you normally should not use MessageBox.Show()).
+                MessageBox.Show("Clicked at " + Header);
+            }
+        }
+
+        public class CommandViewModel : ICommand
+        {
+            private readonly Action _action;
+
+            public CommandViewModel(Action action)
+            {
+                _action = action;
+            }
+
+            public void Execute(object o)
+            {
+                _action();
+            }
+
+            public bool CanExecute(object o)
+            {
+                return true;
+            }
+
+            public event EventHandler CanExecuteChanged
+            {
+                add { }
+                remove { }
+            }
         }
     }
 }
