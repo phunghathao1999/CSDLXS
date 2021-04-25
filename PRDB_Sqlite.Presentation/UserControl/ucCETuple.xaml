@@ -8,6 +8,7 @@
              BorderBrush="Black"
              BorderThickness="2"
              Margin="5"
+             FontFamily="Arial" FontSize="13"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <Style TargetType="Button" x:Key="TabButton">
@@ -32,43 +33,41 @@
                     <Button x:Name="btnClr"  Click="btnClr_Click" Width="58" IsEnabled="False">
                         <StackPanel Orientation="Horizontal">
                             <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/clear-icon.png"/>
-                            <TextBlock Text=" Clear" FontSize="12" VerticalAlignment="Center" />
+                            <TextBlock Text=" Clear" VerticalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <Separator/>
                     <Button x:Name="btnView"  Click="btnView_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image  Width="12" Height="12" Source="/PRDB_Sqlite.Presentation;component/assets/Images/changeView.png"/>
-                            <TextBlock Text=" Change View Edit" FontSize="12" VerticalAlignment="Center" />
+                            <TextBlock Text=" Change View Edit" VerticalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <Label/>
                 <Button Content="Reload Value" Visibility="Collapsed"/>
             </ToolBar>
         </ToolBarTray>
-        <GroupBox Header="Infomation" FontSize="15">
+        <GroupBox Header="Infomation">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
-                    <Label Content="Attribute Name:" FontSize="13"/>
-                    <Label x:Name="txtInfo" FontSize="13" Foreground="Blue"/>
+                    <Label Content="Attribute Name:"/>
+                    <Label x:Name="txtInfo" Foreground="Blue"/>
                 </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="30,0,0,0" Height="33">
-                    <Label Content="Is Primary Key:" FontSize="13"/>
+                    <Label Content="Is Primary Key:"/>
                         <CheckBox x:Name="chkPri" Margin="10" Height="15" Foreground="Blue" IsEnabled="False" IsChecked="False"/>
                 </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
-                    <Label Content="Data Type:" FontSize="13"/>
-                    <Label x:Name="txtDataType" FontSize="13" Foreground="Blue" />
+                    <Label Content="Data Type:" />
+                    <Label x:Name="txtDataType" Foreground="Blue" />
                 </StackPanel>
                 
             </StackPanel>
            
         </GroupBox>
         <StackPanel>
-            <RichTextBox x:Name="rtbxCellContent" 
-                         FontSize="14"
-                         MinHeight="100"                         
-                         FontFamily="Consolas"
+            <RichTextBox x:Name="rtbxCellContent"
+                         MinHeight="100"
                          Margin="5,10,10,10"
                          MaxHeight="100"
                          Background="#FFF7F2D2"
@@ -81,7 +80,6 @@
                 </RichTextBox.Resources>
             </RichTextBox>
             <DataGrid x:Name="dtgCellContent"
-                          FontFamily="Consolas"
                           MinHeight="100"
                           MaxHeight="100"
                           IsEnabled="False"
@@ -95,7 +93,6 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn 
                         Header="Value"
-                        FontSize="13"
                         Binding="{Binding value}"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -107,20 +104,15 @@
                         Content="Accept Changes"  Height="25" Style="{StaticResource TabButton }"/>
             </StackPanel>
         </StackPanel>
-        <ToolBarTray Orientation="Horizontal" FlowDirection="RightToLeft">
-            <ToolBar>
-                    <Button x:Name="btnApply"
-                            
-                            IsEnabled="False"
-                            ToolTip="Apply to DB">
-                        <StackPanel Orientation="Vertical">
-                            <Image  Width="70" Height="70" Source="/PRDB_Sqlite.Presentation;component/assets/Images/savedb (2).ico"/>
-                            <TextBlock Text="Apply Changes into DB" FontSize="12" VerticalAlignment="Center" />
-                        </StackPanel>
-                    </Button>
-                </ToolBar>
-        </ToolBarTray>
-        <TextBlock x:Name="txtMessage" MinHeight="100"/>
+            <DockPanel VerticalAlignment="Bottom" Margin="0,0,2,35">
+                <Button DockPanel.Dock="Right" x:Name="btnApply" IsEnabled="False" ToolTip="Apply to DB" >
+                    <StackPanel Orientation="Vertical">
+                        <Image Width="70" Height="70" Source="/PRDB_Sqlite.Presentation;component/assets/Images/savedb (2).ico"/>
+                        <TextBlock Text="Apply Changes into DB"  VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+            <TextBlock x:Name="txtMessage" MinHeight="100"/>
     </StackPanel>
     </ScrollViewer>
 </UserControl>

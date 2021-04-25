@@ -8,54 +8,56 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Loaded="Window_Loaded"
-        WindowStyle="ToolWindow"
-        Title="Adding New Relation" Height="177.368" Width="388.939" FontWeight="Normal" FontFamily="Times New Roman">
-    <StackPanel Margin="0,0,-0.4,0.2">
+        WindowStyle="ThreeDBorderWindow"
+        FontFamily="Arial" FontSize="13" Background="#f0f0f0" 
+        Height="166.168" Width="319.83"
+        Title="Adding New Relation" >
+    <StackPanel Margin="0,0,-0.4,-0.2">
         <Grid HorizontalAlignment="Center">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
 
             <Label Grid.Row="1"
                    Grid.Column="0"
-                   Content="Relation Name" FontFamily="Times New Roman" FontWeight="Normal" Margin="0,0,0,20" FontSize="20" />
-            <TextBox MinWidth="200"
+                   Content="Relation Name" Margin="0,10,0,0" />
+            <TextBox MinWidth="150"
                      Name="txtRelName"
                      Grid.Column="1"
-                     Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,20" FontSize="20"/>
-            
-            <Label Content="Select Schema"
+                     Grid.Row="1" VerticalAlignment="Center" Margin="0,10,0,0" />
+
+            <Label Content="Select Schema"  Margin="0,10,0,0"
                    Grid.Column="0"
-                   Grid.Row="2" FontFamily="Times New Roman" FontWeight="Normal" FontSize="20"/>
-            <ComboBox MinWidth="200"
+                   Grid.Row="2" FontWeight="Normal"/>
+            <ComboBox MinWidth="150"  Margin="0,10,0,0" Height="18" Background="White"
                       SelectedIndex="1"
                       Name="cbxSch"
                       Grid.Column="1"
-                      Grid.Row="2" VerticalAlignment="Center" FontSize="20" FontFamily="Aria"/>
-            
-    </Grid>
-        <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Center">
-            <Button x:Name="btnSave" Click="btnSave_Click" BorderThickness="0" >
+                      Grid.Row="2" />
+
+        </Grid>
+        <StackPanel Orientation="Horizontal" Width="150" Margin="140,20,0,0">
+            <Button x:Name="btnOk" Click="btnSave_Click" BorderThickness="0">
                 <Button.Content>
-                    <Border Width="60" CornerRadius="5"  Background="LightBlue"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                        <TextBlock Text="Save" FontSize="18" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    <Border >
+                        <TextBlock Text="OK" Width="60" Padding="0,1,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                 </Button.Content>
             </Button>
-            <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0" >
+            <Button x:Name="btnCancel" Click="btnCancel_Click" Margin="15,0,0,0">
                 <Button.Content>
-                    <Border CornerRadius="5" Width="60"  Background="LightCoral"   Margin="0" BorderBrush="Black" BorderThickness="1,1,1,1" >
-                        <TextBlock Text="Cancel" FontSize="18" Padding="5"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                    <Border >
+                        <TextBlock Text="CANCEL" Width="60" Padding="0,1,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                 </Button.Content>
             </Button>
         </StackPanel>
+        
     </StackPanel>
 </Window>

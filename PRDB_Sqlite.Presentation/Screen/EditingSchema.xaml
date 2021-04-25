@@ -65,15 +65,15 @@
             <StackPanel Orientation="Horizontal" Width="185" Margin="450,17,0,0">
                 <Button x:Name="btnSave" Click="btnSave_Click" BorderThickness="0" >
                     <Button.Content>
-                        <Border Width="80" CornerRadius="0" Height="20" Background="#e1e1e1" Margin="0" BorderThickness="1,1,1,1" >
-                            <TextBlock Text="OK" Width="80" Height="25" Padding="0,5,0,0" TextAlignment="Center" VerticalAlignment="Center" />
+                        <Border  >
+                            <TextBlock Text="OK" Width="80" Padding="0,1,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </Button.Content>
                 </Button>
                 <Button x:Name="btnCancel" Click="btnCancel_Click" BorderThickness="0"  Margin="20,0,0,0">
                     <Button.Content>
-                        <Border CornerRadius="0" Width="80" Height="20" Background="#e1e1e1" BorderThickness="1,1,1,1" >
-                            <TextBlock Text="CANCEL" Width="80" Height="25" Padding="0,5,0,0" TextAlignment="Center" VerticalAlignment="Center" />
+                        <Border >
+                            <TextBlock Text="CANCEL" Width="80" Padding="0,1,0,0" TextAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </Button.Content>
                 </Button>
