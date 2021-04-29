@@ -229,29 +229,22 @@ namespace PRDB_Sqlite.Presentation
                     return num;
             return null;
         }
-
         private void Set_Click(object sender, RoutedEventArgs e)
         {
             
             MenuItem item = e.Source as MenuItem;
             Parameter.curStrategy = item.Header.ToString();
-            Console.WriteLine("item.Items.CurrentItem.ToString(): " + item.Header.ToString());
-            Console.WriteLine("Main: " + Parameter.curStrategy);
         }
-
         private void tvLeftNode_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             this.Refresh(false);
         }
-
         private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
             var showAbout = new About();
             showAbout.ShowDialog();
             this.Refresh();
         }
-        
-
 
         private void tbiQry_MouseDown(object sender, MouseButtonEventArgs e)
         {
