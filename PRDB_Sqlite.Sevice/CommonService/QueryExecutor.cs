@@ -702,12 +702,28 @@ namespace PRDB_Sqlite.Sevice.CommonService
             var prop1 = new ElemProb(pTuple_1.Ps);
             var prop2 = new ElemProb(pTuple_2.Ps);
             var strategy = Parameter.curStrategy;
-            switch (strategy.Substring(strategy.IndexOf("_") + 1))
+            switch (strategy)
             {
+                case "⊗_ig": reTuple.Ps = new ElemProb(Math.Max(0, prop1.lowerBound + prop2.lowerBound - 1), Math.Min(prop1.upperBound, prop2.upperBound)); break;
+                case "⊗_in": reTuple.Ps = new ElemProb(prop1.lowerBound * prop2.lowerBound, prop1.upperBound * prop2.upperBound); break;
+                case "⊗_me": reTuple.Ps = new ElemProb(0, 0); break;
+                case "⊕_ig": reTuple.Ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                case "⊕_in": reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
+                case "⊕_me": reTuple.Ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
 
-                case "ig": reTuple.Ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
-                case "in": reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound)); break;
-                case "me": reTuple.Ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound)); break;
+                case "⊖_ig": reTuple.Ps = new ElemProb(Math.Max(0, prop1.lowerBound - prop2.upperBound), Math.Min(prop1.upperBound, 1 - prop2.lowerBound)); break;
+                case "⊖_in": reTuple.Ps = new ElemProb(prop1.lowerBound * (1 - prop2.upperBound), prop1.upperBound * (1 - prop2.lowerBound)); break;
+                case "⊖_me": reTuple.Ps = new ElemProb(prop1.lowerBound, 1 - prop2.lowerBound); break;
+                //case "ig": reTuple.Ps = new ElemProb(Math.Max(prop1.lowerBound, prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound));
+                //    Console.WriteLine("709 ig: ");
+                //    break;
+
+                //case "in": reTuple.Ps = new ElemProb(prop1.lowerBound + prop2.lowerBound - (prop1.lowerBound * prop2.lowerBound), prop1.upperBound + prop2.upperBound - (prop1.upperBound * prop2.upperBound));
+                //    Console.WriteLine("714 in: ");
+                //    break;
+                //case "me": reTuple.Ps = new ElemProb(Math.Min(1, prop1.lowerBound + prop2.lowerBound), Math.Min(1, prop1.upperBound + prop2.upperBound));
+                //    Console.WriteLine("710 me: ");
+                //    break;
                 default:
                     MessageError = "Invalid Current Strategy: " + Parameter.curStrategy;
                     break;
