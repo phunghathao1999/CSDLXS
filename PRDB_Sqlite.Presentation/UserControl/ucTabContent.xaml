@@ -43,7 +43,7 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Background" Value="White" />
         </Style>
-        
+
         <Style TargetType="Button" x:Key="TabButtonDelete">
             <Setter Property="Background" Value="#FF5AF711" />
             <Setter Property="TextBlock.TextAlignment" Value="Center" />
@@ -100,7 +100,7 @@
                         ToolTip="Delelte New Record"
                         Content="Delete" FontSize="13" Height="25"  Width="100" Style="{StaticResource TabButtonDelete}" Background="#FF85E25A" />
                     <Label/>
-                    
+
 
                 </StackPanel>
             </GroupBox>

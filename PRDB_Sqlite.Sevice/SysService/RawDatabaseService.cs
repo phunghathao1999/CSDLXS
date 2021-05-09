@@ -116,6 +116,8 @@ namespace PRDB_Sqlite.Sevice.SysService
                 //var querys = new List<PQuery>();
                 var querys = QueryService.Instance().getAllQuery();
                 pDatabase.Queries = querys;
+
+                
             }
             catch (Exception ex)
             {
@@ -225,7 +227,9 @@ namespace PRDB_Sqlite.Sevice.SysService
 
         public IList<PRelation> getRelByIdSch(PSchema pSchema)
         {
-            return RelationService.Instance().getAllRelation().Where(p => p.schema.id == pSchema.id).ToList();
+            var relation = RelationService.Instance().getAllRelation().Where(p => p.schema.id == pSchema.id).ToList();
+
+            return relation;
         }
 
         public bool InsertTupleData(PRelation pRelation)
@@ -474,7 +478,7 @@ namespace PRDB_Sqlite.Sevice.SysService
             {
                 IList<PAttribute> probAttributes = new List<PAttribute>();
                 DataTable dtb = ConcreteDb.Instance.getDataTable("SELECT * FROM SystemAttribute Where SchemeID = " + pSchema.id);
-
+                
                 if (dtb != null)
                     foreach (DataRow attrRow in dtb.Rows)
                     {
@@ -891,10 +895,16 @@ namespace PRDB_Sqlite.Sevice.SysService
                     var i = 0;
                     foreach (var item in pAttributes)
                     {
+                        string data = row[i++].ToString();
+                        
+                        data = data.Replace("{", "");
+                        data = data.Replace("}", "");
+                        data = data.Trim();
+
                         if (item.AttributeName.Equals(ContantCls.emlementProb))
-                            newRecord.Ps = new ElemProb(row[i++].ToString());
+                            newRecord.Ps = new ElemProb(data);
                         else
-                            newRecord.valueSet.Add(String.Format("{0}.{1}", relationName, item.AttributeName), getData(row[i++].ToString(), item.Type, item.primaryKey));
+                            newRecord.valueSet.Add(String.Format("{0}.{1}", relationName, item.AttributeName), getData(data, item.Type, item.primaryKey));
                     }
                     result.Add(newRecord);
 
@@ -908,10 +918,6 @@ namespace PRDB_Sqlite.Sevice.SysService
                 {
                     if (!checkDataFormat(rawValue)) throw new Exception("Wrong Format's Data!");
                     //fomat handle {x,y,z}
-                    rawValue = rawValue.Trim();
-                    rawValue = rawValue.Replace("{", "");
-                    rawValue = rawValue.Replace("}", "");
-                    rawValue = rawValue.Trim();
                     if (priKey && rawValue.Contains(",")) return new List<string>() { rawValue.Split(',').ToList().FirstOrDefault().Trim() };
                     return rawValue.Contains(",") ? rawValue.Split(',').ToList().Select(p => p.Trim()).ToList() : new List<string>() { rawValue.Trim() };
                 }

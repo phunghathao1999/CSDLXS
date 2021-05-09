@@ -25,7 +25,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
             InitializeComponent();
             //setAutoBinding();
             this.dtg.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(dgData_SelectionChanged);
-            
+
         }
 
         private void dgData_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -58,9 +58,9 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
             var addTupleForm = new addingTuples();
             addTupleForm.ShowDialog();
-      
+
         }
-        
+
 
         private void begin_Edit(object sender, DataGridBeginningEditEventArgs e)
         {
@@ -150,13 +150,13 @@ namespace PRDB_Sqlite.Presentation.UserControl
         {
             //set UC data
         }
-       
+
         private void btnApply(object sender, RoutedEventArgs e)
         {
             var att = this.ucEdit.txtInfo.Content.ToString();
             if (!this.ucEdit.rowBeingEdited)
             {
-                
+
 
                 if (att.Substring(att.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
                 {
@@ -252,7 +252,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
             {
                 MessageBox.Show("the Value have not Edited yet!", "Alert", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
-          
+
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
