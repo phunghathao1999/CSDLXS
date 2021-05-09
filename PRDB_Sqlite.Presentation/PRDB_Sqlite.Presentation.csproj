@@ -369,25 +369,7 @@
     <Resource Include="Iconshock-Real-Vista-Data-Database.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icon\icons8_file_13px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon\icons8_new_copy_13px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon\icons8_database_backup_13px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon\icons8_exit_13px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon\icons8_about_13px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon\icons8_opened_folder_14px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon\icons8_database_import_14px_2.png" />
+    <Resource Include="assets\Images\icons8_refresh_2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
