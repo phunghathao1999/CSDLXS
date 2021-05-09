@@ -305,7 +305,6 @@ namespace PRDB_Sqlite.Presentation.UserControl
                         dt.Columns.Add(new DataColumn(key.Split('.')[1].ToUpper()));
                     else
                         dt.Columns.Add(new DataColumn(key.ToUpper()));
-
                 }
             }
             foreach (var item in data)
@@ -313,11 +312,14 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 var dr = dt.NewRow();
                 foreach (var key in item.Keys)
                 {
+                    string dataa = item[key];
+                    if (!dataa.Contains(","))
+                        dataa = dataa.Replace("{", "").Replace("}", "").Trim();
                     if (key.IndexOf('.') != -1)
 
-                        dr[key.Split('.')[1].ToUpper()] = item[key];
+                        dr[key.Split('.')[1].ToUpper()] = dataa;
                     else
-                        dr[key.ToUpper()] = item[key];
+                        dr[key.ToUpper()] = dataa;
 
                 }
                 dt.Rows.Add(dr);
@@ -453,7 +455,19 @@ namespace PRDB_Sqlite.Presentation.UserControl
         private void btnDis_ig_Click(object sender, RoutedEventArgs e)
         {
             AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(1)));
+        }
 
+        private void btnSub_in_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(7)));
+        }
+        private void btnSub_ig_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(6)));
+        }
+        private void btnSub_me_Click(object sender, RoutedEventArgs e)
+        {
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(8)));
         }
 
         private void rbxQry_TextChanged(object sender, TextChangedEventArgs e)
@@ -498,6 +512,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                             }
                         else
                         relationResult = query.relationResult;
+
                         //remove stack
                         if (operatorQry.Count > 0)
                             operatorQry.Remove(operatorQry.First());

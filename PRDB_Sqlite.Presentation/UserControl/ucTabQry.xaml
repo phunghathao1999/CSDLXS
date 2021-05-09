@@ -89,7 +89,7 @@
                                             Click="btnDis_in_Click" Width="150" Height="25"/>
                                         <Button Content="⊖_in (Subtraction)" HorizontalContentAlignment="Left" Name="btnSub_in"
                                             Background="#FFC6E8FF" Padding="10,0,0,0" 
-                                            Click="btnDis_in_Click" Width="150" Height="25"/>
+                                            Click="btnSub_in_Click" Width="150" Height="25"/>
 
                                         <Separator ToolTip="Ignorance"/>
                                         <Button Content="⊗_ig (Conjunction)" HorizontalContentAlignment="Left" Name="btnCon_ig"
@@ -100,7 +100,7 @@
                                             Click="btnDis_ig_Click" Width="150" Height="25" />
                                         <Button Content="⊖_ig (Subtraction)" HorizontalContentAlignment="Left" Name="btnSub_ig"
                                             Background="#FFC6E8FF" Padding="10,0,0,0" 
-                                            Click="btnDis_in_Click" Width="150" Height="25"/>
+                                            Click="btnSub_ig_Click" Width="150" Height="25"/>
 
                                         <Separator ToolTip="Mutual Exclusion" />
                                         <Button Content="⊗_me (Conjunction)" HorizontalContentAlignment="Left" Name="btnCon_me"
@@ -111,7 +111,7 @@
                                             Click="btnDis_me_Click" Width="150" Height="25" />
                                         <Button Content="⊖_me (Subtraction)" HorizontalContentAlignment="Left" Name="btnSub_me"
                                             Background="#FFC6E8FF" Padding="10,0,0,0" 
-                                            Click="btnDis_in_Click" Width="150" Height="25"/>
+                                            Click="btnSub_me_Click" Width="150" Height="25"/>
 
                                     </MenuItem>
                                     <MenuItem Header="Join Operator">

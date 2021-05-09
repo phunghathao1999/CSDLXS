@@ -85,7 +85,7 @@ namespace PRDB_Sqlite.Infractructure.Common
             get
             {
                 return new List<string> {
-                    "⊗_in", "⊗_ig", "⊗_me","⊕_in", "⊕_ig", "⊕_me", "⊖_ig", "⊖_in", "⊖_pc"
+                    "⊗_in", "⊗_ig", "⊗_me","⊕_in", "⊕_ig", "⊕_me", "⊖_ig", "⊖_in", "⊖_me"
                 };
             }
         }

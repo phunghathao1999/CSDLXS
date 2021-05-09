@@ -40,7 +40,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
         {
             var att = this.txtInfo.Content.ToString();
 
-            if (att.Substring(att.IndexOf(".")+1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+            if (att.Substring(att.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
             {
                 return;
             }
@@ -66,7 +66,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     .ToList()
                     .ForEach(p => this.valueList.Add(new ValueCellView() { value = p.Trim() }));
             }
-            setValCell(valueList.Select(p=>p.value).ToList());
+            setValCell(valueList.Select(p => p.value).ToList());
         }
 
         private void btnClr_Click(object sender, RoutedEventArgs e)
@@ -78,7 +78,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
         {
             this.valueList.Clear();
             val.ToList().ForEach(p => { if (!(p is null)) this.valueList.Add(new ValueCellView() { value = p }); });
-            btnClr_Click(null,null);
+            btnClr_Click(null, null);
             {
                 this.dtgCellContent.ItemsSource = valueList;
                 this.dtgCellContent.Items.Refresh();
@@ -103,12 +103,12 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         private void btnApply_Click(object sender, RoutedEventArgs e)
         {
-           
+
             if (!rowBeingEdited)
             {
                 var att = this.txtInfo.Content.ToString();
 
-                if (att.Substring(att.IndexOf(".")+1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
+                if (att.Substring(att.IndexOf(".") + 1).Equals(ContantCls.emlementProb, StringComparison.CurrentCultureIgnoreCase))
                 {
                     var strProb = new TextRange(this.rtbxCellContent.Document.ContentStart, this.rtbxCellContent.Document.ContentEnd).Text.Trim();
                     try
@@ -169,7 +169,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
                     else
                         MessageBox.Show("The value is invalid with its Datatype", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
@@ -177,9 +177,9 @@ namespace PRDB_Sqlite.Presentation.UserControl
             }
             else
             {
-                MessageBox.Show("the Value have not Edited yet!","Alert",MessageBoxButton.OK,MessageBoxImage.Exclamation);
+                MessageBox.Show("the Value have not Edited yet!", "Alert", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
-            
+
         }
 
         public void removeDuplicateElements(ref string rawVal)
@@ -200,7 +200,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
             this.rtbxCellContent.IsReadOnly = true;
             this.dtgCellContent.IsEnabled = false;
 
-           
+
         }
     }
 }
