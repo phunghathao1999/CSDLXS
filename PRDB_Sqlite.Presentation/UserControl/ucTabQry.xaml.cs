@@ -424,7 +424,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
 
         }
-        // "⊕_in", "⊕_ig", "⊕_me","⊗_in", "⊗_ig", "⊗_me"
+        // "⊕_in", "⊕_ig", "⊕_me","⊗_in", "⊗_ig", "⊗_me", "⊖_ig", "⊖_in", "⊖_pc"
         private void btnCon_in_Click(object sender, RoutedEventArgs e)
         {
             AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(3)));

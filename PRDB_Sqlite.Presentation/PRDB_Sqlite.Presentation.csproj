@@ -383,5 +383,11 @@
   <ItemGroup>
     <Resource Include="Icon\icons8_about_13px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\icons8_opened_folder_14px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\icons8_database_import_14px_2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
