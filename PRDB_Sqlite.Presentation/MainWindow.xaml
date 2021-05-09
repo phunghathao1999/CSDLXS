@@ -58,73 +58,65 @@
                     <MenuItem Header="_File" Height="20" Margin="0,1,0,1">
                         <MenuItem Header="_New database" x:Name="btnNewDb" Click="btnNewDb_Click">
                             <MenuItem.Icon>
-                                <Image Source="/Icon/icons8_new_copy_13px.png"/>
+                                <Image Source="/assets/Images/newdb.ico" />
                             </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="Open database" x:Name="btnOpnDb" Click="btnOpenDb_Click" >
                             <MenuItem.Icon>
-                                <Image Source="/Icon/icons8_file_13px_1.png"/>
+                                <Image Source="/assets/Images/opendb.ico" />
                             </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="Reload Db" x:Name="btnReload" Click="btnReload_Click" >
                             <MenuItem.Icon>
-                                <Image Source="/Icon/icons8_database_backup_13px.png"/>
+                                <Image Source="/assets/Images/icons8_refresh_2.ico" />
                             </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem Header="Exit" x:Name="btnExit" Click="btnExit_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_exit_13px.png"/>
-                                </MenuItem.Icon>-->
-                        </MenuItem>
-                        <MenuItem Header="About" x:Name="btnAbout" Click="btnAbout_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_about_13px.png"/>
-                                </MenuItem.Icon>-->
-                        </MenuItem>
+                        <MenuItem Header="Exit" x:Name="btnExit" Click="btnExit_Click"/>
+                        <MenuItem Header="About" x:Name="btnAbout" Click="btnAbout_Click"/>
                     </MenuItem>
                     <MenuItem Header="_Schema" Height="20" Margin="0,1,0,1">
                         <MenuItem Header="_New Schema" Visibility="Hidden" x:Name="btnNewSch" Click="btnNewSch_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/scheme add.png" />
+                            </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="_Edit Schema"  Visibility="Hidden" x:Name="btnEdtSch" Click="btnEdtSch_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/scheme edit.png" />
+                            </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="_Open Schema"  Visibility="Hidden" x:Name="btnOpnSch" Click="btnOpnSch_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/scheme open.png" />
+                            </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="_Delete Schema"  Visibility="Hidden" x:Name="btnDelSch" Click="btnDelSch_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/scheme delete.png" />
+                            </MenuItem.Icon>
                         </MenuItem>
 
                     </MenuItem>
                     <MenuItem Header="_Relation" Height="20" Margin="0,1,0,1">
                         <MenuItem Header="_New Relation" Visibility="Hidden" x:Name="btnNewRel" Click="btnNewRel_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/new relation.png" />
+                            </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="_Open Relation" Visibility="Hidden" x:Name="btnOpnRel" Click="btnOpnRel_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/open relation.png" />
+                            </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem Header="_Delete Relation" Visibility="Hidden" x:Name="btnDelRel" Margin="0,0,0,-3" Click="btnDelRel_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/remove relation.png" />
+                            </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem Header="_Insert New Tuple" Visibility="Hidden" x:Name="btnIns" Click="btnIns_Click">
-                            <!--<MenuItem.Icon>
-                                    <Image Source="/Icon/icons8_new_copy_13px.png"/>
-                                </MenuItem.Icon>-->
+                        <MenuItem Header="_Insert Data" Visibility="Hidden" x:Name="btnIns" Click="btnIns_Click">
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/add_record_icon.jpg" />
+                            </MenuItem.Icon>
                         </MenuItem>
 
                     </MenuItem>
@@ -146,7 +138,21 @@
             <Border BorderBrush="#abadb3" Background="#f0f0f0" Margin="0" BorderThickness="1,1,1,1">
                 <DockPanel>
                     <Menu DockPanel.Dock="Top">
-                        <MenuItem Header="_New Query"/>
+                        <MenuItem Header="" Click="btnNewDb_Click" Width="35">
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/newdb.ico" Margin="0,0,-12,0"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="" Click="btnOpenDb_Click" Width="35">
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/opendb.ico" Margin="0,0,-12,0"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="" Visibility="Hidden" Name="btnrefresh" Click="btnReload_Click" Width="35">
+                            <MenuItem.Icon>
+                                <Image Source="/assets/Images/icons8_refresh_2.ico" Margin="0,0,-12,0"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </Menu>
                 </DockPanel>
             </Border>

@@ -124,6 +124,7 @@ namespace PRDB_Sqlite.Presentation
                 this.btnOpnRel.Visibility = Visibility.Visible;
                 this.btnDelRel.Visibility = Visibility.Visible;
                 this.btnIns.Visibility = Visibility.Visible;
+                this.btnrefresh.Visibility = Visibility.Visible;
                 //query
 
             }
