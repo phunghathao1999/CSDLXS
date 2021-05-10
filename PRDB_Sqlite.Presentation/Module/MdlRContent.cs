@@ -74,6 +74,7 @@ namespace PRDB_Sqlite.Presentation.Module
 
         private StackPanel getChild(ref StackPanel stp, string uid)
         {
+            
             var reControl = new ucTabContent();
 
             #region Cbx setup
@@ -122,6 +123,7 @@ namespace PRDB_Sqlite.Presentation.Module
             }
             if ("rel".Equals(uid.ToLower()))
             {
+                Console.WriteLine("data: ");
                 if (reControl.cbx.SelectedValue != null)
                 {
                     var data = getDataSourceRel((int)reControl.cbx.SelectedValue);
@@ -142,6 +144,7 @@ namespace PRDB_Sqlite.Presentation.Module
                     if (reControl.cbx.SelectedValue != null)
                     {
                         var data = getDataSourceRel((int)reControl.cbx.SelectedValue);
+                        
                         var dtS = dynamicGenDataTable(data);
                         if (dtS is null)
                         {
@@ -215,11 +218,16 @@ namespace PRDB_Sqlite.Presentation.Module
                     var dr = dt.NewRow();
                     foreach (var key in item.Keys)
                     {
+                        string dat = item[key];
+                        if ((dat.Contains(",") && dat.Contains("[") && dat.Contains("]")) || (!dat.Contains(",") && !dat.Contains("[") && !dat.Contains("]")) || (!dat.Contains(",") && dat.Contains("[") && !dat.Contains("]")) || (!dat.Contains(",") && !dat.Contains("[") && dat.Contains("]")))
+                            dat = dat.Replace("{", "").Replace("}", "").Trim();
+                        dat = dat.Replace("{ ", "{").Replace(" }", "}").Replace(",",", ");
+
                         if (key.IndexOf('.') != -1)
 
-                            dr[key.Split('.')[1].ToUpper()] = item[key];
+                            dr[key.Split('.')[1].ToUpper()] = dat;
                         else
-                            dr[key.ToUpper()] = item[key];
+                            dr[key.ToUpper()] = dat;
 
                     }
                     dt.Rows.Add(dr);
