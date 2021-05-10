@@ -312,14 +312,16 @@ namespace PRDB_Sqlite.Presentation.UserControl
                 var dr = dt.NewRow();
                 foreach (var key in item.Keys)
                 {
-                    string dataa = item[key];
-                    if (!dataa.Contains(","))
-                        dataa = dataa.Replace("{", "").Replace("}", "").Trim();
+                    string dat = item[key];
+                    if ((dat.Contains(",") && dat.Contains("[") && dat.Contains("]")) || (!dat.Contains(",") && !dat.Contains("[") && !dat.Contains("]")) || (!dat.Contains(",") && dat.Contains("[") && !dat.Contains("]")) || (!dat.Contains(",") && !dat.Contains("[") && dat.Contains("]")))
+                        dat = dat.Replace("{", "").Replace("}", "").Trim();
+                    dat = dat.Replace("{ ", "{").Replace(" }", "}").Replace(",", ", ");
+
                     if (key.IndexOf('.') != -1)
 
-                        dr[key.Split('.')[1].ToUpper()] = dataa;
+                        dr[key.Split('.')[1].ToUpper()] = dat;
                     else
-                        dr[key.ToUpper()] = dataa;
+                        dr[key.ToUpper()] = dat;
 
                 }
                 dt.Rows.Add(dr);
