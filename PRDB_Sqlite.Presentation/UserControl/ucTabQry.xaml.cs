@@ -82,8 +82,7 @@ namespace PRDB_Sqlite.Presentation.UserControl
             {
                 if (tabItem.IsSelected)
                 {
-                    this.rbxQry
-                        .CaretPosition.InsertTextInRun(text);
+                    this.rbxQry.CaretPosition.InsertTextInRun(text);
                 }
             }
         }
@@ -430,17 +429,14 @@ namespace PRDB_Sqlite.Presentation.UserControl
 
         }
         // "⊕_in", "⊕_ig", "⊕_me","⊗_in", "⊗_ig", "⊗_me", "⊖_ig", "⊖_in", "⊖_pc"
-
-        // "⊗_in"
         private void btnCon_in_Click(object sender, RoutedEventArgs e)
         {
-            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(0)));
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(3)));
         }
 
-        // "⊕_in"
         private void btnDis_in_Click(object sender, RoutedEventArgs e)
         {
-            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(3)));
+            AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(0)));
         }
 
         private void btnCon_me_Click(object sender, RoutedEventArgs e)
@@ -463,18 +459,14 @@ namespace PRDB_Sqlite.Presentation.UserControl
             AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(1)));
         }
 
-        // "⊖_in"
         private void btnSub_in_Click(object sender, RoutedEventArgs e)
         {
             AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(7)));
         }
-
         private void btnSub_ig_Click(object sender, RoutedEventArgs e)
         {
             AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(6)));
         }
-
-
         private void btnSub_me_Click(object sender, RoutedEventArgs e)
         {
             AddStrategies(String.Format(" {0} ", Parameter.strategies.ToArray().ElementAt(8)));
