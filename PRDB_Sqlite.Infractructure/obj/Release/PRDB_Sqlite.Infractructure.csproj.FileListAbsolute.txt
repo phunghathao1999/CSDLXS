@@ -13,3 +13,9 @@ D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.cspr
 D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.dll
 D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.pdb
 D:\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Infractructure\bin\Release\PRDB_Sqlite.Infractructure.dll
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Infractructure\bin\Release\PRDB_Sqlite.Infractructure.pdb
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.csprojAssemblyReference.cache
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.csproj.CoreCompileInputs.cache
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.dll
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Infractructure\obj\Release\PRDB_Sqlite.Infractructure.pdb

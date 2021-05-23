@@ -24,3 +24,12 @@ D:\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CoreCompileIn
 D:\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CopyComplete
 D:\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.dll
 D:\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.pdb
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.dll
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Domain.pdb
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.dll
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\bin\Release\PRDB_Sqlite.Infractructure.pdb
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csprojAssemblyReference.cache
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CoreCompileInputs.cache
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.csproj.CopyComplete
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.dll
+C:\Users\phung\Desktop\CSDLXS\PRDB_Sqlite.Domain\obj\Release\PRDB_Sqlite.Domain.pdb
