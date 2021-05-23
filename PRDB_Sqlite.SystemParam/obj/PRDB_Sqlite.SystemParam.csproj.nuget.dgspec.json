@@ -1,19 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj": {}
+    "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
+    "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj",
         "projectName": "PRDB_Sqlite.Domain",
-        "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj",
+        "projectPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj": {
-                "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj"
+              "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj": {
+                "projectPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj"
               }
             }
           }
@@ -23,24 +23,24 @@
         "net472": {}
       }
     },
-    "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj": {
+    "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj",
+        "projectUniqueName": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj",
         "projectName": "PRDB_Sqlite.Infractructure",
-        "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj"
+        "projectPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Infractructure\\PRDB_Sqlite.Infractructure.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj": {
+    "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
+        "projectUniqueName": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
         "projectName": "PRDB_Sqlite.SystemParam",
-        "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
+        "projectPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
         "packagesPath": "C:\\Users\\phung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\obj\\",
+        "outputPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,8 +57,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
-                "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj"
+              "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
+                "projectPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj"
               }
             }
           }

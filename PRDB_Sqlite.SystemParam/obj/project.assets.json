@@ -217,11 +217,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
+      "projectUniqueName": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
       "projectName": "PRDB_Sqlite.SystemParam",
-      "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
+      "projectPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\PRDB_Sqlite.SystemParam.csproj",
       "packagesPath": "C:\\Users\\phung\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.SystemParam\\obj\\",
+      "outputPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.SystemParam\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -238,8 +238,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
-              "projectPath": "C:\\Users\\phung\\Desktop\\5_MỞ RỘNG MÔ HÌNH CƠ SỞ DỮ LIỆU QUAN HỆ VỚI MỨC ĐỘ THÀNH VIÊN BỘ KHÔNG CHẮC CHẮN\\PRDB_Sqlite\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj"
+            "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj": {
+              "projectPath": "C:\\Users\\phung\\Desktop\\CSDLXS\\PRDB_Sqlite.Domain\\PRDB_Sqlite.Domain.csproj"
             }
           }
         }

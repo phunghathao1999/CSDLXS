@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRDB_Sqlite.SystemParam", "
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PRDB_System", "setup\PRDB_System\PRDB_System.vdproj", "{4D9EC433-43C8-45C2-83BE-8721CEBDBFB4}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PRDB_Sqlite", "PRDB_Sqlite\PRDB_Sqlite.vdproj", "{843A484F-8036-4D53-8B5B-CBEBC2317E5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{4D9EC433-43C8-45C2-83BE-8721CEBDBFB4}.Debug|x86.ActiveCfg = Debug
 		{4D9EC433-43C8-45C2-83BE-8721CEBDBFB4}.Release|Any CPU.ActiveCfg = Release
 		{4D9EC433-43C8-45C2-83BE-8721CEBDBFB4}.Release|x86.ActiveCfg = Release
+		{843A484F-8036-4D53-8B5B-CBEBC2317E5F}.Debug|Any CPU.ActiveCfg = Debug
+		{843A484F-8036-4D53-8B5B-CBEBC2317E5F}.Debug|x86.ActiveCfg = Debug
+		{843A484F-8036-4D53-8B5B-CBEBC2317E5F}.Release|Any CPU.ActiveCfg = Release
+		{843A484F-8036-4D53-8B5B-CBEBC2317E5F}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
